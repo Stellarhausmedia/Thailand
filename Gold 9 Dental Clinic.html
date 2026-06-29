@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gold 9 Dental Clinic — English-Speaking Dentistry in Rama IX, Bangkok</title>
+<meta name="description" content="Gold 9 Dental Clinic in Rama IX / Huai Khwang, Bangkok. International patients warmly welcomed. Implants, composite bonding, orthodontics and general dentistry. Open every day until 8pm. Rated 5.0 from 374 reviews." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23200a0c'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='42' font-weight='700' text-anchor='middle' fill='%23d4a23a'%3E9%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #150406;
+    --oxblood: #200a0c;
+    --oxblood-2: #2c0f12;
+    --oxblood-3: #3a161a;
+    --gold: #d4a23a;
+    --gold-bright: #ecc663;
+    --gold-deep: #a9772a;
+    --cream: #f6ecd6;
+    --cream-soft: #e9dcc0;
+    --muted: #cbb88f;
+    --line: rgba(212, 162, 58, 0.22);
+    --line-strong: rgba(212, 162, 58, 0.45);
+    --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    --sans: 'Outfit', system-ui, -apple-system, sans-serif;
+    --maxw: 1180px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+
+  body {
+    background: var(--oxblood);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.25rem, 4vw, 3rem); }
+
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.08; color: var(--cream); }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: clamp(0.66rem, 1.4vw, 0.74rem);
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .eyebrow::before {
+    content: "";
+    width: clamp(20px, 5vw, 40px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--gold-bright);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  .skip {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--gold);
+    color: var(--oxblood);
+    padding: 0.7rem 1.2rem;
+    z-index: 999;
+    font-family: var(--sans);
+    font-weight: 600;
+    border-radius: 0 0 8px 0;
+  }
+  .skip:focus { left: 0; }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+  }
+
+  /* ============ DECORATIVE GOLD SHIMMER ============ */
+  .gold-text {
+    background: linear-gradient(100deg, var(--gold-deep) 0%, var(--gold-bright) 30%, #fff3d4 48%, var(--gold-bright) 62%, var(--gold-deep) 100%);
+    background-size: 220% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: var(--gold);
+  }
+  .shimmer { animation: shimmer 7s linear infinite; }
+  @keyframes shimmer { to { background-position: 220% center; } }
+  @media (prefers-reduced-motion: reduce) {
+    .shimmer { animation: none; }
+  }
+
+  /* ============ NAV ============ */
+  header.nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(26, 6, 8, 0.72);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid var(--line);
+    transition: background 0.4s var(--ease);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    gap: 1rem;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.72rem;
+    font-family: var(--serif);
+  }
+  .brand-mark {
+    width: 42px; height: 42px;
+    flex: none;
+    display: grid;
+    place-items: center;
+  }
+  .brand-mark svg { width: 100%; height: 100%; }
+  .brand-name {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+  .brand-name .b1 {
+    font-size: 1.32rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--cream);
+  }
+  .brand-name .b1 b { color: var(--gold); font-weight: 600; }
+  .brand-name .b2 {
+    font-family: var(--sans);
+    font-size: 0.56rem;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 4px;
+    font-weight: 400;
+  }
+  nav.links {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.1rem, 2.6vw, 2.2rem);
+  }
+  nav.links a.navlink {
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--cream-soft);
+    position: relative;
+    padding: 0.4rem 0;
+    transition: color 0.3s var(--ease);
+  }
+  nav.links a.navlink::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 0; height: 1px;
+    background: var(--gold);
+    transition: width 0.35s var(--ease);
+  }
+  nav.links a.navlink:hover { color: var(--gold-bright); }
+  nav.links a.navlink:hover::after { width: 100%; }
+
+  .nav-cta {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 0.62rem 1.25rem;
+    border: 1px solid var(--gold);
+    border-radius: 100px;
+    color: var(--gold-bright);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.35s var(--ease);
+    white-space: nowrap;
+  }
+  .nav-cta:hover {
+    background: var(--gold);
+    color: var(--oxblood);
+  }
+
+  .burger {
+    display: none;
+    width: 44px; height: 44px;
+    border: 1px solid var(--line-strong);
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .burger span { width: 20px; height: 1.5px; background: var(--gold); transition: 0.3s var(--ease); display: block; }
+  .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  @media (max-width: 880px) {
+    .burger { display: flex; }
+    nav.links {
+      position: fixed;
+      inset: 72px 0 auto 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      background: rgba(22, 5, 7, 0.97);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line-strong);
+      padding: 1rem clamp(1.25rem, 4vw, 3rem) 1.6rem;
+      transform: translateY(-130%);
+      transition: transform 0.45s var(--ease);
+      max-height: calc(100vh - 72px);
+      overflow-y: auto;
+    }
+    nav.links.open { transform: translateY(0); }
+    nav.links a.navlink {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 1rem;
+    }
+    nav.links a.navlink::after { display: none; }
+    .nav-cta { margin-top: 1rem; justify-content: center; padding: 0.9rem; }
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative;
+    min-height: clamp(640px, 100svh, 1000px);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(120% 90% at 78% 18%, rgba(58, 22, 26, 0.85) 0%, transparent 55%),
+      radial-gradient(90% 120% at 12% 88%, rgba(44, 15, 18, 0.9) 0%, transparent 60%),
+      linear-gradient(160deg, var(--oxblood-2) 0%, var(--ink) 100%);
+    z-index: 0;
+  }
+  .hero-vignette {
+    position: absolute; inset: 0;
+    background: radial-gradient(130% 110% at 50% 40%, transparent 40%, rgba(10, 2, 3, 0.6) 100%);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero-stage {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    right: clamp(-160px, -2vw, 0px);
+    transform: translateY(-50%);
+    width: clamp(420px, 56vw, 820px);
+    height: clamp(420px, 56vw, 820px);
+    opacity: 0.96;
+    pointer-events: none;
+  }
+  .hero-stage svg { width: 100%; height: 100%; overflow: visible; }
+
+  .hero-content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 6rem 0;
+  }
+  .hero-inner { max-width: 730px; }
+  .hero h1 {
+    font-size: clamp(2.9rem, 8.5vw, 6.6rem);
+    font-weight: 500;
+    letter-spacing: -0.012em;
+    margin: 1.6rem 0 1.4rem;
+  }
+  .hero h1 .lux { font-style: italic; font-weight: 500; }
+  .hero-sub {
+    font-size: clamp(1.02rem, 2.3vw, 1.32rem);
+    font-weight: 300;
+    color: var(--cream-soft);
+    max-width: 540px;
+    line-height: 1.6;
+  }
+  .hero-sub strong { color: var(--gold-bright); font-weight: 500; }
+  .hero-actions {
+    margin-top: 2.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    align-items: center;
+  }
+
+  /* Buttons */
+  .btn {
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    font-weight: 500;
+    letter-spacing: 0.015em;
+    padding: 0.95rem 1.7rem;
+    border-radius: 100px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: transform 0.3s var(--ease), background 0.3s var(--ease), box-shadow 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease);
+    position: relative;
+    overflow: hidden;
+  }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .btn-gold {
+    background: linear-gradient(120deg, var(--gold-deep), var(--gold) 45%, var(--gold-bright));
+    color: var(--oxblood);
+    box-shadow: 0 10px 30px -10px rgba(212, 162, 58, 0.55);
+  }
+  .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -10px rgba(236, 198, 99, 0.7); }
+  .btn-ghost {
+    border-color: var(--line-strong);
+    color: var(--cream);
+    background: rgba(212, 162, 58, 0.04);
+  }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold-bright); transform: translateY(-2px); }
+  @media (prefers-reduced-motion: reduce) {
+    .btn:hover { transform: none; }
+  }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 1.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--muted);
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+  }
+  .hero-scroll .dot {
+    width: 1px; height: 42px;
+    background: linear-gradient(var(--gold), transparent);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-scroll .dot::after {
+    content: "";
+    position: absolute;
+    top: -50%; left: 0;
+    width: 1px; height: 50%;
+    background: var(--gold-bright);
+    animation: scrolltrail 2.2s var(--ease) infinite;
+  }
+  @keyframes scrolltrail { to { top: 110%; } }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-scroll .dot::after { animation: none; }
+  }
+
+  .corner-fil {
+    position: absolute;
+    width: clamp(90px, 14vw, 190px);
+    height: clamp(90px, 14vw, 190px);
+    z-index: 2;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .corner-fil svg { width: 100%; height: 100%; }
+  .corner-tl { top: 78px; left: 12px; }
+  .corner-br { bottom: 12px; right: 12px; transform: rotate(180deg); }
+  @media (max-width: 880px) { .corner-fil { display: none; } }
+
+  /* ============ SECTION SHELL ============ */
+  section { position: relative; }
+  .sec {
+    padding: clamp(4.5rem, 11vw, 9rem) 0;
+    position: relative;
+  }
+  .sec-head { max-width: 720px; margin-bottom: clamp(2.5rem, 6vw, 4.5rem); }
+  .sec-head h2 {
+    font-size: clamp(2.1rem, 5.5vw, 3.7rem);
+    font-weight: 500;
+    margin: 1.1rem 0 0;
+    letter-spacing: -0.01em;
+  }
+  .sec-head h2 em { font-style: italic; }
+  .sec-head p {
+    margin-top: 1.3rem;
+    font-size: clamp(1rem, 2.2vw, 1.16rem);
+    color: var(--cream-soft);
+    font-weight: 300;
+    max-width: 600px;
+  }
+
+  .div-orn {
+    display: flex; align-items: center; justify-content: center;
+    gap: 1.2rem;
+    color: var(--gold);
+    opacity: 0.8;
+  }
+  .div-orn .ln { height: 1px; flex: 1; max-width: 220px; background: linear-gradient(90deg, transparent, var(--line-strong)); }
+  .div-orn .ln.r { background: linear-gradient(90deg, var(--line-strong), transparent); }
+  .div-orn svg { width: 40px; height: 40px; }
+
+  /* ============ WELCOME ============ */
+  .welcome {
+    background:
+      radial-gradient(120% 80% at 85% 0%, rgba(58, 22, 26, 0.5), transparent 60%),
+      linear-gradient(180deg, var(--oxblood) 0%, var(--oxblood-2) 100%);
+  }
+  .welcome-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(2rem, 6vw, 5rem);
+    align-items: center;
+  }
+  @media (max-width: 900px) { .welcome-grid { grid-template-columns: 1fr; } }
+  .welcome-copy p {
+    font-size: clamp(1rem, 2.2vw, 1.18rem);
+    color: var(--cream-soft);
+    margin-bottom: 1.3rem;
+    font-weight: 300;
+  }
+  .welcome-copy p.lead {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 3.6vw, 2.05rem);
+    font-style: italic;
+    line-height: 1.35;
+    color: var(--cream);
+    font-weight: 400;
+    margin-bottom: 1.6rem;
+  }
+  .welcome-copy p.lead .gold-text { font-style: italic; }
+  .welcome-badges {
+    display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.9rem;
+  }
+  .pill {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--cream-soft);
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    padding: 0.5rem 1.05rem;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(212, 162, 58, 0.04);
+    transition: 0.3s var(--ease);
+  }
+  .pill:hover { border-color: var(--gold); color: var(--gold-bright); }
+  .pill svg { width: 15px; height: 15px; color: var(--gold); flex: none; }
+
+  .welcome-art {
+    aspect-ratio: 1 / 1.08;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background:
+      radial-gradient(100% 100% at 50% 30%, rgba(58, 22, 26, 0.6), transparent 70%),
+      linear-gradient(160deg, var(--oxblood-3), var(--ink));
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    box-shadow: inset 0 0 60px rgba(0,0,0,0.5), 0 30px 70px -30px rgba(0,0,0,0.7);
+  }
+  .welcome-art::before {
+    content: "";
+    position: absolute; inset: 14px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    pointer-events: none;
+  }
+  .welcome-art svg { width: 72%; height: 72%; overflow: visible; }
+  .welcome-art .cap {
+    position: absolute;
+    bottom: 1.5rem; left: 0; right: 0;
+    text-align: center;
+    font-family: var(--sans);
+    font-size: 0.62rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ============ SERVICES ============ */
+  .services {
+    background:
+      radial-gradient(110% 70% at 10% 0%, rgba(58, 22, 26, 0.45), transparent 55%),
+      linear-gradient(180deg, var(--oxblood-2) 0%, var(--ink) 100%);
+  }
+  .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1rem, 2.5vw, 1.6rem);
+  }
+  @media (max-width: 760px) { .svc-grid { grid-template-columns: 1fr; } }
+
+  .svc {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: clamp(1.8rem, 3.5vw, 2.6rem);
+    background: linear-gradient(165deg, rgba(58, 22, 26, 0.42), rgba(21, 4, 6, 0.55));
+    overflow: hidden;
+    transition: transform 0.5s var(--ease), border-color 0.5s var(--ease);
+    isolation: isolate;
+  }
+  .svc::before {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(120% 100% at 100% 0%, rgba(212, 162, 58, 0.12), transparent 55%);
+    opacity: 0;
+    transition: opacity 0.5s var(--ease);
+    z-index: -1;
+  }
+  .svc:hover { transform: translateY(-6px); border-color: var(--line-strong); }
+  .svc:hover::before { opacity: 1; }
+  @media (prefers-reduced-motion: reduce) { .svc:hover { transform: none; } }
+
+  .svc-num {
+    position: absolute;
+    top: clamp(1rem, 3vw, 1.6rem);
+    right: clamp(1.2rem, 3.5vw, 2rem);
+    font-family: var(--serif);
+    font-size: clamp(3.4rem, 8vw, 5.4rem);
+    font-weight: 600;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(212, 162, 58, 0.32);
+    pointer-events: none;
+    transition: 0.5s var(--ease);
+  }
+  .svc:hover .svc-num { -webkit-text-stroke-color: rgba(236, 198, 99, 0.6); }
+
+  .svc-ico {
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    border: 1px solid var(--line-strong);
+    display: grid; place-items: center;
+    margin-bottom: 1.5rem;
+    background: rgba(212, 162, 58, 0.06);
+    transition: 0.5s var(--ease);
+  }
+  .svc-ico svg { width: 28px; height: 28px; color: var(--gold); }
+  .svc:hover .svc-ico { background: rgba(212, 162, 58, 0.14); border-color: var(--gold); }
+
+  .svc h3 {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    color: var(--cream);
+  }
+  .svc p {
+    font-size: 0.97rem;
+    color: var(--cream-soft);
+    font-weight: 300;
+    max-width: 36ch;
+  }
+  .svc-tag {
+    margin-top: 1.3rem;
+    font-family: var(--sans);
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: inline-flex; align-items: center; gap: 0.4rem;
+  }
+
+  /* ============ VISIT / LOCATION ============ */
+  .visit {
+    background: linear-gradient(180deg, var(--ink) 0%, var(--oxblood-2) 100%);
+  }
+  .visit-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: stretch;
+  }
+  @media (max-width: 900px) { .visit-grid { grid-template-columns: 1fr; } }
+
+  .visit-info { display: flex; flex-direction: column; gap: 1.6rem; }
+  .vrow {
+    display: flex; gap: 1.1rem; align-items: flex-start;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .vrow:last-child { border-bottom: none; padding-bottom: 0; }
+  .vrow-ic {
+    width: 48px; height: 48px; flex: none;
+    border-radius: 12px;
+    border: 1px solid var(--line-strong);
+    display: grid; place-items: center;
+    background: rgba(212, 162, 58, 0.05);
+  }
+  .vrow-ic svg { width: 22px; height: 22px; color: var(--gold); }
+  .vrow h4 {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 0.35rem;
+  }
+  .vrow p { font-size: 1.04rem; color: var(--cream); font-weight: 300; line-height: 1.5; }
+  .vrow p .sm { color: var(--cream-soft); font-size: 0.92rem; }
+  .vrow a.phone { color: var(--gold-bright); font-weight: 400; border-bottom: 1px solid var(--line-strong); transition: 0.3s; }
+  .vrow a.phone:hover { color: #fff3d4; border-color: var(--gold-bright); }
+
+  .hours-table { width: 100%; margin-top: 0.4rem; }
+  .hours-table div {
+    display: flex; justify-content: space-between;
+    font-size: 0.95rem;
+    padding: 0.28rem 0;
+    color: var(--cream-soft);
+  }
+  .hours-table div span:last-child { color: var(--cream); }
+  .hours-open {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.05em;
+    color: var(--gold-bright);
+    margin-top: 0.7rem;
+  }
+  .hours-open .live {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--gold-bright);
+    box-shadow: 0 0 0 0 rgba(236, 198, 99, 0.7);
+    animation: pulse 2.4s ease-out infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(236, 198, 99, 0.6); }
+    70% { box-shadow: 0 0 0 9px rgba(236, 198, 99, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(236, 198, 99, 0); }
+  }
+  @media (prefers-reduced-motion: reduce) { .hours-open .live { animation: none; } }
+
+  .map-panel {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background:
+      radial-gradient(90% 90% at 70% 30%, rgba(58, 22, 26, 0.55), transparent 65%),
+      linear-gradient(160deg, var(--oxblood-3), var(--ink));
+    position: relative;
+    overflow: hidden;
+    min-height: 380px;
+    box-shadow: inset 0 0 60px rgba(0,0,0,0.5);
+  }
+  .map-panel svg.grid { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0.5; }
+  .map-pin {
+    position: absolute;
+    top: 44%; left: 52%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+  }
+  .map-pin .pinmark { width: 64px; height: 64px; margin: 0 auto; }
+  .map-pin .pinmark svg { width: 100%; height: 100%; color: var(--gold); }
+  .map-pin .pl {
+    margin-top: 0.5rem;
+    font-family: var(--serif);
+    font-size: 1.2rem;
+    color: var(--gold-bright);
+    font-style: italic;
+  }
+  .map-pin .ps {
+    font-family: var(--sans);
+    font-size: 0.66rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .map-ripple {
+    position: absolute; top: 44%; left: 52%;
+    width: 30px; height: 30px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: ripple 3s ease-out infinite;
+    z-index: 1;
+  }
+  @keyframes ripple {
+    0% { width: 30px; height: 30px; opacity: 0.8; }
+    100% { width: 220px; height: 220px; opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { .map-ripple { animation: none; opacity: 0.3; } }
+  .map-foot {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 1.1rem 1.4rem;
+    border-top: 1px solid var(--line);
+    background: rgba(21, 4, 6, 0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: var(--sans); font-size: 0.78rem;
+    color: var(--cream-soft);
+  }
+  .map-foot a { color: var(--gold-bright); display: inline-flex; align-items: center; gap: 0.35rem; }
+  .map-foot a:hover { color: #fff3d4; }
+  .map-foot a svg { width: 14px; height: 14px; }
+
+  /* ============ TRUST ============ */
+  .trust {
+    background:
+      radial-gradient(120% 80% at 50% 0%, rgba(58, 22, 26, 0.55), transparent 60%),
+      linear-gradient(180deg, var(--oxblood-2) 0%, var(--ink) 100%);
+    text-align: center;
+  }
+  .trust-inner { max-width: 820px; margin: 0 auto; }
+  .stars {
+    display: inline-flex; gap: 0.35rem; justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .stars svg { width: clamp(28px, 6vw, 40px); height: clamp(28px, 6vw, 40px); color: var(--gold); }
+  .trust-rating {
+    font-family: var(--serif);
+    font-size: clamp(4rem, 14vw, 8rem);
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .trust-rating sup { font-size: 0.32em; vertical-align: super; color: var(--gold); font-weight: 500; }
+  .trust-sub {
+    font-family: var(--sans);
+    font-size: clamp(0.92rem, 2.2vw, 1.08rem);
+    color: var(--cream-soft);
+    letter-spacing: 0.02em;
+  }
+  .trust-sub b { color: var(--gold-bright); font-weight: 500; }
+  .trust-quote {
+    margin: 3rem auto 0;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.3rem, 3.2vw, 1.85rem);
+    line-height: 1.45;
+    color: var(--cream);
+    font-weight: 400;
+    max-width: 660px;
+    position: relative;
+    padding: 0 1.5rem;
+  }
+  .trust-quote::before, .trust-quote::after {
+    font-family: var(--serif);
+    color: var(--gold);
+    font-size: 2.4em;
+    line-height: 0;
+    position: relative;
+    opacity: 0.6;
+  }
+  .trust-quote::before { content: "\201C"; vertical-align: -0.4em; margin-right: 0.1em; }
+  .trust-quote::after { content: "\201D"; vertical-align: -0.55em; margin-left: 0.05em; }
+  .trust-attr {
+    margin-top: 1.5rem;
+    font-family: var(--sans);
+    font-size: 0.74rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .trust-stats {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: clamp(1.5rem, 6vw, 4rem);
+    margin-top: 3.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--line);
+  }
+  .tstat { text-align: center; }
+  .tstat .n {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+    color: var(--gold-bright);
+    line-height: 1;
+  }
+  .tstat .l {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.6rem;
+  }
+
+  /* ============ CONTACT ============ */
+  .contact {
+    background: linear-gradient(180deg, var(--ink) 0%, var(--oxblood) 60%, var(--oxblood-2) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-glow {
+    position: absolute;
+    top: -10%; left: 50%;
+    transform: translateX(-50%);
+    width: 700px; height: 700px;
+    background: radial-gradient(circle, rgba(212, 162, 58, 0.1), transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .contact-inner { position: relative; z-index: 2; max-width: 940px; margin: 0 auto; text-align: center; }
+  .contact h2 {
+    font-size: clamp(2.3rem, 6.5vw, 4.4rem);
+    font-weight: 500;
+    margin: 1.2rem 0 1.3rem;
+  }
+  .contact h2 em { font-style: italic; }
+  .contact-inner p.intro {
+    font-size: clamp(1.02rem, 2.4vw, 1.22rem);
+    color: var(--cream-soft);
+    font-weight: 300;
+    max-width: 580px;
+    margin: 0 auto 2.6rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.9rem;
+    margin-bottom: 2.4rem;
+    text-align: left;
+  }
+  .cc {
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.4rem 1.5rem;
+    background: rgba(58, 22, 26, 0.3);
+    display: flex; align-items: center; gap: 1rem;
+    transition: 0.4s var(--ease);
+  }
+  .cc:hover { border-color: var(--gold); transform: translateY(-4px); background: rgba(58, 22, 26, 0.55); }
+  @media (prefers-reduced-motion: reduce) { .cc:hover { transform: none; } }
+  .cc-ic {
+    width: 46px; height: 46px; flex: none;
+    border-radius: 11px; border: 1px solid var(--line-strong);
+    display: grid; place-items: center; background: rgba(212, 162, 58, 0.06);
+  }
+  .cc-ic svg { width: 22px; height: 22px; color: var(--gold); }
+  .cc-tx { display: flex; flex-direction: column; min-width: 0; }
+  .cc-tx .k { font-family: var(--sans); font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  .cc-tx .v { font-size: 1rem; color: var(--cream); font-weight: 400; margin-top: 2px; word-break: break-word; }
+  .cc:hover .cc-tx .v { color: var(--gold-bright); }
+
+  .social-row {
+    display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center;
+    margin-bottom: 2.4rem;
+  }
+  .sbtn {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.85rem 1.5rem;
+    border-radius: 100px;
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    transition: transform 0.3s var(--ease), filter 0.3s var(--ease), box-shadow 0.3s var(--ease);
+    color: #fff;
+    border: 1px solid transparent;
+  }
+  .sbtn svg { width: 19px; height: 19px; flex: none; }
+  .sbtn:hover { transform: translateY(-2px); filter: brightness(1.08); }
+  @media (prefers-reduced-motion: reduce) { .sbtn:hover { transform: none; } }
+  .sb-line { background: #06c755; box-shadow: 0 8px 22px -8px rgba(6, 199, 85, 0.6); }
+  .sb-fb { background: #1877f2; box-shadow: 0 8px 22px -8px rgba(24, 119, 242, 0.6); }
+  .sb-wa { background: #25d366; box-shadow: 0 8px 22px -8px rgba(37, 211, 102, 0.6); }
+  .sb-ig {
+    background: linear-gradient(45deg, #f09433, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888);
+    box-shadow: 0 8px 22px -8px rgba(204, 35, 102, 0.6);
+  }
+
+  .cta-cluster {
+    display: flex; flex-wrap: wrap; gap: 0.9rem; justify-content: center; align-items: center;
+  }
+  .btn-book {
+    background: linear-gradient(120deg, var(--gold-deep), var(--gold) 45%, var(--gold-bright));
+    color: var(--oxblood);
+    box-shadow: 0 10px 30px -10px rgba(212, 162, 58, 0.55);
+    position: relative;
+  }
+  .btn-book:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -10px rgba(236, 198, 99, 0.7); }
+  .btn-book .soon {
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: rgba(21, 4, 6, 0.22);
+    padding: 0.18rem 0.5rem;
+    border-radius: 100px;
+    margin-left: 0.2rem;
+    font-weight: 600;
+  }
+  .btn-book[aria-disabled="true"] { cursor: not-allowed; }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--ink);
+    border-top: 1px solid var(--line);
+    padding: clamp(3rem, 7vw, 5rem) 0 2.2rem;
+  }
+  .foot-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 3rem;
+  }
+  @media (max-width: 760px) { .foot-top { grid-template-columns: 1fr; gap: 2.2rem; } }
+  .foot-brand .brand { margin-bottom: 1.2rem; }
+  .foot-brand p {
+    font-size: 0.92rem; color: var(--muted); font-weight: 300; max-width: 34ch; line-height: 1.7;
+  }
+  .foot-col h5 {
+    font-family: var(--sans);
+    font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500; margin-bottom: 1.1rem;
+  }
+  .foot-col a, .foot-col p.fl {
+    display: block;
+    font-size: 0.92rem; color: var(--cream-soft); font-weight: 300;
+    padding: 0.32rem 0; transition: color 0.3s var(--ease);
+  }
+  .foot-col a:hover { color: var(--gold-bright); }
+  .foot-bottom {
+    border-top: 1px solid var(--line);
+    padding-top: 1.8rem;
+    display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center;
+  }
+  .foot-bottom .cp { font-size: 0.8rem; color: var(--muted); font-weight: 300; }
+  .credit {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-weight: 300;
+  }
+  .credit a { color: var(--gold); border-bottom: 1px solid var(--line); transition: 0.3s var(--ease); font-weight: 400; }
+  .credit a:hover { color: var(--gold-bright); border-color: var(--gold-bright); }
+
+  /* ============ REVEALS ============ */
+  .reveal {
+    opacity: 0;
+    transform: translateY(34px);
+    transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+    will-change: opacity, transform;
+  }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal.d1 { transition-delay: 0.08s; }
+  .reveal.d2 { transition-delay: 0.16s; }
+  .reveal.d3 { transition-delay: 0.24s; }
+  .reveal.d4 { transition-delay: 0.32s; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+
+  .draw {
+    stroke-dasharray: var(--len, 1200);
+    stroke-dashoffset: var(--len, 1200);
+    animation: draw 2.6s var(--ease) forwards;
+  }
+  .draw.s1 { animation-delay: 0.2s; }
+  .draw.s2 { animation-delay: 0.5s; }
+  .draw.s3 { animation-delay: 0.8s; }
+  .draw.s4 { animation-delay: 1.1s; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .fade-fill {
+    opacity: 0;
+    animation: fadeFill 1.4s var(--ease) forwards;
+    animation-delay: 2.2s;
+  }
+  @keyframes fadeFill { to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) {
+    .draw { stroke-dashoffset: 0; animation: none; }
+    .fade-fill { opacity: 1; animation: none; }
+  }
+
+  .drift { animation: drift 12s ease-in-out infinite; transform-origin: center; }
+  @keyframes drift {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-12px) rotate(0.6deg); }
+  }
+  @media (prefers-reduced-motion: reduce) { .drift { animation: none; } }
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#d4a23a;--bk-accent-ink:#ffffff;--bk-ink:#150406;--bk-panel:#f6ecd6;--bk-muted:rgba(21,4,6,0.6);--bk-line:rgba(21,4,6,0.14);--bk-serif:"Cormorant Garamond", Georgia, serif;--bk-sans:"Outfit", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Gold 9 Dental Clinic — home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none">
+          <rect x="1" y="1" width="46" height="46" rx="12" stroke="url(#bg)" stroke-width="1.4"/>
+          <text x="24" y="34" font-family="Cormorant Garamond, serif" font-size="30" font-weight="700" text-anchor="middle" fill="url(#bg)">9</text>
+          <defs>
+            <linearGradient id="bg" x1="0" y1="0" x2="48" y2="48">
+              <stop stop-color="#a9772a"/><stop offset="0.5" stop-color="#ecc663"/><stop offset="1" stop-color="#a9772a"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </span>
+      <span class="brand-name">
+        <span class="b1">Gold&nbsp;<b>9</b></span>
+        <span class="b2">Dental&nbsp;Clinic</span>
+      </span>
+    </a>
+
+    <nav class="links" id="navlinks" aria-label="Primary">
+      <a class="navlink" href="#welcome">Welcome</a>
+      <a class="navlink" href="#services">Treatments</a>
+      <a class="navlink" href="#visit">Visit Us</a>
+      <a class="navlink" href="#reviews">Reviews</a>
+      <a class="nav-cta" href="#contact">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+        Book a Visit
+      </a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-vignette" aria-hidden="true"></div>
+
+  <div class="hero-stage" aria-hidden="true">
+    <svg viewBox="0 0 600 600" fill="none">
+      <defs>
+        <linearGradient id="g9" x1="120" y1="80" x2="480" y2="520" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#a9772a"/><stop offset="0.45" stop-color="#ecc663"/><stop offset="0.6" stop-color="#fff3d4"/><stop offset="1" stop-color="#a9772a"/>
+        </linearGradient>
+        <linearGradient id="gline" x1="0" y1="0" x2="600" y2="600" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#a9772a"/><stop offset="0.5" stop-color="#ecc663"/><stop offset="1" stop-color="#a9772a"/>
+        </linearGradient>
+        <radialGradient id="halo" cx="50%" cy="46%" r="46%">
+          <stop offset="0%" stop-color="rgba(212,162,58,0.18)"/><stop offset="100%" stop-color="rgba(212,162,58,0)"/>
+        </radialGradient>
+      </defs>
+
+      <circle cx="300" cy="280" r="270" fill="url(#halo)"/>
+
+      <g class="drift">
+        <circle cx="300" cy="280" r="232" stroke="url(#gline)" stroke-width="1" opacity="0.35" class="draw s1" style="--len:1460"/>
+        <circle cx="300" cy="280" r="246" stroke="url(#gline)" stroke-width="0.6" opacity="0.22" stroke-dasharray="2 7"/>
+
+        <g stroke="url(#gline)" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.85">
+          <g class="draw s2" style="--len:240">
+            <path d="M300 48 c14 22 8 46 -2 58 c-6 -22 2 -40 2 -58 z M300 48 c-14 22 -8 46 2 58"/>
+          </g>
+          <g class="draw s2" style="--len:240" transform="rotate(45 300 280)">
+            <path d="M300 48 c14 22 8 46 -2 58 c-6 -22 2 -40 2 -58 z M300 48 c-14 22 -8 46 2 58"/>
+          </g>
+          <g class="draw s2" style="--len:240" transform="rotate(90 300 280)">
+            <path d="M300 48 c14 22 8 46 -2 58 c-6 -22 2 -40 2 -58 z M300 48 c-14 22 -8 46 2 58"/>
+          </g>
+          <g class="draw s2" style="--len:240" transform="rotate(135 300 280)">
+            <path d="M300 48 c14 22 8 46 -2 58 c-6 -22 2 -40 2 -58 z M300 48 c-14 22 -8 46 2 58"/>
+          </g>
+          <g class="draw s3" style="--len:240" transform="rotate(180 300 280)">
+            <path d="M300 48 c14 22 8 46 -2 58 c-6 -22 2 -40 2 -58 z M300 48 c-14 22 -8 46 2 58"/>
+          </g>
+          <g class="draw s3" style="--len:240" transform="rotate(225 300 280)">
+            <path d="M300 48 c14 22 8 46 -2 58 c-6 -22 2 -40 2 -58 z M300 48 c-14 22 -8 46 2 58"/>
+          </g>
+          <g class="draw s3" style="--len:240" transform="rotate(270 300 280)">
+            <path d="M300 48 c14 22 8 46 -2 58 c-6 -22 2 -40 2 -58 z M300 48 c-14 22 -8 46 2 58"/>
+          </g>
+          <g class="draw s3" style="--len:240" transform="rotate(315 300 280)">
+            <path d="M300 48 c14 22 8 46 -2 58 c-6 -22 2 -40 2 -58 z M300 48 c-14 22 -8 46 2 58"/>
+          </g>
+        </g>
+
+        <g stroke="url(#gline)" stroke-width="1.1" fill="none" stroke-linecap="round" opacity="0.6">
+          <g class="draw s4" style="--len:360">
+            <path d="M300 96 c40 30 52 70 30 96 c-14 -30 -6 -54 -30 -70 c2 26 -4 44 -22 50 c14 -28 6 -52 22 -76 z"/>
+          </g>
+          <g class="draw s4" style="--len:360" transform="rotate(90 300 280)">
+            <path d="M300 96 c40 30 52 70 30 96 c-14 -30 -6 -54 -30 -70 c2 26 -4 44 -22 50 c14 -28 6 -52 22 -76 z"/>
+          </g>
+          <g class="draw s4" style="--len:360" transform="rotate(180 300 280)">
+            <path d="M300 96 c40 30 52 70 30 96 c-14 -30 -6 -54 -30 -70 c2 26 -4 44 -22 50 c14 -28 6 -52 22 -76 z"/>
+          </g>
+          <g class="draw s4" style="--len:360" transform="rotate(270 300 280)">
+            <path d="M300 96 c40 30 52 70 30 96 c-14 -30 -6 -54 -30 -70 c2 26 -4 44 -22 50 c14 -28 6 -52 22 -76 z"/>
+          </g>
+        </g>
+
+        <text x="300" y="392" font-family="Cormorant Garamond, serif" font-size="320" font-weight="600" text-anchor="middle" fill="url(#g9)" class="fade-fill">9</text>
+        <text x="300" y="392" font-family="Cormorant Garamond, serif" font-size="320" font-weight="600" text-anchor="middle" fill="none" stroke="url(#g9)" stroke-width="1.2" class="draw s2" style="--len:1100" opacity="0.9">9</text>
+      </g>
+    </svg>
+  </div>
+
+  <div class="corner-fil corner-tl" aria-hidden="true">
+    <svg viewBox="0 0 120 120" fill="none" stroke="url(#cg)" stroke-width="1.2" stroke-linecap="round">
+      <defs><linearGradient id="cg" x1="0" y1="0" x2="120" y2="120"><stop stop-color="#ecc663"/><stop offset="1" stop-color="#a9772a"/></linearGradient></defs>
+      <path d="M10 10 L10 60 M10 10 L60 10"/>
+      <path d="M10 10 c40 0 50 10 50 50 c-22 -8 -34 -2 -50 0 M10 10 c0 40 10 50 50 50"/>
+      <path d="M28 28 c18 4 24 14 22 30 c-12 -6 -20 -2 -22 -8" opacity="0.7"/>
+    </svg>
+  </div>
+  <div class="corner-fil corner-br" aria-hidden="true">
+    <svg viewBox="0 0 120 120" fill="none" stroke="url(#cg2)" stroke-width="1.2" stroke-linecap="round">
+      <defs><linearGradient id="cg2" x1="0" y1="0" x2="120" y2="120"><stop stop-color="#ecc663"/><stop offset="1" stop-color="#a9772a"/></linearGradient></defs>
+      <path d="M10 10 L10 60 M10 10 L60 10"/>
+      <path d="M10 10 c40 0 50 10 50 50 c-22 -8 -34 -2 -50 0 M10 10 c0 40 10 50 50 50"/>
+      <path d="M28 28 c18 4 24 14 22 30 c-12 -6 -20 -2 -22 -8" opacity="0.7"/>
+    </svg>
+  </div>
+
+  <div class="wrap hero-content">
+    <div class="hero-inner">
+      <span class="eyebrow">Rama IX &middot; Bangkok</span>
+      <h1 id="hero-title">
+        Auspicious care,<br>
+        <span class="lux gold-text shimmer">crafted in gold.</span>
+      </h1>
+      <p class="hero-sub">
+        A serene dental clinic in the heart of Rama IX where
+        <strong>English-speaking patients are warmly looked after</strong> &mdash;
+        precise, gentle dentistry given the time and grace it deserves.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="tel:+66632451469">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+          Call +66 63 245 1469
+        </a>
+        <a class="btn btn-ghost" href="#services">
+          Explore Treatments
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+<!-- ============ WELCOME ============ -->
+<section class="sec welcome" id="welcome" aria-labelledby="welcome-title">
+  <div class="wrap">
+    <div class="welcome-grid">
+      <div class="welcome-copy">
+        <span class="eyebrow reveal">A warm welcome</span>
+        <h2 id="welcome-title" class="reveal d1" style="font-size:clamp(2.1rem,5.5vw,3.7rem);margin:1.1rem 0 0;letter-spacing:-0.01em;">
+          You'll be <em class="gold-text" style="font-style:italic;">understood</em> here.
+        </h2>
+        <p class="lead reveal d1" style="margin-top:1.4rem;">
+          Visiting Bangkok or making it home, your comfort begins with a simple thing &mdash;
+          <span class="gold-text">being spoken to in your own language.</span>
+        </p>
+        <p class="reveal d2">
+          At Gold 9, international patients are met with patience and clarity. Every step &mdash;
+          from your first questions to your treatment plan and aftercare &mdash; is explained calmly in
+          English, so nothing about your visit feels uncertain.
+        </p>
+        <p class="reveal d2">
+          The name carries an old Thai blessing: nine is the number of progress and good fortune.
+          We honour it with unhurried, considered care and a clinic that feels more like a quiet
+          sanctuary than a waiting room.
+        </p>
+        <div class="welcome-badges reveal d3">
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/></svg>English-speaking team</span>
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="11" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>Central Rama IX</span>
+          <span class="pill"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>Open every day &middot; until 8pm</span>
+        </div>
+      </div>
+
+      <div class="welcome-art reveal d2" aria-hidden="true">
+        <svg viewBox="0 0 300 300" fill="none">
+          <defs>
+            <linearGradient id="wg" x1="40" y1="40" x2="260" y2="260" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#a9772a"/><stop offset="0.5" stop-color="#ecc663"/><stop offset="1" stop-color="#a9772a"/>
+            </linearGradient>
+          </defs>
+          <g stroke="url(#wg)" fill="none" stroke-width="1.2" stroke-linecap="round">
+            <g transform="translate(150 150)">
+              <g><path d="M0 -86 c20 24 22 52 0 74 c-22 -22 -20 -50 0 -74z"/></g>
+              <g transform="rotate(60)"><path d="M0 -86 c20 24 22 52 0 74 c-22 -22 -20 -50 0 -74z"/></g>
+              <g transform="rotate(120)"><path d="M0 -86 c20 24 22 52 0 74 c-22 -22 -20 -50 0 -74z"/></g>
+              <g transform="rotate(180)"><path d="M0 -86 c20 24 22 52 0 74 c-22 -22 -20 -50 0 -74z"/></g>
+              <g transform="rotate(240)"><path d="M0 -86 c20 24 22 52 0 74 c-22 -22 -20 -50 0 -74z"/></g>
+              <g transform="rotate(300)"><path d="M0 -86 c20 24 22 52 0 74 c-22 -22 -20 -50 0 -74z"/></g>
+            </g>
+            <circle cx="150" cy="150" r="44" opacity="0.5"/>
+          </g>
+          <text x="150" y="178" font-family="Cormorant Garamond, serif" font-size="74" font-weight="600" text-anchor="middle" fill="url(#wg)">9</text>
+        </svg>
+        <span class="cap">Nine &middot; the lucky number</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap" aria-hidden="true">
+  <div class="div-orn">
+    <span class="ln"></span>
+    <svg viewBox="0 0 40 40" fill="none"><text x="20" y="30" font-family="Cormorant Garamond, serif" font-size="30" font-weight="600" text-anchor="middle" fill="url(#cg)">9</text></svg>
+    <span class="ln r"></span>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section class="sec services" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Our treatments</span>
+      <h2 id="services-title">Dentistry, done <em>beautifully</em>.</h2>
+      <p>From a single gentle visit to a complete transformation, each treatment is planned with care and explained in plain English before anything begins.</p>
+    </div>
+
+    <div class="svc-grid">
+      <article class="svc reveal d1">
+        <span class="svc-num" aria-hidden="true">9</span>
+        <div class="svc-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.5 2 6 4.5 6 8c0 2 .5 3.5 1 5.5.6 2.4 1 6.5 2.5 6.5 1 0 .8-2.5 2.5-2.5s1.5 2.5 2.5 2.5c1.5 0 1.9-4.1 2.5-6.5.5-2 1-3.5 1-5.5 0-3.5-2.5-6-6-6z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 7c1-1 2-1.2 3-1.2S14 6 15 7" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Dental Implants</h3>
+        <p>Permanent, natural-looking replacements for missing teeth &mdash; restoring a confident bite and a complete smile, placed with precision and care.</p>
+        <span class="svc-tag" aria-hidden="true">Restore &middot; Renew</span>
+      </article>
+
+      <article class="svc reveal d2">
+        <span class="svc-num" aria-hidden="true">9</span>
+        <div class="svc-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 14l8-9 8 9-3.5 4h-9z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 5v13M7 14h10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="18.5" cy="6.5" r="1.4" fill="currentColor"/></svg>
+        </div>
+        <h3>Composite Bonding</h3>
+        <p>Artful, minimally-invasive reshaping that refines chips, gaps and edges &mdash; sculpting a brighter, more even smile in a single sitting.</p>
+        <span class="svc-tag" aria-hidden="true">Refine &middot; Reshape</span>
+      </article>
+
+      <article class="svc reveal d1">
+        <span class="svc-num" aria-hidden="true">9</span>
+        <div class="svc-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="9" width="18" height="6" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M7 9v6M11 9v6M15 9v6" stroke="currentColor" stroke-width="1.3"/><circle cx="9" cy="12" r="1" fill="currentColor"/><circle cx="13" cy="12" r="1" fill="currentColor"/></svg>
+        </div>
+        <h3>Orthodontics</h3>
+        <p>Thoughtfully guided alignment for teeth that sit straighter and healthier &mdash; modern, comfortable options tailored to your smile and your schedule.</p>
+        <span class="svc-tag" aria-hidden="true">Align &middot; Balance</span>
+      </article>
+
+      <article class="svc reveal d2">
+        <span class="svc-num" aria-hidden="true">9</span>
+        <div class="svc-ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.5 11.5l1.8 1.8 3.2-3.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>General Dentistry</h3>
+        <p>Calm, comprehensive everyday care &mdash; check-ups, cleanings, fillings and gentle preventive treatment to keep your smile healthy for years to come.</p>
+        <span class="svc-tag" aria-hidden="true">Care &middot; Maintain</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="sec visit" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Visiting the clinic</span>
+      <h2 id="visit-title">Find us in <em>Rama IX</em>.</h2>
+      <p>Set in the lively Rama IX / Huai Khwang district, easy to reach and open every day of the week.</p>
+    </div>
+
+    <div class="visit-grid">
+      <div class="visit-info reveal d1">
+        <div class="vrow">
+          <div class="vrow-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="11" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+          </div>
+          <div>
+            <h4>Area</h4>
+            <p>Rama IX / Huai Khwang<br><span class="sm">Bangkok, Thailand</span></p>
+          </div>
+        </div>
+
+        <div class="vrow">
+          <div class="vrow-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+          </div>
+          <div>
+            <h4>Call us</h4>
+            <p><a class="phone" href="tel:+66632451469">+66 63 245 1469</a><br><span class="sm">We're happy to answer in English.</span></p>
+          </div>
+        </div>
+
+        <div class="vrow">
+          <div class="vrow-ic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </div>
+          <div style="flex:1;">
+            <h4>Opening hours</h4>
+            <div class="hours-table">
+              <div><span>Monday &ndash; Friday</span><span>9:00 &ndash; 20:00</span></div>
+              <div><span>Saturday &ndash; Sunday</span><span>9:00 &ndash; 20:00</span></div>
+            </div>
+            <span class="hours-open"><span class="live" aria-hidden="true"></span>Open every day &middot; closes 8:00 pm</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-panel reveal d2">
+        <svg class="grid" viewBox="0 0 400 400" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <pattern id="mg" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M40 0H0V40" stroke="rgba(212,162,58,0.16)" stroke-width="0.6" fill="none"/>
+            </pattern>
+            <linearGradient id="road" x1="0" y1="0" x2="400" y2="400">
+              <stop stop-color="rgba(212,162,58,0.4)"/><stop offset="1" stop-color="rgba(212,162,58,0.15)"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="400" fill="url(#mg)"/>
+          <path d="M0 250 Q140 230 220 180 T400 120" stroke="url(#road)" stroke-width="2.4" fill="none"/>
+          <path d="M120 0 Q150 160 220 220 T320 400" stroke="url(#road)" stroke-width="2" fill="none"/>
+          <path d="M0 80 L400 320" stroke="rgba(212,162,58,0.1)" stroke-width="1" fill="none"/>
+        </svg>
+        <span class="map-ripple" aria-hidden="true"></span>
+        <div class="map-pin">
+          <div class="pinmark" aria-hidden="true">
+            <svg viewBox="0 0 64 64" fill="none"><path d="M32 60s-18-12-18-28a18 18 0 0 1 36 0c0 16-18 28-18 28z" fill="rgba(212,162,58,0.14)" stroke="currentColor" stroke-width="2"/><text x="32" y="40" font-family="Cormorant Garamond, serif" font-size="24" font-weight="700" text-anchor="middle" fill="currentColor">9</text></svg>
+          </div>
+          <div class="pl">Gold 9 Dental</div>
+          <div class="ps">Rama IX &middot; Huai Khwang</div>
+        </div>
+        <div class="map-foot">
+          <span>Bangkok, Thailand</span>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Gold+9+Dental+Clinic+Rama+IX+Bangkok" target="_blank" rel="noopener noreferrer">
+            Open in Maps
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST / REVIEWS ============ -->
+
+
+<!-- ============ CONTACT ============ -->
+<section class="sec contact" id="contact" aria-labelledby="contact-title">
+  <div class="contact-glow" aria-hidden="true"></div>
+  <div class="wrap contact-inner">
+    <span class="eyebrow reveal" style="justify-content:center;">Get in touch</span>
+    <h2 id="contact-title" class="reveal d1">Begin your <em>visit</em>.</h2>
+    <p class="intro reveal d1">Reach out however suits you best. We'll reply in English and help you find a time that works &mdash; whether it's a check-up or a complete smile makeover.</p>
+
+    <div class="contact-grid reveal d2">
+      <a class="cc" href="tel:+66632451469">
+        <div class="cc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1z" fill="currentColor"/></svg></div>
+        <div class="cc-tx"><span class="k">Phone</span><span class="v">+66 63 245 1469</span></div>
+      </a>
+      <a class="cc" href="https://wa.me/66632451469" target="_blank" rel="noopener noreferrer">
+        <div class="cc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 9.5c.2 2 1.6 3.4 3.5 3.6.6.05 1-.5 1.2-1l-1.6-.8-.6.6c-.7-.3-1.2-.8-1.5-1.5l.6-.6-.8-1.6c-.5.2-1 .6-.8 1.3z" fill="currentColor"/></svg></div>
+        <div class="cc-tx"><span class="k">WhatsApp</span><span class="v">Message us</span></div>
+      </a>
+      <a class="cc" href="#visit" onclick="document.getElementById('visit').scrollIntoView();return false;">
+        <div class="cc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="11" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <div class="cc-tx"><span class="k">Location</span><span class="v">Rama IX, Bangkok</span></div>
+      </a>
+      <div class="cc" style="cursor:default;">
+        <div class="cc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        <div class="cc-tx"><span class="k">Hours</span><span class="v">Daily &middot; until 8pm</span></div>
+      </div>
+    </div>
+
+    <div class="social-row reveal d2">
+      <!-- LINE: official URL unknown — placeholder. Replace href="#" with the clinic's LINE add-friend link, e.g. https://line.me/R/ti/p/@gold9dental -->
+      <a class="sbtn sb-line" href="#" aria-label="Add Gold 9 Dental on LINE">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.07.75.2.86.47.1.24.06.6.03.85l-.14.84c-.04.25-.2.97.85.53s5.6-3.3 7.64-5.65C20.9 14.4 22 12.8 22 11c0-4.4-4.5-8-10-8zm-3.4 10.2H6.5a.4.4 0 0 1-.4-.4V9.3a.4.4 0 1 1 .8 0v3.1h1.7a.4.4 0 1 1 0 .8zm1.6-.4a.4.4 0 0 1-.8 0V9.3a.4.4 0 1 1 .8 0zm4.2 0a.4.4 0 0 1-.27.38h-.13a.4.4 0 0 1-.32-.16l-1.55-2.1v1.88a.4.4 0 1 1-.8 0V9.3a.4.4 0 0 1 .27-.38h.13a.4.4 0 0 1 .32.16l1.55 2.11V9.3a.4.4 0 1 1 .8 0zm3.1-2.1a.4.4 0 1 1 0 .8h-1.1v.7h1.1a.4.4 0 1 1 0 .8h-1.5a.4.4 0 0 1-.4-.4V9.3a.4.4 0 0 1 .4-.4h1.5a.4.4 0 1 1 0 .8h-1.1v.7z"/></svg>
+        Add on LINE
+      </a>
+      <!-- Facebook: page URL unknown — placeholder. Replace href="#" with the clinic's Facebook page, e.g. https://facebook.com/gold9dental -->
+      <a class="sbtn sb-fb" href="#" aria-label="Find Gold 9 Dental on Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.45 2.9h-2.35v7A10 10 0 0 0 22 12z"/></svg>
+        Facebook
+      </a>
+      <a class="sbtn sb-wa" href="https://wa.me/66632451469" target="_blank" rel="noopener noreferrer" aria-label="Message Gold 9 Dental on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2zm0 18.3a8.3 8.3 0 0 1-4.2-1.15l-.3-.18-3 .8.8-2.9-.2-.3A8.3 8.3 0 1 1 12 20.3zm4.6-6.2c-.25-.13-1.5-.74-1.73-.82-.23-.08-.4-.13-.57.13-.17.25-.65.82-.8.98-.15.17-.3.19-.55.06a6.8 6.8 0 0 1-2-1.24 7.5 7.5 0 0 1-1.38-1.72c-.14-.25 0-.38.11-.5.11-.12.25-.3.37-.46.12-.15.16-.26.25-.43.08-.17.04-.32-.02-.45-.06-.13-.57-1.37-.78-1.87-.2-.49-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.13.17 1.78 2.72 4.3 3.81.6.26 1.07.42 1.44.54.6.19 1.15.16 1.58.1.48-.07 1.5-.61 1.7-1.2.22-.59.22-1.1.16-1.2-.07-.11-.24-.17-.49-.3z"/></svg>
+        WhatsApp
+      </a>
+      <a class="sbtn sb-ig" href="#" data-placeholder="Instagram handle to confirm" aria-label="Follow Gold 9 Dental on Instagram">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor"/></svg>
+        Instagram
+      </a>
+    </div>
+
+    <div class="cta-cluster reveal d3">
+      <!-- Bookings are already taken by phone / LINE; online booking is being prepared. Intentionally non-functional. -->
+      <button class="btn btn-book" type="button" aria-disabled="true" title="Online booking is coming soon — please call or message us in the meantime">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2.5" stroke="currentColor" stroke-width="1.7"/><path d="M3 9h18M8 3v3M16 3v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M9 14l2 2 4-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Book Online
+        <span class="soon">Coming soon</span>
+      </button>
+      <a class="btn btn-ghost" href="tel:+66632451469">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.6a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
+        Call to book today
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer aria-labelledby="foot-title">
+  <h2 id="foot-title" class="sr-only">Clinic information</h2>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Gold 9 Dental Clinic — home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect x="1" y="1" width="46" height="46" rx="12" stroke="url(#bgf)" stroke-width="1.4"/>
+              <text x="24" y="34" font-family="Cormorant Garamond, serif" font-size="30" font-weight="700" text-anchor="middle" fill="url(#bgf)">9</text>
+              <defs><linearGradient id="bgf" x1="0" y1="0" x2="48" y2="48"><stop stop-color="#a9772a"/><stop offset="0.5" stop-color="#ecc663"/><stop offset="1" stop-color="#a9772a"/></linearGradient></defs>
+            </svg>
+          </span>
+          <span class="brand-name">
+            <span class="b1">Gold&nbsp;<b>9</b></span>
+            <span class="b2">Dental&nbsp;Clinic</span>
+          </span>
+        </a>
+        <p>Auspicious, English-friendly dentistry in the heart of Rama IX, Bangkok. Open every day, until 8pm.</p>
+      </div>
+
+      <div class="foot-col">
+        <h5>Explore</h5>
+        <a href="#welcome">Welcome</a>
+        <a href="#services">Treatments</a>
+        <a href="#visit">Visit Us</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="foot-col">
+        <h5>Get in touch</h5>
+        <a href="tel:+66632451469">+66 63 245 1469</a>
+        <a href="https://wa.me/66632451469" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <!-- LINE placeholder — replace with clinic LINE add-friend URL -->
+        <a href="#">LINE</a>
+        <!-- Facebook placeholder — replace with clinic Facebook page URL -->
+        <a href="#">Facebook</a>
+        <a href="#" data-placeholder="Instagram handle to confirm">Instagram</a>
+        <p class="fl">Rama IX / Huai Khwang, Bangkok</p>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span class="cp">&copy; <span id="yr">2026</span> Gold 9 Dental Clinic &middot; Rama IX, Bangkok &middot; All rights reserved.</span>
+      <span class="credit">Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener noreferrer">Stellar Haus Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    "use strict";
+    var prefersReduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    var yr = document.getElementById("yr");
+    if (yr) yr.textContent = new Date().getFullYear();
+
+    var burger = document.getElementById("burger");
+    var links = document.getElementById("navlinks");
+    function closeMenu() {
+      if (!burger || !links) return;
+      burger.setAttribute("aria-expanded", "false");
+      burger.setAttribute("aria-label", "Open menu");
+      links.classList.remove("open");
+    }
+    if (burger && links) {
+      burger.addEventListener("click", function () {
+        var open = burger.getAttribute("aria-expanded") === "true";
+        burger.setAttribute("aria-expanded", String(!open));
+        burger.setAttribute("aria-label", open ? "Open menu" : "Close menu");
+        links.classList.toggle("open", !open);
+      });
+      links.querySelectorAll("a").forEach(function (a) {
+        a.addEventListener("click", closeMenu);
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeMenu();
+      });
+    }
+
+    var reveals = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+    if (prefersReduced || !("IntersectionObserver" in window)) {
+      reveals.forEach(function (el) { el.classList.add("in"); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      reveals.forEach(function (el) { io.observe(el); });
+    }
+  })();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text or WhatsApp.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+66632451469", CHAN="https://wa.me/66632451469", CHANLABEL="Message us on WhatsApp";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>
+                                                      

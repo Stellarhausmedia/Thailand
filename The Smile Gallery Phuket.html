@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Smile Gallery Phuket — English-Speaking Dental Care in Phuket Old Town</title>
+<meta name="description" content="A warm, English-speaking dental clinic in Phuket Town. General dentistry, Invisalign, whitening, implants and more — rated 4.9 stars across 1,805 reviews. Visitors and expats welcome." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23F4DDE0'/%3E%3Cpath d='M16 4 L26 13 L26 14 L6 14 L6 13 Z' fill='%23C97B84'/%3E%3Cpath d='M9 14 h4 v12 h-4 z M19 14 h4 v12 h-4 z' fill='%237FA8B8'/%3E%3Cpath d='M9 14 a2 2 0 0 1 4 0 M19 14 a2 2 0 0 1 4 0' fill='none' stroke='%238FB5A3' stroke-width='1.4'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --rose:        #D98A93;
+    --rose-deep:   #B7656E;
+    --rose-soft:   #F4DDE0;
+    --mint:        #9FC4B0;
+    --mint-deep:   #5E8B74;
+    --mint-soft:   #DFEDE4;
+    --blue:        #7FA8B8;
+    --blue-deep:   #4A7384;
+    --blue-soft:   #DCE9EE;
+    --cream:       #FBF5EC;
+    --cream-2:     #F5ECDC;
+    --ink:         #3A2F2C;
+    --ink-soft:    #6B5C56;
+    --gold:        #C9A86A;
+
+    --maxw: 1180px;
+    --ease: cubic-bezier(.22,.61,.36,1);
+    --serif: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --sans:  'Jost', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+
+  h1,h2,h3{ font-family:var(--serif); font-weight:500; line-height:1.08; margin:0; }
+
+  a{ color:inherit; text-decoration:none; }
+
+  img,svg{ display:block; max-width:100%; }
+
+  .wrap{ width:100%; max-width:var(--maxw); margin-inline:auto; padding-inline:clamp(1.1rem,4vw,2.4rem); }
+
+  .eyebrow{
+    font-family:var(--sans);
+    font-weight:600;
+    font-size:.74rem;
+    letter-spacing:.26em;
+    text-transform:uppercase;
+    color:var(--rose-deep);
+    display:inline-flex;
+    align-items:center;
+    gap:.7rem;
+  }
+  .eyebrow::before{
+    content:"";
+    width:2.2rem; height:1px;
+    background:linear-gradient(90deg,transparent,var(--rose));
+  }
+
+  :focus-visible{
+    outline:3px solid var(--blue-deep);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  .skip{
+    position:absolute; left:-9999px; top:0;
+    background:var(--ink); color:var(--cream);
+    padding:.7rem 1.2rem; z-index:200; border-radius:0 0 8px 0;
+  }
+  .skip:focus{ left:0; }
+
+  .sr-only{
+    position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+    overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+  }
+
+  /* ===================== NAV ===================== */
+  header.nav{
+    position:sticky; top:0; z-index:100;
+    background:rgba(251,245,236,.78);
+    backdrop-filter:saturate(140%) blur(14px);
+    -webkit-backdrop-filter:saturate(140%) blur(14px);
+    border-bottom:1px solid rgba(201,123,132,.18);
+    transition:background .4s var(--ease), box-shadow .4s var(--ease);
+  }
+  header.nav.scrolled{
+    background:rgba(251,245,236,.94);
+    box-shadow:0 6px 26px -16px rgba(58,47,44,.4);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    height:74px; gap:1rem;
+  }
+  .brand{ display:flex; align-items:center; gap:.7rem; }
+  .brand .mark{ width:38px; height:38px; flex:none; }
+  .brand .mark rect.bg{ fill:var(--rose-soft); }
+  .brand-txt{ display:flex; flex-direction:column; line-height:1; }
+  .brand-txt .t1{ font-family:var(--serif); font-size:1.16rem; font-weight:600; letter-spacing:.01em; }
+  .brand-txt .t2{ font-size:.6rem; letter-spacing:.32em; text-transform:uppercase; color:var(--ink-soft); margin-top:.28rem; }
+
+  nav.links{ display:none; align-items:center; gap:.3rem; }
+  nav.links a{
+    position:relative; padding:.5rem .9rem; font-size:.84rem;
+    letter-spacing:.04em; color:var(--ink-soft); border-radius:6px;
+    transition:color .25s var(--ease);
+  }
+  nav.links a::after{
+    content:""; position:absolute; left:.9rem; right:.9rem; bottom:.32rem;
+    height:1.5px; background:var(--rose); transform:scaleX(0); transform-origin:left;
+    transition:transform .3s var(--ease);
+  }
+  nav.links a:hover{ color:var(--ink); }
+  nav.links a:hover::after{ transform:scaleX(1); }
+
+  .nav-cta{
+    display:none; align-items:center; gap:.5rem;
+    background:var(--ink); color:var(--cream);
+    padding:.62rem 1.15rem; border-radius:100px; font-size:.84rem; font-weight:500;
+    letter-spacing:.03em;
+    transition:transform .25s var(--ease), background .25s var(--ease);
+  }
+  .nav-cta:hover{ background:var(--rose-deep); transform:translateY(-2px); }
+  .nav-cta svg{ width:15px; height:15px; }
+
+  .menu-btn{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:46px; height:46px; border:1px solid rgba(58,47,44,.2);
+    background:transparent; border-radius:10px; cursor:pointer; color:var(--ink);
+  }
+  .menu-btn svg{ width:22px; height:22px; }
+
+  .mobile-menu{
+    display:none; flex-direction:column; gap:.2rem;
+    padding:.6rem 0 1.2rem;
+    border-top:1px solid rgba(201,123,132,.16);
+  }
+  .mobile-menu.open{ display:flex; }
+  .mobile-menu a{
+    padding:.85rem .2rem; font-size:1.05rem; font-family:var(--serif);
+    border-bottom:1px solid rgba(58,47,44,.06); color:var(--ink);
+  }
+  .mobile-menu .m-cta{
+    margin-top:1rem; background:var(--ink); color:var(--cream);
+    text-align:center; border-radius:100px; padding:.85rem; border:none;
+  }
+
+  @media(min-width:920px){
+    nav.links{ display:flex; }
+    .nav-cta{ display:inline-flex; }
+    .menu-btn{ display:none; }
+  }
+
+  /* ===================== HERO ===================== */
+  .hero{
+    position:relative; overflow:hidden;
+    padding-top:clamp(2.6rem,6vw,5rem);
+    padding-bottom:clamp(0rem,2vw,1rem);
+    background:
+      radial-gradient(1100px 620px at 78% -8%, var(--rose-soft) 0%, transparent 58%),
+      radial-gradient(900px 560px at 6% 8%, var(--blue-soft) 0%, transparent 52%),
+      linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
+  }
+
+  .hero-grid{
+    display:grid; gap:clamp(2rem,5vw,3.4rem);
+    grid-template-columns:1fr;
+    align-items:center;
+  }
+  @media(min-width:980px){
+    .hero-grid{ grid-template-columns:1.04fr .96fr; }
+  }
+
+  .hero-copy{ max-width:36rem; }
+  .hero h1{
+    font-size:clamp(2.7rem,6.4vw,4.7rem);
+    letter-spacing:-.015em; margin:1.3rem 0 0;
+    color:var(--ink);
+  }
+  .hero h1 .em{ font-style:italic; color:var(--rose-deep); }
+  .hero h1 .accent{ position:relative; white-space:nowrap; }
+  .hero h1 .accent svg{
+    position:absolute; left:0; right:0; bottom:-.16em; width:100%; height:.4em;
+    overflow:visible;
+  }
+  .hero h1 .accent path{
+    fill:none; stroke:var(--mint); stroke-width:7; stroke-linecap:round;
+    stroke-dasharray:560; stroke-dashoffset:560;
+    animation:draw 1.5s var(--ease) 1.1s forwards;
+  }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+
+  .hero p.lede{
+    font-size:clamp(1.04rem,1.5vw,1.2rem); color:var(--ink-soft);
+    margin:1.5rem 0 0; max-width:32rem;
+  }
+
+  .hero-cta{ display:flex; flex-wrap:wrap; gap:.9rem; margin-top:2.1rem; }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:.6rem;
+    padding:.92rem 1.55rem; border-radius:100px; font-size:.96rem; font-weight:500;
+    letter-spacing:.02em; cursor:pointer; border:1.5px solid transparent;
+    transition:transform .25s var(--ease), background .25s var(--ease), box-shadow .25s var(--ease), color .25s var(--ease);
+  }
+  .btn svg{ width:18px; height:18px; flex:none; }
+  .btn-primary{
+    background:var(--ink); color:var(--cream);
+    box-shadow:0 14px 30px -16px rgba(58,47,44,.7);
+  }
+  .btn-primary:hover{ background:var(--rose-deep); transform:translateY(-3px); box-shadow:0 20px 36px -16px rgba(183,101,110,.7); }
+  .btn-fb{ background:#1877F2; color:#fff; box-shadow:0 14px 30px -18px rgba(24,119,242,.9); }
+  .btn-fb:hover{ background:#0f63d6; transform:translateY(-3px); }
+  .btn-ghost{
+    background:rgba(255,255,255,.55); color:var(--ink);
+    border-color:rgba(58,47,44,.22);
+  }
+  .btn-ghost:hover{ border-color:var(--rose-deep); color:var(--rose-deep); transform:translateY(-3px); background:#fff; }
+
+  .hero-meta{
+    display:flex; flex-wrap:wrap; align-items:center; gap:1.4rem;
+    margin-top:2.3rem; padding-top:1.7rem;
+    border-top:1px solid rgba(58,47,44,.12);
+  }
+  .hero-meta .stars{ display:flex; align-items:center; gap:.55rem; }
+  .hero-meta .stars svg{ width:18px; height:18px; }
+  .hero-meta .rate{ font-family:var(--serif); font-weight:600; font-size:1.2rem; }
+  .hero-meta .rate small{ font-family:var(--sans); font-weight:400; font-size:.82rem; color:var(--ink-soft); display:block; margin-top:.1rem; letter-spacing:.02em; }
+  .hero-meta .divider{ width:1px; height:34px; background:rgba(58,47,44,.14); }
+  .hero-meta .pill{
+    display:inline-flex; align-items:center; gap:.5rem; font-size:.82rem;
+    color:var(--mint-deep); font-weight:500; letter-spacing:.02em;
+  }
+  .hero-meta .pill svg{ width:16px; height:16px; }
+
+  /* ---- HERO SHOPHOUSE FACADE ---- */
+  .facade-stage{
+    position:relative; width:100%;
+    filter:drop-shadow(0 30px 50px rgba(74,115,132,.18));
+  }
+  .facade-stage svg{ width:100%; height:auto; }
+
+  .facade .piece{
+    opacity:0; transform:translateY(26px);
+    animation:rise .9s var(--ease) forwards;
+  }
+  @keyframes rise{ to{ opacity:1; transform:translateY(0); } }
+
+  .facade .arch-line{
+    fill:none; stroke-linecap:round;
+    stroke-dasharray:var(--len,420); stroke-dashoffset:var(--len,420);
+    animation:archdraw 1.4s var(--ease) forwards;
+  }
+  @keyframes archdraw{ to{ stroke-dashoffset:0; } }
+
+  .facade .sway{ transform-box:fill-box; transform-origin:top center; }
+  @keyframes sway{ 0%,100%{ transform:rotate(0deg);} 50%{ transform:rotate(1.4deg);} }
+
+  .facade .twinkle{ animation:twinkle 3.4s ease-in-out infinite; }
+  @keyframes twinkle{ 0%,100%{ opacity:.35;} 50%{ opacity:1;} }
+
+  .mote{
+    position:absolute; border-radius:50%; pointer-events:none;
+    opacity:.5; animation:float 9s ease-in-out infinite;
+  }
+  @keyframes float{ 0%,100%{ transform:translateY(0) translateX(0);} 50%{ transform:translateY(-22px) translateX(10px);} }
+
+  .arcade-strip{ width:100%; overflow:hidden; line-height:0; background:var(--cream-2); }
+  .arcade-strip svg{ width:100%; height:auto; }
+
+  /* ===================== SECTION SHELL ===================== */
+  section{ position:relative; }
+  .pad{ padding-block:clamp(4rem,9vw,7rem); }
+
+  .sec-head{ max-width:40rem; margin-bottom:clamp(2.2rem,5vw,3.4rem); }
+  .sec-head.center{ margin-inline:auto; text-align:center; }
+  .sec-head h2{
+    font-size:clamp(2rem,4.4vw,3.1rem); letter-spacing:-.01em; margin-top:1rem;
+    color:var(--ink);
+  }
+  .sec-head h2 .em{ font-style:italic; color:var(--rose-deep); }
+  .sec-head p{ color:var(--ink-soft); font-size:1.05rem; margin:1.1rem 0 0; }
+  .sec-head.center p{ margin-inline:auto; }
+
+  /* ===================== WELCOME (HOOK) ===================== */
+  .welcome{ background:linear-gradient(180deg, var(--cream-2) 0%, var(--cream) 100%); }
+  .welcome-grid{
+    display:grid; gap:clamp(2rem,5vw,4rem); align-items:center;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:920px){ .welcome-grid{ grid-template-columns:.92fr 1.08fr; } }
+
+  .welcome-emblem{ position:relative; display:flex; justify-content:center; }
+  .welcome-emblem svg{ width:min(360px,86%); height:auto; }
+  .welcome-emblem .ring{ transform-box:fill-box; transform-origin:center; }
+  @keyframes spin{ to{ transform:rotate(360deg);} }
+
+  .welcome-copy h2{ font-size:clamp(2rem,4.2vw,2.9rem); margin-top:1rem; color:var(--ink); }
+  .welcome-copy h2 .em{ font-style:italic; color:var(--mint-deep); }
+  .welcome-copy p{ color:var(--ink-soft); font-size:1.06rem; margin:1.2rem 0 0; max-width:34rem; }
+
+  .welcome-points{ list-style:none; margin:2rem 0 0; padding:0; display:grid; gap:1rem; }
+  .welcome-points li{
+    display:flex; gap:1rem; align-items:flex-start;
+    padding:1rem 1.2rem; border-radius:14px;
+    background:rgba(255,255,255,.6);
+    border:1px solid rgba(201,123,132,.16);
+    transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease);
+  }
+  .welcome-points li:hover{ transform:translateX(6px); box-shadow:0 16px 30px -22px rgba(58,47,44,.5); border-color:var(--rose); }
+  .welcome-points .ic{
+    flex:none; width:42px; height:42px; border-radius:11px;
+    display:flex; align-items:center; justify-content:center;
+    background:var(--blue-soft); color:var(--blue-deep);
+  }
+  .welcome-points li:nth-child(2) .ic{ background:var(--mint-soft); color:var(--mint-deep); }
+  .welcome-points li:nth-child(3) .ic{ background:var(--rose-soft); color:var(--rose-deep); }
+  .welcome-points .ic svg{ width:21px; height:21px; }
+  .welcome-points strong{ font-family:var(--serif); font-weight:600; font-size:1.08rem; display:block; }
+  .welcome-points span{ color:var(--ink-soft); font-size:.92rem; }
+
+  /* ===================== SERVICES (GALLERY ARCADE) ===================== */
+  .services{ background:var(--cream); }
+  .gallery{
+    display:grid; gap:clamp(1.2rem,2.6vw,1.8rem);
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  }
+  .frame{
+    position:relative; background:#fff;
+    border:1px solid rgba(201,123,132,.18);
+    border-radius:20px 20px 16px 16px;
+    padding:0 1.7rem 1.9rem;
+    overflow:hidden;
+    transition:transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease);
+  }
+  .frame::before{
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background:radial-gradient(140% 90% at 50% 0%, rgba(159,196,176,.12) 0%, transparent 46%);
+  }
+  .frame:hover{
+    transform:translateY(-8px);
+    box-shadow:0 30px 50px -30px rgba(74,115,132,.55);
+    border-color:var(--mint);
+  }
+  .frame .arch-top{ width:100%; height:96px; }
+  .frame .arch-top .stroke{ fill:none; stroke:var(--rose); stroke-width:1.6; }
+  .frame .num{
+    font-family:var(--serif); font-style:italic; font-size:.92rem; color:var(--gold);
+    letter-spacing:.04em;
+  }
+  .frame h3{ font-size:1.42rem; margin:.4rem 0 0; color:var(--ink); }
+  .frame p{ color:var(--ink-soft); font-size:.96rem; margin:.7rem 0 0; }
+  .frame .tag{
+    display:inline-block; margin-top:1.1rem; font-size:.74rem; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--mint-deep); font-weight:600;
+    padding:.35rem .8rem; border-radius:100px; background:var(--mint-soft);
+  }
+  .frame:nth-child(3n+2) .arch-top .stroke{ stroke:var(--mint); }
+  .frame:nth-child(3n+2) .tag{ color:var(--blue-deep); background:var(--blue-soft); }
+  .frame:nth-child(3n+3) .arch-top .stroke{ stroke:var(--blue); }
+  .frame:nth-child(3n+3) .tag{ color:var(--rose-deep); background:var(--rose-soft); }
+
+  .services-note{
+    margin-top:2.6rem; text-align:center; color:var(--ink-soft); font-size:1rem;
+  }
+  .services-note a{ color:var(--rose-deep); font-weight:500; border-bottom:1.5px solid var(--rose); padding-bottom:1px; }
+
+  /* ===================== VISIT / LOCATION ===================== */
+  .visit{
+    background:
+      radial-gradient(900px 500px at 100% 0%, var(--blue-soft) 0%, transparent 55%),
+      linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
+  }
+  .visit-grid{
+    display:grid; gap:clamp(2rem,4vw,3.2rem); align-items:start;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:900px){ .visit-grid{ grid-template-columns:1.05fr .95fr; } }
+
+  .hours-card{
+    background:#fff; border:1px solid rgba(201,123,132,.18);
+    border-radius:22px; padding:clamp(1.6rem,3vw,2.4rem);
+    box-shadow:0 30px 60px -40px rgba(74,115,132,.5);
+  }
+  .hours-card h3{ font-size:1.6rem; color:var(--ink); }
+  .hours-card .sub{ color:var(--ink-soft); font-size:.95rem; margin:.4rem 0 1.4rem; }
+  .hours-row{
+    display:flex; align-items:center; justify-content:space-between; gap:1rem;
+    padding:.78rem 0; border-bottom:1px dashed rgba(58,47,44,.14);
+  }
+  .hours-row:last-of-type{ border-bottom:none; }
+  .hours-row .day{ font-weight:500; letter-spacing:.02em; }
+  .hours-row .time{ color:var(--ink-soft); font-variant-numeric:tabular-nums; font-size:.95rem; }
+  .hours-row.today{
+    background:var(--mint-soft); margin-inline:-1rem; padding-inline:1rem;
+    border-radius:12px; border-bottom-color:transparent;
+  }
+  .hours-row.today .day{ color:var(--mint-deep); }
+  .hours-row.today .time{ color:var(--mint-deep); font-weight:500; }
+  .today-flag{
+    font-size:.62rem; letter-spacing:.18em; text-transform:uppercase;
+    color:#fff; background:var(--mint-deep); padding:.2rem .55rem; border-radius:100px;
+    margin-left:.6rem;
+  }
+  .hours-foot{
+    margin-top:1.5rem; display:flex; align-items:center; gap:.7rem;
+    color:var(--mint-deep); font-size:.92rem; font-weight:500;
+  }
+  .hours-foot svg{ width:18px; height:18px; flex:none; }
+
+  .loc-panel{ display:flex; flex-direction:column; gap:1.4rem; }
+  .loc-art{
+    position:relative; border-radius:22px; overflow:hidden;
+    border:1px solid rgba(201,123,132,.18);
+    background:linear-gradient(160deg, var(--rose-soft) 0%, var(--blue-soft) 100%);
+  }
+  .loc-art svg{ width:100%; height:auto; display:block; }
+  .loc-detail{
+    background:#fff; border:1px solid rgba(201,123,132,.18);
+    border-radius:18px; padding:1.5rem 1.6rem;
+  }
+  .loc-detail .row{ display:flex; gap:.9rem; align-items:flex-start; padding:.55rem 0; }
+  .loc-detail .row svg{ width:20px; height:20px; flex:none; color:var(--rose-deep); margin-top:.15rem; }
+  .loc-detail .row strong{ font-family:var(--serif); font-weight:600; font-size:1.02rem; display:block; }
+  .loc-detail .row span{ color:var(--ink-soft); font-size:.92rem; }
+
+  /* ===================== TRUST MOMENT ===================== */
+  .trust{
+    position:relative; overflow:hidden;
+    background:linear-gradient(165deg, #4A3A36 0%, #3A2F2C 60%, #2C2421 100%);
+    color:var(--cream);
+  }
+  .trust::before{
+    content:""; position:absolute; inset:0; opacity:.5; pointer-events:none;
+    background:
+      radial-gradient(700px 400px at 12% 18%, rgba(217,138,147,.22) 0%, transparent 55%),
+      radial-gradient(700px 400px at 92% 90%, rgba(127,168,184,.2) 0%, transparent 55%);
+  }
+  .trust .wrap{ position:relative; }
+  .trust .sec-head h2{ color:var(--cream); }
+  .trust .sec-head h2 .em{ color:var(--rose); }
+  .trust .eyebrow{ color:var(--rose); }
+  .trust .eyebrow::before{ background:linear-gradient(90deg,transparent,var(--rose)); }
+  .trust .sec-head p{ color:rgba(251,245,236,.72); }
+
+  .trust-hero{
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+    gap:clamp(1.6rem,4vw,3.4rem); text-align:center;
+    margin-bottom:clamp(2.4rem,5vw,3.6rem);
+  }
+  .big-rate{ display:flex; flex-direction:column; align-items:center; }
+  .big-rate .n{
+    font-family:var(--serif); font-size:clamp(4.4rem,11vw,7rem); line-height:.9;
+    font-weight:600; color:var(--cream);
+    background:linear-gradient(180deg,#fff 0%, var(--rose-soft) 100%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  }
+  .big-rate .stars{ display:flex; gap:.35rem; margin-top:.8rem; }
+  .big-rate .stars svg{ width:24px; height:24px; }
+  .big-rate .cap{ margin-top:.8rem; color:rgba(251,245,236,.7); font-size:.92rem; letter-spacing:.04em; }
+  .trust-divider{ width:1px; height:120px; background:rgba(251,245,236,.18); }
+  @media(max-width:640px){ .trust-divider{ display:none; } }
+
+  .trust-stats{ display:grid; gap:1.4rem; grid-template-columns:1fr 1fr; }
+  .trust-stats .stat .v{ font-family:var(--serif); font-size:clamp(2rem,5vw,2.8rem); font-weight:600; color:var(--cream); line-height:1; }
+  .trust-stats .stat .l{ color:rgba(251,245,236,.66); font-size:.84rem; letter-spacing:.04em; margin-top:.5rem; }
+
+  .trust-cards{ display:grid; gap:1.2rem; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); }
+  .tcard{
+    background:rgba(251,245,236,.06); border:1px solid rgba(251,245,236,.14);
+    border-radius:18px; padding:1.6rem 1.5rem;
+    transition:transform .35s var(--ease), background .35s var(--ease), border-color .35s var(--ease);
+  }
+  .tcard:hover{ transform:translateY(-6px); background:rgba(251,245,236,.1); border-color:rgba(217,138,147,.5); }
+  .tcard .q{ font-size:2.6rem; line-height:.6; font-family:var(--serif); color:var(--rose); height:.7em; }
+  .tcard p{ margin:.4rem 0 0; color:rgba(251,245,236,.86); font-size:.98rem; line-height:1.6; }
+  .tcard .who{ margin-top:1.1rem; font-size:.78rem; letter-spacing:.04em; color:rgba(251,245,236,.55); display:flex; align-items:center; gap:.5rem; }
+  .tcard .who svg{ width:15px; height:15px; color:var(--mint); }
+
+  /* ===================== CONTACT ===================== */
+  .contact{ background:var(--cream); }
+  .contact-shell{
+    position:relative;
+    background:linear-gradient(160deg, var(--rose-soft) 0%, var(--cream) 42%, var(--blue-soft) 100%);
+    border:1px solid rgba(201,123,132,.2);
+    border-radius:30px; overflow:hidden;
+    padding:clamp(2.2rem,5vw,4rem);
+  }
+  .contact-arch{ position:absolute; inset:0; opacity:.5; pointer-events:none; }
+  .contact-arch svg{ width:100%; height:100%; }
+  .contact-grid{ position:relative; display:grid; gap:clamp(2rem,4vw,3rem); grid-template-columns:1fr; align-items:center; }
+  @media(min-width:880px){ .contact-grid{ grid-template-columns:1.05fr .95fr; } }
+
+  .contact-copy h2{ font-size:clamp(2.1rem,4.6vw,3.2rem); color:var(--ink); margin-top:1rem; }
+  .contact-copy h2 .em{ font-style:italic; color:var(--rose-deep); }
+  .contact-copy p{ color:var(--ink-soft); font-size:1.06rem; margin:1.2rem 0 0; max-width:30rem; }
+
+  .contact-actions{ display:grid; gap:1rem; }
+  .ca{
+    display:flex; align-items:center; gap:1.1rem;
+    background:rgba(255,255,255,.78); border:1px solid rgba(58,47,44,.1);
+    border-radius:16px; padding:1.05rem 1.3rem;
+    transition:transform .3s var(--ease), box-shadow .3s var(--ease), border-color .3s var(--ease), background .3s var(--ease);
+  }
+  .ca:hover{ transform:translateY(-4px); box-shadow:0 22px 38px -26px rgba(58,47,44,.55); border-color:var(--rose); background:#fff; }
+  .ca .ic{
+    flex:none; width:48px; height:48px; border-radius:13px;
+    display:flex; align-items:center; justify-content:center; color:#fff;
+  }
+  .ca .ic svg{ width:23px; height:23px; }
+  .ca-phone .ic{ background:var(--ink); }
+  .ca-fb .ic{ background:#1877F2; }
+  .ca-wa .ic{ background:#25D366; }
+  .ca-line .ic{ background:#06C755; }
+  .ca-ig .ic{ background:linear-gradient(45deg,#F58529,#DD2A7B 50%,#8134AF); }
+  .ca .txt{ display:flex; flex-direction:column; min-width:0; }
+  .ca .txt .lbl{ font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-soft); }
+  .ca .txt .val{ font-family:var(--serif); font-weight:600; font-size:1.08rem; color:var(--ink); overflow-wrap:anywhere; }
+  .ca .arrow{ margin-left:auto; color:var(--ink-soft); transition:transform .3s var(--ease), color .3s var(--ease); }
+  .ca:hover .arrow{ transform:translate(3px,-3px); color:var(--rose-deep); }
+  .ca .arrow svg{ width:18px; height:18px; }
+
+  /* ===================== FOOTER ===================== */
+  footer.site{
+    background:#2C2421; color:rgba(251,245,236,.72);
+    padding-block:clamp(3rem,6vw,4.4rem) 2.2rem;
+  }
+  .foot-top{
+    display:grid; gap:2.4rem; grid-template-columns:1fr;
+    padding-bottom:2.6rem; border-bottom:1px solid rgba(251,245,236,.12);
+  }
+  @media(min-width:760px){ .foot-top{ grid-template-columns:1.4fr 1fr 1fr; } }
+  .foot-brand .b{ display:flex; align-items:center; gap:.7rem; }
+  .foot-brand .b .mark{ width:40px; height:40px; }
+  .foot-brand .b .mark rect.bg{ fill:rgba(251,245,236,.12); }
+  .foot-brand .name{ font-family:var(--serif); font-size:1.3rem; font-weight:600; color:var(--cream); }
+  .foot-brand p{ margin:1.1rem 0 0; max-width:24rem; font-size:.95rem; line-height:1.7; }
+  .foot-col h4{
+    font-family:var(--sans); font-size:.72rem; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--rose); margin:0 0 1rem;
+  }
+  .foot-col a, .foot-col p{ display:block; color:rgba(251,245,236,.72); font-size:.94rem; margin:.5rem 0; transition:color .25s var(--ease); }
+  .foot-col a:hover{ color:var(--cream); }
+  .foot-social{ display:flex; gap:.7rem; margin-top:.4rem; }
+  .foot-social a{
+    width:42px; height:42px; border-radius:11px; display:flex; align-items:center; justify-content:center;
+    background:rgba(251,245,236,.08); border:1px solid rgba(251,245,236,.12); color:rgba(251,245,236,.8);
+    transition:background .25s var(--ease), transform .25s var(--ease), color .25s var(--ease);
+  }
+  .foot-social a:hover{ background:rgba(217,138,147,.25); color:var(--cream); transform:translateY(-3px); }
+  .foot-social svg{ width:19px; height:19px; }
+
+  .foot-bottom{
+    display:flex; flex-wrap:wrap; gap:1rem; align-items:center; justify-content:space-between;
+    padding-top:2rem; font-size:.84rem;
+  }
+  .foot-bottom .area{ display:flex; align-items:center; gap:.5rem; color:rgba(251,245,236,.6); }
+  .foot-bottom .area svg{ width:15px; height:15px; color:var(--rose); }
+  .credit{ color:rgba(251,245,236,.55); }
+  .credit a{ color:rgba(251,245,236,.85); border-bottom:1px solid rgba(217,138,147,.5); padding-bottom:1px; transition:color .25s var(--ease); }
+  .credit a:hover{ color:var(--cream); }
+
+  /* ===================== REVEAL ===================== */
+  .reveal{ opacity:0; transform:translateY(34px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
+  .reveal.in{ opacity:1; transform:none; }
+  .reveal.d1{ transition-delay:.08s; }
+  .reveal.d2{ transition-delay:.16s; }
+  .reveal.d3{ transition-delay:.24s; }
+  .reveal.d4{ transition-delay:.32s; }
+
+  /* ===================== REDUCED MOTION ===================== */
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{
+      animation-duration:.001ms !important;
+      animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;
+    }
+    .reveal{ opacity:1 !important; transform:none !important; }
+    .hero h1 .accent path{ stroke-dashoffset:0 !important; }
+    .facade .piece{ opacity:1 !important; transform:none !important; }
+    .facade .arch-line{ stroke-dashoffset:0 !important; }
+    .mote{ display:none; }
+  }
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#c9a86a;--bk-accent-ink:#ffffff;--bk-ink:#3a2f2c;--bk-panel:#fbf5ec;--bk-muted:rgba(58,47,44,0.6);--bk-line:rgba(58,47,44,0.14);--bk-serif:"Fraunces", Georgia, serif;--bk-sans:"Jost", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="The Smile Gallery Phuket — home">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect class="bg" width="40" height="40" rx="10"/>
+        <path d="M20 7 L31 16 L31 17 L9 17 L9 16 Z" fill="#B7656E"/>
+        <rect x="11" y="17" width="5" height="15" fill="#7FA8B8"/>
+        <rect x="24" y="17" width="5" height="15" fill="#7FA8B8"/>
+        <path d="M11 17 a2.5 2.5 0 0 1 5 0 M24 17 a2.5 2.5 0 0 1 5 0" fill="none" stroke="#9FC4B0" stroke-width="1.6"/>
+        <rect x="18" y="24" width="4" height="8" rx="2" fill="#C9A86A"/>
+      </svg>
+      <span class="brand-txt">
+        <span class="t1">The Smile Gallery</span>
+        <span class="t2">Phuket Old Town</span>
+      </span>
+    </a>
+
+    <nav class="links" aria-label="Primary">
+      <a href="#welcome">English Welcome</a>
+      <a href="#services">Treatments</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="tel:+66863053788">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+      Call the clinic
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+    </button>
+  </div>
+
+  <div class="wrap">
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+      <a href="#welcome">English Welcome</a>
+      <a href="#services">Treatments</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a class="m-cta" href="tel:+66863053788">Call +66 86 305 3788</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-labelledby="hero-h">
+    <span class="mote" style="width:14px;height:14px;background:var(--rose);left:12%;top:30%;animation-delay:0s;"></span>
+    <span class="mote" style="width:9px;height:9px;background:var(--mint);left:46%;top:16%;animation-delay:1.4s;"></span>
+    <span class="mote" style="width:11px;height:11px;background:var(--blue);left:88%;top:46%;animation-delay:.7s;"></span>
+    <span class="mote" style="width:7px;height:7px;background:var(--gold);left:70%;top:22%;animation-delay:2.1s;"></span>
+
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Phuket Town &middot; Wichit</span>
+        <h1 id="hero-h">
+          A bright <span class="em">welcome</span> for every
+          <span class="accent">smile<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 14 Q 80 4 150 11 T 296 8"/></svg></span>
+          in the Old Town.
+        </h1>
+        <p class="lede">
+          A warm, modern dental clinic on the pastel shophouse streets of historic Phuket Town — where international visitors and expats are looked after in fluent English, from a quick clean to a complete new smile.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="tel:+66863053788">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            Call +66 86 305 3788
+          </a>
+          <!-- TODO: replace href="#" with the clinic's real Facebook page URL: facebook.com/<The Smile Gallery Dental Clinic Phuket> -->
+          <a class="btn btn-fb" href="#" aria-label="Message us on Facebook (link to be added)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg>
+            Message on Facebook
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="#C9A86A"><path d="M12 2l2.9 6.26 6.9.6-5.2 4.52 1.55 6.74L12 17.27 5.85 20.6 7.4 13.86 2.2 9.34l6.9-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#C9A86A"><path d="M12 2l2.9 6.26 6.9.6-5.2 4.52 1.55 6.74L12 17.27 5.85 20.6 7.4 13.86 2.2 9.34l6.9-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#C9A86A"><path d="M12 2l2.9 6.26 6.9.6-5.2 4.52 1.55 6.74L12 17.27 5.85 20.6 7.4 13.86 2.2 9.34l6.9-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#C9A86A"><path d="M12 2l2.9 6.26 6.9.6-5.2 4.52 1.55 6.74L12 17.27 5.85 20.6 7.4 13.86 2.2 9.34l6.9-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#C9A86A"><path d="M12 2l2.9 6.26 6.9.6-5.2 4.52 1.55 6.74L12 17.27 5.85 20.6 7.4 13.86 2.2 9.34l6.9-.6L12 2z"/></svg>
+          </div>
+          <div>
+            <span class="rate">4.9 <span class="sr-only">out of 5</span></span>
+            <small>Rated by 1,805 Google reviews</small>
+          </div>
+          <span class="divider" aria-hidden="true"></span>
+          <span class="pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Heart of Phuket Old Town
+          </span>
+        </div>
+      </div>
+
+      <!-- HERO SHOPHOUSE FACADE (assembling SVG) -->
+      <div class="facade-stage" aria-hidden="true">
+        <svg class="facade" viewBox="0 0 480 420" role="img">
+          <title>An illustrated pastel Sino-Portuguese shophouse facade</title>
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FBF5EC"/>
+              <stop offset="1" stop-color="#F5ECDC"/>
+            </linearGradient>
+          </defs>
+          <rect x="20" y="20" width="440" height="380" rx="18" fill="url(#sky)"/>
+
+          <g class="piece" style="animation-delay:.15s">
+            <rect x="42" y="120" width="120" height="260" fill="#F4DDE0"/>
+            <rect x="42" y="120" width="120" height="20" fill="#D98A93"/>
+            <rect x="36" y="108" width="132" height="16" rx="4" fill="#B7656E"/>
+            <rect x="48" y="96" width="108" height="12" rx="3" fill="#D98A93"/>
+          </g>
+          <g class="piece" style="animation-delay:.35s">
+            <rect x="170" y="86" width="140" height="294" fill="#DFEDE4"/>
+            <rect x="170" y="86" width="140" height="22" fill="#9FC4B0"/>
+            <rect x="162" y="72" width="156" height="18" rx="4" fill="#5E8B74"/>
+            <rect x="178" y="58" width="124" height="14" rx="3" fill="#9FC4B0"/>
+            <path d="M178 58 L240 38 L302 58 Z" fill="#DFEDE4" stroke="#5E8B74" stroke-width="2"/>
+            <circle class="twinkle" cx="240" cy="50" r="4" fill="#C9A86A"/>
+          </g>
+          <g class="piece" style="animation-delay:.55s">
+            <rect x="318" y="130" width="120" height="250" fill="#DCE9EE"/>
+            <rect x="318" y="130" width="120" height="20" fill="#7FA8B8"/>
+            <rect x="312" y="116" width="132" height="16" rx="4" fill="#4A7384"/>
+            <rect x="324" y="104" width="108" height="12" rx="3" fill="#7FA8B8"/>
+          </g>
+
+          <g class="piece" style="animation-delay:.75s">
+            <g class="sway" style="animation:sway 5s ease-in-out infinite;">
+              <rect x="64" y="170" width="34" height="58" rx="17 17 0 0" fill="#fff" stroke="#B7656E" stroke-width="2"/>
+              <line x1="81" y1="172" x2="81" y2="228" stroke="#D98A93" stroke-width="1.4"/>
+              <line x1="64" y1="186" x2="98" y2="186" stroke="#D98A93" stroke-width="1.2"/>
+              <line x1="64" y1="200" x2="98" y2="200" stroke="#D98A93" stroke-width="1.2"/>
+              <line x1="64" y1="214" x2="98" y2="214" stroke="#D98A93" stroke-width="1.2"/>
+            </g>
+            <g class="sway" style="animation:sway 5.6s ease-in-out infinite;">
+              <rect x="108" y="170" width="34" height="58" rx="17 17 0 0" fill="#fff" stroke="#B7656E" stroke-width="2"/>
+              <line x1="125" y1="172" x2="125" y2="228" stroke="#D98A93" stroke-width="1.4"/>
+              <line x1="108" y1="186" x2="142" y2="186" stroke="#D98A93" stroke-width="1.2"/>
+              <line x1="108" y1="200" x2="142" y2="200" stroke="#D98A93" stroke-width="1.2"/>
+              <line x1="108" y1="214" x2="142" y2="214" stroke="#D98A93" stroke-width="1.2"/>
+            </g>
+            <path class="arch-line" style="--len:160" d="M70 380 L70 300 A33 33 0 0 1 136 300 L136 380" stroke="#B7656E" stroke-width="2.4"/>
+          </g>
+
+          <g class="piece" style="animation-delay:.95s">
+            <g class="sway" style="animation:sway 5.2s ease-in-out infinite;">
+              <rect x="186" y="132" width="32" height="54" rx="16 16 0 0" fill="#fff" stroke="#5E8B74" stroke-width="2"/>
+              <line x1="202" y1="134" x2="202" y2="186" stroke="#9FC4B0" stroke-width="1.4"/>
+            </g>
+            <g class="sway" style="animation:sway 5.8s ease-in-out infinite;">
+              <rect x="224" y="132" width="32" height="54" rx="16 16 0 0" fill="#fff" stroke="#5E8B74" stroke-width="2"/>
+              <line x1="240" y1="134" x2="240" y2="186" stroke="#9FC4B0" stroke-width="1.4"/>
+            </g>
+            <g class="sway" style="animation:sway 5.4s ease-in-out infinite;">
+              <rect x="262" y="132" width="32" height="54" rx="16 16 0 0" fill="#fff" stroke="#5E8B74" stroke-width="2"/>
+              <line x1="278" y1="134" x2="278" y2="186" stroke="#9FC4B0" stroke-width="1.4"/>
+            </g>
+            <path class="arch-line" style="--len:200" d="M196 380 L196 286 A44 44 0 0 1 284 286 L284 380" stroke="#5E8B74" stroke-width="2.6"/>
+            <line x1="240" y1="244" x2="240" y2="380" stroke="#5E8B74" stroke-width="2"/>
+          </g>
+
+          <g class="piece" style="animation-delay:1.15s">
+            <g class="sway" style="animation:sway 5.5s ease-in-out infinite;">
+              <rect x="340" y="178" width="34" height="56" rx="17 17 0 0" fill="#fff" stroke="#4A7384" stroke-width="2"/>
+              <line x1="357" y1="180" x2="357" y2="234" stroke="#7FA8B8" stroke-width="1.4"/>
+              <line x1="340" y1="196" x2="374" y2="196" stroke="#7FA8B8" stroke-width="1.2"/>
+              <line x1="340" y1="212" x2="374" y2="212" stroke="#7FA8B8" stroke-width="1.2"/>
+            </g>
+            <g class="sway" style="animation:sway 6s ease-in-out infinite;">
+              <rect x="382" y="178" width="34" height="56" rx="17 17 0 0" fill="#fff" stroke="#4A7384" stroke-width="2"/>
+              <line x1="399" y1="180" x2="399" y2="234" stroke="#7FA8B8" stroke-width="1.4"/>
+              <line x1="382" y1="196" x2="416" y2="196" stroke="#7FA8B8" stroke-width="1.2"/>
+              <line x1="382" y1="212" x2="416" y2="212" stroke="#7FA8B8" stroke-width="1.2"/>
+            </g>
+            <path class="arch-line" style="--len:150" d="M346 380 L346 308 A32 32 0 0 1 410 308 L410 380" stroke="#4A7384" stroke-width="2.4"/>
+          </g>
+
+          <g class="piece" style="animation-delay:1.3s">
+            <rect x="20" y="378" width="440" height="22" fill="#F5ECDC"/>
+            <line x1="20" y1="378" x2="460" y2="378" stroke="#C9A86A" stroke-width="1.4"/>
+            <circle class="twinkle" cx="170" cy="389" r="2.4" fill="#C9A86A" style="animation-delay:.6s"/>
+            <circle class="twinkle" cx="310" cy="389" r="2.4" fill="#C9A86A" style="animation-delay:1.1s"/>
+          </g>
+
+          <g class="piece" style="animation-delay:1.4s">
+            <line x1="240" y1="38" x2="240" y2="30" stroke="#C9A86A" stroke-width="1.4"/>
+            <circle class="twinkle" cx="100" cy="150" r="3" fill="#D98A93" style="animation-delay:.3s"/>
+            <circle class="twinkle" cx="380" cy="160" r="3" fill="#7FA8B8" style="animation-delay:.9s"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- arcade divider -->
+  <div class="arcade-strip" aria-hidden="true">
+    <svg viewBox="0 0 1200 48" preserveAspectRatio="none">
+      <g fill="none" stroke="rgba(201,123,132,.35)" stroke-width="2">
+        <path d="M0 46 V24 Q30 4 60 24 V46 M60 46 V24 Q90 4 120 24 V46 M120 46 V24 Q150 4 180 24 V46 M180 46 V24 Q210 4 240 24 V46 M240 46 V24 Q270 4 300 24 V46 M300 46 V24 Q330 4 360 24 V46 M360 46 V24 Q390 4 420 24 V46 M420 46 V24 Q450 4 480 24 V46 M480 46 V24 Q510 4 540 24 V46 M540 46 V24 Q570 4 600 24 V46 M600 46 V24 Q630 4 660 24 V46 M660 46 V24 Q690 4 720 24 V46 M720 46 V24 Q750 4 780 24 V46 M780 46 V24 Q810 4 840 24 V46 M840 46 V24 Q870 4 900 24 V46 M900 46 V24 Q930 4 960 24 V46 M960 46 V24 Q990 4 1020 24 V46 M1020 46 V24 Q1050 4 1080 24 V46 M1080 46 V24 Q1110 4 1140 24 V46 M1140 46 V24 Q1170 4 1200 24 V46"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- ============ WELCOME / HOOK ============ -->
+  <section class="welcome pad" id="welcome" aria-labelledby="welcome-h">
+    <div class="wrap welcome-grid">
+      <div class="welcome-emblem reveal" aria-hidden="true">
+        <svg viewBox="0 0 360 360" role="img">
+          <title>A decorative arch emblem with a welcoming smile motif</title>
+          <g class="ring" style="animation:spin 40s linear infinite;">
+            <circle cx="180" cy="180" r="150" fill="none" stroke="#D98A93" stroke-width="1.4" stroke-dasharray="3 11"/>
+          </g>
+          <circle cx="180" cy="180" r="128" fill="#FBF5EC" stroke="#9FC4B0" stroke-width="1.6"/>
+          <path d="M110 250 L110 168 A70 70 0 0 1 250 168 L250 250 Z" fill="#DFEDE4" stroke="#5E8B74" stroke-width="2"/>
+          <g stroke="#9FC4B0" stroke-width="2">
+            <line x1="124" y1="190" x2="236" y2="190"/>
+            <line x1="124" y1="206" x2="236" y2="206"/>
+            <line x1="124" y1="222" x2="236" y2="222"/>
+            <line x1="124" y1="238" x2="236" y2="238"/>
+          </g>
+          <circle cx="180" cy="138" r="26" fill="#fff" stroke="#B7656E" stroke-width="2"/>
+          <path d="M168 138 Q180 152 192 138" fill="none" stroke="#B7656E" stroke-width="2.6" stroke-linecap="round"/>
+          <circle cx="171" cy="131" r="2.4" fill="#B7656E"/>
+          <circle cx="189" cy="131" r="2.4" fill="#B7656E"/>
+          <path d="M118 96 Q180 64 242 96" fill="none" stroke="#C9A86A" stroke-width="1.2"/>
+          <text x="180" y="300" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="22" fill="#5E8B74">Sawasdee &amp; welcome</text>
+        </svg>
+      </div>
+
+      <div class="welcome-copy reveal d1">
+        <span class="eyebrow">English spoken here</span>
+        <h2 id="welcome-h">Far from home, <span class="em">completely</span> at ease.</h2>
+        <p>
+          We know that visiting the dentist in a new country can feel daunting. That is exactly why so many of our recent patients have been holidaymakers and expats discovering Phuket — and why our team takes the time to explain every step clearly, in English, before anything begins.
+        </p>
+        <ul class="welcome-points">
+          <li>
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <div><strong>Care explained in English</strong><span>Treatment plans, options and costs made clear before you decide — no surprises.</span></div>
+          </li>
+          <li>
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+            <div><strong>Loved by 1,805 reviewers</strong><span>A 4.9-star reputation built across international and local patients alike.</span></div>
+          </li>
+          <li>
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+            <div><strong>Easy to fit your trip</strong><span>Open into the evening and across the weekend, in the walkable Old Town.</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES / GALLERY ============ -->
+  <section class="services pad" id="services" aria-labelledby="services-h">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <span class="eyebrow" style="justify-content:center;">The treatment gallery</span>
+        <h2 id="services-h">Every service, <span class="em">framed</span> with care.</h2>
+        <p>From routine check-ups to a full smile transformation — explore our care like pieces in a heritage arcade, each one looked after by an experienced, gentle team.</p>
+      </div>
+
+      <div class="gallery">
+        <article class="frame reveal">
+          <svg class="arch-top" viewBox="0 0 220 96" aria-hidden="true"><path class="stroke" d="M20 96 L20 56 A90 40 0 0 1 200 56 L200 96"/><circle cx="110" cy="44" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span class="num">i.</span>
+          <h3>General Dentistry</h3>
+          <p>Thorough check-ups, comfortable fillings and trusted everyday care to keep your smile healthy and comfortable throughout your stay.</p>
+          <span class="tag">Check-ups &middot; Fillings</span>
+        </article>
+
+        <article class="frame reveal d1">
+          <svg class="arch-top" viewBox="0 0 220 96" aria-hidden="true"><path class="stroke" d="M20 96 L20 56 A90 40 0 0 1 200 56 L200 96"/><circle cx="110" cy="44" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span class="num">ii.</span>
+          <h3>Scaling &amp; Cleaning</h3>
+          <p>A professional scale and polish that lifts away build-up and leaves teeth feeling beautifully fresh — perfect before or after a long flight.</p>
+          <span class="tag">Hygiene &middot; Polish</span>
+        </article>
+
+        <article class="frame reveal d2">
+          <svg class="arch-top" viewBox="0 0 220 96" aria-hidden="true"><path class="stroke" d="M20 96 L20 56 A90 40 0 0 1 200 56 L200 96"/><circle cx="110" cy="44" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span class="num">iii.</span>
+          <h3>Teeth Whitening</h3>
+          <p>A brighter, more confident smile to take home — gentle, professional whitening tailored to the shade that suits you best.</p>
+          <span class="tag">Brightening</span>
+        </article>
+
+        <article class="frame reveal">
+          <svg class="arch-top" viewBox="0 0 220 96" aria-hidden="true"><path class="stroke" d="M20 96 L20 56 A90 40 0 0 1 200 56 L200 96"/><circle cx="110" cy="44" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span class="num">iv.</span>
+          <h3>Orthodontics</h3>
+          <p>Classic braces to gently and reliably straighten teeth, with clear guidance at every appointment and a plan that fits your timeline.</p>
+          <span class="tag">Braces &middot; Alignment</span>
+        </article>
+
+        <article class="frame reveal d1">
+          <svg class="arch-top" viewBox="0 0 220 96" aria-hidden="true"><path class="stroke" d="M20 96 L20 56 A90 40 0 0 1 200 56 L200 96"/><circle cx="110" cy="44" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span class="num">v.</span>
+          <h3>Invisalign</h3>
+          <p>Discreet, removable clear aligners that straighten your smile quietly — an elegant choice for adults who would rather skip metal braces.</p>
+          <span class="tag">Clear Aligners</span>
+        </article>
+
+        <article class="frame reveal d2">
+          <svg class="arch-top" viewBox="0 0 220 96" aria-hidden="true"><path class="stroke" d="M20 96 L20 56 A90 40 0 0 1 200 56 L200 96"/><circle cx="110" cy="44" r="8" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+          <span class="num">vi.</span>
+          <h3>Dental Implants</h3>
+          <p>Natural-looking, long-lasting replacements for missing teeth — restoring both the look and the everyday comfort of a complete smile.</p>
+          <span class="tag">Restorative</span>
+        </article>
+      </div>
+
+      <p class="services-note reveal">
+        Not sure which treatment is right for you? <a href="tel:+66863053788">Call us and ask</a> — we are always happy to talk it through.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ VISIT / LOCATION ============ -->
+  <section class="visit pad" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">Visiting &amp; opening hours</span>
+        <h2 id="visit-h">Find us in the <span class="em">pastel streets</span> of Old Town.</h2>
+        <p>Set among the historic Sino-Portuguese shophouses of Phuket Town in Wichit — open late and across the weekend, so it is easy to drop in around your plans.</p>
+      </div>
+
+      <div class="visit-grid">
+        <div class="hours-card reveal">
+          <h3>Opening hours</h3>
+          <p class="sub">Open seven days, into the evening &middot; closes 8:00 PM.</p>
+
+          <div class="hours-row" data-day="1"><span class="day">Monday</span><span class="time">9:00 AM – 8:00 PM</span></div>
+          <div class="hours-row" data-day="2"><span class="day">Tuesday</span><span class="time">9:00 AM – 8:00 PM</span></div>
+          <div class="hours-row" data-day="3"><span class="day">Wednesday</span><span class="time">9:00 AM – 8:00 PM</span></div>
+          <div class="hours-row" data-day="4"><span class="day">Thursday</span><span class="time">9:00 AM – 8:00 PM</span></div>
+          <div class="hours-row" data-day="5"><span class="day">Friday</span><span class="time">9:00 AM – 8:00 PM</span></div>
+          <div class="hours-row" data-day="6"><span class="day">Saturday</span><span class="time">9:00 AM – 8:00 PM</span></div>
+          <div class="hours-row" data-day="0"><span class="day">Sunday</span><span class="time">9:00 AM – 8:00 PM</span></div>
+
+          <div class="hours-foot">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Weekends welcome — no online booking needed, simply call ahead.
+          </div>
+        </div>
+
+        <div class="loc-panel reveal d1">
+          <div class="loc-art" aria-hidden="true">
+            <svg viewBox="0 0 480 240" role="img">
+              <title>A stylised row of pastel Old Town shophouses with a marked location</title>
+              <rect x="0" y="0" width="480" height="240" fill="none"/>
+              <rect x="0" y="196" width="480" height="44" fill="rgba(251,245,236,.55)"/>
+              <line x1="0" y1="196" x2="480" y2="196" stroke="#C9A86A" stroke-width="1.4"/>
+              <g stroke-width="1.6">
+                <rect x="24" y="92" width="72" height="104" fill="#F4DDE0" stroke="#B7656E"/>
+                <rect x="24" y="92" width="72" height="14" fill="#D98A93" stroke="none"/>
+                <rect x="40" y="120" width="18" height="30" rx="9 9 0 0" fill="#fff" stroke="#B7656E"/>
+                <rect x="62" y="120" width="18" height="30" rx="9 9 0 0" fill="#fff" stroke="#B7656E"/>
+
+                <rect x="104" y="72" width="76" height="124" fill="#DFEDE4" stroke="#5E8B74"/>
+                <rect x="104" y="72" width="76" height="14" fill="#9FC4B0" stroke="none"/>
+                <rect x="120" y="100" width="18" height="30" rx="9 9 0 0" fill="#fff" stroke="#5E8B74"/>
+                <rect x="146" y="100" width="18" height="30" rx="9 9 0 0" fill="#fff" stroke="#5E8B74"/>
+
+                <rect x="188" y="100" width="72" height="96" fill="#DCE9EE" stroke="#4A7384"/>
+                <rect x="188" y="100" width="72" height="14" fill="#7FA8B8" stroke="none"/>
+                <rect x="204" y="126" width="18" height="28" rx="9 9 0 0" fill="#fff" stroke="#4A7384"/>
+                <rect x="226" y="126" width="18" height="28" rx="9 9 0 0" fill="#fff" stroke="#4A7384"/>
+
+                <rect x="268" y="84" width="76" height="112" fill="#F5ECDC" stroke="#C9A86A"/>
+                <rect x="268" y="84" width="76" height="14" fill="#C9A86A" stroke="none"/>
+                <rect x="284" y="112" width="18" height="30" rx="9 9 0 0" fill="#fff" stroke="#C9A86A"/>
+                <rect x="310" y="112" width="18" height="30" rx="9 9 0 0" fill="#fff" stroke="#C9A86A"/>
+
+                <rect x="352" y="96" width="76" height="100" fill="#F4DDE0" stroke="#B7656E"/>
+                <rect x="352" y="96" width="76" height="14" fill="#D98A93" stroke="none"/>
+                <rect x="368" y="122" width="18" height="30" rx="9 9 0 0" fill="#fff" stroke="#B7656E"/>
+                <rect x="394" y="122" width="18" height="30" rx="9 9 0 0" fill="#fff" stroke="#B7656E"/>
+              </g>
+              <g>
+                <line x1="142" y1="44" x2="142" y2="72" stroke="#B7656E" stroke-width="1.4" stroke-dasharray="3 4"/>
+                <path d="M142 14 C126 14 116 26 116 40 C116 56 142 76 142 76 C142 76 168 56 168 40 C168 26 158 14 142 14 Z" fill="#B7656E"/>
+                <circle cx="142" cy="38" r="9" fill="#FBF5EC"/>
+                <path d="M137 38 Q142 45 147 38" fill="none" stroke="#B7656E" stroke-width="2" stroke-linecap="round"/>
+              </g>
+            </svg>
+          </div>
+
+          <div class="loc-detail">
+            <div class="row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div><strong>Phuket Town · Wichit</strong><span>In the heart of Phuket's historic Old Town, among the pastel Sino-Portuguese shophouses.</span></div>
+            </div>
+            <div class="row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+              <div><strong>+66 86 305 3788</strong><span>Call ahead and we will be glad to find a convenient time for you.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST MOMENT ============ -->
+  <section class="trust pad" id="reviews" aria-labelledby="reviews-h">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <span class="eyebrow" style="justify-content:center;">A reputation, kindly earned</span>
+        <h2 id="reviews-h">Trusted by <span class="em">1,805</span> smiles — and counting.</h2>
+        <p>Local families and travellers from around the world have shared their experience. The result is a rating we are quietly proud of.</p>
+      </div>
+
+      <div class="trust-hero reveal d1">
+        <div class="big-rate">
+          <span class="n">4.9</span>
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="#D98A93"><path d="M12 2l2.9 6.26 6.9.6-5.2 4.52 1.55 6.74L12 17.27 5.85 20.6 7.4 13.86 2.2 9.34l6.9-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#D98A93"><path d="M12 2l2.9 6.26 6.9.6-5.2 4.52 1.55 6.74L12 17.27 5.85 20.6 7.4 13.86 2.2 9.34l6.9-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#D98A93"><path d="M12 2l2.9 6.26 6.9.6-5.2 4.52 1.55 6.74L12 17.27 5.85 20.6 7.4 13.86 2.2 9.34l6.9-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#D98A93"><path d="M12 2l2.9 6.26 6.9.6-5.2 4.52 1.55 6.74L12 17.27 5.85 20.6 7.4 13.86 2.2 9.34l6.9-.6L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="#D98A93"><path d="M12 2l2.9 6.26 6.9.6-5.2 4.52 1.55 6.74L12 17.27 5.85 20.6 7.4 13.86 2.2 9.34l6.9-.6L12 2z"/></svg>
+          </div>
+          <span class="cap">Average Google rating</span>
+        </div>
+
+        <span class="trust-divider" aria-hidden="true"></span>
+
+        <div class="trust-stats">
+          <div class="stat"><div class="v">1,805</div><div class="l">Reviews &amp; rising</div></div>
+          <div class="stat"><div class="v">7 days</div><div class="l">Open every week</div></div>
+          <div class="stat"><div class="v">til 8PM</div><div class="l">Evening visits</div></div>
+          <div class="stat"><div class="v">English</div><div class="l">Spoken throughout</div></div>
+        </div>
+      </div>
+
+      <div class="trust-cards">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact pad" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="contact-shell">
+        <div class="contact-arch" aria-hidden="true">
+          <svg viewBox="0 0 1100 460" preserveAspectRatio="xMidYMid slice">
+            <g fill="none" stroke="rgba(183,101,110,.22)" stroke-width="2">
+              <path d="M120 460 L120 250 A110 110 0 0 1 340 250 L340 460"/>
+              <path d="M430 460 L430 210 A120 120 0 0 1 670 210 L670 460"/>
+              <path d="M760 460 L760 250 A110 110 0 0 1 980 250 L980 460"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-copy reveal">
+            <span class="eyebrow">Say hello</span>
+            <h2 id="contact-h">Let's get your <span class="em">smile</span> seen.</h2>
+            <p>There is no online booking to wrestle with — just reach out by phone or Facebook and our friendly team will take care of the rest, in English.</p>
+          </div>
+
+          <div class="contact-actions reveal d1">
+            <a class="ca ca-phone" href="tel:+66863053788">
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+              <span class="txt"><span class="lbl">Call the clinic</span><span class="val">+66 86 305 3788</span></span>
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+            </a>
+
+            <!-- TODO: replace href="#" with the real Facebook page URL: facebook.com/<The Smile Gallery Dental Clinic Phuket> -->
+            <a class="ca ca-fb" href="#" aria-label="Message us on Facebook (link to be added)">
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg></span>
+              <span class="txt"><span class="lbl">Facebook</span><span class="val">The Smile Gallery Dental Clinic Phuket</span></span>
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+            </a>
+
+            <!-- TODO: replace href="#" with the clinic's LINE official-account URL, e.g. https://line.me/R/ti/p/@<lineid> -->
+            <a class="ca ca-line" href="#" aria-label="Add us on LINE (link to be added)">
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.07 3.55 7.48 8.34 8.13.32.07.77.21.88.49.1.25.06.65.03.9l-.14.85c-.04.25-.2.99.87.54 1.07-.45 5.76-3.39 7.86-5.81C21.3 13.66 22 12.03 22 10.23 22 5.69 17.52 2 12 2ZM8.2 12.86H6.21a.52.52 0 0 1-.53-.52V8.36c0-.29.24-.52.53-.52.29 0 .52.23.52.52v3.46h1.47c.29 0 .52.24.52.53 0 .29-.23.51-.52.51Zm2.07-.52a.52.52 0 0 1-.52.52.52.52 0 0 1-.53-.52V8.36c0-.29.24-.52.53-.52.29 0 .52.23.52.52v3.98Zm4.74 0c0 .23-.14.43-.36.5a.5.5 0 0 1-.16.02.52.52 0 0 1-.42-.21l-2.04-2.77v2.46a.52.52 0 0 1-.52.52.52.52 0 0 1-.53-.52V8.36c0-.22.15-.42.37-.5a.53.53 0 0 1 .58.19l2.05 2.78V8.36c0-.29.23-.52.52-.52.29 0 .52.23.52.52v3.98Zm3.2-2.51c.29 0 .52.23.52.52 0 .29-.23.52-.52.52h-1.47v.95h1.47c.29 0 .52.24.52.53 0 .29-.23.51-.52.51h-1.99a.52.52 0 0 1-.52-.51V8.36c0-.29.23-.52.52-.52h1.99c.29 0 .52.23.52.52 0 .29-.23.53-.52.53h-1.47v.94h1.47Z"/></svg></span>
+              <span class="txt"><span class="lbl">LINE</span><span class="val">Add us on LINE</span></span>
+              <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <div class="b">
+          <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect class="bg" width="40" height="40" rx="10"/>
+            <path d="M20 7 L31 16 L31 17 L9 17 L9 16 Z" fill="#D98A93"/>
+            <rect x="11" y="17" width="5" height="15" fill="#7FA8B8"/>
+            <rect x="24" y="17" width="5" height="15" fill="#7FA8B8"/>
+            <path d="M11 17 a2.5 2.5 0 0 1 5 0 M24 17 a2.5 2.5 0 0 1 5 0" fill="none" stroke="#9FC4B0" stroke-width="1.6"/>
+            <rect x="18" y="24" width="4" height="8" rx="2" fill="#C9A86A"/>
+          </svg>
+          <span class="name">The Smile Gallery</span>
+        </div>
+        <p>A warm, English-speaking dental clinic in the heart of Phuket's historic Old Town. Gentle, modern care for visitors, expats and local families — every smile welcome.</p>
+        <div class="foot-social">
+          <!-- TODO: replace href="#" with the real Facebook page URL -->
+          <a href="#" aria-label="Facebook (link to be added)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/></svg></a>
+          <a href="tel:+66863053788" aria-label="Call the clinic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Treatments</h4>
+        <a href="#services">General dentistry</a>
+        <a href="#services">Scaling &amp; cleaning</a>
+        <a href="#services">Teeth whitening</a>
+        <a href="#services">Orthodontics &amp; Invisalign</a>
+        <a href="#services">Dental implants</a>
+      </div>
+
+      <div class="foot-col">
+        <h4>Visit us</h4>
+        <p>Phuket Town · Wichit, Phuket</p>
+        <p>Historic Old Town</p>
+        <a href="tel:+66863053788">+66 86 305 3788</a>
+        <p>Open daily · 9:00 AM – 8:00 PM</p>
+        <a href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span class="area">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22Z"/><circle cx="12" cy="10" r="3"/></svg>
+        The Smile Gallery Phuket · Phuket Town / Wichit
+      </span>
+      <span class="credit">Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener">Stellar Haus Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    "use strict";
+
+    var btn = document.getElementById('menuBtn');
+    var menu = document.getElementById('mobileMenu');
+    if(btn && menu){
+      btn.addEventListener('click', function(){
+        var open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      menu.querySelectorAll('a').forEach(function(a){
+        a.addEventListener('click', function(){
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded','false');
+          btn.setAttribute('aria-label','Open menu');
+        });
+      });
+    }
+
+    var nav = document.querySelector('header.nav');
+    var onScroll = function(){
+      if(window.scrollY > 24){ nav.classList.add('scrolled'); }
+      else{ nav.classList.remove('scrolled'); }
+    };
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+
+    try{
+      var today = new Date().getDay();
+      var row = document.querySelector('.hours-row[data-day="'+today+'"]');
+      if(row){
+        row.classList.add('today');
+        var flag = document.createElement('span');
+        flag.className = 'today-flag';
+        flag.textContent = 'Today';
+        row.querySelector('.day').appendChild(flag);
+      }
+    }catch(e){}
+
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var reveals = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){
+      reveals.forEach(function(el){ el.classList.add('in'); });
+    } else {
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting){
+            en.target.classList.add('in');
+            io.unobserve(en.target);
+          }
+        });
+      }, { threshold:0.14, rootMargin:'0px 0px -8% 0px' });
+      reveals.forEach(function(el){ io.observe(el); });
+    }
+  })();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+66863053788", CHAN="", CHANLABEL="";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>

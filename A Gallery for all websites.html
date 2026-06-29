@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thailand Expat Dental — Landing Page Gallery · Stellar Haus Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;600;700&family=Noto+Sans+Thai:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#0a0c12; --bg2:#11141d; --card:#161a25; --line:rgba(255,255,255,.08);
+    --ink:#f4f2ec; --muted:#99a0b1; --gold:#cfa75f; --gold-soft:#e8d6ad;
+    --jade:#1f9e89; --jade-soft:#54c7b1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:
+      radial-gradient(900px 620px at 82% -10%, rgba(31,158,137,.16), transparent 60%),
+      radial-gradient(820px 600px at -6% 10%, rgba(207,167,95,.10), transparent 55%),
+      var(--bg);
+    color:var(--ink); font-family:"Manrope",system-ui,sans-serif;
+    line-height:1.55; -webkit-font-smoothing:antialiased; min-height:100vh;
+  }
+  .wrap{max-width:1180px;margin:0 auto;padding:clamp(28px,5vw,64px) clamp(18px,4vw,40px) 80px}
+  header.top{margin-bottom:clamp(30px,5vw,56px)}
+  .brandrow{display:flex;align-items:center;gap:12px;margin-bottom:30px}
+  .mark{width:36px;height:36px;flex:0 0 auto}
+  .mark svg{display:block;width:100%;height:100%}
+  .brandname{font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);font-weight:600}
+  .thmark{font-family:"Noto Sans Thai",sans-serif;color:var(--jade-soft);font-size:.86rem;letter-spacing:.16em;margin-left:6px}
+  h1{font-family:"Fraunces",serif;font-weight:400;font-size:clamp(2.05rem,5.2vw,3.45rem);
+    line-height:1.05;letter-spacing:-.01em;margin-bottom:18px;max-width:20ch}
+  h1 em{font-style:italic;color:var(--gold-soft)}
+  .lede{color:var(--muted);max-width:62ch;font-size:clamp(1rem,1.6vw,1.12rem)}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .chip{border:1px solid var(--line);border-radius:100px;padding:7px 15px;font-size:.82rem;
+    color:var(--ink);background:rgba(255,255,255,.02);font-weight:500}
+  .chip b{color:var(--gold-soft);font-weight:700}
+  .region{font-family:"Fraunces",serif;font-size:1.02rem;color:var(--jade-soft);letter-spacing:.02em;
+    margin:34px 2px 2px;display:flex;align-items:center;gap:12px}
+  .region::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(31,158,137,.4),transparent)}
+  .grid{margin-top:16px;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+  a.card{position:relative;display:flex;flex-direction:column;text-decoration:none;color:inherit;
+    background:linear-gradient(180deg,var(--card),var(--bg2));
+    border:1px solid var(--line);border-radius:16px;padding:20px 20px 18px;overflow:hidden;
+    transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,box-shadow .35s;
+    opacity:0;transform:translateY(14px)}
+  a.card.in{opacity:1;transform:none}
+  a.card::before{content:"";position:absolute;inset:0;border-radius:16px;pointer-events:none;
+    background:radial-gradient(420px 180px at var(--mx,80%) -10%, rgba(31,158,137,.16), transparent 60%);
+    opacity:0;transition:opacity .4s}
+  a.card:hover{transform:translateY(-5px);border-color:rgba(31,158,137,.45);box-shadow:0 22px 50px -28px rgba(0,0,0,.85)}
+  a.card:hover::before{opacity:1}
+  a.card:focus-visible{outline:2px solid var(--jade);outline-offset:3px}
+  .num{font-family:"Fraunces",serif;font-size:.95rem;color:var(--gold);letter-spacing:.04em}
+  .tag{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin:2px 0 14px;font-weight:600}
+  .cname{font-family:"Fraunces",serif;font-size:1.3rem;line-height:1.16;margin-bottom:3px}
+  .th{font-family:"Noto Sans Thai",sans-serif;font-size:.84rem;color:var(--muted);margin-bottom:14px;min-height:1.1em}
+  .row{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;
+    padding-top:14px;border-top:1px solid var(--line)}
+  .area{font-size:.82rem;color:var(--muted)}
+  .star{font-size:.82rem;color:var(--gold-soft);font-weight:700;white-space:nowrap}
+  .view{display:inline-flex;align-items:center;gap:7px;margin-top:14px;font-size:.86rem;font-weight:600;color:var(--ink)}
+  .view .arr{transition:transform .3s;color:var(--jade-soft)}
+  a.card:hover .view .arr{transform:translateX(5px)}
+  .view .arr svg{display:block}
+  footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between;
+    color:var(--muted);font-size:.84rem}
+  footer a{color:var(--gold-soft);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;animation:none!important}
+    a.card{opacity:1;transform:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brandrow">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="11" fill="#1f9e89" opacity="0.92"/>
+          <circle cx="20" cy="20" r="18.3" stroke="rgba(232,214,173,.4)" stroke-width="1"/>
+        </svg>
+      </span>
+      <span class="brandname">Stellar Haus Media</span><span class="thmark">ไทย</span>
+    </div>
+    <h1>Thailand Expat Dental — <em>thirty-six</em> landing pages, thirty-six art directions.</h1>
+    <p class="lede">Single-page, English-first websites for dental clinics across Bangkok, Phuket and Chiang Mai that welcome international patients. Each is fully self-contained, photo-free (all CSS &amp; SVG), motion-led, and wired to the clinic's own real contact channels. Open any card to preview the live page.</p>
+    <div class="meta">
+      <span class="chip"><b>36</b> clinics</span>
+      <span class="chip"><b>36</b> distinct art directions</span>
+      <span class="chip">Bangkok · Phuket · Chiang Mai</span>
+      <span class="chip">No stock photos — pure CSS &amp; SVG</span>
+    </div>
+  </header>
+
+  <div id="regions"></div>
+
+  <footer>
+    <span>Internal preview gallery · designs reflect each clinic's spreadsheet data.</span>
+    <span>Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener">Stellar Haus Media</a></span>
+  </footer>
+</div>
+
+<script>
+  // [num, art-direction, EN name, TH name, area, rating, FILE NAME in this folder, region]
+  var clinics = [
+    ["01","Members' Club Editorial","DentSociety Dental Clinic","","Thonglor · Bangkok","5.0 ★ · 211","DentSociety Dental Clinic.html","Bangkok"],
+    ["02","Trusted Modernist","Bangkok Dental Clinic","","Thonglor · Bangkok","4.6 ★ · 59","Bangkok Dental Clinic.html","Bangkok"],
+    ["03","Architectural Arc","ARC Dental Clinic","","Ari · Bangkok","5.0 ★ · 1,054","ARC Dental Clinic.html","Bangkok"],
+    ["04","Andaman Resort","Dental Hub Clinic Phuket","","Bang Tao · Phuket","4.8 ★ · 187","Dental Hub Clinic Phuket.html","Phuket"],
+    ["05","Sino-Portuguese Heritage","The Smile Gallery Phuket","","Phuket Town · Phuket","4.9 ★ · 1,805","The Smile Gallery Phuket.html","Phuket"],
+    ["06","Skytrain Kinetic","Onnut Skytrain Dental Clinic","","On Nut · Bangkok","4.9 ★ · 983","Onnut Skytrain Dental Clinic.html","Bangkok"],
+    ["07","Warm Habitat","Habito Dental Clinic","","On Nut · Bangkok","4.8 ★ · 156","Habito Dental Clinic.html","Bangkok"],
+    ["08","Crossroads Grid","Asoke Dental Clinic","","Asok · Bangkok","4.9 ★ · 54","Asoke Dental Clinic.html","Bangkok"],
+    ["09","Four-Seasons Gradient","Smile Seasons (Asoke Tower)","","Asok · Bangkok","4.9 ★ · 837","Smile Seasons (Asoke Tower).html","Bangkok"],
+    ["10","Plus-Sign Minimal","PLUS Dental Clinic (Ari)","","Ari · Bangkok","4.8 ★ · 514","PLUS Dental Clinic (Ari).html","Bangkok"],
+    ["11","Civic Republic","Tooth Republic Dental Clinic","","Charoen Nakhon · Bangkok","5.0 ★ · 1,191","Tooth Republic Dental Clinic.html","Bangkok"],
+    ["12","Pure Water Clarity","Puredent Dental Clinic","","Charoen Nakhon · Bangkok","5.0 ★ · 792","Puredent Dental Clinic.html","Bangkok"],
+    ["13","Storybook Warm","Silom Family Dental House","","Silom · Bangkok","4.9 ★ · 77","Silom Family Dental House.html","Bangkok"],
+    ["14","Chao Phraya Riverside Luxe","Charoen Nakhon Dental Clinic 1","","Charoen Nakhon · Bangkok","5.0 ★ · 431","Charoen Nakhon Dental Clinic 1.html","Bangkok"],
+    ["15","Creative-District Gallery","Diners Dental Clinic (Bangrak)","","Charoen Krung · Bangkok","4.9 ★ · 245","Diners Dental Clinic (Bangrak).html","Bangkok"],
+    ["16","Nimman Café Minimal","CDC Dental Clinic (Nimman)","","Nimman · Chiang Mai","4.8 ★ · 87","CDC Dental Clinic (Nimman).html","Chiang Mai"],
+    ["17","ICONSIAM Glass Modern","Charoen Nakhon Dental Clinic 2","","Khlong San · Bangkok","5.0 ★ · 499","Charoen Nakhon Dental Clinic 2.html","Bangkok"],
+    ["18","Teal Monochrome","TEAL Dental Clinic","","Rama IX · Bangkok","4.7 ★ · 76","TEAL Dental Clinic.html","Bangkok"],
+    ["19","Pro Confident Bold","Prosmiles Dental Clinic Rama IX","","Rama IX · Bangkok","4.8 ★ · 141","Prosmiles Dental Clinic Rama IX.html","Bangkok"],
+    ["20","Fresh Optimistic","Bangkok New Smile Dental (Ratchada)","","Ratchada · Bangkok","4.9 ★ · 719","Bangkok New Smile Dental (Ratchada).html","Bangkok"],
+    ["21","Lotus Rebirth","Reborn Dental Clinic","","Wongwian Yai · Bangkok","4.9 ★ · 276","Reborn Dental Clinic.html","Bangkok"],
+    ["22","Connected Hub","TOOTHHUB Dental Clinic","","Chong Nonsi · Bangkok","5.0 ★ · 482","TOOTHHUB Dental Clinic.html","Bangkok"],
+    ["23","Bauhaus Haus","Tooth Haus Dental Clinic","","Sathorn · Bangkok","5.0 ★ · 598","Tooth Haus Dental Clinic.html","Bangkok"],
+    ["24","Nomad Loft","Ok Dental Clinic 2","","On Nut · Bangkok","4.9 ★ · 98","Ok Dental Clinic 2.html","Bangkok"],
+    ["25","Lanna Temple Heritage","Dental Point Clinic Chiang Mai","","Old City · Chiang Mai","4.8 ★ · 587","Dental Point Clinic Chiang Mai.html","Chiang Mai"],
+    ["26","Lantern Glow Nocturne","i Smile Plus Dental Clinic","","Santitham · Chiang Mai","4.5 ★ · 97","i Smile Plus Dental Clinic.html","Chiang Mai"],
+    ["27","Doi Suthep Mountain Mist","T Smile Dental Clinic Chiang Mai","","Suthep · Chiang Mai","4.9 ★ · 668","T Smile Dental Clinic Chiang Mai.html","Chiang Mai"],
+    ["28","Red Sala — Thai Pavilion","Saladaeng Dental Clinic","","Sala Daeng · Bangkok","4.9 ★ · 193","Saladaeng Dental Clinic.html","Bangkok"],
+    ["29","Neo Futurist Minimal","Neodent Riverside Dental Clinic","","Charoen Nakhon · Bangkok","4.8 ★ · 123","Neodent Riverside Dental Clinic.html","Bangkok"],
+    ["30","Clear-Aligner Crystalline","DC Dental Clinic","","Nimman · Chiang Mai","4.9 ★ · 678","DC Dental Clinic.html","Chiang Mai"],
+    ["31","Fashionista Luxe","Dentalista at Phrompong","","Phrom Phong · Bangkok","4.8 ★ · 19","Dentalista at Phrompong.html","Bangkok"],
+    ["32","Lab Precision","SmileLab","","Rawai · Phuket","4.8 ★ · 67","SmileLab.html","Phuket"],
+    ["33","Signature Script","Smile Signature Ratchada","","Ratchadaphisek · Bangkok","5.0 ★ · 2,793","Smile Signature Ratchada.html","Bangkok"],
+    ["34","Auspicious Thai Gold","Gold 9 Dental Clinic","","Rama IX · Bangkok","5.0 ★ · 374","Gold 9 Dental Clinic.html","Bangkok"],
+    ["35","Swiss Design Studio","Smile Design Dental Clinic (Silom)","","Silom · Bangkok","5.0 ★ · 226","Smile Design Dental Clinic (Silom).html","Bangkok"],
+    ["36","Indigo Lanna Craft","Dentalme Clinic (Phra-Sing)","","Old City · Chiang Mai","4.8 ★ · 318","Dentalme Clinic (Phra-Sing).html","Chiang Mai"],
+  ];
+  var arrow = '<span class="arr"><svg width="16" height="12" viewBox="0 0 16 12" fill="none"><path d="M1 6h13M9 1l5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>';
+  function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  var regionsHost = document.getElementById('regions');
+  var order = ["Bangkok","Phuket","Chiang Mai"];
+  var labels = {Bangkok:"Bangkok　กรุงเทพฯ", Phuket:"Phuket　ภูเก็ต", "Chiang Mai":"Chiang Mai　เชียงใหม่"};
+  order.forEach(function(reg){
+    var items = clinics.filter(function(c){return c[7]===reg;});
+    if(!items.length) return;
+    var h = document.createElement('div'); h.className='region'; h.textContent = labels[reg];
+    regionsHost.appendChild(h);
+    var grid = document.createElement('main'); grid.className='grid';
+    items.forEach(function(c){
+      var a = document.createElement('a');
+      a.className = 'card';
+      a.href = encodeURIComponent(c[6]);
+      a.setAttribute('aria-label','Open ' + c[2] + ' landing page');
+      a.innerHTML =
+        '<div class="num">'+c[0]+'</div>'+
+        '<div class="tag">'+esc(c[1])+'</div>'+
+        '<div class="cname">'+esc(c[2])+'</div>'+
+        '<div class="th">'+esc(c[3])+'</div>'+
+        '<div class="row"><span class="area">'+esc(c[4])+'</span><span class="star">'+esc(c[5])+'</span></div>'+
+        '<div class="view">View landing page '+arrow+'</div>';
+      a.addEventListener('mousemove', function(e){
+        var r = a.getBoundingClientRect();
+        a.style.setProperty('--mx', ((e.clientX - r.left)/r.width*100)+'%');
+      });
+      grid.appendChild(a);
+    });
+    regionsHost.appendChild(grid);
+  });
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cards = document.querySelectorAll('.card');
+  if (reduce) {
+    cards.forEach(function(c){c.classList.add('in')});
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          var el = en.target, i = Array.prototype.indexOf.call(cards, el);
+          setTimeout(function(){ el.classList.add('in'); }, (i % 4) * 65);
+          io.unobserve(el);
+        }
+      });
+    }, {threshold:.12});
+    cards.forEach(function(c){ io.observe(c); });
+  }
+</script>
+</body>
+</html>

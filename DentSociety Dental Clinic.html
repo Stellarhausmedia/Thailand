@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DentSociety Dental Clinic — Thonglor, Bangkok</title>
+<meta name="description" content="An English-speaking dental clinic in Thonglor, Bangkok. General and family dentistry with a 5.0-star rating from 211 reviews. International patients warmly welcomed in English." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231f3b30'/%3E%3Cpath d='M16 6c-3.4 0-5.5 2-5.5 5 0 2.2 1 4.6 1.7 7.4.6 2.3 1 4.6 2.3 4.6 1 0 1-1.6 1.5-1.6s.5 1.6 1.5 1.6c1.3 0 1.7-2.3 2.3-4.6.7-2.8 1.7-5.2 1.7-7.4 0-3-2.1-5-5.5-5z' fill='%23c9a24a'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --forest:#16302a;
+    --forest-deep:#0e211d;
+    --forest-soft:#1f3b30;
+    --moss:#2f4f42;
+    --brass:#c9a24a;
+    --brass-bright:#e3c178;
+    --brass-deep:#a07c2e;
+    --cream:#f4eede;
+    --cream-soft:#faf6ec;
+    --paper:#ece3cf;
+    --ink:#13241f;
+    --line:rgba(201,162,74,.28);
+    --line-soft:rgba(201,162,74,.16);
+    --serif:'Playfair Display', Georgia, serif;
+    --serif-light:'Cormorant Garamond', Georgia, serif;
+    --sans:'Jost', system-ui, -apple-system, sans-serif;
+    --ease:cubic-bezier(.22,1,.36,1);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+  body{
+    font-family:var(--sans);
+    background:var(--forest);
+    color:var(--cream);
+    line-height:1.65;
+    font-weight:300;
+    letter-spacing:.01em;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--brass);color:var(--forest-deep)}
+
+  /* ---- Focus visibility ---- */
+  a:focus-visible,button:focus-visible{
+    outline:2px solid var(--brass-bright);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+  .skip{
+    position:absolute;left:-9999px;top:0;z-index:200;
+    background:var(--brass);color:var(--forest-deep);
+    padding:.8rem 1.2rem;font-family:var(--sans);font-weight:500;
+    letter-spacing:.12em;text-transform:uppercase;font-size:.72rem;
+  }
+  .skip:focus{left:1rem;top:1rem}
+
+  .wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 1.5rem}
+  @media(min-width:768px){.wrap{padding:0 2.5rem}}
+  @media(min-width:1100px){.wrap{padding:0 3.5rem}}
+
+  .eyebrow{
+    font-family:var(--sans);
+    font-weight:500;
+    font-size:.7rem;
+    letter-spacing:.34em;
+    text-transform:uppercase;
+    color:var(--brass);
+    display:inline-flex;align-items:center;gap:.85rem;
+  }
+  .eyebrow::before{
+    content:"";width:34px;height:1px;background:var(--brass);
+    opacity:.6;display:inline-block;
+  }
+  .eyebrow.center::after{
+    content:"";width:34px;height:1px;background:var(--brass);
+    opacity:.6;display:inline-block;
+  }
+
+  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.04;letter-spacing:-.01em}
+
+  /* ================= NAV ================= */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    transition:background .6s var(--ease),backdrop-filter .6s var(--ease),box-shadow .6s var(--ease);
+  }
+  header.nav.scrolled{
+    background:rgba(14,33,29,.86);
+    backdrop-filter:blur(14px) saturate(140%);
+    -webkit-backdrop-filter:blur(14px) saturate(140%);
+    box-shadow:0 1px 0 var(--line-soft);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    height:74px;
+  }
+  @media(min-width:768px){.nav-inner{height:88px}}
+  .wordmark{display:flex;align-items:center;gap:.7rem}
+  .wordmark .crest-mini{width:34px;height:34px;flex:none}
+  .wordmark .crest-mini path,.wordmark .crest-mini circle{transition:fill .4s var(--ease)}
+  .wm-text{display:flex;flex-direction:column;line-height:1}
+  .wm-name{
+    font-family:var(--serif);font-weight:600;font-size:1.12rem;
+    color:var(--cream);letter-spacing:.02em;
+  }
+  .wm-sub{
+    font-family:var(--sans);font-weight:400;font-size:.56rem;
+    letter-spacing:.36em;text-transform:uppercase;color:var(--brass);
+    margin-top:.28rem;
+  }
+  .nav-links{display:none;align-items:center;gap:2.4rem}
+  @media(min-width:980px){.nav-links{display:flex}}
+  .nav-links a{
+    font-family:var(--sans);font-weight:400;font-size:.74rem;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--cream);
+    position:relative;padding:.4rem 0;opacity:.82;transition:opacity .4s var(--ease);
+  }
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:0;height:1px;width:0;
+    background:var(--brass);transition:width .45s var(--ease);
+  }
+  .nav-links a:hover{opacity:1}
+  .nav-links a:hover::after{width:100%}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:.6rem;
+    font-family:var(--sans);font-weight:500;font-size:.72rem;
+    letter-spacing:.16em;text-transform:uppercase;
+    color:var(--forest-deep);background:var(--brass);
+    padding:.78rem 1.5rem;border:1px solid var(--brass);
+    transition:background .4s var(--ease),color .4s var(--ease),transform .4s var(--ease);
+  }
+  .nav-cta:hover{background:var(--brass-bright);transform:translateY(-1px)}
+  .nav-cta svg{width:14px;height:14px}
+
+  /* ================= HERO ================= */
+  .hero{
+    position:relative;min-height:100svh;display:flex;align-items:center;
+    padding-top:120px;padding-bottom:64px;overflow:hidden;
+    background:
+      radial-gradient(120% 90% at 82% 8%, rgba(201,162,74,.14) 0%, rgba(201,162,74,0) 46%),
+      radial-gradient(120% 120% at 12% 100%, rgba(47,79,66,.55) 0%, rgba(47,79,66,0) 50%),
+      linear-gradient(168deg, var(--forest) 0%, var(--forest-deep) 100%);
+  }
+  .hero-grid-lines{
+    position:absolute;inset:0;pointer-events:none;opacity:.5;
+    background-image:linear-gradient(var(--line-soft) 1px,transparent 1px);
+    background-size:100% 88px;
+    -webkit-mask-image:linear-gradient(to bottom,transparent,#000 30%,#000 70%,transparent);
+            mask-image:linear-gradient(to bottom,transparent,#000 30%,#000 70%,transparent);
+  }
+  .hero-vert{
+    position:absolute;top:0;bottom:0;width:1px;background:var(--line-soft);
+    pointer-events:none;display:none;
+  }
+  @media(min-width:1100px){
+    .hero-vert{display:block}
+    .hero-vert.l{left:max(3.5rem,calc(50% - 620px + 3.5rem))}
+    .hero-vert.r{right:max(3.5rem,calc(50% - 620px + 3.5rem))}
+  }
+  .hero-inner{position:relative;z-index:3;width:100%}
+  .hero-layout{display:grid;grid-template-columns:1fr;gap:3rem;align-items:center}
+  @media(min-width:1024px){.hero-layout{grid-template-columns:1.18fr .82fr;gap:4rem}}
+
+  .hero-loc{
+    display:inline-flex;align-items:center;gap:.7rem;margin-bottom:2rem;
+    font-family:var(--sans);font-weight:400;font-size:.72rem;
+    letter-spacing:.26em;text-transform:uppercase;color:var(--brass);
+  }
+  .hero-loc svg{width:13px;height:13px;flex:none}
+  .hero h1{
+    font-size:clamp(2.9rem,8.4vw,6.6rem);
+    color:var(--cream);margin-bottom:1.8rem;
+  }
+  .hero h1 .ital{font-style:italic;font-weight:500;color:var(--brass-bright)}
+  .hero h1 .thin{
+    display:block;font-family:var(--serif-light);font-weight:400;
+    font-size:.52em;font-style:italic;color:var(--cream);opacity:.92;
+    letter-spacing:0;margin-top:.4rem;
+  }
+  .hero-lede{
+    max-width:30rem;font-size:1.06rem;font-weight:300;line-height:1.7;
+    color:rgba(244,238,222,.82);margin-bottom:2.6rem;
+  }
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:.7rem;
+    font-family:var(--sans);font-weight:500;font-size:.78rem;
+    letter-spacing:.16em;text-transform:uppercase;
+    padding:1.05rem 1.9rem;border:1px solid transparent;cursor:pointer;
+    transition:transform .4s var(--ease),background .4s var(--ease),color .4s var(--ease),border-color .4s var(--ease);
+    position:relative;
+  }
+  .btn svg{width:16px;height:16px;flex:none}
+  .btn-gold{background:var(--brass);color:var(--forest-deep);border-color:var(--brass)}
+  .btn-gold:hover{background:var(--brass-bright);border-color:var(--brass-bright);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:var(--cream);border-color:var(--line)}
+  .btn-ghost:hover{border-color:var(--brass);color:var(--brass-bright);transform:translateY(-2px)}
+
+  /* Hero crest panel */
+  .crest-panel{
+    position:relative;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;text-align:center;padding:2.5rem 1.5rem;
+  }
+  .crest-frame{
+    position:relative;width:min(340px,80vw);aspect-ratio:1;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .crest-frame .ring{
+    position:absolute;inset:0;border:1px solid var(--line);border-radius:50%;
+  }
+  .crest-frame .ring.inner{inset:18px;border-style:dashed;border-color:var(--line-soft)}
+  .crest-svg{width:74%;height:74%;position:relative;z-index:2}
+  .crest-cap{
+    margin-top:2rem;font-family:var(--sans);font-weight:400;font-size:.66rem;
+    letter-spacing:.32em;text-transform:uppercase;color:var(--brass);
+  }
+  .crest-cap b{display:block;font-family:var(--serif);font-weight:600;font-size:1.5rem;
+    letter-spacing:.01em;color:var(--cream);text-transform:none;margin-top:.5rem}
+
+  /* rotating ring text */
+  .seal-rotate{transform-origin:center;}
+
+  /* scroll cue */
+  .scroll-cue{
+    position:absolute;left:50%;bottom:2rem;transform:translateX(-50%);
+    z-index:5;display:flex;flex-direction:column;align-items:center;gap:.7rem;
+    font-family:var(--sans);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--brass);opacity:.8;
+  }
+  .scroll-cue .track{width:1px;height:46px;background:var(--line);position:relative;overflow:hidden}
+  .scroll-cue .track::after{
+    content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--brass);
+  }
+  @media(min-width:768px){.scroll-cue{display:flex}}
+  @media(max-width:520px){.scroll-cue{display:none}}
+
+  /* ================= GENERIC SECTION ================= */
+  section{position:relative}
+  .band{padding:6rem 0}
+  @media(min-width:768px){.band{padding:8.5rem 0}}
+  .sec-head{max-width:46rem}
+  .sec-head .eyebrow{margin-bottom:1.6rem}
+  .sec-head h2{
+    font-size:clamp(2.1rem,5vw,3.8rem);color:var(--cream);margin-bottom:1.4rem;
+  }
+  .sec-head h2 .ital{font-style:italic;color:var(--brass-bright)}
+  .sec-head p{font-size:1.04rem;font-weight:300;color:rgba(244,238,222,.78);max-width:38rem}
+
+  /* ===== WELCOME / ENGLISH ===== */
+  .welcome{
+    background:
+      radial-gradient(100% 80% at 90% 0%, rgba(201,162,74,.08), transparent 55%),
+      var(--forest-deep);
+    border-top:1px solid var(--line-soft);
+  }
+  .welcome-grid{display:grid;grid-template-columns:1fr;gap:3.5rem;margin-top:3.5rem;align-items:stretch}
+  @media(min-width:900px){.welcome-grid{grid-template-columns:1.05fr .95fr;gap:4.5rem;align-items:center}}
+
+  .welcome-copy .lead{
+    font-family:var(--serif-light);font-style:italic;font-weight:400;
+    font-size:clamp(1.5rem,3vw,2.05rem);line-height:1.45;color:var(--cream);
+    margin-bottom:1.8rem;
+  }
+  .welcome-copy .lead .hl{color:var(--brass-bright);font-style:normal;font-weight:500}
+  .welcome-copy p{color:rgba(244,238,222,.78);font-weight:300;margin-bottom:1.2rem;max-width:34rem}
+
+  .assure-list{list-style:none;margin-top:2.2rem;display:grid;gap:1.1rem}
+  .assure-list li{display:flex;gap:1rem;align-items:flex-start}
+  .assure-list .ic{
+    flex:none;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;color:var(--brass);
+  }
+  .assure-list .ic svg{width:18px;height:18px}
+  .assure-list .tx b{display:block;font-family:var(--serif);font-weight:600;font-size:1.05rem;color:var(--cream);letter-spacing:.01em}
+  .assure-list .tx span{font-size:.92rem;font-weight:300;color:rgba(244,238,222,.66)}
+
+  /* proof card inside welcome */
+  .proof-card{
+    background:linear-gradient(160deg, rgba(47,79,66,.5), rgba(14,33,29,.6));
+    border:1px solid var(--line);padding:3rem 2.5rem;position:relative;
+    text-align:center;overflow:hidden;
+  }
+  .proof-card::before{
+    content:"";position:absolute;inset:10px;border:1px solid var(--line-soft);pointer-events:none;
+  }
+  .proof-rating{
+    font-family:var(--serif);font-weight:700;font-size:clamp(4rem,9vw,5.6rem);
+    line-height:1;color:var(--brass-bright);letter-spacing:-.02em;
+  }
+  .proof-rating sup{font-size:.32em;vertical-align:super;color:var(--brass)}
+  .stars{display:flex;justify-content:center;gap:.45rem;margin:1.1rem 0 1.3rem}
+  .stars svg{width:22px;height:22px;color:var(--brass)}
+  .proof-card .rv{font-family:var(--sans);font-weight:400;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cream)}
+  .proof-card .rv b{color:var(--brass-bright);font-weight:600}
+  .proof-card .note{
+    margin-top:1.6rem;padding-top:1.6rem;border-top:1px solid var(--line-soft);
+    font-family:var(--serif-light);font-style:italic;font-size:1.12rem;color:rgba(244,238,222,.85);line-height:1.5;
+  }
+
+  /* ===== SERVICES ===== */
+  .services{background:var(--forest);border-top:1px solid var(--line-soft)}
+  .svc-wrap{margin-top:4rem;border-top:1px solid var(--line)}
+  .svc-row{
+    display:grid;grid-template-columns:1fr;gap:.6rem;
+    padding:2.4rem 0;border-bottom:1px solid var(--line);
+    position:relative;transition:padding .5s var(--ease);
+  }
+  @media(min-width:860px){
+    .svc-row{grid-template-columns:88px 1fr 1.25fr auto;gap:2.5rem;align-items:baseline}
+  }
+  .svc-row::after{
+    content:"";position:absolute;left:0;bottom:-1px;height:1px;width:0;
+    background:linear-gradient(90deg,var(--brass),transparent);
+    transition:width .7s var(--ease);
+  }
+  .svc-row:hover::after{width:100%}
+  .svc-num{
+    font-family:var(--serif-light);font-style:italic;font-size:1.3rem;color:var(--brass);
+    letter-spacing:.05em;
+  }
+  .svc-title{
+    font-family:var(--serif);font-weight:600;font-size:clamp(1.5rem,3.4vw,2.3rem);
+    color:var(--cream);line-height:1.05;transition:color .45s var(--ease),transform .55s var(--ease);
+  }
+  .svc-row:hover .svc-title{color:var(--brass-bright)}
+  @media(min-width:860px){.svc-row:hover .svc-title{transform:translateX(8px)}}
+  .svc-desc{font-size:.96rem;font-weight:300;color:rgba(244,238,222,.7);max-width:30rem}
+  .svc-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+  .svc-tags span{
+    font-family:var(--sans);font-weight:400;font-size:.64rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--brass);border:1px solid var(--line);
+    padding:.4rem .8rem;border-radius:40px;
+  }
+  .svc-mark{flex:none;color:var(--brass);opacity:.55;transition:opacity .45s var(--ease),transform .45s var(--ease)}
+  .svc-row:hover .svc-mark{opacity:1;transform:translateX(6px)}
+  .svc-mark svg{width:30px;height:30px}
+
+  /* ===== VISIT ===== */
+  .visit{
+    background:
+      radial-gradient(90% 90% at 8% 100%, rgba(201,162,74,.1), transparent 50%),
+      var(--forest-deep);
+    border-top:1px solid var(--line-soft);
+  }
+  .visit-grid{display:grid;grid-template-columns:1fr;gap:3rem;margin-top:3.5rem}
+  @media(min-width:900px){.visit-grid{grid-template-columns:.92fr 1.08fr;gap:4.5rem;align-items:center}}
+  .visit-info{display:grid;gap:0}
+  .info-row{
+    display:grid;grid-template-columns:auto 1fr;gap:1.4rem;align-items:flex-start;
+    padding:1.8rem 0;border-bottom:1px solid var(--line-soft);
+  }
+  .info-row:first-child{border-top:1px solid var(--line-soft)}
+  .info-row .ic{
+    width:44px;height:44px;border:1px solid var(--line);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;color:var(--brass);flex:none;
+  }
+  .info-row .ic svg{width:20px;height:20px}
+  .info-row h3{font-family:var(--serif);font-weight:600;font-size:1.25rem;color:var(--cream);margin-bottom:.35rem;letter-spacing:.01em}
+  .info-row p{font-size:.96rem;font-weight:300;color:rgba(244,238,222,.74)}
+  .info-row p .accent{color:var(--brass-bright)}
+
+  /* stylised map / district card */
+  .map-card{
+    position:relative;border:1px solid var(--line);overflow:hidden;
+    background:linear-gradient(155deg,var(--forest-soft),var(--forest-deep));
+    min-height:380px;
+  }
+  .map-card svg.map{position:absolute;inset:0;width:100%;height:100%}
+  .map-badge{
+    position:absolute;left:1.6rem;bottom:1.6rem;z-index:4;
+    background:rgba(14,33,29,.7);backdrop-filter:blur(6px);
+    border:1px solid var(--line);padding:1.1rem 1.4rem;
+  }
+  .map-badge .k{font-family:var(--sans);font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--brass)}
+  .map-badge .v{font-family:var(--serif);font-weight:600;font-size:1.2rem;color:var(--cream);margin-top:.3rem;letter-spacing:.01em}
+
+  /* ===== TESTIMONIAL / QUOTE BAND ===== */
+  .quote-band{
+    background:var(--forest);border-top:1px solid var(--line-soft);
+    text-align:center;
+  }
+  .big-quote{
+    font-family:var(--serif);font-weight:500;font-style:italic;
+    font-size:clamp(1.8rem,5vw,3.4rem);line-height:1.28;color:var(--cream);
+    max-width:54rem;margin:2.5rem auto;position:relative;
+  }
+  .big-quote .mark{
+    display:block;font-family:var(--serif);font-weight:700;font-size:4rem;
+    color:var(--brass);line-height:.4;margin-bottom:1.5rem;
+  }
+  .big-quote .hl{color:var(--brass-bright)}
+  .quote-sub{
+    font-family:var(--sans);font-weight:400;font-size:.74rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--brass);
+  }
+  .quote-stat-row{
+    display:flex;flex-wrap:wrap;justify-content:center;gap:0;margin-top:4rem;
+    border-top:1px solid var(--line-soft);
+  }
+  .qstat{
+    flex:1 1 180px;padding:2.4rem 1.5rem;border-right:1px solid var(--line-soft);
+  }
+  .qstat:last-child{border-right:none}
+  .qstat .n{font-family:var(--serif);font-weight:700;font-size:clamp(2.2rem,5vw,3rem);color:var(--brass-bright);line-height:1}
+  .qstat .l{font-family:var(--sans);font-weight:400;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,238,222,.66);margin-top:.7rem}
+
+  /* ===== CONTACT ===== */
+  .contact{
+    background:
+      radial-gradient(110% 90% at 100% 0%, rgba(201,162,74,.12), transparent 50%),
+      linear-gradient(190deg,var(--forest-deep),var(--forest));
+    border-top:1px solid var(--line-soft);
+  }
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:3.5rem;margin-top:3.5rem}
+  @media(min-width:900px){.contact-grid{grid-template-columns:1fr 1fr;gap:5rem}}
+  .contact-lead .lead{
+    font-family:var(--serif-light);font-style:italic;font-size:clamp(1.4rem,3vw,1.9rem);
+    line-height:1.45;color:var(--cream);margin-bottom:1.5rem;
+  }
+  .contact-lead p{color:rgba(244,238,222,.76);font-weight:300;max-width:30rem}
+  .contact-actions{display:grid;gap:1rem}
+  .channel{
+    display:flex;align-items:center;gap:1.2rem;
+    border:1px solid var(--line);padding:1.3rem 1.6rem;
+    transition:background .45s var(--ease),border-color .45s var(--ease),transform .45s var(--ease);
+    background:rgba(47,79,66,.16);
+  }
+  .channel:hover{background:rgba(201,162,74,.1);border-color:var(--brass);transform:translateX(6px)}
+  .channel .ic{
+    width:46px;height:46px;flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    background:var(--forest-deep);border:1px solid var(--line);color:var(--brass);
+    transition:background .45s var(--ease),color .45s var(--ease);
+  }
+  .channel:hover .ic{background:var(--brass);color:var(--forest-deep)}
+  .channel .ic svg{width:22px;height:22px}
+  .channel .tx{flex:1}
+  .channel .tx b{display:block;font-family:var(--serif);font-weight:600;font-size:1.15rem;color:var(--cream);letter-spacing:.01em}
+  .channel .tx span{font-size:.82rem;font-weight:300;color:rgba(244,238,222,.62);letter-spacing:.02em}
+  .channel .arw{color:var(--brass);opacity:.6;transition:opacity .4s var(--ease),transform .4s var(--ease)}
+  .channel:hover .arw{opacity:1;transform:translateX(4px)}
+  .channel .arw svg{width:18px;height:18px}
+
+  /* ================= FOOTER ================= */
+  footer.site{
+    background:var(--forest-deep);border-top:1px solid var(--line);
+    padding:5rem 0 2.5rem;
+  }
+  .foot-top{
+    display:grid;grid-template-columns:1fr;gap:3rem;
+    padding-bottom:3.5rem;border-bottom:1px solid var(--line-soft);
+  }
+  @media(min-width:780px){.foot-top{grid-template-columns:1.4fr 1fr 1fr}}
+  .foot-brand .wm-name{font-size:1.4rem}
+  .foot-brand p{margin-top:1.2rem;font-weight:300;color:rgba(244,238,222,.6);max-width:24rem;font-size:.94rem}
+  .foot-brand .wordmark{margin-bottom:0}
+  .foot-col h4{
+    font-family:var(--sans);font-weight:500;font-size:.68rem;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--brass);margin-bottom:1.4rem;
+  }
+  .foot-col a,.foot-col p{
+    display:block;font-weight:300;font-size:.92rem;color:rgba(244,238,222,.72);
+    margin-bottom:.7rem;transition:color .35s var(--ease);
+  }
+  .foot-col a:hover{color:var(--brass-bright)}
+  .foot-social{display:flex;gap:.8rem;margin-top:.4rem}
+  .foot-social a{
+    width:42px;height:42px;border:1px solid var(--line);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;color:var(--brass);margin:0;
+    transition:background .4s var(--ease),color .4s var(--ease),transform .4s var(--ease);
+  }
+  .foot-social a:hover{background:var(--brass);color:var(--forest-deep);transform:translateY(-2px)}
+  .foot-social a svg{width:18px;height:18px}
+  .foot-bottom{
+    display:flex;flex-direction:column;gap:1rem;align-items:center;justify-content:space-between;
+    padding-top:2.5rem;text-align:center;
+  }
+  @media(min-width:680px){.foot-bottom{flex-direction:row;text-align:left}}
+  .foot-bottom .legal{font-size:.78rem;font-weight:300;color:rgba(244,238,222,.5);letter-spacing:.02em}
+  .credit{font-size:.76rem;font-weight:300;letter-spacing:.04em;color:rgba(244,238,222,.55)}
+  .credit a{color:var(--brass);border-bottom:1px solid var(--line);padding-bottom:1px;transition:color .35s var(--ease),border-color .35s var(--ease)}
+  .credit a:hover{color:var(--brass-bright);border-color:var(--brass)}
+
+  /* ================= REVEAL ANIM ================= */
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{opacity:0;transform:translateY(34px);transition:opacity 1.05s var(--ease),transform 1.05s var(--ease)}
+    .reveal.in{opacity:1;transform:none}
+    .reveal[data-d="1"]{transition-delay:.1s}
+    .reveal[data-d="2"]{transition-delay:.2s}
+    .reveal[data-d="3"]{transition-delay:.3s}
+    .reveal[data-d="4"]{transition-delay:.4s}
+
+    /* hero entrance */
+    .hero-anim{opacity:0;transform:translateY(40px)}
+    .hero.ready .hero-anim{opacity:1;transform:none;transition:opacity 1.1s var(--ease),transform 1.1s var(--ease)}
+    .hero.ready .hero-anim[data-d="1"]{transition-delay:.45s}
+    .hero.ready .hero-anim[data-d="2"]{transition-delay:.6s}
+    .hero.ready .hero-anim[data-d="3"]{transition-delay:.78s}
+    .hero.ready .hero-anim[data-d="4"]{transition-delay:.95s}
+
+    /* crest stamp-in */
+    .crest-panel .crest-frame{opacity:0;transform:scale(1.35) rotate(-8deg);filter:blur(3px)}
+    .hero.ready .crest-panel .crest-frame{
+      opacity:1;transform:scale(1) rotate(0);filter:blur(0);
+      transition:opacity .7s var(--ease) 1.05s, transform .9s cubic-bezier(.34,1.56,.64,1) 1.05s, filter .7s ease 1.05s;
+    }
+    .crest-frame .ring{transform:scale(.85);opacity:0}
+    .hero.ready .crest-frame .ring{opacity:1;transform:scale(1);transition:opacity .8s var(--ease) 1.3s,transform .8s var(--ease) 1.3s}
+    .hero.ready .crest-frame .ring.inner{transition-delay:1.45s}
+
+    .seal-rotate{animation:sealspin 60s linear infinite}
+    @keyframes sealspin{to{transform:rotate(360deg)}}
+
+    .scroll-cue .track::after{animation:cuedrop 2.4s var(--ease) infinite}
+    @keyframes cuedrop{0%{top:-50%}60%,100%{top:100%}}
+
+    .float-orn{animation:floaty 9s ease-in-out infinite}
+    @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+  }
+  /* reduced motion: ensure crest + content visible */
+  @media (prefers-reduced-motion: reduce){
+    .crest-panel .crest-frame,.crest-frame .ring,.hero-anim,.reveal{opacity:1!important;transform:none!important;filter:none!important}
+  }
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#c9a24a;--bk-accent-ink:#ffffff;--bk-ink:#13241f;--bk-panel:#ece3cf;--bk-muted:rgba(19,36,31,0.6);--bk-line:rgba(19,36,31,0.14);--bk-serif:"Cormorant Garamond", Georgia, serif;--bk-sans:"Jost", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="siteNav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <a class="wordmark" href="#top" aria-label="DentSociety Dental Clinic — home">
+        <svg class="crest-mini" viewBox="0 0 48 48" aria-hidden="true">
+          <circle cx="24" cy="24" r="23" fill="none" stroke="#c9a24a" stroke-width="1"/>
+          <circle cx="24" cy="24" r="18.5" fill="none" stroke="#c9a24a" stroke-width=".6" opacity=".55"/>
+          <path d="M24 12c-4.6 0-7.4 2.7-7.4 6.7 0 3 1.3 6.2 2.3 9.9.8 3.1 1.4 6.2 3.1 6.2 1.3 0 1.3-2.2 2-2.2s.7 2.2 2 2.2c1.7 0 2.3-3.1 3.1-6.2 1-3.7 2.3-6.9 2.3-9.9 0-4-2.8-6.7-7.4-6.7z" fill="#c9a24a"/>
+        </svg>
+        <span class="wm-text">
+          <span class="wm-name">DentSociety</span>
+          <span class="wm-sub">Thonglor · Bangkok</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#welcome">Welcome</a>
+        <a href="#services">Care</a>
+        <a href="#visit">Visit</a>
+        <a href="#proof">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <!-- Phone verified from clinic website dentsocietyclinic.com (also 065-382-2225) -->
+      <a class="nav-cta" href="tel:+66653835222" aria-label="Call the clinic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.27a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero" aria-labelledby="hero-h">
+  <div class="hero-grid-lines" aria-hidden="true"></div>
+  <span class="hero-vert l" aria-hidden="true"></span>
+  <span class="hero-vert r" aria-hidden="true"></span>
+  <div class="wrap hero-inner">
+    <div class="hero-layout">
+      <div class="hero-copy">
+        <p class="hero-loc hero-anim" data-d="1">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Thonglor · Soi 55 · Bangkok
+        </p>
+        <h1 id="hero-h">
+          <span class="hero-anim" data-d="2" style="display:block">An <span class="ital">exclusive</span></span>
+          <span class="hero-anim" data-d="2" style="display:block">members' club</span>
+          <span class="thin hero-anim" data-d="3">for your smile.</span>
+        </h1>
+        <p class="hero-lede hero-anim" data-d="3">
+          A refined dental practice in the heart of Thonglor, where international
+          patients are welcomed in fluent English and cared for with quiet,
+          considered craft.
+        </p>
+        <div class="hero-ctas hero-anim" data-d="4">
+          <!-- Phone verified from clinic website dentsocietyclinic.com (also 065-382-2225) -->
+          <a class="btn btn-gold" href="tel:+66653835222" aria-label="Call the clinic to arrange a visit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.27a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call the clinic
+          </a>
+          <!-- Facebook verified: facebook.com/dentsocietyclinic -->
+          <a class="btn btn-ghost" href="https://www.facebook.com/dentsocietyclinic/" target="_blank" rel="noopener" aria-label="Message DentSociety on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+            Message on Facebook
+          </a>
+        </div>
+      </div>
+
+      <!-- crest panel -->
+      <div class="crest-panel hero-anim" data-d="2" aria-hidden="true">
+        <div class="crest-frame float-orn">
+          <span class="ring"></span>
+          <span class="ring inner"></span>
+          <svg class="crest-svg" viewBox="0 0 200 200">
+            <g class="seal-rotate">
+              <defs>
+                <path id="seal-arc-top" d="M100,100 m-72,0 a72,72 0 1,1 144,0" />
+                <path id="seal-arc-bot" d="M100,100 m72,0 a72,72 0 1,1 -144,0" />
+              </defs>
+              <text font-family="'Jost',sans-serif" font-size="11.5" letter-spacing="5" fill="#c9a24a" font-weight="500">
+                <textPath href="#seal-arc-top" startOffset="6%">DENTSOCIETY · BANGKOK</textPath>
+              </text>
+              <text font-family="'Jost',sans-serif" font-size="11.5" letter-spacing="5" fill="#c9a24a" font-weight="500">
+                <textPath href="#seal-arc-bot" startOffset="9%">EST · THONGLOR · SOI 55</textPath>
+              </text>
+            </g>
+            <circle cx="100" cy="100" r="58" fill="none" stroke="#c9a24a" stroke-width="1" opacity=".55"/>
+            <circle cx="100" cy="100" r="52" fill="none" stroke="#c9a24a" stroke-width=".5" opacity=".4"/>
+            <!-- tooth crest -->
+            <path d="M100 60c-9 0-14.5 5.3-14.5 13.2 0 5.9 2.6 12.2 4.6 19.5 1.6 6.1 2.8 12.2 6.1 12.2 2.6 0 2.6-4.3 3.8-4.3s1.2 4.3 3.8 4.3c3.3 0 4.5-6.1 6.1-12.2 2-7.3 4.6-13.6 4.6-19.5 0-7.9-5.5-13.2-14.5-13.2z" fill="#e3c178"/>
+            <!-- laurels -->
+            <path d="M70 112c-6 6-8 14-7 22 7-1 13-5 16-11" fill="none" stroke="#c9a24a" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M130 112c6 6 8 14 7 22-7-1-13-5-16-11" fill="none" stroke="#c9a24a" stroke-width="1.4" stroke-linecap="round"/>
+            <path d="M74 118c-1 3-1.4 6-1 9M80 124c-1 2.6-1 5 0 7.4M86 129c-.6 2-.4 4 .4 5.8" stroke="#c9a24a" stroke-width="1" stroke-linecap="round" fill="none" opacity=".8"/>
+            <path d="M126 118c1 3 1.4 6 1 9M120 124c1 2.6 1 5 0 7.4M114 129c.6 2 .4 4-.4 5.8" stroke="#c9a24a" stroke-width="1" stroke-linecap="round" fill="none" opacity=".8"/>
+            <text x="100" y="150" text-anchor="middle" font-family="'Playfair Display',serif" font-size="13" letter-spacing="3" fill="#f4eede">5.0★</text>
+          </svg>
+        </div>
+        <p class="crest-cap">A Standard of Care
+          <b>Five Stars · 211 Reviews</b>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true">
+    <span>Scroll</span>
+    <span class="track"></span>
+  </div>
+</section>
+
+<!-- ============ WELCOME ============ -->
+<section class="band welcome" id="welcome" aria-labelledby="welcome-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">The English-Speaking Welcome</span>
+      <h2 id="welcome-h">Where international patients<br><span class="ital">feel at home.</span></h2>
+      <p>Thonglor is Bangkok's address for design, dining and the discerning — and our practice is built for the international community who live and visit here.</p>
+    </div>
+
+    <div class="welcome-grid">
+      <div class="welcome-copy reveal" data-d="1">
+        <p class="lead">From the first hello to the final appointment, you'll be looked after <span class="hl">entirely in English</span> — clearly, warmly, and without anything lost in translation.</p>
+        <p>Expats and visitors choose us because the experience feels effortless. Treatment is explained in plain language, your questions are always welcome, and every visit is unhurried and personal — the way good care should be.</p>
+
+        <ul class="assure-list">
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 5h12M9 3v2c0 5.5-3 9-7 11M5 11c1.5 4 5 7 8 9M14 21l5-12 5 12M16.5 16h5"/></svg></span>
+            <span class="tx"><b>Fluent English, start to finish</b><span>Consultations, treatment and follow-up — all in clear English.</span></span>
+          </li>
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M3 21a9 9 0 0 1 18 0"/></svg></span>
+            <span class="tx"><b>A genuinely international welcome</b><span>Trusted by English-speaking patients across Bangkok.</span></span>
+          </li>
+          <li>
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-4.5-9.5-9A5.5 5.5 0 0 1 12 6a5.5 5.5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/></svg></span>
+            <span class="tx"><b>Unhurried, personal care</b><span>Time to listen, explain and put you at ease at every step.</span></span>
+          </li>
+        </ul>
+      </div>
+
+      <aside class="proof-card reveal" data-d="2" aria-label="Patient rating">
+        <div class="proof-rating">5.0<sup>★</sup></div>
+        <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="rv">A perfect <b>5.0</b> from <b class="count" data-target="211">211</b> reviews</p>
+        <p class="note">Genuine reviews from English-speaking patients — a welcome you can read for yourself.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="band services" id="services" aria-labelledby="services-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">General &amp; Family Dentistry</span>
+      <h2 id="services-h">Considered care,<br><span class="ital">beautifully kept.</span></h2>
+      <p>A complete range of everyday dentistry for you and your family — delivered with the calm attention you'd expect of Thonglor.</p>
+    </div>
+
+    <div class="svc-wrap">
+      <article class="svc-row reveal" data-d="1">
+        <div class="svc-num">01</div>
+        <h3 class="svc-title">Check-ups &amp; Cleaning</h3>
+        <div>
+          <p class="svc-desc">Routine examinations and professional hygiene to keep your smile healthy, bright and well looked after — visit by visit.</p>
+          <div class="svc-tags"><span>Examination</span><span>Hygiene</span><span>Prevention</span></div>
+        </div>
+        <span class="svc-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </article>
+
+      <article class="svc-row reveal" data-d="1">
+        <div class="svc-num">02</div>
+        <h3 class="svc-title">Fillings &amp; Restoration</h3>
+        <div>
+          <p class="svc-desc">Gentle, natural-looking restorations that repair and protect — comfortably treating cavities and everyday wear.</p>
+          <div class="svc-tags"><span>Tooth-coloured</span><span>Restoration</span><span>Comfort</span></div>
+        </div>
+        <span class="svc-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </article>
+
+      <article class="svc-row reveal" data-d="1">
+        <div class="svc-num">03</div>
+        <h3 class="svc-title">Teeth Whitening</h3>
+        <div>
+          <p class="svc-desc">A refreshed, confident smile with professional whitening — tailored to your teeth and carried out with care.</p>
+          <div class="svc-tags"><span>Brightening</span><span>Cosmetic</span><span>Confidence</span></div>
+        </div>
+        <span class="svc-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </article>
+
+      <article class="svc-row reveal" data-d="1">
+        <div class="svc-num">04</div>
+        <h3 class="svc-title">Family Dentistry</h3>
+        <div>
+          <p class="svc-desc">Trusted everyday care for every age, in one welcoming practice — keeping the whole household smiling.</p>
+          <div class="svc-tags"><span>All ages</span><span>Everyday care</span><span>Trusted</span></div>
+        </div>
+        <span class="svc-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="band visit" id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Visiting the Practice</span>
+      <h2 id="visit-h">Find us in the heart<br><span class="ital">of Thonglor.</span></h2>
+      <p>Set within Bangkok's most design-conscious district, we're a calm retreat moments from the avenue's best dining and boutiques.</p>
+    </div>
+
+    <div class="visit-grid">
+      <div class="visit-info reveal" data-d="1">
+        <div class="info-row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div>
+            <h3>Location</h3>
+            <p>Thonglor · Soi Sukhumvit 55, Bangkok — the city's upscale design-and-dining quarter.</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+          <div>
+            <h3>Hours</h3>
+            <p><span class="accent">By appointment.</span> Call or message us to arrange a visit at a time that suits you.</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z"/><path d="M9 9h6M12 6v6" opacity=".5"/></svg></span>
+          <div>
+            <h3>Getting here</h3>
+            <p>Well placed for the Thonglor neighbourhood and the Sukhumvit line — easy to reach from across central Bangkok.</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.27a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div>
+            <h3>Arrange your visit</h3>
+            <p>The easiest way to book is to <span class="accent">call or message us directly</span> — we'll find a time and answer any questions in English.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- stylised district map -->
+      <div class="map-card reveal" data-d="2" role="img" aria-label="Stylised illustration of the Thonglor district where the clinic is located">
+        <svg class="map" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="400" height="400" fill="none"/>
+          <g stroke="#c9a24a" stroke-width=".5" opacity=".18" fill="none">
+            <path d="M0 70 H400 M0 140 H400 M0 210 H400 M0 280 H400 M0 350 H400"/>
+            <path d="M70 0 V400 M150 0 V400 M230 0 V400 M310 0 V400"/>
+          </g>
+          <!-- main avenue (Thonglor) -->
+          <path d="M200 0 C 205 120, 195 240, 215 400" stroke="#c9a24a" stroke-width="6" fill="none" opacity=".5" stroke-linecap="round"/>
+          <path d="M200 0 C 205 120, 195 240, 215 400" stroke="#e3c178" stroke-width="1" fill="none" stroke-dasharray="2 10" opacity=".8"/>
+          <!-- cross sois -->
+          <path d="M0 150 C 120 145, 280 160, 400 150" stroke="#c9a24a" stroke-width="2.5" fill="none" opacity=".32"/>
+          <path d="M0 250 C 120 245, 280 262, 400 250" stroke="#c9a24a" stroke-width="2.5" fill="none" opacity=".32"/>
+          <!-- blocks -->
+          <g fill="#2f4f42" opacity=".5" stroke="#c9a24a" stroke-width=".4">
+            <rect x="60" y="60" width="100" height="70" rx="3"/>
+            <rect x="250" y="55" width="90" height="75" rx="3"/>
+            <rect x="55" y="270" width="105" height="80" rx="3"/>
+            <rect x="255" y="275" width="95" height="78" rx="3"/>
+            <rect x="60" y="172" width="95" height="56" rx="3"/>
+            <rect x="255" y="170" width="90" height="58" rx="3"/>
+          </g>
+          <!-- pin -->
+          <g transform="translate(200 200)">
+            <circle r="46" fill="#c9a24a" opacity=".1"/>
+            <circle r="30" fill="#c9a24a" opacity=".14"/>
+            <path d="M0 -26c-9.4 0-17 7.2-17 16.6 0 11.8 17 30 17 30s17-18.2 17-30C17 -18.8 9.4 -26 0 -26z" fill="#e3c178"/>
+            <circle cx="0" cy="-9" r="6.5" fill="#0e211d"/>
+          </g>
+        </svg>
+        <div class="map-badge">
+          <div class="k">The Practice</div>
+          <div class="v">Thonglor · Soi 55</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROOF / QUOTE ============ -->
+
+
+<!-- ============ CONTACT ============ -->
+<section class="band contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-lead reveal">
+        <span class="eyebrow">Begin Your Visit</span>
+        <h2 id="contact-h" style="font-size:clamp(2.1rem,5vw,3.6rem);color:var(--cream);margin:1.6rem 0 1.8rem">Reserve a place<br><span style="font-style:italic;color:var(--brass-bright)">in the society.</span></h2>
+        <p class="lead">We'd be delighted to welcome you.</p>
+        <p>There's no online booking here — and that's by design. A quick call or message lets us understand exactly what you need, answer your questions in English, and arrange a time that suits you.</p>
+      </div>
+
+      <div class="contact-actions reveal" data-d="1">
+        <!-- Phone verified from clinic website dentsocietyclinic.com (also 065-382-2225) -->
+        <a class="channel" href="tel:+66653835222" aria-label="Call the clinic">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.27a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <span class="tx"><b>065 383 5222</b><span>Speak with us directly — in English</span></span>
+          <span class="arw" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+
+        <!-- Facebook verified: facebook.com/dentsocietyclinic -->
+        <a class="channel" href="https://www.facebook.com/dentsocietyclinic/" target="_blank" rel="noopener" aria-label="Message DentSociety on Facebook">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></span>
+          <span class="tx"><b>Message on Facebook</b><span>Send us a note and we'll reply</span></span>
+          <span class="arw" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+
+        <div class="channel" style="cursor:default" aria-label="Booking information">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+          <span class="tx"><b>By appointment</b><span>Call or message to arrange your visit</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site" aria-labelledby="foot-h">
+  <div class="wrap">
+    <h2 id="foot-h" class="sr-only">DentSociety Dental Clinic footer</h2>
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="wordmark" href="#top" aria-label="DentSociety Dental Clinic — home">
+          <svg class="crest-mini" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="23" fill="none" stroke="#c9a24a" stroke-width="1"/>
+            <circle cx="24" cy="24" r="18.5" fill="none" stroke="#c9a24a" stroke-width=".6" opacity=".55"/>
+            <path d="M24 12c-4.6 0-7.4 2.7-7.4 6.7 0 3 1.3 6.2 2.3 9.9.8 3.1 1.4 6.2 3.1 6.2 1.3 0 1.3-2.2 2-2.2s.7 2.2 2 2.2c1.7 0 2.3-3.1 3.1-6.2 1-3.7 2.3-6.9 2.3-9.9 0-4-2.8-6.7-7.4-6.7z" fill="#c9a24a"/>
+          </svg>
+          <span class="wm-text">
+            <span class="wm-name">DentSociety</span>
+            <span class="wm-sub">Thonglor · Bangkok</span>
+          </span>
+        </a>
+        <p>An English-speaking dental practice in Thonglor, Bangkok — caring for the international community with general and family dentistry, by appointment.</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="#welcome">The Welcome</a>
+        <a href="#services">Our Care</a>
+        <a href="#visit">Visit Us</a>
+        <a href="#proof">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="foot-col">
+        <h4>Get in Touch</h4>
+        <!-- Phone verified from clinic website dentsocietyclinic.com (also 065-382-2225) -->
+        <a href="tel:+66653835222">065 383 5222</a>
+        <a href="tel:+66653822225">065 382 2225</a>
+        <p>Marché Thonglor, Bldg A, 4th Fl · Soi 55</p>
+        <p>By appointment only</p>
+        <div class="foot-social">
+          <!-- Facebook verified: facebook.com/dentsocietyclinic -->
+          <a href="https://www.facebook.com/dentsocietyclinic/" target="_blank" rel="noopener" aria-label="DentSociety on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+          </a>
+          <a href="https://lin.ee/3mml8KK" target="_blank" rel="noopener" aria-label="DentSociety on LINE">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.63 0 .345-.281.63-.63.63h-1.755v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63h-1.755v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596a.62.62 0 0 1-.199.034c-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595a.609.609 0 0 1 .195-.034c.184 0 .368.09.486.25l2.444 3.327V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+          </a>
+          <!-- Phone verified from clinic website dentsocietyclinic.com (also 065-382-2225) -->
+          <a href="tel:+66653835222" aria-label="Call the clinic">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.74a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.34-1.27a2 2 0 0 1 2.11-.45c.88.34 1.8.57 2.74.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <p class="legal">© <span id="yr">2026</span> DentSociety Dental Clinic · Thonglor, Bangkok. All rights reserved.</p>
+      <p class="credit">Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener">Stellar Haus Media</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* hero entrance */
+  var hero = document.getElementById('hero');
+  if(hero){
+    if(reduce){ hero.classList.add('ready'); }
+    else { requestAnimationFrame(function(){ setTimeout(function(){ hero.classList.add('ready'); }, 120); }); }
+  }
+
+  /* sticky nav background */
+  var nav = document.getElementById('siteNav');
+  function onScroll(){
+    if(window.scrollY > 40){ nav.classList.add('scrolled'); }
+    else { nav.classList.remove('scrolled'); }
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* reveal on scroll (rebuilt — this observer was lost where the file was truncated) */
+  var revs = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    revs.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    revs.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+66653835222", CHAN="https://lin.ee/3mml8KK", CHANLABEL="Message us on LINE";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>

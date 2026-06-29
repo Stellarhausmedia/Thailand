@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Onnut Skytrain Dental Clinic — The easy stop on your line | On Nut, Bangkok</title>
+<meta name="description" content="English-speaking dental care steps from BTS On Nut, Bangkok. General dentistry, open weekends until 8pm, rated 4.9 by 983 patients. International visitors welcome — just call." />
+<meta name="theme-color" content="#0a7d3c" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230a7d3c'/%3E%3Crect x='8' y='6' width='16' height='17' rx='4' fill='%23fff'/%3E%3Crect x='10.5' y='8.5' width='11' height='6' rx='1.6' fill='%230a7d3c'/%3E%3Ccircle cx='12.5' cy='19' r='1.7' fill='%230a7d3c'/%3E%3Ccircle cx='19.5' cy='19' r='1.7' fill='%230a7d3c'/%3E%3Crect x='10' y='24.5' width='5' height='3.5' rx='1' fill='%23fff'/%3E%3Crect x='17' y='24.5' width='5' height='3.5' rx='1' fill='%23fff'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Narrow:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --green:#0a7d3c;
+    --green-deep:#075c2c;
+    --green-bright:#16a34a;
+    --green-glow:#33d17a;
+    --ink:#0b1410;
+    --ink-soft:#33413a;
+    --paper:#ffffff;
+    --paper-2:#f4f7f3;
+    --paper-3:#eaf1ea;
+    --board:#0c1611;
+    --board-2:#16241b;
+    --amber:#f6a609;
+    --amber-deep:#b87106;
+    --red:#e23b3b;
+    --red-deep:#a82626;
+    --line-on:#16a34a;
+    --hair:rgba(11,20,16,.12);
+    --hair-2:rgba(11,20,16,.07);
+    --shadow:0 1px 0 rgba(11,20,16,.04), 0 18px 40px -24px rgba(11,20,16,.30);
+    --shadow-lift:0 1px 0 rgba(11,20,16,.04), 0 28px 60px -28px rgba(10,125,60,.40);
+    --maxw:1180px;
+    --ease:cubic-bezier(.22,1,.36,1);
+    --ease-flip:cubic-bezier(.6,.04,.2,1);
+    --rail-w:46px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    margin:0;
+    font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+    color:var(--ink);background:var(--paper);line-height:1.6;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;
+  }
+  body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-image:linear-gradient(var(--hair-2) 1px,transparent 1px),linear-gradient(90deg,var(--hair-2) 1px,transparent 1px);
+    background-size:46px 46px;
+    -webkit-mask-image:radial-gradient(circle at 50% 0%,#000 0%,transparent 75%);mask-image:radial-gradient(circle at 50% 0%,#000 0%,transparent 75%);
+    opacity:.6;
+  }
+  ::selection{background:var(--green);color:#fff}
+  a{color:inherit}
+  .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(18px,5vw,52px);position:relative;z-index:2}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .skip{position:absolute;left:14px;top:-60px;z-index:200;background:var(--ink);color:#fff;padding:12px 18px;border-radius:10px;font-weight:700;transition:top .2s var(--ease);text-decoration:none}
+  .skip:focus{top:14px}
+  :focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+  .display{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:.01em;margin:0}
+  .kicker{font-family:'Space Mono',monospace;font-weight:700;text-transform:uppercase;letter-spacing:.34em;font-size:clamp(.62rem,1.4vw,.74rem)}
+  .narrow{font-family:'Archivo Narrow','Archivo',sans-serif}
+
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:transform .4s var(--ease),background .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease);background:rgba(255,255,255,0);border-bottom:1px solid transparent}
+  header.nav.solid{background:rgba(255,255,255,.86);-webkit-backdrop-filter:saturate(160%) blur(14px);backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--hair);box-shadow:0 10px 30px -22px rgba(11,20,16,.5)}
+  header.nav.hide{transform:translateY(-100%)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;height:74px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);flex-shrink:0}
+  .brand .mark{width:40px;height:40px;flex:none;display:block}
+  .brand .bt{display:flex;flex-direction:column;line-height:1}
+  .brand .bt b{font-family:'Archivo';font-weight:900;font-size:1.02rem;letter-spacing:-.01em}
+  .brand .bt span{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.22em;color:var(--green-deep);text-transform:uppercase;margin-top:3px}
+  .nav-links{display:flex;align-items:center;gap:6px}
+  .nav-links a.navlink{text-decoration:none;color:var(--ink-soft);font-weight:600;font-size:.86rem;padding:9px 14px;border-radius:9px;position:relative;transition:color .25s var(--ease),background .25s var(--ease);display:inline-flex;align-items:center;gap:8px}
+  .nav-links a.navlink::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--paper-3);border:1.5px solid var(--green);transition:background .25s var(--ease),box-shadow .25s var(--ease)}
+  .nav-links a.navlink:hover{color:var(--ink);background:var(--paper-2)}
+  .nav-links a.navlink:hover::before{background:var(--green);box-shadow:0 0 0 4px rgba(22,163,74,.16)}
+  .nav-cta{display:inline-flex;align-items:center;gap:9px;text-decoration:none;background:var(--green);color:#fff;font-weight:800;font-size:.86rem;padding:12px 18px;border-radius:11px;white-space:nowrap;box-shadow:0 10px 22px -12px rgba(10,125,60,.85);transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease)}
+  .nav-cta:hover{transform:translateY(-2px);background:var(--green-deep);box-shadow:0 16px 30px -12px rgba(10,125,60,.9)}
+  .nav-cta svg{width:16px;height:16px}
+  .burger{display:none;flex-direction:column;gap:5px;background:none;border:1px solid var(--hair);border-radius:11px;padding:11px;cursor:pointer}
+  .burger span{display:block;width:22px;height:2.5px;background:var(--ink);border-radius:2px;transition:transform .3s var(--ease),opacity .2s var(--ease)}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .drawer{position:fixed;inset:0;z-index:99;background:var(--ink);display:flex;flex-direction:column;justify-content:center;gap:6px;padding:32px;transform:translateY(-100%);transition:transform .5s var(--ease);visibility:hidden}
+  .drawer.open{transform:translateY(0);visibility:visible}
+  .drawer a{color:#fff;text-decoration:none;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(2rem,9vw,3.1rem);line-height:1.04;padding:6px 0;display:flex;align-items:center;gap:18px;opacity:.55;transition:opacity .25s var(--ease),transform .25s var(--ease)}
+  .drawer a:hover{opacity:1;transform:translateX(8px)}
+  .drawer a .ix{font-family:'Space Mono',monospace;font-size:.8rem;color:var(--green-glow);width:34px;flex:none}
+  .drawer .dcta{margin-top:22px;font-family:'Archivo';font-size:1.05rem;background:var(--green-glow);color:var(--ink);justify-content:center;border-radius:12px;padding:16px;opacity:1}
+  .drawer .dcta .ix{display:none}
+
+  .rail{position:absolute;top:0;bottom:0;left:calc(clamp(18px,5vw,52px) + 14px);width:4px;z-index:1;pointer-events:none}
+  .rail .track{position:absolute;inset:0;background:var(--hair);border-radius:4px;overflow:hidden}
+  .rail .fill{position:absolute;left:0;right:0;top:0;height:0;border-radius:4px;background:linear-gradient(var(--green-glow),var(--green),var(--green-deep));box-shadow:0 0 14px rgba(22,163,74,.55)}
+  .rail .pulse{position:absolute;left:50%;top:0;width:14px;height:14px;border-radius:50%;transform:translateX(-50%);background:var(--green-glow);box-shadow:0 0 0 5px rgba(51,209,122,.22),0 0 18px rgba(51,209,122,.8);margin-top:-7px}
+  @media (prefers-reduced-motion:reduce){.rail .fill{height:100% !important;background:var(--green)}.rail .pulse{display:none}}
+  .stop{position:absolute;left:calc(clamp(18px,5vw,52px) + 16px);width:0;height:0;z-index:3}
+  .stop i{position:absolute;left:0;top:0;transform:translate(-50%,-50%);width:18px;height:18px;border-radius:50%;background:#fff;border:4px solid var(--green);box-shadow:0 0 0 4px #fff, 0 6px 16px -6px rgba(10,125,60,.7);transition:transform .5s var(--ease),background .5s var(--ease),border-color .5s var(--ease)}
+  .stop.lit i{background:var(--green);transform:translate(-50%,-50%) scale(1.18)}
+
+  main{position:relative;z-index:2}
+  section{position:relative}
+  .pad{padding-block:clamp(74px,11vw,140px)}
+  .has-rail{padding-left:0}
+  @media (min-width:1000px){.has-rail .wrap{padding-left:calc(clamp(18px,5vw,52px) + var(--rail-w))}}
+  .sec-head{display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(34px,5vw,58px);max-width:760px}
+  .sec-head .kicker{color:var(--green-deep);display:flex;align-items:center;gap:12px}
+  .sec-head .kicker::before{content:"";width:26px;height:2px;background:var(--green);display:inline-block}
+  .sec-head h2{font-size:clamp(2.1rem,6vw,4rem)}
+  .sec-head p.lead{font-size:clamp(1.02rem,1.7vw,1.22rem);color:var(--ink-soft);max-width:62ch;margin:2px 0 0;line-height:1.62}
+
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding-top:74px}
+  .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:radial-gradient(120% 90% at 88% -10%,#eaf6ee 0%,transparent 60%),radial-gradient(90% 80% at -10% 110%,#f0f7f1 0%,transparent 55%),var(--paper)}
+  .hero-rails{position:absolute;inset:0;width:100%;height:100%;z-index:0}
+  .hero-grid{position:relative;z-index:3;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(30px,5vw,68px);align-items:center;width:100%}
+  @media (max-width:980px){.hero-grid{grid-template-columns:1fr;gap:38px}}
+  .hero-badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--hair);border-radius:100px;padding:8px 8px 8px 16px;font-weight:700;font-size:.78rem;color:var(--ink-soft);box-shadow:var(--shadow);width:max-content;max-width:100%}
+  .hero-badge .dot{width:9px;height:9px;border-radius:50%;background:var(--green-bright);box-shadow:0 0 0 4px rgba(22,163,74,.18);flex:none}
+  .hero-badge .pill{background:var(--green);color:#fff;border-radius:100px;padding:5px 11px;font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.06em}
+  @media (prefers-reduced-motion:no-preference){.hero-badge .dot{animation:live 2.4s ease-in-out infinite}}
+  @keyframes live{0%,100%{box-shadow:0 0 0 0 rgba(22,163,74,.5)}50%{box-shadow:0 0 0 7px rgba(22,163,74,0)}}
+  .hero h1{font-size:clamp(2.9rem,8.4vw,6.6rem);margin:22px 0 0;letter-spacing:-.005em}
+  .hero h1 .ln{display:block;overflow:hidden}
+  .hero h1 .ln > span{display:block;will-change:transform}
+  .hero h1 .green{color:var(--green)}
+  .hero h1 .stroke{color:transparent;-webkit-text-stroke:2px var(--green);paint-order:stroke fill}
+  .hero-sub{font-size:clamp(1.04rem,1.9vw,1.32rem);color:var(--ink-soft);max-width:50ch;margin:26px 0 0;line-height:1.6}
+  .hero-sub b{color:var(--ink);font-weight:700}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+  .btn{--bg:var(--green);--fg:#fff;display:inline-flex;align-items:center;gap:11px;text-decoration:none;background:var(--bg);color:var(--fg);font-weight:800;font-size:.98rem;padding:17px 26px;border-radius:14px;border:1.5px solid transparent;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease);box-shadow:0 16px 30px -16px rgba(10,125,60,.75);position:relative}
+  .btn svg{width:19px;height:19px;flex:none}
+  .btn:hover{transform:translateY(-3px);box-shadow:0 22px 40px -16px rgba(10,125,60,.85)}
+  .btn:active{transform:translateY(-1px)}
+  .btn.ghost{--bg:#fff;--fg:var(--ink);border-color:var(--hair);box-shadow:var(--shadow)}
+  .btn.ghost:hover{border-color:var(--green);background:var(--paper-2)}
+  .btn.ghost .ic{color:var(--green)}
+  .btn .sub{display:block;font-family:'Space Mono',monospace;font-weight:400;font-size:.66rem;opacity:.85;letter-spacing:.04em;margin-top:1px}
+  .btn .lbl{display:flex;flex-direction:column;line-height:1.05;align-items:flex-start}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:30px;align-items:center}
+  .hero-meta .m{display:flex;align-items:center;gap:9px;font-size:.86rem;color:var(--ink-soft);font-weight:600}
+  .hero-meta .m svg{width:17px;height:17px;color:var(--green)}
+  .hero-meta .sep{width:1px;height:16px;background:var(--hair)}
+  .board{position:relative;background:var(--board);border-radius:22px;padding:22px;color:#fff;overflow:hidden;box-shadow:0 40px 80px -40px rgba(10,30,18,.8),inset 0 1px 0 rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.07)}
+  .board::before{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.04) 0 1px,transparent 1px 4px);opacity:.5}
+  .board-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;position:relative}
+  .board-top .bt-l{display:flex;align-items:center;gap:10px;font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+  .board-top .led{width:9px;height:9px;border-radius:50%;background:var(--amber);box-shadow:0 0 10px var(--amber)}
+  @media (prefers-reduced-motion:no-preference){.board-top .led{animation:blink 1.6s steps(1) infinite}}
+  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:.25}}
+  .board-now{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:var(--green-glow)}
+  .flap-row{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .flap-row:last-of-type{border-bottom:0}
+  .flap-row .num{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--green-glow);width:20px}
+  .flap-row .dest{font-family:'Archivo';font-weight:800;font-size:1.04rem;letter-spacing:.01em;display:flex;flex-wrap:wrap;gap:1px}
+  .flap-row .stat{font-family:'Space Mono',monospace;font-size:.64rem;text-transform:uppercase;letter-spacing:.08em;padding:5px 9px;border-radius:7px;white-space:nowrap}
+  .flap-row .stat.go{background:rgba(22,163,74,.18);color:var(--green-glow)}
+  .flap-row .stat.now{background:rgba(246,166,9,.16);color:var(--amber)}
+  .flap{display:inline-block;background:var(--board-2);border-radius:4px;padding:3px 1px;min-width:.72em;text-align:center;color:#fff;position:relative;box-shadow:inset 0 -1px 0 rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.05);line-height:1}
+  .flap::after{content:"";position:absolute;left:2px;right:2px;top:50%;height:1px;background:rgba(0,0,0,.55)}
+  .flap.sp{background:transparent;box-shadow:none;min-width:.28em}
+  .flap.sp::after{display:none}
+  @media (prefers-reduced-motion:no-preference){.flap.anim{animation:flap .42s var(--ease-flip) both}}
+  @keyframes flap{0%{transform:rotateX(-90deg);opacity:0;filter:brightness(1.8)}55%{transform:rotateX(8deg);opacity:1}100%{transform:rotateX(0);opacity:1}}
+  .board-foot{margin-top:16px;padding-top:15px;border-top:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .board-foot .rate{display:flex;align-items:baseline;gap:7px}
+  .board-foot .rate b{font-family:'Anton';font-size:1.7rem;color:#fff;letter-spacing:.02em}
+  .board-foot .rate .stars{color:var(--amber);font-size:.8rem;letter-spacing:1px}
+  .board-foot .rate small{font-family:'Space Mono',monospace;font-size:.6rem;color:rgba(255,255,255,.5);display:block;margin-top:1px}
+  .board-foot .bts-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(22,163,74,.16);color:var(--green-glow);font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.08em;padding:7px 10px;border-radius:8px;text-transform:uppercase}
+  .scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:4;display:flex;flex-direction:column;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft)}
+  .scroll-hint .ln{width:1px;height:34px;background:linear-gradient(var(--green),transparent);position:relative;overflow:hidden}
+  .scroll-hint .ln::after{content:"";position:absolute;left:-1px;top:0;width:3px;height:10px;background:var(--green);border-radius:3px}
+  @media (prefers-reduced-motion:no-preference){.scroll-hint .ln::after{animation:drop 1.8s var(--ease) infinite}}
+  @keyframes drop{0%{top:-10px;opacity:0}30%{opacity:1}100%{top:34px;opacity:0}}
+  @media (max-width:980px){.scroll-hint{display:none}}
+
+  .strip{background:var(--green);color:#fff;overflow:hidden;position:relative;border-top:3px solid var(--green-glow);border-bottom:3px solid var(--green-deep)}
+  .strip .track{display:flex;width:max-content;gap:0}
+  @media (prefers-reduced-motion:no-preference){.strip .track{animation:marq 34s linear infinite}}
+  @keyframes marq{to{transform:translateX(-50%)}}
+  .strip .it{display:inline-flex;align-items:center;gap:18px;padding:16px 0;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(1.05rem,2.4vw,1.6rem);letter-spacing:.02em;white-space:nowrap}
+  .strip .it span{padding:0 26px}
+  .strip .it .o{color:var(--green-glow);font-size:1.1em;line-height:0}
+  .strip:hover .track{animation-play-state:paused}
+
+  .welcome{background:var(--paper-2);position:relative}
+  .welcome-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(34px,5vw,72px);align-items:center}
+  @media (max-width:920px){.welcome-grid{grid-template-columns:1fr;gap:42px}}
+  .welcome h2{font-size:clamp(2.2rem,6vw,4.2rem)}
+  .welcome h2 .hl{color:var(--green);position:relative;white-space:nowrap}
+  .welcome p{font-size:clamp(1.04rem,1.7vw,1.2rem);color:var(--ink-soft);line-height:1.66;margin:20px 0 0}
+  .welcome .pts{display:flex;flex-direction:column;gap:2px;margin-top:30px}
+  .welcome .pt{display:flex;gap:16px;align-items:flex-start;padding:18px 0;border-top:1px solid var(--hair)}
+  .welcome .pt:last-child{border-bottom:1px solid var(--hair)}
+  .welcome .pt .ic{flex:none;width:46px;height:46px;border-radius:13px;background:#fff;border:1px solid var(--hair);display:grid;place-items:center;color:var(--green);box-shadow:var(--shadow);transition:transform .3s var(--ease),background .3s var(--ease),color .3s var(--ease)}
+  .welcome .pt .ic svg{width:23px;height:23px}
+  .welcome .pt:hover .ic{transform:translateY(-3px) rotate(-4deg);background:var(--green);color:#fff}
+  .welcome .pt h3{margin:2px 0 4px;font-family:'Archivo';font-weight:800;font-size:1.06rem}
+  .welcome .pt p{margin:0;font-size:.96rem;color:var(--ink-soft);line-height:1.55}
+  .youhere{position:relative;background:#fff;border:1px solid var(--hair);border-radius:24px;padding:26px;box-shadow:var(--shadow-lift);overflow:hidden}
+  .youhere h4{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--green-deep);margin:0 0 4px}
+  .youhere .big{font-family:'Anton';font-size:clamp(1.5rem,4vw,2rem);text-transform:uppercase;line-height:.95;margin:0 0 18px}
+  .youhere .ln-svg{width:100%;height:auto;display:block}
+  .youhere .leg{display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:18px;font-size:.8rem;color:var(--ink-soft);font-weight:600}
+  .youhere .leg .l{display:flex;align-items:center;gap:8px}
+  .youhere .leg .l .d{width:11px;height:11px;border-radius:50%;flex:none}
+
+  .services{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+  .services::before{content:"";position:absolute;inset:0;opacity:.5;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:54px 54px;-webkit-mask-image:radial-gradient(circle at 80% 0%,#000,transparent 70%);mask-image:radial-gradient(circle at 80% 0%,#000,transparent 70%)}
+  .services .sec-head h2{color:#fff}
+  .services .sec-head .kicker{color:var(--green-glow)}
+  .services .sec-head .kicker::before{background:var(--green-glow)}
+  .services .sec-head p.lead{color:rgba(255,255,255,.66)}
+  .services .stop i{box-shadow:0 0 0 4px var(--ink),0 6px 16px -6px rgba(51,209,122,.7)}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media (max-width:900px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.svc-grid{grid-template-columns:1fr}}
+  .svc{position:relative;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:26px 24px 24px;overflow:hidden;transition:transform .4s var(--ease),background .4s var(--ease),border-color .4s var(--ease)}
+  .svc::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--green-glow);transform:scaleY(0);transform-origin:top;transition:transform .45s var(--ease)}
+  .svc:hover{transform:translateY(-6px);background:rgba(22,163,74,.08);border-color:rgba(51,209,122,.4)}
+  .svc:hover::after{transform:scaleY(1)}
+  .svc .no{font-family:'Space Mono',monospace;font-size:.7rem;letter-spacing:.12em;color:var(--green-glow);margin-bottom:16px;display:flex;align-items:center;justify-content:space-between}
+  .svc .no .stp{color:rgba(255,255,255,.32)}
+  .svc .icw{width:54px;height:54px;border-radius:15px;background:rgba(51,209,122,.12);display:grid;place-items:center;color:var(--green-glow);margin-bottom:18px;transition:transform .4s var(--ease)}
+  .svc:hover .icw{transform:rotate(-6deg) scale(1.05)}
+  .svc .icw svg{width:27px;height:27px}
+  .svc h3{font-family:'Archivo';font-weight:800;font-size:1.22rem;margin:0 0 9px;letter-spacing:-.01em}
+  .svc p{margin:0;color:rgba(255,255,255,.64);font-size:.95rem;line-height:1.55}
+  .svc ul{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:7px}
+  .svc ul li{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.03em;color:rgba(255,255,255,.7);background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:5px 9px;border-radius:7px}
+  .svc-note{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;color:rgba(255,255,255,.66);font-size:.92rem}
+  .svc-note .tag{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green-glow);border:1px solid rgba(51,209,122,.35);padding:7px 12px;border-radius:8px}
+
+  .visit{background:var(--paper)}
+  .visit-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(30px,5vw,60px);align-items:stretch}
+  @media (max-width:960px){.visit-grid{grid-template-columns:1fr}}
+  .hours-card{background:var(--ink);color:#fff;border-radius:24px;padding:clamp(26px,3.5vw,38px);position:relative;overflow:hidden;box-shadow:var(--shadow-lift)}
+  .hours-card::before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(51,209,122,.22),transparent 70%)}
+  .hours-card .hc-top{display:flex;align-items:center;gap:12px;margin-bottom:24px;position:relative}
+  .hours-card .hc-top .o{width:13px;height:13px;border-radius:50%;background:var(--green-glow);box-shadow:0 0 0 5px rgba(51,209,122,.18)}
+  .hours-card .hc-top span{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase}
+  .hours-card .hc-top .badge{margin-left:auto;background:rgba(22,163,74,.2);color:var(--green-glow);font-family:'Space Mono',monospace;font-size:.62rem;padding:6px 11px;border-radius:8px;letter-spacing:.04em}
+  .hrow{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.09);font-size:.95rem}
+  .hrow:last-of-type{border-bottom:0}
+  .hrow .d{font-weight:700;display:flex;align-items:center;gap:11px}
+  .hrow .d .dd{width:7px;height:7px;border-radius:50%;background:var(--green-glow)}
+  .hrow.closed .d .dd{background:rgba(255,255,255,.22)}
+  .hrow .t{font-family:'Space Mono',monospace;font-size:.86rem;color:rgba(255,255,255,.85)}
+  .hrow.closed .t{color:rgba(255,255,255,.4)}
+  .hrow.today{background:linear-gradient(90deg,rgba(51,209,122,.14),transparent);border-radius:10px;padding-inline:12px;margin-inline:-12px}
+  .hrow.today .d::after{content:"TODAY";font-family:'Space Mono',monospace;font-size:.56rem;letter-spacing:.1em;background:var(--green-glow);color:var(--ink);padding:3px 7px;border-radius:5px;margin-left:4px}
+  .hours-card .hc-foot{margin-top:22px;font-size:.86rem;color:rgba(255,255,255,.6);display:flex;gap:11px;align-items:flex-start}
+  .hours-card .hc-foot svg{width:18px;height:18px;color:var(--green-glow);flex:none;margin-top:1px}
+  .getting{display:flex;flex-direction:column;gap:18px}
+  .gt-card{background:var(--paper-2);border:1px solid var(--hair);border-radius:20px;padding:24px;transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s var(--ease)}
+  .gt-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:rgba(10,125,60,.3)}
+  .gt-card .gh{display:flex;align-items:center;gap:14px;margin-bottom:6px}
+  .gt-card .gh .ic{width:48px;height:48px;border-radius:13px;background:#fff;border:1px solid var(--hair);display:grid;place-items:center;color:var(--green);flex:none}
+  .gt-card .gh .ic svg{width:24px;height:24px}
+  .gt-card .gh h3{font-family:'Archivo';font-weight:800;font-size:1.12rem;margin:0}
+  .gt-card .gh .tag{margin-left:auto;font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-deep);background:var(--paper-3);padding:5px 9px;border-radius:7px}
+  .gt-card p{margin:8px 0 0;color:var(--ink-soft);font-size:.96rem;line-height:1.58}
+  .gt-card p b{color:var(--ink)}
+  .mini-line{display:flex;align-items:center;gap:0;margin-top:18px;flex-wrap:wrap}
+  .mini-line .st{display:flex;flex-direction:column;align-items:center;gap:7px;text-align:center;position:relative;min-width:64px}
+  .mini-line .st .dot{width:15px;height:15px;border-radius:50%;background:#fff;border:3.5px solid var(--green);z-index:2}
+  .mini-line .st.you .dot{background:var(--green);box-shadow:0 0 0 5px rgba(22,163,74,.2)}
+  .mini-line .st small{font-family:'Space Mono',monospace;font-size:.58rem;letter-spacing:.02em;color:var(--ink-soft);line-height:1.2;max-width:74px}
+  .mini-line .st.you small{color:var(--green-deep);font-weight:700}
+  .mini-line .seg{flex:1;height:3.5px;background:var(--green);min-width:18px;border-radius:3px;margin-top:-26px}
+
+  .trust{background:var(--paper-2);position:relative;overflow:hidden}
+  .trust .big-rate{display:grid;grid-template-columns:auto 1fr;gap:clamp(28px,5vw,56px);align-items:center;margin-bottom:clamp(34px,5vw,54px)}
+  @media (max-width:760px){.trust .big-rate{grid-template-columns:1fr;gap:24px}}
+  .rate-card{background:#fff;border:1px solid var(--hair);border-radius:24px;padding:clamp(26px,4vw,40px);text-align:center;box-shadow:var(--shadow-lift);position:relative;overflow:hidden;min-width:min(280px,80vw)}
+  .rate-card::before{content:"";position:absolute;left:0;right:0;top:0;height:5px;background:linear-gradient(90deg,var(--green-glow),var(--green),var(--amber))}
+  .rate-card .score{font-family:'Anton';font-size:clamp(4rem,13vw,6.4rem);line-height:.85;color:var(--green);letter-spacing:.01em}
+  .rate-card .stars{color:var(--amber);font-size:1.5rem;letter-spacing:4px;margin:6px 0 8px}
+  .rate-card .of{font-family:'Space Mono',monospace;font-size:.78rem;color:var(--ink-soft);letter-spacing:.04em}
+  .rate-card .of b{color:var(--ink);font-weight:700}
+  .rate-card .src{margin-top:14px;display:inline-flex;align-items:center;gap:8px;font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--green-deep);background:var(--paper-2);border:1px solid var(--hair);padding:7px 12px;border-radius:9px}
+  .trust-copy h2{font-size:clamp(2rem,5vw,3.4rem)}
+  .trust-copy p{font-size:clamp(1.02rem,1.6vw,1.18rem);color:var(--ink-soft);line-height:1.64;margin:18px 0 0}
+  .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+  @media (max-width:760px){.stat-row{grid-template-columns:repeat(2,1fr)}}
+  .stat{background:#fff;border:1px solid var(--hair);border-radius:18px;padding:24px 22px;transition:transform .3s var(--ease),box-shadow .3s var(--ease)}
+  .stat:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .stat .v{font-family:'Anton';font-size:clamp(2.1rem,5vw,2.9rem);line-height:.9;color:var(--ink);letter-spacing:.01em}
+  .stat .v .u{color:var(--green);font-size:.6em}
+  .stat .k{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;line-height:1.4}
+
+  .contact{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+  .contact::before{content:"";position:absolute;inset:0;opacity:.6;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:54px 54px;-webkit-mask-image:radial-gradient(circle at 20% 100%,#000,transparent 70%);mask-image:radial-gradient(circle at 20% 100%,#000,transparent 70%)}
+  .contact .stop i{box-shadow:0 0 0 4px var(--ink),0 6px 16px -6px rgba(51,209,122,.7)}
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(34px,5vw,64px);align-items:center}
+  @media (max-width:920px){.contact-grid{grid-template-columns:1fr;gap:40px}}
+  .contact h2{font-size:clamp(2.4rem,6.5vw,4.6rem);color:#fff}
+  .contact .kicker{color:var(--green-glow);display:flex;align-items:center;gap:12px}
+  .contact .kicker::before{content:"";width:26px;height:2px;background:var(--green-glow)}
+  .contact p.lead{font-size:clamp(1.04rem,1.7vw,1.22rem);color:rgba(255,255,255,.7);margin:18px 0 0;max-width:52ch;line-height:1.62}
+  .call-hero{margin-top:34px}
+  .call-hero .lab{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-glow);margin-bottom:10px}
+  .call-big{display:inline-flex;align-items:center;gap:18px;text-decoration:none;color:#fff;background:linear-gradient(120deg,var(--green),var(--green-deep));padding:22px 30px;border-radius:18px;box-shadow:0 26px 54px -22px rgba(22,163,74,.7);transition:transform .3s var(--ease),box-shadow .3s var(--ease);border:1px solid rgba(255,255,255,.12)}
+  .call-big:hover{transform:translateY(-4px) scale(1.01);box-shadow:0 34px 66px -22px rgba(22,163,74,.8)}
+  .call-big .ph-ic{width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;flex:none}
+  .call-big .ph-ic svg{width:26px;height:26px}
+  .call-big .ph-t small{display:block;font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.08em;color:rgba(255,255,255,.78);text-transform:uppercase}
+  .call-big .ph-t b{font-family:'Anton';font-size:clamp(1.5rem,4.5vw,2.1rem);letter-spacing:.02em;line-height:1.05;white-space:nowrap}
+  .contact-alt{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+  .alt-btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);padding:14px 18px;border-radius:13px;font-weight:700;font-size:.9rem;transition:transform .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease)}
+  .alt-btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.1);border-color:rgba(51,209,122,.5)}
+  .alt-btn svg{width:19px;height:19px;flex:none}
+  .alt-btn small{font-family:'Space Mono',monospace;font-weight:400;font-size:.6rem;color:rgba(255,255,255,.6);display:block}
+  .alt-btn .at{display:flex;flex-direction:column;line-height:1.15;align-items:flex-start}
+  .info-board{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:clamp(24px,3.5vw,34px);position:relative;overflow:hidden}
+  .info-board .ib-h{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green-glow);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+  .info-board .ib-h::after{content:"";flex:1;height:1px;background:rgba(255,255,255,.12)}
+  .ib-row{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+  .ib-row:last-child{border-bottom:0;padding-bottom:0}
+  .ib-row .ic{width:44px;height:44px;border-radius:12px;background:rgba(51,209,122,.12);display:grid;place-items:center;color:var(--green-glow);flex:none}
+  .ib-row .ic svg{width:21px;height:21px}
+  .ib-row .ib-t{flex:1;min-width:0}
+  .ib-row .ib-t small{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5);display:block;margin-bottom:3px}
+  .ib-row .ib-t a,.ib-row .ib-t span{color:#fff;font-weight:700;font-size:1.02rem;text-decoration:none;word-break:break-word}
+  .ib-row .ib-t a:hover{color:var(--green-glow)}
+  .ib-row .ib-t p{margin:2px 0 0;color:rgba(255,255,255,.6);font-size:.86rem;font-weight:400}
+
+  footer.foot{background:#060d09;color:#fff;position:relative;overflow:hidden;border-top:3px solid var(--green)}
+  .foot-main{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-block:clamp(54px,7vw,84px)}
+  @media (max-width:820px){.foot-main{grid-template-columns:1fr;gap:36px}}
+  .foot-brand .brand{color:#fff;margin-bottom:18px}
+  .foot-brand .brand .bt span{color:var(--green-glow)}
+  .foot-brand p{color:rgba(255,255,255,.55);font-size:.94rem;line-height:1.6;max-width:36ch;margin:0 0 22px}
+  .foot-brand .stars{color:var(--amber);font-size:.92rem;letter-spacing:2px}
+  .foot-brand .stars b{color:#fff;font-family:'Archivo';margin-right:8px}
+  .foot-brand .stars small{color:rgba(255,255,255,.5);font-family:'Space Mono',monospace;font-size:.66rem;display:block;margin-top:4px;letter-spacing:.04em}
+  .foot-col h5{font-family:'Space Mono',monospace;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--green-glow);margin:0 0 18px}
+  .foot-col a,.foot-col span{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.66);text-decoration:none;font-size:.94rem;padding:7px 0;transition:color .2s var(--ease),transform .2s var(--ease)}
+  .foot-col a:hover{color:#fff;transform:translateX(4px)}
+  .foot-col a svg{width:16px;height:16px;color:var(--green-glow);flex:none}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-block:24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+  .foot-bottom .cl{color:rgba(255,255,255,.42);font-size:.82rem}
+  .foot-credit{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s var(--ease)}
+  .foot-credit:hover{color:#fff}
+  .foot-credit b{color:rgba(255,255,255,.85);font-weight:700}
+  .foot-credit .star{color:var(--green-glow)}
+
+  [data-rev]{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  [data-rev].in{opacity:1;transform:none}
+  [data-rev][data-d="1"]{transition-delay:.08s}
+  [data-rev][data-d="2"]{transition-delay:.16s}
+  [data-rev][data-d="3"]{transition-delay:.24s}
+  [data-rev][data-d="4"]{transition-delay:.32s}
+  [data-rev][data-d="5"]{transition-delay:.40s}
+  @media (prefers-reduced-motion:reduce){[data-rev]{opacity:1 !important;transform:none !important;transition:none !important}.hero h1 .ln > span{transform:none !important}}
+  .preload .hero h1 .ln > span{transform:translateY(110%)}
+  .preload .hero-badge,.preload .hero-sub,.preload .hero-cta,.preload .hero-meta,.preload .board{opacity:0}
+
+  @media (max-width:860px){.nav-links{display:none}.nav-cta{display:none}.burger{display:flex}}
+  @media (max-width:480px){.hero-cta{gap:10px}.btn{padding:15px 20px;font-size:.92rem}.call-big{padding:18px 22px;gap:14px}}
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#f6a609;--bk-accent-ink:#0d0d0f;--bk-ink:#0b1410;--bk-panel:#ffffff;--bk-muted:rgba(11,20,16,0.6);--bk-line:rgba(11,20,16,0.14);--bk-serif:Georgia, "Times New Roman", serif;--bk-sans:"Anton", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body class="preload">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Onnut Skytrain Dental Clinic — home">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="10" fill="var(--green)"/>
+        <rect x="10" y="7" width="20" height="21" rx="5" fill="#fff"/>
+        <rect x="13" y="10.5" width="14" height="7.5" rx="2" fill="var(--green)"/>
+        <circle cx="15.5" cy="23" r="2.1" fill="var(--green)"/>
+        <circle cx="24.5" cy="23" r="2.1" fill="var(--green)"/>
+        <rect x="12.5" y="30.5" width="6" height="4.5" rx="1.3" fill="#fff"/>
+        <rect x="21.5" y="30.5" width="6" height="4.5" rx="1.3" fill="#fff"/>
+      </svg>
+      <span class="bt"><b>Onnut Skytrain</b><span>Dental&nbsp;·&nbsp;Lotus&nbsp;On&nbsp;Nut</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="navlink" href="#welcome">Welcome</a>
+      <a class="navlink" href="#services">Treatments</a>
+      <a class="navlink" href="#visit">Visit</a>
+      <a class="navlink" href="#reviews">Reviews</a>
+      <a class="navlink" href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="tel:+66642235645">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5 5L18.5 16l4 1.5v3a2 2 0 0 1-2.2 2A18 18 0 0 1 4.5 6.7 2 2 0 0 1 6.5 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      Call us
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <a href="#welcome"><span class="ix">01</span>Welcome</a>
+  <a href="#services"><span class="ix">02</span>Treatments</a>
+  <a href="#visit"><span class="ix">03</span>Visit</a>
+  <a href="#reviews"><span class="ix">04</span>Reviews</a>
+  <a href="#contact"><span class="ix">05</span>Contact</a>
+  <a class="dcta" href="tel:+66642235645"><span class="ix"></span>Call +66 64 223 5645</a>
+</div>
+
+<span id="top"></span>
+
+<div class="rail" id="rail" aria-hidden="true">
+  <div class="track"><div class="fill" id="railFill"></div></div>
+  <div class="pulse" id="railPulse"></div>
+</div>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero-bg" aria-hidden="true">
+      <svg class="hero-rails" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#33d17a"/><stop offset="1" stop-color="#0a7d3c"/>
+          </linearGradient>
+        </defs>
+        <path id="heroLine" d="M-40 700 Q 260 700 360 560 T 720 420 Q 900 330 1080 360 T 1500 230" fill="none" stroke="url(#lg1)" stroke-width="4" stroke-linecap="round" opacity=".85"/>
+        <path d="M-40 820 Q 300 820 420 690 T 880 560 Q 1100 500 1320 540 T 1520 470" fill="none" stroke="#0a7d3c" stroke-width="2" stroke-linecap="round" opacity=".18"/>
+        <g id="heroStops">
+          <circle cx="360" cy="560" r="9" fill="#fff" stroke="#0a7d3c" stroke-width="4"/>
+          <circle cx="720" cy="420" r="9" fill="#fff" stroke="#0a7d3c" stroke-width="4"/>
+          <circle cx="1080" cy="360" r="11" fill="#0a7d3c" stroke="#33d17a" stroke-width="4"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="wrap hero-grid">
+      <div class="hero-left">
+        <span class="hero-badge" data-h="badge">
+          <span class="dot" aria-hidden="true"></span>
+          On Nut · Phra Khanong, Bangkok
+          <span class="pill">BTS&nbsp;E9</span>
+        </span>
+        <h1 id="hero-h">
+          <span class="ln"><span>The easy</span></span>
+          <span class="ln"><span class="green">stop on</span></span>
+          <span class="ln"><span class="stroke">your line.</span></span>
+        </h1>
+        <p class="hero-sub" data-h="sub">
+          English-speaking dental care, right beside the BTS Skytrain. Step off at On Nut, walk a few minutes,
+          and you're in the chair. <b>International visitors are welcome — and we'll greet you in English.</b>
+        </p>
+        <div class="hero-cta" data-h="cta">
+          <a class="btn" href="tel:+66642235645">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5 5L18.5 16l4 1.5v3a2 2 0 0 1-2.2 2A18 18 0 0 1 4.5 6.7 2 2 0 0 1 6.5 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            <span class="lbl"><span>Call the clinic</span><span class="sub">+66 64 223 5645</span></span>
+          </a>
+          <a class="btn ghost" href="#visit">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.8"/></svg></span>
+            <span class="lbl"><span>How to reach us</span><span class="sub">Steps from BTS On Nut</span></span>
+          </a>
+        </div>
+        <div class="hero-meta" data-h="meta">
+          <span class="m"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9 6.8 19.2l1-5.8L3.5 9.3l5.9-.9L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>4.9 from 983 reviews</span>
+          <span class="sep" aria-hidden="true"></span>
+          <span class="m"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3.5 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Open until 8pm · weekends too</span>
+          <span class="sep" aria-hidden="true"></span>
+          <span class="m"><svg viewBox="0 0 24 24" fill="none"><path d="M4 9h16M4 9 6 5h12l2 4M4 9v8a1 1 0 0 0 1 1h1m13-9v8a1 1 0 0 1-1 1h-1M7 18h10m-9 0v1m8-1v1M8 13h2m4 0h2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>No booking needed — just call</span>
+        </div>
+      </div>
+
+      <aside class="board" data-h="board" aria-label="Station-style information board">
+        <div class="board-top">
+          <span class="bt-l"><span class="led" aria-hidden="true"></span>On Nut · Departures</span>
+          <span class="board-now" id="boardClock">--:--</span>
+        </div>
+        <div class="flap-row">
+          <span class="num">01</span>
+          <span class="dest" data-flap="WELCOME"></span>
+          <span class="stat go">English</span>
+        </div>
+        <div class="flap-row">
+          <span class="num">02</span>
+          <span class="dest" data-flap="CHECK-UP"></span>
+          <span class="stat now">On time</span>
+        </div>
+        <div class="flap-row">
+          <span class="num">03</span>
+          <span class="dest" data-flap="WALK-IN"></span>
+          <span class="stat go">Open</span>
+        </div>
+        <div class="board-foot">
+          <div class="rate">
+            <b>4.9</b>
+            <div>
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <small>983 reviews</small>
+            </div>
+          </div>
+          <span class="bts-chip"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" aria-hidden="true"><rect x="6" y="3" width="12" height="14" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M8 21l1.5-2m6.5 2-1.5-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>By the Skytrain</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <span class="ln"></span>
+    </div>
+  </section>
+
+  <div class="strip" aria-hidden="true">
+    <div class="track" id="strip">
+      <div class="it">
+        <span>English Spoken</span><span class="o">●</span><span>Steps From BTS On Nut</span><span class="o">●</span><span>Open Weekends</span><span class="o">●</span><span>4.9 ★ · 983 Reviews</span><span class="o">●</span><span>Until 8PM</span><span class="o">●</span><span>Visitors Welcome</span><span class="o">●</span>
+      </div>
+      <div class="it">
+        <span>English Spoken</span><span class="o">●</span><span>Steps From BTS On Nut</span><span class="o">●</span><span>Open Weekends</span><span class="o">●</span><span>4.9 ★ · 983 Reviews</span><span class="o">●</span><span>Until 8PM</span><span class="o">●</span><span>Visitors Welcome</span><span class="o">●</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="welcome pad has-rail" id="welcome" aria-labelledby="welcome-h">
+    <div class="stop" data-stop style="top:0"></div>
+    <div class="wrap welcome-grid">
+      <div>
+        <div class="sec-head" style="margin-bottom:0">
+          <span class="kicker" data-rev>Your stop, your language</span>
+          <h2 id="welcome-h" class="display" data-rev data-d="1">A clinic that<br><span class="hl">speaks your language.</span></h2>
+        </div>
+        <p data-rev data-d="2">
+          On Nut is one of Bangkok's most international neighbourhoods — a home base for remote workers,
+          long-stay visitors and newcomers finding their feet. We built our day around exactly that: clear
+          English from the front desk to the chair, so there's never a moment where you're nodding along
+          without quite knowing what comes next.
+        </p>
+        <div class="pts">
+          <div class="pt" data-rev data-d="2">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H7l-3 3V5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.5 10.5h7M8.5 13h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+            <div><h3>English, start to finish</h3><p>Questions answered, options explained, costs talked through before anything begins — plainly, in English.</p></div>
+          </div>
+          <div class="pt" data-rev data-d="3">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="6" y="3" width="12" height="15" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M8 21l1.6-2.4M16 21l-1.6-2.4M10 7h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+            <div><h3>Right by the Skytrain</h3><p>Come straight from the BTS at On Nut. No taxi haggling, no traffic — just step off and walk over.</p></div>
+          </div>
+          <div class="pt" data-rev data-d="4">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7.5v5l3.4 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+            <div><h3>Hours that fit a busy life</h3><p>Open into the evening until 8pm and through the weekend — easy to slot in around work and travel.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="youhere" data-rev data-d="2" aria-label="Where the clinic sits on the Skytrain line">
+        <h4>You are here</h4>
+        <p class="big">On Nut<br>Station Area</p>
+        <svg class="ln-svg" viewBox="0 0 360 250" role="img" aria-label="The clinic sits beside On Nut station on the BTS Sukhumvit line, a short hop from Phrom Phong and Asok.">
+          <title>Clinic location on the BTS line</title>
+          <line x1="40" y1="40" x2="40" y2="210" stroke="#0a7d3c" stroke-width="5" stroke-linecap="round"/>
+          <g font-family="'Space Mono',monospace" font-size="12" fill="#33413a">
+            <circle cx="40" cy="50" r="8" fill="#fff" stroke="#0a7d3c" stroke-width="4"/>
+            <text x="62" y="54">Asok · E4</text>
+            <circle cx="40" cy="100" r="8" fill="#fff" stroke="#0a7d3c" stroke-width="4"/>
+            <text x="62" y="104">Phrom Phong · E5</text>
+            <circle cx="40" cy="150" r="8" fill="#fff" stroke="#0a7d3c" stroke-width="4"/>
+            <text x="62" y="154">Thong Lo · E6</text>
+            <circle cx="40" cy="200" r="13" fill="#0a7d3c"/>
+            <circle cx="40" cy="200" r="20" fill="none" stroke="#33d17a" stroke-width="2" opacity=".5"/>
+            <text x="68" y="197" font-family="'Archivo'" font-weight="800" font-size="15" fill="#0a7d3c">On Nut · E9</text>
+            <text x="68" y="213" fill="#0a7d3c" font-size="11">Onnut Skytrain Dental</text>
+          </g>
+        </svg>
+        <div class="leg">
+          <span class="l"><span class="d" style="background:#0a7d3c"></span>Our station</span>
+          <span class="l"><span class="d" style="background:#fff;border:3px solid #0a7d3c"></span>Nearby stops</span>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="services pad has-rail" id="services" aria-labelledby="services-h">
+    <div class="stop" data-stop style="top:0"></div>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker" data-rev>Treatments · General dentistry</span>
+        <h2 id="services-h" class="display" data-rev data-d="1">Everyday dental care,<br>done right.</h2>
+        <p class="lead" data-rev data-d="2">A full general-dentistry practice for the day-to-day care that keeps your smile healthy — the regular visits, the small fixes, the honest advice. Here's what we look after most.</p>
+      </div>
+      <div class="svc-grid">
+        <article class="svc" data-rev data-d="1">
+          <div class="no"><span>STOP 01</span><span class="stp">·····</span></div>
+          <div class="icw" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4c2.5 0 4 1 5 1.5C18.5 6.2 19 8 18.4 11c-.5 2.6-1 5.5-2.4 7.5-.7 1-1.7.7-2-.6L13 14c-.2-.9-1.8-.9-2 0l-1 3.9c-.3 1.3-1.3 1.6-2 .6-1.4-2-1.9-4.9-2.4-7.5C5 8 5.5 6.2 7 5.5 8 5 9.5 4 12 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+          <h3>Check-ups &amp; cleaning</h3>
+          <p>Routine exams, scaling and polish, and a clear plan for keeping things healthy between visits.</p>
+          <ul><li>Exam</li><li>Scale &amp; polish</li><li>Hygiene advice</li></ul>
+        </article>
+        <article class="svc" data-rev data-d="2">
+          <div class="no"><span>STOP 02</span><span class="stp">·····</span></div>
+          <div class="icw" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3a6 6 0 0 1 6 6c0 3-2 4-2 7 0 1.6-1 3-2.5 3S11 23.6 11 22m1-19a6 6 0 0 0-6 6c0 3 2 4 2 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9 9.5c.7-1 1.8-1.5 3-1.5s2.3.5 3 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <h3>Fillings &amp; tooth repair</h3>
+          <p>Tooth-coloured fillings and gentle restorations to fix decay or wear and get you comfortable again.</p>
+          <ul><li>Fillings</li><li>Restorations</li><li>Sensitivity</li></ul>
+        </article>
+        <article class="svc" data-rev data-d="3">
+          <div class="no"><span>STOP 03</span><span class="stp">·····</span></div>
+          <div class="icw" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 7 4v5c0 4-3 7-7 9-4-2-7-5-7-9V7l7-4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Gum &amp; preventive care</h3>
+          <p>Looking after the foundations — healthy gums, early checks and steady upkeep so small things stay small.</p>
+          <ul><li>Gum health</li><li>Prevention</li><li>Deep cleaning</li></ul>
+        </article>
+        <article class="svc" data-rev data-d="1">
+          <div class="no"><span>STOP 04</span><span class="stp">·····</span></div>
+          <div class="icw" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 4c2.4 0 4 1 5 1.5C18.4 6.2 19 8 18.4 11c-.5 2.6-1 5.5-2.4 7.5-.7 1-1.7.7-2-.6L13 14c-.2-.9-1.8-.9-2 0l-1 3.9c-.3 1.3-1.3 1.6-2 .6-1.4-2-1.9-4.9-2.4-7.5C5 8 5.6 6.2 7 5.5 8 5 9.6 4 12 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 5.5 19 3M18 8l3-1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <h3>Whitening &amp; cosmetic touch-ups</h3>
+          <p>Brighten and tidy up your smile with whitening and small cosmetic refinements done with a light touch.</p>
+          <ul><li>Whitening</li><li>Polishing</li><li>Cosmetic</li></ul>
+        </article>
+        <article class="svc" data-rev data-d="2">
+          <div class="no"><span>STOP 05</span><span class="stp">·····</span></div>
+          <div class="icw" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.6"/><path d="M12 8.5v3.5l2.5 1.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M4.5 7 7 8.5M19.5 7 17 8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <h3>Same-day relief</h3>
+          <p>A sudden ache or a chipped tooth on your trip? Call and we'll do our best to see you and ease the pain.</p>
+          <ul><li>Toothache</li><li>Walk-in</li><li>Quick fixes</li></ul>
+        </article>
+        <article class="svc" data-rev data-d="3">
+          <div class="no"><span>STOP 06</span><span class="stp">·····</span></div>
+          <div class="icw" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M7 4h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.6"/><path d="M9 8h6M9 11.5h6M9 15h3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <h3>Advice &amp; treatment plans</h3>
+          <p>Not sure what you need? Come in for a friendly look and a straight, no-pressure plan in plain English.</p>
+          <ul><li>Consultation</li><li>X-rays</li><li>Clear pricing</li></ul>
+        </article>
+      </div>
+      <div class="svc-note" data-rev>
+        <span class="tag">Good to know</span>
+        Every visit starts with a proper look and an honest conversation — you'll always know what's recommended, and why, before we begin.
+      </div>
+    </div>
+  </section>
+
+  <section class="visit pad has-rail" id="visit" aria-labelledby="visit-h">
+    <div class="stop" data-stop style="top:0"></div>
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker" data-rev>Visiting · On Nut, Bangkok</span>
+        <h2 id="visit-h" class="display" data-rev data-d="1">Find us in a<br>few short stops.</h2>
+        <p class="lead" data-rev data-d="2">We're in the On Nut / Phra Khanong area of Bangkok, right by the BTS Skytrain. Here's when we're open and the easiest way to arrive.</p>
+      </div>
+      <div class="visit-grid">
+        <div class="hours-card" data-rev data-d="1">
+          <div class="hc-top">
+            <span class="o" aria-hidden="true"></span>
+            <span>Opening Hours</span>
+            <span class="badge" id="openBadge">Checking…</span>
+          </div>
+          <div class="hrow" data-day="1"><span class="d"><span class="dd" aria-hidden="true"></span>Monday</span><span class="t">10:00 — 20:00</span></div>
+          <div class="hrow" data-day="2"><span class="d"><span class="dd" aria-hidden="true"></span>Tuesday</span><span class="t">10:00 — 20:00</span></div>
+          <div class="hrow" data-day="3"><span class="d"><span class="dd" aria-hidden="true"></span>Wednesday</span><span class="t">10:00 — 20:00</span></div>
+          <div class="hrow" data-day="4"><span class="d"><span class="dd" aria-hidden="true"></span>Thursday</span><span class="t">10:00 — 20:00</span></div>
+          <div class="hrow" data-day="5"><span class="d"><span class="dd" aria-hidden="true"></span>Friday</span><span class="t">10:00 — 20:00</span></div>
+          <div class="hrow" data-day="6"><span class="d"><span class="dd" aria-hidden="true"></span>Saturday</span><span class="t">10:00 — 20:00</span></div>
+          <div class="hrow" data-day="0"><span class="d"><span class="dd" aria-hidden="true"></span>Sunday</span><span class="t">10:00 — 20:00</span></div>
+          <div class="hc-foot">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4.5l3 1.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <span>Open every day into the evening, weekends included. Hours can vary on public holidays — a quick call confirms.</span>
+          </div>
+        </div>
+        <div class="getting">
+          <div class="gt-card" data-rev data-d="2">
+            <div class="gh">
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="6" y="3" width="12" height="14" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M6 9h12M8 21l1.6-2.4M16 21l-1.6-2.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="13" r="1" fill="currentColor"/><circle cx="14.5" cy="13" r="1" fill="currentColor"/></svg></span>
+              <h3>By Skytrain (BTS)</h3>
+              <span class="tag">Easiest</span>
+            </div>
+            <p>Take the Sukhumvit line to <b>On Nut (E9)</b> and exit toward street level. You're just a short walk from the clinic — the simplest, traffic-free way to reach us.</p>
+            <div class="mini-line" aria-hidden="true">
+              <div class="st"><span class="dot"></span><small>Asok</small></div>
+              <div class="seg"></div>
+              <div class="st"><span class="dot"></span><small>Phrom&nbsp;Phong</small></div>
+              <div class="seg"></div>
+              <div class="st"><span class="dot"></span><small>Thong&nbsp;Lo</small></div>
+              <div class="seg"></div>
+              <div class="st you"><span class="dot"></span><small>On&nbsp;Nut</small></div>
+            </div>
+          </div>
+          <div class="gt-card" data-rev data-d="3">
+            <div class="gh">
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11m-14 0h14m-14 0v6m14-6v6M6 17v1.5M18 17v1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="14" r="1" fill="currentColor"/><circle cx="16" cy="14" r="1" fill="currentColor"/></svg></span>
+              <h3>By taxi or ride-hailing</h3>
+              <span class="tag">Anytime</span>
+            </div>
+            <p>Ask for the <b>On Nut / Phra Khanong</b> area near the BTS station. If the driver needs directions, give us a call and we'll happily point the way.</p>
+          </div>
+          <div class="gt-card" data-rev data-d="4">
+            <div class="gh">
+              <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg></span>
+              <h3>In the neighbourhood</h3>
+              <span class="tag">Local</span>
+            </div>
+            <p>Staying nearby in On Nut or Phra Khanong? You're likely within an easy walk. We're glad to be the local clinic for our international neighbours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  <section class="contact pad has-rail" id="contact" aria-labelledby="contact-h">
+    <div class="stop" data-stop style="top:0"></div>
+    <div class="wrap contact-grid">
+      <div>
+        <span class="kicker" data-rev>Ready when you are</span>
+        <h2 id="contact-h" class="display" data-rev data-d="1">Make us your<br>next stop.</h2>
+        <p class="lead" data-rev data-d="2">No online forms, no waiting around — the fastest way in is a quick phone call. Tell us what you need in English and we'll help you find a time.</p>
+        <div class="call-hero" data-rev data-d="2">
+          <div class="lab">Call the clinic directly</div>
+          <a class="call-big" href="tel:+66642235645">
+            <span class="ph-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5 5L18.5 16l4 1.5v3a2 2 0 0 1-2.2 2A18 18 0 0 1 4.5 6.7 2 2 0 0 1 6.5 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <span class="ph-t"><small>Tap to call · English welcome</small><b>+66 64 223 5645</b></span>
+          </a>
+        </div>
+        <div class="contact-alt" data-rev data-d="3">
+          <a class="alt-btn" href="#" aria-label="Add us on LINE (link to be confirmed)">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="5" stroke="currentColor" stroke-width="1.7"/><path d="M7 9v4m0-4 3 4V9m4 0h-1.5a1.5 1.5 0 0 0 0 3H14m3-3v4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 21l2-3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            <span class="at"><span>LINE</span><small>Add &amp; message us</small></span>
+          </a>
+          <a class="alt-btn" href="#" aria-label="Find us on Facebook (link to be confirmed)">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 8.5V7c0-.8.5-1 1-1h1.5V3H14c-2 0-3.5 1.4-3.5 3.6V8.5H8V11.5h2.5V21h3.5v-9.5h2.4l.6-3H14Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+            <span class="at"><span>Facebook</span><small>See our page</small></span>
+          </a>
+        </div>
+      </div>
+
+      <aside class="info-board" data-rev data-d="2" aria-label="Clinic contact details">
+        <div class="ib-h">Clinic details</div>
+        <div class="ib-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5 5L18.5 16l4 1.5v3a2 2 0 0 1-2.2 2A18 18 0 0 1 4.5 6.7 2 2 0 0 1 6.5 3Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+          <div class="ib-t"><small>Phone</small><a href="tel:+66642235645">+66 64 223 5645</a><p>Call to ask a question or arrange a visit</p></div>
+        </div>
+        <div class="ib-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg></span>
+          <div class="ib-t"><small>Area</small><span>On Nut · Phra Khanong, Bangkok</span><p>Beside BTS On Nut (E9), Sukhumvit line</p></div>
+        </div>
+        <div class="ib-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4.5l3 1.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <div class="ib-t"><small>Hours</small><span>Every day · 10:00 — 20:00</span><p>Open into the evening, weekends included</p></div>
+        </div>
+        <div class="ib-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H7l-3 3V5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.5 10.5h7M8.5 13h4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span>
+          <div class="ib-t"><small>Language</small><span>English spoken</span><p>International visitors are warmly welcome</p></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-main">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Onnut Skytrain Dental Clinic — home">
+          <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="10" fill="var(--green)"/>
+            <rect x="10" y="7" width="20" height="21" rx="5" fill="#fff"/>
+            <rect x="13" y="10.5" width="14" height="7.5" rx="2" fill="var(--green)"/>
+            <circle cx="15.5" cy="23" r="2.1" fill="var(--green)"/>
+            <circle cx="24.5" cy="23" r="2.1" fill="var(--green)"/>
+            <rect x="12.5" y="30.5" width="6" height="4.5" rx="1.3" fill="#fff"/>
+            <rect x="21.5" y="30.5" width="6" height="4.5" rx="1.3" fill="#fff"/>
+          </svg>
+          <span class="bt"><b>Onnut Skytrain Dental</b><span>Also known as Lotus On Nut</span></span>
+        </a>
+        <p>English-speaking general dentistry in On Nut, Bangkok — the easy stop on your line, just steps from the BTS Skytrain.</p>
+        <div class="stars" aria-label="Rated 4.9 out of 5 from 983 reviews">★★★★★ <b>4.9</b><small>983 Google reviews · open every day</small></div>
+      </div>
+      <div class="foot-col">
+        <h5>Explore</h5>
+        <a href="#welcome">Welcome</a>
+        <a href="#services">Treatments</a>
+        <a href="#visit">Visiting &amp; hours</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h5>Get in touch</h5>
+        <a href="tel:+66642235645"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 3h3l1.5 4-2 1.5a12 12 0 0 0 5 5L18.5 16l4 1.5v3a2 2 0 0 1-2.2 2A18 18 0 0 1 4.5 6.7 2 2 0 0 1 6.5 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>+66 64 223 5645</a>
+        <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>On Nut · Phra Khanong, Bangkok</span>
+        <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4.5l3 1.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Every day · 10:00 — 20:00</span>
+        <span><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="6" y="3" width="12" height="14" rx="3" stroke="currentColor" stroke-width="1.7"/><path d="M8 21l1.6-2.4M16 21l-1.6-2.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>Beside BTS On Nut (E9)</span>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="cl">© <span id="yr">2026</span> Onnut Skytrain Dental Clinic · On Nut, Bangkok</span>
+      <a class="foot-credit" href="https://stellarhausmedia.com" target="_blank" rel="noopener">
+        <span class="star" aria-hidden="true">✦</span> Designed by <b>Stellar Haus Media</b>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var doc = document;
+
+  window.addEventListener('load', function(){
+    requestAnimationFrame(function(){ doc.body.classList.remove('preload'); });
+  });
+  setTimeout(function(){ doc.body.classList.remove('preload'); }, 700);
+
+  doc.getElementById('yr').textContent = new Date().getFullYear();
+
+  var nav = doc.getElementById('nav');
+  var lastY = 0, ticking = false;
+  function onScroll(){
+    var y = window.pageYOffset;
+    if (y > 24) nav.classList.add('solid'); else nav.classList.remove('solid');
+    if (y > lastY && y > 420 && !drawerOpen) nav.classList.add('hide');
+    else nav.classList.remove('hide');
+    lastY = y; ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking){ window.requestAnimationFrame(onScroll); ticking = true; }
+  }, {passive:true});
+
+  var burger = doc.getElementById('burger');
+  var drawer = doc.getElementById('drawer');
+  var drawerOpen = false;
+  function setDrawer(open){
+    drawerOpen = open;
+    drawer.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true':'false');
+    drawer.setAttribute('aria-hidden', open ? 'false':'true');
+    burger.setAttribute('aria-label', open ? 'Close menu':'Open menu');
+    doc.body.style.overflow = open ? 'hidden':'';
+  }
+  burger.addEventListener('click', function(){ setDrawer(!drawerOpen); });
+  drawer.addEventListener('click', function(e){ if (e.target.tagName === 'A') setDrawer(false); });
+  doc.addEventListener('keydown', function(e){ if (e.key === 'Escape' && drawerOpen) setDrawer(false); });
+
+  var revs = [].slice.call(doc.querySelectorAll('[data-rev]'));
+  if (reduce || !('IntersectionObserver' in window)){
+    revs.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    revs.forEach(function(el){ io.observe(el); });
+  }
+
+  var railFill = doc.getElementById('railFill');
+  var railPulse = doc.getElementById('railPulse');
+  var rail = doc.getElementById('rail');
+  var stops = [].slice.call(doc.querySelectorAll('.stop'));
+  function railUpdate(){
+    if (reduce) return;
+    var docH = doc.documentElement.scrollHeight - window.innerHeight;
+    var prog = docH > 0 ? Math.min(1, Math.max(0, window.pageYOffset / docH)) : 0;
+    var railH = rail.offsetHeight;
+    railFill.style.height = (prog * 100) + '%';
+    railPulse.style.top = (prog * railH) + 'px';
+    var viewMid = window.pageYOffset + window.innerHeight * 0.5;
+    stops.forEach(function(s){
+      var r = s.getBoundingClientRect();
+      var absTop = r.top + window.pageYOffset;
+      if (absTop <= viewMid) s.classList.add('lit'); else s.classList.remove('lit');
+    });
+  }
+  if (!reduce){
+    window.addEventListener('scroll', railUpdate, {passive:true});
+    window.addEventListener('resize', railUpdate);
+    railUpdate();
+  } else {
+    stops.forEach(function(s){ s.classList.add('lit'); });
+  }
+
+  function tick(){
+    var d = new Date();
+    var hh = String(d.getHours()).padStart(2,'0');
+    var mm = String(d.getMinutes()).padStart(2,'0');
+    var c = doc.getElementById('boardClock');
+    if (c) c.textContent = hh + ':' + mm;
+  }
+  tick(); setInterval(tick, 1000 * 20);
+
+  var GLYPHS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-& ";
+  function buildFlaps(el){
+    var target = el.getAttribute('data-flap');
+    el.textContent = '';
+    var cells = [];
+    for (var i=0;i<target.length;i++){
+      var ch = target[i];
+      var s = doc.createElement('span');
+      s.className = 'flap' + (ch === ' ' ? ' sp':'');
+      s.textContent = ch === ' ' ? ' ' : (reduce ? ch : 'A');
+      el.appendChild(s);
+      cells.push({node:s, target:ch});
+    }
+    if (reduce) return;
+    cells.forEach(function(cell, idx){
+      if (cell.target === ' '){ return; }
+      var steps = 6 + (idx % 4) * 2;
+      var n = 0;
+      var startDelay = 120 + idx * 90;
+      setTimeout(function(){
+        var iv = setInterval(function(){
+          n++;
+          if (n >= steps){
+            clearInterval(iv);
+            cell.node.textContent = cell.target;
+            cell.node.classList.remove('anim'); void cell.node.offsetWidth; cell.node.classList.add('anim');
+          } else {
+            var g = GLYPHS[Math.floor(Math.random()*(GLYPHS.length-1))];
+            cell.node.textContent = g;
+            cell.node.classList.remove('anim'); void cell.node.offsetWidth; cell.node.classList.add('anim');
+          }
+        }, 55);
+      }, startDelay);
+    });
+  }
+  var flapEls = [].slice.call(doc.querySelectorAll('[data-flap]'));
+  if (reduce){
+    flapEls.forEach(buildFlaps);
+  } else {
+    var boardSeen = false;
+    var boardEl = doc.querySelector('.board');
+    function fireBoard(){ if (boardSeen) return; boardSeen = true; flapEls.forEach(function(el,i){ setTimeout(function(){ buildFlaps(el); }, i*260); }); }
+    if (boardEl && 'IntersectionObserver' in window){
+      var bio = new IntersectionObserver(function(es){
+        es.forEach(function(e){ if (e.isIntersecting){ fireBoard(); bio.disconnect(); } });
+      }, {threshold:0.4});
+      bio.observe(boardEl);
+    }
+    setTimeout(fireBoard, 1400);
+  }
+
+  function animateCount(el){
+    var to = parseFloat(el.getAttribute('data-count'));
+    var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
+    if (reduce){ el.textContent = dec ? to.toFixed(dec) : Math.round(to).toString(); return; }
+    var dur = 1300, t0 = null;
+    function frame(ts){
+      if (!t0) t0 = ts;
+      var p = Math.min(1, (ts - t0)/dur);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = to * eased;
+      el.textContent = dec ? val.toFixed(dec) : Math.round(val).toString();
+      if (p < 1) requestAnimationFrame(frame);
+      else el.textContent = dec ? to.toFixed(dec) : Math.round(to).toString();
+    }
+    requestAnimationFrame(frame);
+  }
+  var counts = [].slice.call(doc.querySelectorAll('[data-count]'));
+  if (reduce || !('IntersectionObserver' in window)){
+    counts.forEach(animateCount);
+  } else {
+    var cio = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting){ animateCount(e.target); cio.unobserve(e.target); } });
+    }, {threshold:0.6});
+    counts.forEach(function(el){ cio.observe(el); });
+  }
+
+  (function(){
+    var badge = doc.getElementById('openBadge');
+    var now = new Date();
+    var day = now.getDay();
+    var hr = now.getHours() + now.getMinutes()/60;
+    var open = hr >= 10 && hr < 20;
+    if (badge){
+      badge.textContent = open ? 'Open now' : 'Closed now';
+      badge.style.background = open ? 'rgba(22,163,74,.22)' : 'rgba(246,166,9,.18)';
+      badge.style.color = open ? 'var(--green-glow)' : 'var(--amber)';
+    }
+    var row = doc.querySelector('.hrow[data-day="'+day+'"]');
+    if (row){ row.classList.add('today'); }
+  })();
+
+})();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+66642235645", CHAN="", CHANLABEL="";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>i Smile Plus Dental Clinic — Santitham, Chiang Mai</title>
+<meta name="description" content="A warm, English-speaking dental clinic in Santitham, Chiang Mai. General dentistry, root canal treatment, extractions and orthodontics. Open late, rated 4.5 stars by visitors from around the world." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3CradialGradient id='g' cx='50%25' cy='38%25' r='62%25'%3E%3Cstop offset='0' stop-color='%23ffd98a'/%3E%3Cstop offset='0.55' stop-color='%23f4a23b'/%3E%3Cstop offset='1' stop-color='%23b9531a'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%231a1340'/%3E%3Cpath d='M16 5c5 0 8 3 8 7 0 3-1 5-2 8l-1 4h-10l-1-4c-1-3-2-5-2-8 0-4 3-7 8-7z' fill='url(%23g)'/%3E%3Crect x='10' y='23' width='12' height='2.4' rx='1.2' fill='%23ffe6ad'/%3E%3Cpath d='M14 26h4l-1 2h-2z' fill='%23ffcf7a'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --night-0:#0a0820;
+    --night-1:#120e34;
+    --night-2:#1a1448;
+    --night-3:#241a5e;
+    --indigo-glow:#3a2a7a;
+    --amber:#f4a23b;
+    --amber-bright:#ffc36a;
+    --gold:#e7b24a;
+    --gold-soft:#f3cf85;
+    --cream:#f6ecd8;
+    --cream-dim:#d9cbb0;
+    --muted:#a99fce;
+    --muted-2:#8a82b3;
+    --line:rgba(212,182,120,0.16);
+    --line-2:rgba(212,182,120,0.30);
+    --max:1180px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+    --font-body:'Jost',system-ui,-apple-system,sans-serif;
+    --font-display:'Marcellus',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    font-family:var(--font-body);
+    background:var(--night-0);
+    color:var(--cream);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    font-weight:300;
+  }
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--amber);color:var(--night-0)}
+  :focus-visible{outline:2px solid var(--amber-bright);outline-offset:3px;border-radius:3px}
+
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 clamp(1.25rem,4vw,2.75rem)}
+  .skip{position:absolute;left:-999px;top:0;background:var(--amber);color:var(--night-0);padding:.7rem 1.1rem;z-index:200;border-radius:0 0 8px 0;font-weight:500}
+  .skip:focus{left:0}
+
+  .sky{position:fixed;inset:0;z-index:-2;background:
+    radial-gradient(140% 90% at 78% -8%, rgba(244,162,59,0.16), transparent 48%),
+    radial-gradient(120% 80% at 12% 8%, rgba(58,42,122,0.55), transparent 55%),
+    linear-gradient(180deg, var(--night-1) 0%, var(--night-0) 38%, #08061a 100%);
+  }
+  .sky canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .moon{position:fixed;top:8vh;right:9vw;width:clamp(64px,9vw,118px);height:clamp(64px,9vw,118px);border-radius:50%;z-index:-2;
+    background:radial-gradient(circle at 38% 36%, #fff6e2, #f6dca0 46%, #e7b24a 78%, rgba(231,178,74,0) 100%);
+    filter:blur(.3px);opacity:.92}
+  .moon::after{content:"";position:absolute;inset:-46%;border-radius:50%;background:radial-gradient(circle, rgba(247,205,133,0.28), transparent 62%)}
+
+  header.nav{position:sticky;top:0;z-index:100;transition:background .4s var(--ease),backdrop-filter .4s,border-color .4s}
+  header.nav.scrolled{background:rgba(10,8,32,0.74);backdrop-filter:blur(14px) saturate(1.2);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:.62rem;font-family:var(--font-display);font-size:1.16rem;letter-spacing:.01em;color:var(--cream)}
+  .brand .mark{width:30px;height:30px;flex:0 0 auto;filter:drop-shadow(0 0 9px rgba(244,162,59,.55))}
+  .brand b{font-weight:400}
+  .brand .plus{color:var(--amber-bright)}
+  nav.links{display:flex;align-items:center;gap:2rem}
+  nav.links a{font-size:.84rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);position:relative;padding:.35rem 0;transition:color .3s}
+  nav.links a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:linear-gradient(90deg,var(--amber),var(--gold-soft));transition:width .35s var(--ease)}
+  nav.links a:hover{color:var(--cream)}
+  nav.links a:hover::after{width:100%}
+  .nav-cta{display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase;color:var(--night-0);background:linear-gradient(135deg,var(--amber-bright),var(--amber));padding:.62rem 1.15rem;border-radius:50px;font-weight:500;box-shadow:0 0 0 1px rgba(255,200,120,.35),0 8px 26px rgba(244,162,59,.28);transition:transform .3s var(--ease),box-shadow .3s}
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(255,200,120,.55),0 12px 34px rgba(244,162,59,.42)}
+  .menu-btn{display:none;background:none;border:1px solid var(--line-2);border-radius:8px;width:44px;height:44px;color:var(--cream);cursor:pointer;align-items:center;justify-content:center}
+  .menu-btn svg{width:22px;height:22px}
+  @media(max-width:860px){
+    nav.links{position:fixed;inset:74px 0 auto 0;flex-direction:column;gap:0;background:rgba(10,8,32,0.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:.5rem 0 1.4rem;transform:translateY(-130%);transition:transform .45s var(--ease);align-items:stretch}
+    nav.links.open{transform:translateY(0)}
+    nav.links a{padding:1rem clamp(1.25rem,4vw,2.75rem);font-size:.95rem;border-bottom:1px solid var(--line)}
+    nav.links a::after{display:none}
+    nav.links .nav-cta{margin:1rem clamp(1.25rem,4vw,2.75rem) 0;justify-content:center}
+    .menu-btn{display:inline-flex}
+  }
+
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:7rem 0 5rem;overflow:hidden}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;width:100%}
+  @media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:2.5rem}}
+  .eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.76rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:1.6rem}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--amber-bright);box-shadow:0 0 12px 2px rgba(255,195,106,.8);animation:twinkle 3.4s ease-in-out infinite}
+  @keyframes twinkle{0%,100%{opacity:.55;transform:scale(.85)}50%{opacity:1;transform:scale(1.15)}}
+  h1.hero-title{font-family:var(--font-display);font-weight:400;line-height:1.04;letter-spacing:-0.01em;
+    font-size:clamp(2.7rem,7.4vw,5.1rem);color:var(--cream);margin-bottom:1.5rem}
+  h1.hero-title .glow{
+    background:linear-gradient(105deg,var(--amber-bright) 0%,var(--gold-soft) 40%,#fff3da 70%,var(--amber-bright) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    background-size:220% auto;animation:shimmer 7s linear infinite;
+    text-shadow:0 0 38px rgba(244,162,59,.18)}
+  @keyframes shimmer{to{background-position:220% center}}
+  .hero-sub{font-size:clamp(1.04rem,2.1vw,1.28rem);color:var(--cream-dim);max-width:38ch;margin-bottom:2.4rem;font-weight:300}
+  .hero-sub strong{color:var(--cream);font-weight:500}
+  .hero-cta-row{display:flex;flex-wrap:wrap;gap:1rem;align-items:center}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font-family:var(--font-body);font-size:.96rem;letter-spacing:.02em;padding:.95rem 1.7rem;border-radius:50px;font-weight:500;cursor:pointer;border:none;transition:transform .3s var(--ease),box-shadow .3s,background .3s,color .3s;line-height:1}
+  .btn svg{width:18px;height:18px;flex:0 0 auto}
+  .btn-primary{color:var(--night-0);background:linear-gradient(135deg,var(--amber-bright),var(--amber));box-shadow:0 0 0 1px rgba(255,200,120,.4),0 12px 36px rgba(244,162,59,.34)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(255,200,120,.6),0 18px 48px rgba(244,162,59,.5)}
+  .btn-ghost{color:var(--cream);background:rgba(255,255,255,.04);border:1px solid var(--line-2)}
+  .btn-ghost:hover{transform:translateY(-3px);border-color:var(--gold-soft);background:rgba(244,162,59,.08)}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:1.6rem 2.2rem;margin-top:3rem;padding-top:2rem;border-top:1px solid var(--line)}
+  .hero-meta .item{display:flex;flex-direction:column;gap:.15rem}
+  .hero-meta .k{font-family:var(--font-display);font-size:1.5rem;color:var(--amber-bright);line-height:1}
+  .hero-meta .v{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+  .hero-art{position:relative;height:clamp(360px,52vh,560px);display:flex;align-items:center;justify-content:center}
+  .hero-art svg{width:100%;height:100%;overflow:visible}
+  .lift{transform-box:fill-box;transform-origin:center}
+  .lift-1{animation:lift1 9s var(--ease) infinite}
+  .lift-2{animation:lift2 11s var(--ease) infinite}
+  .lift-3{animation:lift3 13s var(--ease) infinite}
+  .lift-4{animation:lift4 10s var(--ease) infinite}
+  @keyframes lift1{0%{transform:translateY(40px);opacity:0}10%{opacity:1}90%{opacity:.85}100%{transform:translateY(-130px);opacity:0}}
+  @keyframes lift2{0%{transform:translateY(60px);opacity:0}14%{opacity:1}88%{opacity:.8}100%{transform:translateY(-160px);opacity:0}}
+  @keyframes lift3{0%{transform:translateY(30px);opacity:0}12%{opacity:1}90%{opacity:.85}100%{transform:translateY(-110px);opacity:0}}
+  @keyframes lift4{0%{transform:translateY(70px);opacity:0}16%{opacity:1}86%{opacity:.78}100%{transform:translateY(-150px);opacity:0}}
+  .breathe{animation:breathe 5s ease-in-out infinite}
+  @keyframes breathe{0%,100%{opacity:.8}50%{opacity:1}}
+
+  section{position:relative;padding:clamp(5rem,11vw,8.5rem) 0}
+  .sec-head{max-width:660px;margin-bottom:3.4rem}
+  .sec-tag{display:inline-flex;align-items:center;gap:.55rem;font-size:.74rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:1.1rem}
+  .sec-tag::before{content:"";width:26px;height:1px;background:linear-gradient(90deg,var(--amber),transparent)}
+  h2.sec-title{font-family:var(--font-display);font-weight:400;line-height:1.08;letter-spacing:-0.005em;font-size:clamp(2rem,4.6vw,3.15rem);color:var(--cream);margin-bottom:1.1rem}
+  .sec-title em{font-style:italic;color:var(--gold-soft)}
+  .sec-lead{font-size:clamp(1rem,1.7vw,1.14rem);color:var(--cream-dim);font-weight:300}
+
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+
+  .welcome-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+  @media(max-width:880px){.welcome-grid{grid-template-columns:1fr}}
+  .welcome-copy p{color:var(--cream-dim);font-size:1.06rem;margin-bottom:1.2rem;font-weight:300}
+  .welcome-copy p strong{color:var(--cream);font-weight:500}
+  .flags{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.8rem}
+  .flag{display:inline-flex;align-items:center;gap:.5rem;font-size:.82rem;letter-spacing:.04em;color:var(--cream-dim);background:rgba(255,255,255,.04);border:1px solid var(--line);padding:.5rem .95rem;border-radius:50px}
+  .flag svg{width:20px;height:14px;border-radius:2px;flex:0 0 auto;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+  .welcome-art{position:relative;min-height:340px;display:flex;align-items:center;justify-content:center}
+  .welcome-art svg{width:100%;max-width:460px;overflow:visible;filter:drop-shadow(0 22px 60px rgba(244,162,59,.14))}
+  .float-a{animation:floata 8s ease-in-out infinite}
+  .float-b{animation:floatb 10s ease-in-out infinite}
+  .float-c{animation:floatc 9s ease-in-out infinite}
+  @keyframes floata{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+  @keyframes floatb{0%,100%{transform:translateY(0)}50%{transform:translateY(-24px)}}
+  @keyframes floatc{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:1.3rem}
+  .svc{position:relative;padding:2.1rem 1.9rem 2.2rem;border-radius:18px;background:linear-gradient(165deg,rgba(36,26,94,0.55),rgba(18,14,52,0.55));border:1px solid var(--line);overflow:hidden;transition:transform .45s var(--ease),border-color .45s,box-shadow .45s}
+  .svc::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 90% at 50% -20%,rgba(244,162,59,.16),transparent 60%);opacity:0;transition:opacity .5s}
+  .svc:hover{transform:translateY(-8px);border-color:var(--line-2);box-shadow:0 24px 60px rgba(0,0,0,.4)}
+  .svc:hover::before{opacity:1}
+  .svc:hover .svc-ic{transform:translateY(-3px);box-shadow:0 0 0 1px rgba(255,200,120,.4),0 0 28px rgba(244,162,59,.4)}
+  .svc-ic{position:relative;width:58px;height:58px;border-radius:15px;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;background:linear-gradient(145deg,rgba(244,162,59,.18),rgba(231,178,74,.06));border:1px solid var(--line-2);transition:transform .45s var(--ease),box-shadow .45s}
+  .svc-ic svg{width:28px;height:28px;color:var(--amber-bright)}
+  .svc h3{position:relative;font-family:var(--font-display);font-weight:400;font-size:1.34rem;color:var(--cream);margin-bottom:.6rem;letter-spacing:.005em}
+  .svc p{position:relative;font-size:.95rem;color:var(--muted);font-weight:300;line-height:1.6}
+  .svc .tag{position:relative;display:inline-block;margin-top:1.1rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-soft);opacity:.85}
+
+  .visit-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:stretch}
+  @media(max-width:900px){.visit-grid{grid-template-columns:1fr}}
+  .visit-panel{background:linear-gradient(165deg,rgba(36,26,94,0.5),rgba(14,11,42,0.6));border:1px solid var(--line);border-radius:22px;padding:clamp(1.8rem,3.5vw,2.8rem)}
+  .info-row{display:flex;gap:1.1rem;padding:1.3rem 0;border-bottom:1px solid var(--line)}
+  .info-row:last-child{border-bottom:none;padding-bottom:.2rem}
+  .info-row:first-child{padding-top:.2rem}
+  .info-ic{flex:0 0 auto;width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(244,162,59,.1);border:1px solid var(--line);color:var(--amber-bright)}
+  .info-ic svg{width:22px;height:22px}
+  .info-row .lbl{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);margin-bottom:.25rem}
+  .info-row .val{font-size:1.06rem;color:var(--cream);font-weight:400}
+  .info-row .val a{color:var(--gold-soft);transition:color .3s}
+  .info-row .val a:hover{color:var(--amber-bright)}
+  .info-row .sub{font-size:.86rem;color:var(--muted);font-weight:300;margin-top:.15rem}
+  .open-pill{display:inline-flex;align-items:center;gap:.5rem;margin-top:.5rem;font-size:.8rem;letter-spacing:.04em;color:#bff0c8;background:rgba(60,160,90,.14);border:1px solid rgba(120,220,150,.28);padding:.32rem .8rem;border-radius:50px}
+  .open-pill .pulse{width:7px;height:7px;border-radius:50%;background:#7fe39b;box-shadow:0 0 10px 1px rgba(127,227,155,.9);animation:twinkle 2.6s ease-in-out infinite}
+
+  .map-card{position:relative;border:1px solid var(--line);border-radius:22px;overflow:hidden;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;background:
+    radial-gradient(80% 60% at 70% 25%, rgba(244,162,59,0.18), transparent 60%),
+    linear-gradient(160deg,#1a1448,#0c0a28)}
+  .map-card svg.streets{position:absolute;inset:0;width:100%;height:100%}
+  .map-pin{position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);z-index:2}
+  .map-pin .pin{width:24px;height:24px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:linear-gradient(135deg,var(--amber-bright),var(--amber));box-shadow:0 0 0 6px rgba(244,162,59,.18),0 0 22px rgba(244,162,59,.6)}
+  .map-pin .ripple{position:absolute;inset:-10px;border-radius:50%;border:1.5px solid rgba(244,162,59,.5);animation:ripple 2.6s ease-out infinite}
+  @keyframes ripple{0%{transform:scale(.5);opacity:.9}100%{transform:scale(2.4);opacity:0}}
+  .map-label{position:relative;z-index:3;padding:1.4rem 1.6rem;background:linear-gradient(0deg,rgba(8,6,26,.85),transparent)}
+  .map-label .area{font-family:var(--font-display);font-size:1.3rem;color:var(--cream)}
+  .map-label .city{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-soft);margin-top:.2rem}
+
+  .trust{text-align:center}
+  .trust-inner{max-width:760px;margin:0 auto}
+  .stars{display:inline-flex;gap:.45rem;margin-bottom:1.3rem}
+  .stars svg{width:30px;height:30px;color:var(--gold);filter:drop-shadow(0 0 8px rgba(231,178,74,.5));animation:starpop .6s var(--ease) backwards}
+  .stars svg:nth-child(1){animation-delay:.05s}.stars svg:nth-child(2){animation-delay:.13s}.stars svg:nth-child(3){animation-delay:.21s}.stars svg:nth-child(4){animation-delay:.29s}.stars svg:nth-child(5){animation-delay:.37s}
+  @keyframes starpop{from{opacity:0;transform:scale(.4) translateY(8px)}to{opacity:1;transform:none}}
+  .rating-big{font-family:var(--font-display);font-size:clamp(3.4rem,9vw,5.4rem);line-height:1;color:transparent;background:linear-gradient(135deg,var(--amber-bright),var(--gold-soft),#fff3da);-webkit-background-clip:text;background-clip:text;margin-bottom:.4rem}
+  .rating-sub{font-size:1.02rem;color:var(--cream-dim);font-weight:300;margin-bottom:2.6rem}
+  .rating-sub strong{color:var(--cream);font-weight:500}
+  .voices{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.2rem;margin-top:.5rem;text-align:left}
+  .voice{background:linear-gradient(165deg,rgba(36,26,94,0.42),rgba(14,11,42,0.5));border:1px solid var(--line);border-radius:18px;padding:1.7rem 1.6rem;position:relative;transition:transform .4s var(--ease),border-color .4s}
+  .voice:hover{transform:translateY(-6px);border-color:var(--line-2)}
+  .voice .q{font-family:var(--font-display);font-size:2.6rem;line-height:.6;color:var(--gold-soft);opacity:.45;height:.6em}
+  .voice p{font-size:.98rem;color:var(--cream-dim);font-weight:300;font-style:italic;margin:.6rem 0 1rem}
+  .voice .src{font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted-2)}
+
+  .contact-card{position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line-2);padding:clamp(2.4rem,5.5vw,4.5rem) clamp(1.8rem,5vw,3.6rem);background:
+    radial-gradient(110% 130% at 85% 0%, rgba(244,162,59,0.18), transparent 55%),
+    radial-gradient(90% 120% at 8% 100%, rgba(58,42,122,0.5), transparent 60%),
+    linear-gradient(165deg,rgba(26,20,72,0.85),rgba(10,8,32,0.92))}
+  .contact-card .ct-grid{display:grid;grid-template-columns:1fr;gap:2.4rem;position:relative;z-index:2;max-width:720px;margin:0 auto;text-align:center}
+  .contact h2{font-family:var(--font-display);font-weight:400;font-size:clamp(2rem,5vw,3.2rem);color:var(--cream);line-height:1.08;margin-bottom:.9rem}
+  .contact h2 em{font-style:italic;color:var(--gold-soft)}
+  .contact .lead{font-size:1.08rem;color:var(--cream-dim);font-weight:300;max-width:46ch;margin:0 auto 0}
+  .channel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.9rem;max-width:640px;margin:0 auto;width:100%}
+  .chan{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 1.1rem;border-radius:14px;font-size:.95rem;font-weight:500;letter-spacing:.01em;border:1px solid var(--line-2);background:rgba(255,255,255,.04);color:var(--cream);transition:transform .3s var(--ease),box-shadow .3s,border-color .3s,background .3s}
+  .chan svg{width:20px;height:20px;flex:0 0 auto}
+  .chan:hover{transform:translateY(-3px)}
+  .chan.phone{background:linear-gradient(135deg,var(--amber-bright),var(--amber));color:var(--night-0);border-color:transparent;box-shadow:0 10px 30px rgba(244,162,59,.32)}
+  .chan.phone:hover{box-shadow:0 16px 40px rgba(244,162,59,.48)}
+  .chan.line:hover{border-color:#06C755;background:rgba(6,199,85,.12);box-shadow:0 10px 28px rgba(6,199,85,.22)}
+  .chan.line svg{color:#06C755}
+  .chan.fb:hover{border-color:#1877F2;background:rgba(24,119,242,.12);box-shadow:0 10px 28px rgba(24,119,242,.22)}
+  .chan.fb svg{color:#3b9bff}
+  .chan.book{border-style:dashed;color:var(--gold-soft);cursor:not-allowed;background:rgba(244,162,59,.05)}
+  .chan.book:hover{transform:none;border-color:var(--line-2)}
+  .chan.book .soon{font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;background:rgba(244,162,59,.18);color:var(--amber-bright);padding:.12rem .45rem;border-radius:50px;margin-left:.1rem}
+  .ct-foot{font-size:.86rem;color:var(--muted);font-weight:300}
+  .ct-foot a{color:var(--gold-soft)}
+
+  footer.site{padding:4rem 0 2.6rem;border-top:1px solid var(--line);position:relative}
+  .foot-grid{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:2rem}
+  .foot-brand{display:flex;align-items:center;gap:.6rem;font-family:var(--font-display);font-size:1.16rem;color:var(--cream)}
+  .foot-brand .mark{width:28px;height:28px;filter:drop-shadow(0 0 8px rgba(244,162,59,.5))}
+  .foot-brand .plus{color:var(--amber-bright)}
+  .foot-area{font-size:.9rem;color:var(--muted);font-weight:300;margin-top:.6rem;max-width:30ch}
+  .foot-right{text-align:right}
+  @media(max-width:620px){.foot-right{text-align:left}}
+  .foot-hours{font-size:.86rem;color:var(--cream-dim);font-weight:300}
+  .foot-hours b{color:var(--gold-soft);font-weight:500}
+  .foot-bottom{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;margin-top:2.6rem;padding-top:1.6rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted-2)}
+  .credit{font-weight:300}
+  .credit a{color:var(--cream-dim);border-bottom:1px solid var(--line-2);padding-bottom:1px;transition:color .3s,border-color .3s}
+  .credit a:hover{color:var(--gold-soft);border-color:var(--gold-soft)}
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#f4a23b;--bk-accent-ink:#0d0d0f;--bk-ink:#0d0d0f;--bk-panel:#f6ecd8;--bk-muted:rgba(13,13,15,0.6);--bk-line:rgba(13,13,15,0.14);--bk-serif:"Marcellus", Georgia, serif;--bk-sans:"Jost", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="sky" aria-hidden="true"><canvas id="lanternCanvas"></canvas></div>
+<div class="moon" aria-hidden="true"></div>
+
+<header class="nav" id="siteNav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="i Smile Plus Dental Clinic — home">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><defs><radialGradient id="bm" cx="50%" cy="36%" r="62%"><stop offset="0" stop-color="#fff0cf"/><stop offset="0.5" stop-color="#f4a23b"/><stop offset="1" stop-color="#b9531a"/></radialGradient></defs><path d="M16 4c5.2 0 8.4 3 8.4 7.2 0 3.1-1.1 5.2-2.1 8.2L21 24H11l-1.3-4.6c-1-3-2.1-5.1-2.1-8.2C7.6 7 10.8 4 16 4z" fill="url(#bm)"/><rect x="10" y="23.4" width="12" height="2.6" rx="1.3" fill="#ffe6ad"/><path d="M14 26.4h4l-1 2.4h-2z" fill="#ffcf7a"/></svg>
+      <span><b>i Smile</b> <span class="plus">Plus</span></span>
+    </a>
+    <nav class="links" id="navLinks" aria-label="Primary">
+      <a href="#welcome">Welcome</a>
+      <a href="#services">Care</a>
+      <a href="#visit">Visit</a>
+      <a href="#reviews">Reviews</a>
+      <a class="nav-cta" href="tel:+6653218670">Call the clinic</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="dot"></span>Santitham · Chiang Mai</span>
+      <h1 class="hero-title" id="hero-title">A gentle smile,<br><span class="glow">lit by lantern light.</span></h1>
+      <p class="hero-sub">Modern dentistry with a warm welcome — where visitors from across the world are cared for <strong>entirely in English</strong>, late into the Chiang Mai evening.</p>
+      <div class="hero-cta-row">
+        <a class="btn btn-primary" href="tel:+6653218670">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
+          Call +66 53 218 670
+        </a>
+        <a class="btn btn-ghost" href="#visit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          Find &amp; visit us
+        </a>
+      </div>
+      <div class="hero-meta">
+        <div class="item"><span class="k">4.5★</span><span class="v">97 reviews</span></div>
+        <div class="item"><span class="k">Open late</span><span class="v">Until 8:30 pm</span></div>
+        <div class="item"><span class="k">English</span><span class="v">Spoken here</span></div>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <svg viewBox="0 0 380 520" role="img">
+        <title>Sky lanterns drifting up into a glowing Chiang Mai night</title>
+        <defs>
+          <radialGradient id="lg" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#fff3d6"/><stop offset="0.5" stop-color="#f8b95a"/><stop offset="1" stop-color="#d8761f"/></radialGradient>
+          <radialGradient id="lgGlow" cx="50%" cy="55%" r="55%"><stop offset="0" stop-color="rgba(255,205,120,0.55)"/><stop offset="1" stop-color="rgba(255,205,120,0)"/></radialGradient>
+          <radialGradient id="lgSmall" cx="50%" cy="42%" r="58%"><stop offset="0" stop-color="#ffe9c2"/><stop offset="0.55" stop-color="#f4a23b"/><stop offset="1" stop-color="#bd5d1c"/></radialGradient>
+        </defs>
+        <g class="lift lift-2">
+          <ellipse cx="190" cy="250" rx="120" ry="120" fill="url(#lgGlow)"/>
+          <path d="M150 196c0-13 18-22 40-22s40 9 40 22c0 14-6 26-11 40l-5 16h-48l-5-16c-5-14-11-26-11-40z" fill="url(#lg)"/>
+          <path d="M150 196c0-13 18-22 40-22s40 9 40 22" fill="none" stroke="#ffe9bf" stroke-width="1.4" opacity=".7"/>
+          <rect x="166" y="252" width="48" height="6" rx="3" fill="#ffe6ad"/>
+          <line x1="174" y1="258" x2="178" y2="270" stroke="#e7b24a" stroke-width="1.4"/>
+          <line x1="206" y1="258" x2="202" y2="270" stroke="#e7b24a" stroke-width="1.4"/>
+          <path d="M183 270h14l-2 8h-10z" fill="#ffcf7a"/>
+        </g>
+        <g class="lift lift-1">
+          <ellipse cx="92" cy="150" rx="72" ry="72" fill="url(#lgGlow)" opacity=".8"/>
+          <path d="M70 120c0-9 10-15 24-15s24 6 24 15c0 9-4 17-7 26l-3 10H80l-3-10c-3-9-7-17-7-26z" fill="url(#lgSmall)"/>
+          <rect x="78" y="156" width="28" height="4.4" rx="2.2" fill="#ffe6ad"/>
+          <path d="M88 160h8l-1.4 6h-5.2z" fill="#ffcf7a"/>
+        </g>
+        <g class="lift lift-4">
+          <ellipse cx="290" cy="360" rx="66" ry="66" fill="url(#lgGlow)" opacity=".8"/>
+          <path d="M270 334c0-8 9-14 20-14s20 6 20 14c0 8-3 15-6 23l-2 9h-24l-2-9c-3-8-6-15-6-23z" fill="url(#lgSmall)"/>
+          <rect x="277" y="366" width="26" height="4.2" rx="2.1" fill="#ffe6ad"/>
+          <path d="M286 370h8l-1.3 6h-5.4z" fill="#ffcf7a"/>
+        </g>
+        <g class="lift lift-3">
+          <ellipse cx="232" cy="92" rx="44" ry="44" fill="url(#lgGlow)" opacity=".7"/>
+          <path d="M218 74c0-6 6-10 14-10s14 4 14 10c0 6-2 11-4 16l-2 7h-16l-2-7c-2-5-4-10-4-16z" fill="url(#lgSmall)"/>
+          <rect x="223" y="96" width="18" height="3.4" rx="1.7" fill="#ffe6ad"/>
+        </g>
+        <circle class="breathe" cx="60" cy="320" r="4" fill="#f8b95a" opacity=".7"/>
+        <circle class="breathe" cx="330" cy="180" r="3" fill="#ffd98a" opacity=".7"/>
+        <circle class="breathe" cx="150" cy="60" r="2.6" fill="#f4a23b" opacity=".6"/>
+        <circle class="breathe" cx="300" cy="470" r="3.4" fill="#f8b95a" opacity=".6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="welcome" id="welcome" aria-labelledby="welcome-title">
+  <div class="wrap welcome-grid">
+    <div class="welcome-copy reveal">
+      <span class="sec-tag">You're welcome here</span>
+      <h2 class="sec-title" id="welcome-title">Travellers find their <em>way to us</em> from all over the world.</h2>
+      <p>Far from home and need a dentist you can talk to? You're in good company. Visitors making their way through Chiang Mai — <strong>from Australia to Germany</strong> and far beyond — have called us one of the friendliest clinics in the city.</p>
+      <p>Every consultation, every step of your treatment, every question about cost and care is handled <strong>in clear, comfortable English</strong>. No translation worries, no guesswork — just calm, attentive dentistry.</p>
+      <p>Whether you're here for a week or living the Chiang Mai life, you'll be met with the same warm welcome and the same gentle hands.</p>
+      <div class="flags" role="list" aria-label="Visitors from around the world">
+        <span class="flag" role="listitem">
+          <svg viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#012169"/><path d="M0 0l20 14M20 0L0 14" stroke="#fff" stroke-width="2"/><path d="M10 0v14M0 7h20" stroke="#fff" stroke-width="3"/><path d="M10 0v14M0 7h20" stroke="#C8102E" stroke-width="1.6"/></svg>
+          Australia
+        </span>
+        <span class="flag" role="listitem">
+          <svg viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="4.66" fill="#000"/><rect y="4.66" width="20" height="4.66" fill="#DD0000"/><rect y="9.33" width="20" height="4.66" fill="#FFCE00"/></svg>
+          Germany
+        </span>
+        <span class="flag" role="listitem">
+          <svg viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#012169"/><path d="M0 0l20 14M20 0L0 14" stroke="#fff" stroke-width="2.4"/><path d="M0 0l20 14M20 0L0 14" stroke="#C8102E" stroke-width="1.2"/><path d="M10 0v14M0 7h20" stroke="#fff" stroke-width="4"/><path d="M10 0v14M0 7h20" stroke="#C8102E" stroke-width="2.2"/></svg>
+          United Kingdom
+        </span>
+        <span class="flag" role="listitem">
+          <svg viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#fff"/><rect width="6.7" height="14" fill="#002654"/><rect x="13.3" width="6.7" height="14" fill="#CE1126"/></svg>
+          France
+        </span>
+        <span class="flag" role="listitem">
+          <svg viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" fill="#B22234"/><rect y="2.15" width="20" height="2.15" fill="#fff"/><rect y="6.46" width="20" height="2.15" fill="#fff"/><rect y="10.77" width="20" height="2.15" fill="#fff"/><rect width="9" height="7.54" fill="#3C3B6E"/></svg>
+          United States
+        </span>
+      </div>
+    </div>
+
+    <div class="welcome-art reveal d2" aria-hidden="true">
+      <svg viewBox="0 0 460 360" role="img">
+        <title>A cluster of glowing paper lanterns floating gently</title>
+        <defs>
+          <radialGradient id="wg1" cx="50%" cy="40%" r="60%"><stop offset="0" stop-color="#fff3d6"/><stop offset="0.5" stop-color="#f8b95a"/><stop offset="1" stop-color="#cf6b1d"/></radialGradient>
+          <radialGradient id="wgGlow" cx="50%" cy="50%" r="55%"><stop offset="0" stop-color="rgba(255,205,120,0.5)"/><stop offset="1" stop-color="rgba(255,205,120,0)"/></radialGradient>
+        </defs>
+        <g class="float-b">
+          <ellipse cx="230" cy="150" rx="118" ry="118" fill="url(#wgGlow)"/>
+          <path d="M192 104c0-13 17-22 38-22s38 9 38 22c0 14-6 25-10 38l-5 16h-46l-5-16c-4-13-10-24-10-38z" fill="url(#wg1)"/>
+          <path d="M192 104c0-13 17-22 38-22s38 9 38 22" fill="none" stroke="#ffe9bf" stroke-width="1.3" opacity=".7"/>
+          <rect x="207" y="158" width="46" height="5.6" rx="2.8" fill="#ffe6ad"/>
+          <path d="M223 163.6h14l-1.8 8h-10.4z" fill="#ffcf7a"/>
+        </g>
+        <g class="float-a">
+          <ellipse cx="110" cy="210" rx="74" ry="74" fill="url(#wgGlow)" opacity=".85"/>
+          <path d="M88 184c0-9 10-15 22-15s22 6 22 15c0 9-4 16-7 25l-3 10H98l-3-10c-3-9-7-16-7-25z" fill="url(#wg1)"/>
+          <rect x="96" y="218" width="28" height="4.4" rx="2.2" fill="#ffe6ad"/>
+          <path d="M106 222.4h8l-1.4 6h-5.2z" fill="#ffcf7a"/>
+        </g>
+        <g class="float-c">
+          <ellipse cx="356" cy="226" rx="66" ry="66" fill="url(#wgGlow)" opacity=".85"/>
+          <path d="M336 200c0-8 9-14 20-14s20 6 20 14c0 8-3 15-6 23l-2 9h-24l-2-9c-3-8-6-15-6-23z" fill="url(#wg1)"/>
+          <rect x="343" y="232" width="26" height="4.2" rx="2.1" fill="#ffe6ad"/>
+          <path d="M352 236.2h8l-1.3 6h-5.4z" fill="#ffcf7a"/>
+        </g>
+        <circle class="breathe" cx="60" cy="110" r="3.4" fill="#ffd98a" opacity=".7"/>
+        <circle class="breathe" cx="410" cy="120" r="3" fill="#f8b95a" opacity=".6"/>
+        <circle class="breathe" cx="220" cy="320" r="3" fill="#f4a23b" opacity=".6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Our care</span>
+      <h2 class="sec-title" id="services-title">Considered dentistry, <em>start to finish.</em></h2>
+      <p class="sec-lead">From a routine check-up to more involved treatment, everything is explained clearly before we begin — so you always know what's happening and why.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal d1">
+        <div class="svc-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5c-1.6-1.6-4-2-6-1-2.4 1.2-3 4.4-2 8 .7 2.5 1.4 5.6 2.4 7 .8 1.1 2 .6 2.4-1l1.2-4c.3-1 1.7-1 2 0l1.2 4c.4 1.6 1.6 2.1 2.4 1 1-1.4 1.7-4.5 2.4-7 1-3.6.4-6.8-2-8-2-1-4.4-.6-6 1z"/></svg>
+        </div>
+        <h3>General dentistry</h3>
+        <p>Check-ups, cleanings, fillings and friendly preventive advice to keep your smile healthy and bright while you travel.</p>
+        <span class="tag">Everyday care</span>
+      </article>
+
+      <article class="svc reveal d2">
+        <div class="svc-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c-1.4-1.2-3.4-1.4-5-.6C5 4.4 4.5 7 5.3 10c.6 2.2 1.2 4.8 2 6 .7 1 1.8.5 2.1-.8l1-3.5c.3-1 1.5-1 1.8 0l1 3.5c.3 1.3 1.4 1.8 2.1.8.8-1.2 1.4-3.8 2-6 .8-3 .3-5.6-1.7-6.6-1.6-.8-3.6-.6-5 .6z"/><path d="M12 4v9" stroke-dasharray="1.4 1.8"/></svg>
+        </div>
+        <h3>Root canal (RCT)</h3>
+        <p>Gentle, modern root canal treatment to relieve pain and save a natural tooth — handled calmly, with care at every stage.</p>
+        <span class="tag">Save the tooth</span>
+      </article>
+
+      <article class="svc reveal d3">
+        <div class="svc-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4.5c-1.5-1.4-3.6-1.7-5.2-.8C4.7 4.9 4.2 7.6 5 10.8c.6 2.3 1.2 4.6 2 5.8.5.8 1.3.6 1.7-.2"/><path d="M12 4.5c1.5-1.4 3.6-1.7 5.2-.8 1.8 1.2 2.3 3.9 1.5 7.1-.4 1.6-.8 3.2-1.4 4.4"/><path d="M14.5 15.5l4.5 4.5M19 15.5l-4.5 4.5"/></svg>
+        </div>
+        <h3>Extractions</h3>
+        <p>When a tooth truly needs to come out, it's done safely and as comfortably as possible, with clear aftercare for your trip ahead.</p>
+        <span class="tag">Safe &amp; calm</span>
+      </article>
+
+      <article class="svc reveal d4">
+        <div class="svc-ic" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h16M4 13h16"/><rect x="6" y="7" width="3" height="4" rx="1"/><rect x="11" y="7" width="3" height="4" rx="1"/><rect x="15" y="13" width="3" height="4" rx="1"/><rect x="9" y="13" width="3" height="4" rx="1"/></svg>
+        </div>
+        <h3>Orthodontics</h3>
+        <p>Braces and alignment plans for a straighter, more confident smile — with a treatment path that fits your time in Thailand.</p>
+        <span class="tag">Straighter smile</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="sec-tag">Plan your visit</span>
+      <h2 class="sec-title" id="visit-title">Find us in <em>Santitham.</em></h2>
+      <p class="sec-lead">A short hop from the old city and Nimman, in one of Chiang Mai's most local, leafy neighbourhoods — and we're open late, so evenings work too.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-panel reveal d1">
+        <div class="info-row">
+          <span class="info-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div>
+            <div class="lbl">Neighbourhood</div>
+            <div class="val">Santitham, Chiang Mai</div>
+            <div class="sub">Northern Thailand — easy to reach by songthaew, scooter or a short ride.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="info-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg></span>
+          <div>
+            <div class="lbl">Call us</div>
+            <div class="val"><a href="tel:+6653218670">+66 53 218 670</a></div>
+            <div class="sub">Speak with us in English — we're happy to answer any question.</div>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="info-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+          <div>
+            <div class="lbl">Hours</div>
+            <div class="val">Open until 8:30 pm</div>
+            <span class="open-pill"><span class="pulse" aria-hidden="true"></span>Open late for evening visits</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-card reveal d2" role="img" aria-label="Stylized map showing the clinic's location in Santitham, Chiang Mai">
+        <svg class="streets" viewBox="0 0 400 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g stroke="rgba(212,182,120,0.14)" stroke-width="1.4" fill="none">
+            <path d="M-20 90 H420"/><path d="M-20 170 H420"/><path d="M-20 250 H420"/><path d="M-20 320 H420"/>
+            <path d="M70 -20 V380"/><path d="M170 -20 V380"/><path d="M250 -20 V380"/><path d="M330 -20 V380"/>
+          </g>
+          <g stroke="rgba(244,162,59,0.28)" stroke-width="2.2" fill="none">
+            <path d="M-20 170 H420"/><path d="M170 -20 V380"/>
+          </g>
+          <path d="M30 30 Q120 80 110 150 T230 300" stroke="rgba(120,160,255,0.2)" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <circle cx="170" cy="170" r="3" fill="rgba(244,162,59,0.5)"/>
+          <rect x="120" y="120" width="40" height="30" rx="3" fill="rgba(212,182,120,0.08)"/>
+          <rect x="210" y="200" width="46" height="34" rx="3" fill="rgba(212,182,120,0.08)"/>
+          <rect x="90" y="220" width="34" height="28" rx="3" fill="rgba(212,182,120,0.08)"/>
+        </svg>
+        <div class="map-pin" aria-hidden="true"><span class="ripple"></span><span class="pin"></span></div>
+        <div class="map-label">
+          <div class="area">i Smile Plus Dental Clinic</div>
+          <div class="city">Santitham · Chiang Mai</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <div class="ct-grid">
+        <div>
+          <h2 id="contact-title">Let's get your <em>smile sorted.</em></h2>
+          <p class="lead">Reach out however suits you — a quick call, a message, or book online soon. We'll greet you in English and take it from there.</p>
+        </div>
+        <div class="channel-grid">
+          <a class="chan phone" href="tel:+6653218670">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .58 3.6 1 1 0 0 1-.24 1z"/></svg>
+            Call the clinic
+          </a>
+          <!-- LINE: official account not listed yet — placeholder, wire to https://line.me/R/ti/p/@HANDLE when available -->
+          <a class="chan line" href="#" aria-label="Add us on LINE (coming soon)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.07.7.2.8.5.1.25.07.6.04.85l-.13.8c-.04.25-.2.97.85.53s5.6-3.3 7.64-5.65C20.8 14.5 22 12.9 22 11c0-4.4-4.5-8-10-8zm-3.4 9.7H6.55a.43.43 0 0 1-.43-.43V9.2a.43.43 0 0 1 .86 0v2.64h1.62a.43.43 0 0 1 0 .86zm1.7-.43a.43.43 0 0 1-.86 0V9.2a.43.43 0 0 1 .86 0zm3.85 0a.43.43 0 0 1-.3.41h-.13a.43.43 0 0 1-.34-.17l-1.4-1.9v1.66a.43.43 0 0 1-.85 0V9.2a.43.43 0 0 1 .29-.4l.14-.03a.43.43 0 0 1 .34.17l1.4 1.9V9.2a.43.43 0 0 1 .86 0zm2.74-1.78a.43.43 0 0 1 0 .86h-1.62v.5h1.62a.43.43 0 0 1 0 .85h-2.05a.43.43 0 0 1-.43-.43V9.2a.43.43 0 0 1 .43-.43h2.05a.43.43 0 0 1 0 .86h-1.62v.5z"/></svg>
+            Add us on LINE
+          </a>
+          <!-- Facebook: page not listed yet — placeholder, wire to https://facebook.com/PAGE when available -->
+          <a class="chan fb" href="#" aria-label="Visit us on Facebook (coming soon)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+            Find us on Facebook
+          </a>
+          <!-- Booking exists but online form not live yet — intentionally non-functional -->
+          <span class="chan book" role="button" aria-disabled="true" tabindex="0">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg>
+            Book online <span class="soon">Soon</span>
+          </span>
+        </div>
+        <p class="ct-foot">Prefer to drop by? You'll find us in <a href="#visit">Santitham, Chiang Mai</a> — open until 8:30 pm.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="foot-brand" href="#top">
+          <svg class="mark" viewBox="0 0 32 32" aria-hidden="true"><defs><radialGradient id="fm" cx="50%" cy="36%" r="62%"><stop offset="0" stop-color="#fff0cf"/><stop offset="0.5" stop-color="#f4a23b"/><stop offset="1" stop-color="#b9531a"/></radialGradient></defs><path d="M16 4c5.2 0 8.4 3 8.4 7.2 0 3.1-1.1 5.2-2.1 8.2L21 24H11l-1.3-4.6c-1-3-2.1-5.1-2.1-8.2C7.6 7 10.8 4 16 4z" fill="url(#fm)"/><rect x="10" y="23.4" width="12" height="2.6" rx="1.3" fill="#ffe6ad"/></svg>
+          <span><b style="font-weight:400">i Smile</b> <span class="plus">Plus</span></span>
+        </a>
+        <p class="foot-area">A warm, English-speaking dental clinic in Santitham, Chiang Mai, Thailand.</p>
+      </div>
+      <div class="foot-right">
+        <p class="foot-hours">Open until <b>8:30 pm</b> · <b>4.5★</b> from 97 reviews</p>
+        <p class="foot-hours" style="margin-top:.4rem"><a href="tel:+6653218670" style="color:var(--gold-soft)">+66 53 218 670</a></p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> i Smile Plus Dental Clinic · Santitham, Chiang Mai</span>
+      <span class="credit">Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener">Stellar Haus Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var yr = document.getElementById('yr'); if(yr) yr.textContent = new Date().getFullYear();
+
+  var nav = document.getElementById('siteNav');
+  function onScroll(){ if(window.scrollY > 28) nav.classList.add('scrolled'); else nav.classList.remove('scrolled'); }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  var menuBtn = document.getElementById('menuBtn'), navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', function(){
+    var open = navLinks.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', open ? 'true':'false');
+  });
+  navLinks.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ navLinks.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false'); }
+  });
+
+  var revs = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    revs.forEach(function(r){ r.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    revs.forEach(function(r){ io.observe(r); });
+  }
+
+  var canvas = document.getElementById('lanternCanvas');
+  if(!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W=0, H=0, DPR = Math.min(window.devicePixelRatio||1, 2);
+  var lanterns = [], stars = [];
+
+  function rand(a,b){ return a + Math.random()*(b-a); }
+
+  function build(){
+    var area = W*H;
+    var count = Math.max(10, Math.min(26, Math.round(area/52000)));
+    lanterns = [];
+    for(var i=0;i<count;i++){
+      lanterns.push({
+        x: rand(0, W),
+        y: rand(0, H),
+        r: rand(6, 17),
+        speed: rand(6, 20),
+        drift: rand(-7, 7),
+        phase: rand(0, Math.PI*2),
+        sway: rand(8, 22),
+        hue: rand(28, 42),
+        glow: rand(0.55, 1)
+      });
+    }
+    var sc = Math.round(area/9000);
+    stars = [];
+    for(var s=0;s<sc;s++){
+      stars.push({ x: rand(0,W), y: rand(0,H*0.85), r: rand(0.4,1.4), tw: rand(0,Math.PI*2), sp: rand(0.6,1.8) });
+    }
+  }
+
+  function resize(){
+    W = canvas.clientWidth; H = canvas.clientHeight;
+    canvas.width = Math.floor(W*DPR); canvas.height = Math.floor(H*DPR);
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    build();
+  }
+
+  function drawStar(s, t){
+    var a = 0.35 + 0.45*Math.abs(Math.sin(t*0.001*s.sp + s.tw));
+    ctx.globalAlpha = a;
+    ctx.fillStyle = '#fff4dc';
+    ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI*2); ctx.fill();
+  }
+
+  function drawLantern(l, t){
+    var sway = Math.sin(t*0.0006 + l.phase) * l.sway;
+    var x = l.x + sway, y = l.y;
+    var r = l.r;
+    var g = ctx.createRadialGradient(x, y, 0, x, y, r*3.4);
+    g.addColorStop(0, 'rgba(255,205,120,'+(0.32*l.glow)+')');
+    g.addColorStop(1, 'rgba(255,205,120,0)');
+    ctx.globalAlpha = 1; ctx.fillStyle = g;
+    ctx.beginPath(); ctx.arc(x, y, r*3.4, 0, Math.PI*2); ctx.fill();
+    var grd = ctx.createRadialGradient(x, y - r*0.2, r*0.2, x, y, r*1.25);
+    grd.addColorStop(0, 'hsla('+l.hue+',95%,82%,0.98)');
+    grd.addColorStop(0.55, 'hsla('+l.hue+',88%,60%,0.95)');
+    grd.addColorStop(1, 'hsla('+(l.hue-6)+',82%,42%,0.92)');
+    ctx.fillStyle = grd;
+    ctx.beginPath();
+    ctx.moveTo(x - r, y - r*0.15);
+    ctx.bezierCurveTo(x - r, y - r*1.15, x + r, y - r*1.15, x + r, y - r*0.15);
+    ctx.bezierCurveTo(x + r*0.92, y + r*0.95, x - r*0.92, y + r*0.95, x - r, y - r*0.15);
+    ctx.closePath(); ctx.fill();
+    ctx.globalAlpha = 0.9;
+    ctx.fillStyle = 'rgba(255,240,200,0.9)';
+    ctx.beginPath(); ctx.ellipse(x, y + r*0.7, r*0.32, r*0.22, 0, 0, Math.PI*2); ctx.fill();
+    ctx.globalAlpha = 1;
+  }
+
+  var last = performance.now();
+  var scrollParallax = 0, targetParallax = 0;
+
+  function frame(now){
+    var dt = Math.min((now - last)/1000, 0.05); last = now;
+    ctx.clearRect(0,0,W,H);
+    scrollParallax += (targetParallax - scrollParallax)*0.06;
+
+    for(var s=0;s<stars.length;s++) drawStar(stars[s], now);
+
+    for(var i=0;i<lanterns.length;i++){
+      var l = lanterns[i];
+      l.y -= l.speed*dt;
+      l.x += l.drift*dt;
+      if(l.y < -l.r*4){ l.y = H + l.r*4; l.x = rand(0,W); }
+      if(l.x < -40) l.x = W+40; if(l.x > W+40) l.x = -40;
+      var saved = l.y; l.y = l.y - scrollParallax*(l.r/14);
+      drawLantern(l, now);
+      l.y = saved;
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function frameStatic(){
+    ctx.clearRect(0,0,W,H);
+    for(var s=0;s<stars.length;s++){ ctx.globalAlpha=0.6; ctx.fillStyle='#fff4dc'; ctx.beginPath(); ctx.arc(stars[s].x,stars[s].y,stars[s].r,0,Math.PI*2); ctx.fill(); }
+    ctx.globalAlpha=1;
+    for(var i=0;i<lanterns.length;i++) drawLantern(lanterns[i], 0);
+  }
+
+  resize();
+  window.addEventListener('resize', resize);
+
+  if(reduce){
+    frameStatic();
+    window.addEventListener('resize', frameStatic);
+  } else {
+    window.addEventListener('scroll', function(){
+      targetParallax = (window.scrollY||0) * 0.12;
+    }, {passive:true});
+    requestAnimationFrame(frame);
+  }
+})();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+6653218670", CHAN="", CHANLABEL="";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>

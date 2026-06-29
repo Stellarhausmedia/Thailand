@@ -1,0 +1,1845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dentalme Clinic — English-Speaking Dentist in Chiang Mai Old City</title>
+<meta name="description" content="A warm, English-speaking dental clinic in Chiang Mai's historic Old City. Invisalign, veneers, orthodontics and implants — booked in English over WhatsApp. Rated 4.8 from 318 reviews." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231b2a52'/%3E%3Cg stroke='%23e8d9b8' stroke-width='1.4' fill='none' opacity='0.95'%3E%3Cpath d='M8 9v14M13 9v14M19 9v14M24 9v14'/%3E%3Cpath d='M6 12h20M6 16h20M6 20h20' stroke='%23c8954a'/%3E%3C/g%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Marcellus&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --indigo-950: #0d162e;
+    --indigo-900: #141f3f;
+    --indigo-850: #1b2a52;
+    --indigo-800: #223468;
+    --indigo-700: #2e447f;
+    --indigo-500: #4d6bb0;
+    --indigo-300: #8aa3d4;
+    --cream: #f4ecdb;
+    --cream-soft: #efe5cf;
+    --cream-dim: #d9cdb0;
+    --brass: #c8954a;
+    --brass-bright: #e0b366;
+    --brass-deep: #a3742f;
+    --paper: #f7f1e3;
+    --ink: #16213f;
+
+    --serif: 'Fraunces', Georgia, serif;
+    --display: 'Marcellus', Georgia, serif;
+    --sans: 'Manrope', system-ui, -apple-system, sans-serif;
+
+    --maxw: 1180px;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--indigo-950);
+    color: var(--cream);
+    line-height: 1.65;
+    font-weight: 400;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection { background: var(--brass); color: var(--indigo-950); }
+
+  a { color: inherit; text-decoration: none; }
+
+  img, svg { display: block; max-width: 100%; }
+
+  :focus-visible {
+    outline: 2px solid var(--brass-bright);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 12px; top: -60px;
+    background: var(--brass-bright);
+    color: var(--indigo-950);
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: 600;
+    z-index: 200;
+    transition: top .25s var(--ease);
+  }
+  .skip-link:focus { top: 12px; }
+
+  .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(20px, 5vw, 56px); }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--brass-bright);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 34px; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--brass));
+  }
+  .eyebrow.center::before { display: none; }
+
+  h1, h2, h3 { font-weight: 400; line-height: 1.08; letter-spacing: -0.01em; }
+
+  .display-serif {
+    font-family: var(--serif);
+    font-optical-sizing: auto;
+  }
+
+  .weave-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    transition: background .4s var(--ease), backdrop-filter .4s var(--ease), border-color .4s var(--ease), padding .4s var(--ease);
+    border-bottom: 1px solid transparent;
+    padding: 22px 0;
+  }
+  .nav.scrolled {
+    background: rgba(13, 22, 46, 0.82);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    border-bottom-color: rgba(200, 149, 74, 0.22);
+    padding: 14px 0;
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-family: var(--display);
+    font-size: 1.32rem;
+    letter-spacing: 0.01em;
+    color: var(--cream);
+  }
+  .brand .mark {
+    width: 38px; height: 38px;
+    flex-shrink: 0;
+  }
+  .brand .sub {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.6rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--brass);
+    font-weight: 600;
+    margin-top: 1px;
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.86rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--cream-soft);
+    position: relative;
+    padding: 4px 0;
+    transition: color .25s var(--ease);
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -2px;
+    width: 0; height: 1.5px;
+    background: var(--brass-bright);
+    transition: width .3s var(--ease);
+  }
+  .nav-links a:hover { color: var(--cream); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--brass);
+    color: var(--indigo-950);
+    font-weight: 600;
+    font-size: 0.84rem;
+    padding: 11px 20px;
+    border-radius: 100px;
+    border: 1px solid var(--brass);
+    transition: transform .25s var(--ease), background .25s var(--ease), box-shadow .25s var(--ease);
+    white-space: nowrap;
+  }
+  .nav-cta:hover {
+    background: var(--brass-bright);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px -8px rgba(200, 149, 74, 0.6);
+  }
+  .nav-cta svg { width: 16px; height: 16px; }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid rgba(200,149,74,0.4);
+    border-radius: 8px;
+    width: 44px; height: 44px;
+    cursor: pointer;
+    color: var(--cream);
+    align-items: center;
+    justify-content: center;
+  }
+  .menu-toggle svg { width: 22px; height: 22px; }
+
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding: 130px 0 80px;
+    overflow: hidden;
+    background:
+      radial-gradient(120% 90% at 85% 8%, rgba(46, 68, 127, 0.55) 0%, transparent 55%),
+      radial-gradient(100% 80% at 8% 95%, rgba(20, 31, 63, 0.9) 0%, transparent 60%),
+      linear-gradient(160deg, var(--indigo-900) 0%, var(--indigo-950) 60%, #0a1126 100%);
+  }
+  .hero-grid {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(30px, 5vw, 70px);
+    align-items: center;
+    width: 100%;
+  }
+  .hero-copy { max-width: 620px; }
+  .hero-copy .eyebrow { margin-bottom: 28px; }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.9rem, 7vw, 5.4rem);
+    line-height: 0.98;
+    letter-spacing: -0.022em;
+    color: var(--cream);
+    margin-bottom: 26px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--brass-bright);
+    position: relative;
+  }
+  .hero h1 .line { display: block; overflow: hidden; }
+  .hero h1 .line > span {
+    display: block;
+    transform: translateY(110%);
+    animation: lineUp 1s var(--ease) forwards;
+  }
+  .hero h1 .line:nth-child(1) > span { animation-delay: 0.15s; }
+  .hero h1 .line:nth-child(2) > span { animation-delay: 0.30s; }
+  .hero h1 .line:nth-child(3) > span { animation-delay: 0.45s; }
+
+  @keyframes lineUp { to { transform: translateY(0); } }
+
+  .hero-lede {
+    font-size: clamp(1.04rem, 1.5vw, 1.22rem);
+    line-height: 1.62;
+    color: var(--cream-soft);
+    max-width: 500px;
+    margin-bottom: 38px;
+    opacity: 0;
+    animation: fadeUp 1s var(--ease) 0.6s forwards;
+  }
+  .hero-lede strong { color: var(--cream); font-weight: 600; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    opacity: 0;
+    animation: fadeUp 1s var(--ease) 0.78s forwards;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 0.94rem;
+    padding: 15px 26px;
+    border-radius: 100px;
+    cursor: pointer;
+    border: 1.5px solid transparent;
+    transition: transform .25s var(--ease), background .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease);
+    letter-spacing: 0.01em;
+  }
+  .btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .btn-primary {
+    background: var(--brass);
+    color: var(--indigo-950);
+    border-color: var(--brass);
+  }
+  .btn-primary:hover {
+    background: var(--brass-bright);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px -12px rgba(200, 149, 74, 0.7);
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--cream);
+    border-color: rgba(231, 217, 184, 0.32);
+  }
+  .btn-ghost:hover {
+    border-color: var(--cream-soft);
+    background: rgba(231, 217, 184, 0.07);
+    transform: translateY(-2px);
+  }
+
+  .hero-stats {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    gap: clamp(24px, 4vw, 48px);
+    margin-top: 56px;
+    opacity: 0;
+    animation: fadeUp 1s var(--ease) 0.95s forwards;
+  }
+  .hstat .num {
+    font-family: var(--display);
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    color: var(--brass-bright);
+    line-height: 1;
+  }
+  .hstat .lbl {
+    font-size: 0.74rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    margin-top: 8px;
+  }
+  .hstat + .hstat { padding-left: clamp(24px, 4vw, 48px); border-left: 1px solid rgba(200,149,74,0.22); }
+
+  .hero-art {
+    position: relative;
+    z-index: 2;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .hero-art svg { width: 100%; height: 100%; overflow: visible; }
+
+  .dye-bloom {
+    position: absolute;
+    inset: -8%;
+    z-index: 1;
+    background: radial-gradient(circle at 50% 50%, rgba(77, 107, 176, 0.45) 0%, rgba(46, 68, 127, 0.22) 38%, transparent 68%);
+    border-radius: 50%;
+    filter: blur(8px);
+    animation: bloom 9s ease-in-out infinite;
+  }
+  @keyframes bloom {
+    0%, 100% { transform: scale(0.92); opacity: 0.7; }
+    50% { transform: scale(1.06); opacity: 1; }
+  }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 28px; left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.66rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    opacity: 0;
+    animation: fadeUp 1s var(--ease) 1.3s forwards;
+  }
+  .scroll-cue .bar {
+    width: 1px; height: 38px;
+    background: linear-gradient(var(--brass), transparent);
+    position: relative;
+    overflow: hidden;
+  }
+  .scroll-cue .bar::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 40%;
+    background: var(--brass-bright);
+    animation: cue 2.2s ease-in-out infinite;
+  }
+  @keyframes cue { 0% { transform: translateY(-100%); } 100% { transform: translateY(280%); } }
+
+  section { position: relative; }
+  .band {
+    padding: clamp(80px, 11vw, 140px) 0;
+    position: relative;
+  }
+  .band-cream {
+    background: var(--paper);
+    color: var(--ink);
+  }
+  .band-cream .eyebrow { color: var(--brass-deep); }
+  .band-cream .eyebrow::before { background: linear-gradient(90deg, transparent, var(--brass-deep)); }
+
+  .sec-head { max-width: 720px; margin-bottom: clamp(48px, 6vw, 72px); }
+  .sec-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .sec-head .eyebrow { margin-bottom: 22px; }
+  .sec-head h2 {
+    font-family: var(--serif);
+    font-size: clamp(2.1rem, 4.6vw, 3.4rem);
+    letter-spacing: -0.018em;
+    line-height: 1.04;
+    margin-bottom: 22px;
+  }
+  .sec-head h2 em { font-style: italic; color: var(--brass-deep); }
+  .band:not(.band-cream) .sec-head h2 em { color: var(--brass-bright); }
+  .sec-head p {
+    font-size: clamp(1rem, 1.4vw, 1.14rem);
+    line-height: 1.68;
+    color: rgba(22, 33, 63, 0.74);
+    max-width: 600px;
+  }
+  .sec-head.center p { margin-left: auto; margin-right: auto; }
+  .band:not(.band-cream) .sec-head p { color: var(--cream-soft); }
+
+  .welcome { background: linear-gradient(180deg, var(--indigo-950) 0%, var(--indigo-900) 100%); }
+  .welcome-grid {
+    display: grid;
+    grid-template-columns: 0.92fr 1.08fr;
+    gap: clamp(40px, 6vw, 84px);
+    align-items: center;
+  }
+  .welcome-visual {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(200, 149, 74, 0.28);
+    background: linear-gradient(155deg, var(--indigo-800) 0%, var(--indigo-950) 100%);
+  }
+  .welcome-visual svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .welcome-badge {
+    position: absolute;
+    z-index: 3;
+    bottom: 22px; left: 22px; right: 22px;
+    background: rgba(13, 22, 46, 0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(200, 149, 74, 0.3);
+    border-radius: 13px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .welcome-badge .flag {
+    font-family: var(--display);
+    font-size: 1.5rem;
+    color: var(--brass-bright);
+    line-height: 1;
+  }
+  .welcome-badge .txt { font-size: 0.82rem; color: var(--cream-soft); line-height: 1.4; }
+  .welcome-badge .txt strong { color: var(--cream); display: block; font-weight: 600; font-size: 0.92rem; }
+
+  .welcome-copy h2 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4.4vw, 3.2rem);
+    line-height: 1.06;
+    letter-spacing: -0.018em;
+    margin-bottom: 24px;
+    color: var(--cream);
+  }
+  .welcome-copy h2 em { font-style: italic; color: var(--brass-bright); }
+  .welcome-copy p {
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: var(--cream-soft);
+    margin-bottom: 20px;
+    max-width: 540px;
+  }
+  .welcome-list {
+    list-style: none;
+    margin-top: 32px;
+    display: grid;
+    gap: 16px;
+  }
+  .welcome-list li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    font-size: 0.98rem;
+    color: var(--cream-soft);
+  }
+  .welcome-list .ic {
+    flex-shrink: 0;
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: rgba(200, 149, 74, 0.12);
+    border: 1px solid rgba(200, 149, 74, 0.3);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--brass-bright);
+  }
+  .welcome-list .ic svg { width: 19px; height: 19px; }
+  .welcome-list strong { color: var(--cream); font-weight: 600; }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(16px, 2vw, 22px);
+  }
+  .svc-card {
+    position: relative;
+    background: rgba(247, 241, 227, 0.85);
+    border: 1px solid rgba(163, 116, 47, 0.2);
+    border-radius: 17px;
+    padding: clamp(28px, 3.4vw, 40px);
+    overflow: hidden;
+    transition: transform .4s var(--ease), border-color .4s var(--ease), box-shadow .4s var(--ease);
+  }
+  .svc-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(90deg, rgba(27, 42, 82, 0.04) 0 2px, transparent 2px 9px),
+      repeating-linear-gradient(0deg, rgba(27, 42, 82, 0.04) 0 2px, transparent 2px 9px);
+    opacity: 0;
+    transition: opacity .4s var(--ease);
+    pointer-events: none;
+  }
+  .svc-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(200, 149, 74, 0.55);
+    box-shadow: 0 26px 50px -26px rgba(13, 22, 46, 0.5);
+  }
+  .svc-card:hover::before { opacity: 1; }
+  .svc-num {
+    font-family: var(--display);
+    font-size: 0.84rem;
+    letter-spacing: 0.1em;
+    color: var(--brass-deep);
+    margin-bottom: 20px;
+    display: block;
+  }
+  .svc-icon {
+    width: 56px; height: 56px;
+    margin-bottom: 24px;
+    color: var(--indigo-850);
+    position: relative;
+    z-index: 1;
+  }
+  .svc-icon svg { width: 100%; height: 100%; }
+  .svc-card h3 {
+    font-family: var(--serif);
+    font-size: 1.62rem;
+    color: var(--ink);
+    margin-bottom: 13px;
+    letter-spacing: -0.012em;
+    position: relative; z-index: 1;
+  }
+  .svc-card p {
+    font-size: 0.97rem;
+    line-height: 1.62;
+    color: rgba(22, 33, 63, 0.72);
+    position: relative; z-index: 1;
+  }
+  .svc-tag {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 0.7rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--brass-deep);
+    border-top: 1px solid rgba(163, 116, 47, 0.3);
+    padding-top: 14px;
+    position: relative; z-index: 1;
+  }
+
+  .visit { background: linear-gradient(180deg, var(--indigo-900) 0%, var(--indigo-950) 100%); }
+  .visit-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(36px, 5vw, 72px);
+    align-items: stretch;
+  }
+  .visit-card {
+    background: rgba(20, 31, 63, 0.55);
+    border: 1px solid rgba(200, 149, 74, 0.22);
+    border-radius: 18px;
+    padding: clamp(28px, 3.6vw, 44px);
+    display: flex;
+    flex-direction: column;
+  }
+  .visit-card h3 {
+    font-family: var(--serif);
+    font-size: 1.9rem;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+  .visit-card .area {
+    color: var(--brass-bright);
+    font-size: 0.86rem;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+    display: flex; align-items: center; gap: 9px;
+  }
+  .visit-card .area svg { width: 17px; height: 17px; }
+
+  .info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 19px 0;
+    border-top: 1px solid rgba(200, 149, 74, 0.14);
+  }
+  .info-row:first-of-type { border-top: none; }
+  .info-row .ic {
+    flex-shrink: 0;
+    width: 42px; height: 42px;
+    border-radius: 11px;
+    background: rgba(200, 149, 74, 0.1);
+    border: 1px solid rgba(200, 149, 74, 0.26);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--brass-bright);
+  }
+  .info-row .ic svg { width: 20px; height: 20px; }
+  .info-row .meta .k {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--cream-dim);
+    margin-bottom: 4px;
+  }
+  .info-row .meta .v {
+    font-size: 1.05rem;
+    color: var(--cream);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .info-row .meta .v a { transition: color .2s var(--ease); }
+  .info-row .meta .v a:hover { color: var(--brass-bright); }
+  .info-row .meta small { display: block; color: var(--cream-soft); font-size: 0.85rem; font-weight: 400; margin-top: 2px; }
+
+  .hours-badge {
+    margin-top: auto;
+    padding-top: 26px;
+  }
+  .open-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(29, 158, 117, 0.14);
+    border: 1px solid rgba(93, 202, 165, 0.4);
+    color: #8fe3c7;
+    padding: 10px 18px;
+    border-radius: 100px;
+    font-size: 0.84rem;
+    font-weight: 600;
+  }
+  .open-pill .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #5dcaa5;
+    box-shadow: 0 0 0 0 rgba(93, 202, 165, 0.6);
+    animation: pulse 2.4s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(93, 202, 165, 0.55); }
+    70% { box-shadow: 0 0 0 10px rgba(93, 202, 165, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(93, 202, 165, 0); }
+  }
+
+  .visit-map {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(200, 149, 74, 0.22);
+    min-height: 340px;
+    background: linear-gradient(150deg, var(--indigo-800) 0%, var(--indigo-950) 100%);
+  }
+  .visit-map svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .map-tag {
+    position: absolute;
+    z-index: 3;
+    top: 22px; left: 22px;
+    background: rgba(13, 22, 46, 0.72);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(200, 149, 74, 0.3);
+    border-radius: 11px;
+    padding: 12px 16px;
+    font-size: 0.78rem;
+    color: var(--cream-soft);
+    max-width: 200px;
+  }
+  .map-tag strong { color: var(--brass-bright); display: block; font-family: var(--display); font-size: 0.96rem; margin-bottom: 3px; }
+
+  .trust {
+    background: var(--paper);
+    color: var(--ink);
+    overflow: hidden;
+  }
+  .trust-top {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: center;
+    margin-bottom: clamp(48px, 5vw, 70px);
+  }
+  .rating-block { text-align: left; }
+  .rating-big {
+    font-family: var(--serif);
+    font-size: clamp(4.4rem, 9vw, 6.6rem);
+    line-height: 0.85;
+    color: var(--indigo-850);
+    letter-spacing: -0.03em;
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .rating-big sup {
+    font-size: 0.32em;
+    color: var(--brass-deep);
+    font-family: var(--sans);
+    font-weight: 600;
+    margin-top: 0.6em;
+  }
+  .stars {
+    display: flex;
+    gap: 5px;
+    margin: 18px 0 14px;
+  }
+  .stars svg { width: 26px; height: 26px; color: var(--brass); }
+  .rating-meta {
+    font-size: 0.98rem;
+    color: rgba(22, 33, 63, 0.72);
+  }
+  .rating-meta strong { color: var(--ink); font-weight: 600; }
+  .rating-source {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 14px;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brass-deep);
+    font-weight: 600;
+  }
+
+  .trust-lede {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 2.6vw, 2.05rem);
+    line-height: 1.32;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .trust-lede em { font-style: italic; color: var(--brass-deep); }
+
+  .review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(16px, 2vw, 22px);
+  }
+  .review-card {
+    background: #fff;
+    border: 1px solid rgba(163, 116, 47, 0.18);
+    border-radius: 15px;
+    padding: clamp(24px, 2.8vw, 32px);
+    position: relative;
+    transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+  }
+  .review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 44px -24px rgba(13, 22, 46, 0.4);
+  }
+  .review-card .qmark {
+    font-family: var(--serif);
+    font-size: 3.4rem;
+    line-height: 0.5;
+    color: rgba(200, 149, 74, 0.32);
+    height: 26px;
+    display: block;
+  }
+  .review-card .rstars { display: flex; gap: 3px; margin-bottom: 14px; }
+  .review-card .rstars svg { width: 16px; height: 16px; color: var(--brass); }
+  .review-card p {
+    font-size: 0.99rem;
+    line-height: 1.6;
+    color: rgba(22, 33, 63, 0.82);
+    margin-bottom: 18px;
+  }
+  .review-card .tag {
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--brass-deep);
+    font-weight: 600;
+    border-top: 1px solid rgba(163,116,47,0.18);
+    padding-top: 14px;
+  }
+
+  .contact {
+    background:
+      radial-gradient(120% 100% at 50% 0%, rgba(46, 68, 127, 0.5) 0%, transparent 55%),
+      linear-gradient(180deg, var(--indigo-950) 0%, #0a1126 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .contact-inner {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  .contact h2 {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+    color: var(--cream);
+    margin-bottom: 22px;
+  }
+  .contact h2 em { font-style: italic; color: var(--brass-bright); }
+  .contact .lede {
+    font-size: clamp(1.02rem, 1.5vw, 1.18rem);
+    color: var(--cream-soft);
+    line-height: 1.6;
+    margin-bottom: 44px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .channels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 13px;
+    margin-bottom: 18px;
+  }
+  .chan {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    padding: 15px 24px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.93rem;
+    border: 1.5px solid transparent;
+    transition: transform .25s var(--ease), box-shadow .25s var(--ease), filter .25s var(--ease), background .25s var(--ease), border-color .25s var(--ease);
+    white-space: nowrap;
+  }
+  .chan svg { width: 20px; height: 20px; flex-shrink: 0; }
+  .chan:hover { transform: translateY(-2px); }
+  .chan-whatsapp { background: #25D366; color: #04321b; border-color: #25D366; }
+  .chan-whatsapp:hover { box-shadow: 0 12px 28px -12px rgba(37, 211, 102, 0.7); filter: brightness(1.05); }
+  .chan-line { background: #06C755; color: #022b13; border-color: #06C755; }
+  .chan-line:hover { box-shadow: 0 12px 28px -12px rgba(6, 199, 85, 0.7); filter: brightness(1.05); }
+  .chan-fb { background: #1877F2; color: #fff; border-color: #1877F2; }
+  .chan-fb:hover { box-shadow: 0 12px 28px -12px rgba(24, 119, 242, 0.7); filter: brightness(1.07); }
+  .chan-phone { background: var(--brass); color: var(--indigo-950); border-color: var(--brass); }
+  .chan-phone:hover { background: var(--brass-bright); box-shadow: 0 12px 28px -12px rgba(200, 149, 74, 0.7); }
+
+  .chan-book {
+    background: transparent;
+    color: var(--cream-soft);
+    border-color: rgba(231, 217, 184, 0.3);
+    position: relative;
+    cursor: not-allowed;
+  }
+  .chan-book:hover {
+    transform: translateY(-2px);
+    border-color: rgba(231, 217, 184, 0.5);
+    background: rgba(231, 217, 184, 0.05);
+  }
+  .chan-book .soon {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: rgba(200, 149, 74, 0.2);
+    color: var(--brass-bright);
+    padding: 3px 8px;
+    border-radius: 100px;
+    font-weight: 700;
+  }
+
+  .contact-note {
+    font-size: 0.84rem;
+    color: var(--cream-dim);
+    margin-top: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    flex-wrap: wrap;
+  }
+  .contact-note svg { width: 16px; height: 16px; color: var(--brass); }
+
+  footer {
+    background: #080d1d;
+    padding: clamp(56px, 7vw, 80px) 0 36px;
+    border-top: 1px solid rgba(200, 149, 74, 0.16);
+  }
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    margin-bottom: 52px;
+  }
+  .foot-brand .brand { font-size: 1.5rem; margin-bottom: 18px; }
+  .foot-brand p {
+    font-size: 0.92rem;
+    color: var(--cream-dim);
+    line-height: 1.62;
+    max-width: 320px;
+  }
+  .foot-col h4 {
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--brass);
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .foot-col ul { list-style: none; display: grid; gap: 12px; }
+  .foot-col a, .foot-col li {
+    font-size: 0.92rem;
+    color: var(--cream-soft);
+    transition: color .2s var(--ease);
+  }
+  .foot-col a:hover { color: var(--brass-bright); }
+  .foot-social { display: flex; gap: 12px; margin-top: 4px; }
+  .foot-social a {
+    width: 40px; height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(200, 149, 74, 0.26);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--cream-soft);
+    transition: all .25s var(--ease);
+  }
+  .foot-social a:hover {
+    color: var(--brass-bright);
+    border-color: var(--brass);
+    transform: translateY(-2px);
+  }
+  .foot-social svg { width: 18px; height: 18px; }
+
+  .foot-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(200, 149, 74, 0.12);
+    font-size: 0.82rem;
+    color: var(--cream-dim);
+  }
+  .foot-credit a {
+    color: var(--cream-soft);
+    border-bottom: 1px solid rgba(200, 149, 74, 0.4);
+    transition: color .2s var(--ease), border-color .2s var(--ease);
+    padding-bottom: 1px;
+  }
+  .foot-credit a:hover { color: var(--brass-bright); border-color: var(--brass-bright); }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s var(--ease), transform 1s var(--ease);
+    will-change: opacity, transform;
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+  .reveal.d1 { transition-delay: 0.1s; }
+  .reveal.d2 { transition-delay: 0.2s; }
+  .reveal.d3 { transition-delay: 0.3s; }
+
+  .thread { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .weave-draw.in .thread {
+    animation: drawThread 2.6s var(--ease) forwards;
+  }
+  .weave-draw.in .thread:nth-child(even) { animation-duration: 3.1s; }
+  @keyframes drawThread { to { stroke-dashoffset: 0; } }
+
+  @media (max-width: 940px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-art { order: -1; max-width: 360px; margin-bottom: 8px; }
+    .welcome-grid, .visit-grid, .trust-top { grid-template-columns: 1fr; }
+    .welcome-visual { max-width: 440px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .review-grid { grid-template-columns: 1fr; }
+    .visit-map { min-height: 280px; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+    .foot-brand { grid-column: 1 / -1; }
+  }
+
+  @media (max-width: 720px) {
+    .nav-links, .nav-cta { display: none; }
+    .menu-toggle { display: flex; }
+    .nav.open .nav-links {
+      display: flex;
+      position: absolute;
+      top: 100%; left: 0; right: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      background: rgba(13, 22, 46, 0.97);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(200,149,74,0.22);
+      padding: 20px clamp(20px, 5vw, 56px) 26px;
+    }
+    .nav.open .nav-links a { font-size: 1rem; padding: 10px 0; width: 100%; }
+    .nav.open .nav-cta {
+      display: inline-flex;
+      position: absolute;
+      top: calc(100% + 220px); left: clamp(20px,5vw,56px); right: clamp(20px,5vw,56px);
+      justify-content: center;
+    }
+    .hero-stats { flex-wrap: wrap; gap: 22px; }
+    .hstat + .hstat { padding-left: 22px; }
+    .review-card .qmark { font-size: 2.6rem; }
+    .foot-grid { grid-template-columns: 1fr; }
+    .foot-bottom { flex-direction: column; align-items: flex-start; }
+  }
+
+  @media (max-width: 420px) {
+    .hero-stats { flex-direction: column; gap: 18px; }
+    .hstat + .hstat { padding-left: 0; border-left: none; padding-top: 18px; border-top: 1px solid rgba(200,149,74,0.18); }
+    .btn, .chan { width: 100%; justify-content: center; }
+    .hero-actions { width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+    .hero h1 .line > span { transform: none; }
+    .hero-lede, .hero-actions, .hero-stats, .scroll-cue { opacity: 1; }
+    .reveal { opacity: 1; transform: none; }
+    .thread { stroke-dashoffset: 0; }
+    .dye-bloom { animation: none; }
+    .scroll-cue .bar::after { animation: none; }
+    .open-pill .dot { animation: none; }
+  }
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#4d6bb0;--bk-accent-ink:#ffffff;--bk-ink:#16213f;--bk-panel:#f7f1e3;--bk-muted:rgba(22,33,63,0.6);--bk-line:rgba(22,33,63,0.14);--bk-serif:"Fraunces", Georgia, serif;--bk-sans:"Manrope", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<nav class="nav" id="nav" aria-label="Primary">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Dentalme Clinic, home">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="9" fill="#1b2a52"/>
+        <g stroke="#e8d9b8" stroke-width="1.5" fill="none" opacity="0.95">
+          <path d="M10 11v18M15 11v18M20 11v18M25 11v18M30 11v18"/>
+        </g>
+        <g stroke="#c8954a" stroke-width="1.5" fill="none">
+          <path d="M8 15h24M8 20h24M8 25h24"/>
+        </g>
+      </svg>
+      <span>Dentalme<span class="sub">Phra-Sing &middot; Chiang Mai</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#welcome">Welcome</a></li>
+      <li><a href="#services">Treatments</a></li>
+      <li><a href="#visit">Visit Us</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="https://wa.me/6653327203">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.06c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.24-3.26-.68-2.76-1.09-4.5-3.92-4.64-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.35.71-2.01.96-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.59.82 2.02.89 2.17.07.15.12.32.02.51-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.86.27.14.45.2.51.31.07.11.07.64-.17 1.32z"/></svg>
+      Book in English
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main id="main">
+<span id="top"></span>
+
+<header class="hero" aria-label="Introduction">
+  <div class="weave-bg" aria-hidden="true">
+    <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1200 900">
+      <g stroke="#2e447f" stroke-width="1" opacity="0.5">
+        <path d="M0 90 H1200 M0 180 H1200 M0 270 H1200 M0 360 H1200 M0 450 H1200 M0 540 H1200 M0 630 H1200 M0 720 H1200 M0 810 H1200"/>
+      </g>
+      <g stroke="#223468" stroke-width="1" opacity="0.4">
+        <path d="M120 0 V900 M240 0 V900 M360 0 V900 M480 0 V900 M600 0 V900 M720 0 V900 M840 0 V900 M960 0 V900 M1080 0 V900"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">English-Speaking Dental Care &middot; Old City</span>
+      <h1 class="display-serif">
+        <span class="line"><span>Crafted smiles,</span></span>
+        <span class="line"><span>woven with</span></span>
+        <span class="line"><span><em>indigo care.</em></span></span>
+      </h1>
+      <p class="hero-lede">
+        A warm, modern dental clinic in the heart of Chiang Mai's historic Old City &mdash; where international patients are
+        <strong>welcomed in English</strong>, from your first message to your final smile.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://wa.me/6653327203">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.06c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.24-3.26-.68-2.76-1.09-4.5-3.92-4.64-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.35.71-2.01.96-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.59.82 2.02.89 2.17.07.15.12.32.02.51-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.86.27.14.45.2.51.31.07.11.07.64-.17 1.32z"/></svg>
+          Message Us on WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#services">
+          Explore Treatments
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="hstat">
+          <div class="num">4.8<span style="font-size:0.55em;color:var(--brass)">&#9733;</span></div>
+          <div class="lbl">Google Rating</div>
+        </div>
+        <div class="hstat">
+          <div class="num">318</div>
+          <div class="lbl">Patient Reviews</div>
+        </div>
+        <div class="hstat">
+          <div class="num">7 days</div>
+          <div class="lbl">Open &middot; Until 8pm</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-art" aria-hidden="true">
+      <div class="dye-bloom"></div>
+      <div class="weave-draw" id="heroWeave">
+      <svg viewBox="0 0 400 400">
+        <defs>
+          <radialGradient id="dye" cx="50%" cy="48%" r="60%">
+            <stop offset="0%" stop-color="#4d6bb0"/>
+            <stop offset="55%" stop-color="#2e447f"/>
+            <stop offset="100%" stop-color="#141f3f"/>
+          </radialGradient>
+          <linearGradient id="brassGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#e0b366"/>
+            <stop offset="100%" stop-color="#a3742f"/>
+          </linearGradient>
+          <clipPath id="diamondClip"><circle cx="200" cy="200" r="168"/></clipPath>
+        </defs>
+
+        <circle cx="200" cy="200" r="168" fill="url(#dye)" stroke="url(#brassGrad)" stroke-width="2.5"/>
+
+        <g clip-path="url(#diamondClip)" opacity="0.5">
+          <circle cx="200" cy="200" r="60" fill="none" stroke="#8aa3d4" stroke-width="2" stroke-dasharray="2 7"/>
+          <circle cx="200" cy="200" r="100" fill="none" stroke="#8aa3d4" stroke-width="1.5" stroke-dasharray="3 9"/>
+          <circle cx="200" cy="200" r="140" fill="none" stroke="#6f8cc4" stroke-width="1.5" stroke-dasharray="2 10"/>
+        </g>
+
+        <g clip-path="url(#diamondClip)">
+          <g stroke="#cbbb95" stroke-width="2" fill="none" opacity="0.8">
+            <path class="thread" pathLength="1" d="M52 90 H348"/>
+            <path class="thread" pathLength="1" d="M52 130 H348"/>
+            <path class="thread" pathLength="1" d="M52 170 H348"/>
+            <path class="thread" pathLength="1" d="M52 210 H348"/>
+            <path class="thread" pathLength="1" d="M52 250 H348"/>
+            <path class="thread" pathLength="1" d="M52 290 H348"/>
+            <path class="thread" pathLength="1" d="M52 330 H348"/>
+          </g>
+          <g stroke="#e0b366" stroke-width="2" fill="none" opacity="0.85">
+            <path class="thread" pathLength="1" d="M90 52 V348"/>
+            <path class="thread" pathLength="1" d="M130 52 V348"/>
+            <path class="thread" pathLength="1" d="M170 52 V348"/>
+            <path class="thread" pathLength="1" d="M210 52 V348"/>
+            <path class="thread" pathLength="1" d="M250 52 V348"/>
+            <path class="thread" pathLength="1" d="M290 52 V348"/>
+            <path class="thread" pathLength="1" d="M330 52 V348"/>
+          </g>
+        </g>
+
+        <g clip-path="url(#diamondClip)" stroke="#f4ecdb" stroke-width="1.4" fill="none" opacity="0.55">
+          <path class="thread" pathLength="1" d="M200 60 L300 200 L200 340 L100 200 Z"/>
+          <path class="thread" pathLength="1" d="M200 110 L260 200 L200 290 L140 200 Z"/>
+          <path class="thread" pathLength="1" d="M200 160 L225 200 L200 240 L175 200 Z"/>
+        </g>
+
+        <g fill="url(#brassGrad)">
+          <circle cx="200" cy="200" r="6"/>
+          <circle cx="200" cy="60" r="4"/>
+          <circle cx="200" cy="340" r="4"/>
+          <circle cx="100" cy="200" r="4"/>
+          <circle cx="300" cy="200" r="4"/>
+        </g>
+        <circle cx="200" cy="200" r="168" fill="none" stroke="url(#brassGrad)" stroke-width="2.5"/>
+      </svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span>Scroll</span>
+    <span class="bar"></span>
+  </div>
+</header>
+
+<section class="band welcome" id="welcome" aria-labelledby="welcome-h">
+  <div class="wrap welcome-grid">
+    <div class="welcome-visual reveal weave-draw" aria-hidden="true">
+      <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="wv" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#2e447f"/>
+            <stop offset="100%" stop-color="#0d162e"/>
+          </linearGradient>
+        </defs>
+        <rect width="400" height="500" fill="url(#wv)"/>
+        <g stroke="#c8954a" stroke-width="1.4" opacity="0.6" fill="none">
+          <path class="thread" pathLength="1" d="M40 60 H360"/>
+          <path class="thread" pathLength="1" d="M40 110 H360"/>
+          <path class="thread" pathLength="1" d="M40 160 H360"/>
+          <path class="thread" pathLength="1" d="M40 210 H360"/>
+          <path class="thread" pathLength="1" d="M40 260 H360"/>
+          <path class="thread" pathLength="1" d="M40 310 H360"/>
+          <path class="thread" pathLength="1" d="M40 360 H360"/>
+          <path class="thread" pathLength="1" d="M40 410 H360"/>
+          <path class="thread" pathLength="1" d="M40 460 H360"/>
+        </g>
+        <g stroke="#8aa3d4" stroke-width="1.2" opacity="0.45" fill="none">
+          <path class="thread" pathLength="1" d="M70 30 V470"/>
+          <path class="thread" pathLength="1" d="M120 30 V470"/>
+          <path class="thread" pathLength="1" d="M170 30 V470"/>
+          <path class="thread" pathLength="1" d="M220 30 V470"/>
+          <path class="thread" pathLength="1" d="M270 30 V470"/>
+          <path class="thread" pathLength="1" d="M320 30 V470"/>
+        </g>
+        <g stroke="#f4ecdb" stroke-width="1.3" opacity="0.5" fill="none">
+          <path class="thread" pathLength="1" d="M200 110 L290 250 L200 390 L110 250 Z"/>
+          <path class="thread" pathLength="1" d="M200 170 L240 250 L200 330 L160 250 Z"/>
+        </g>
+        <circle cx="200" cy="250" r="5" fill="#e0b366"/>
+      </svg>
+      <div class="welcome-badge">
+        <span class="flag" aria-hidden="true">EN</span>
+        <span class="txt"><strong>Spoken here, every day</strong>An English-language menu &amp; English WhatsApp booking</span>
+      </div>
+    </div>
+
+    <div class="welcome-copy reveal d1">
+      <span class="eyebrow">You're Welcome Here</span>
+      <h2 id="welcome-h">Far from home, but <em>perfectly understood.</em></h2>
+      <p>
+        Choosing a dentist in a new country shouldn't feel daunting. At Dentalme, English isn't an afterthought &mdash;
+        it's how we greet you, explain every option, and confirm your appointment.
+      </p>
+      <p>
+        From the first WhatsApp message to your treatment plan, you'll always know exactly what's happening and why.
+        It's modern dental care with the unhurried warmth of Chiang Mai's craft quarter.
+      </p>
+      <ul class="welcome-list">
+        <li>
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
+          <span><strong>Book &amp; chat in English over WhatsApp</strong> &mdash; ask questions, share concerns, and arrange your visit in your own words.</span>
+        </li>
+        <li>
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+          <span><strong>An English-language treatment menu</strong> so prices and procedures are clear before you ever sit in the chair.</span>
+        </li>
+        <li>
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span><strong>Right in the historic Old City</strong> &mdash; easy to reach whether you're visiting Chiang Mai or settling in long-term.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band band-cream" id="services" aria-labelledby="services-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Our Treatments</span>
+      <h2 id="services-h">Care <em>crafted</em> for every kind of smile.</h2>
+      <p>
+        From discreet alignment to lifelike restorations, our treatments are chosen with the same care and patience
+        that defines Old City craftsmanship &mdash; precise, considered, and made to last.
+      </p>
+    </div>
+
+    <div class="services-grid">
+      <article class="svc-card reveal">
+        <span class="svc-num">01 / Aligners</span>
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 22c0-3 3-5 7-5h22c4 0 7 2 7 5 0 6-2 11-6 16-2 3-5 5-8 5h-8c-3 0-6-2-8-5-4-5-6-10-6-16z"/>
+            <path d="M14 22h28M18 17v22M28 17v25M38 17v22"/>
+          </svg>
+        </div>
+        <h3>Invisalign &amp; Clear Aligners</h3>
+        <p>Straighten your teeth almost invisibly with custom clear aligners &mdash; comfortable, removable, and perfect for adults who'd rather not wear traditional braces.</p>
+        <span class="svc-tag">Discreet &middot; Removable</span>
+      </article>
+
+      <article class="svc-card reveal d1">
+        <span class="svc-num">02 / Aesthetics</span>
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M28 8l4.5 9.5L43 19l-7.5 7.5L37 37l-9-5-9 5 1.5-10.5L13 19l10.5-1.5z"/>
+            <path d="M20 44h16M24 50h8"/>
+          </svg>
+        </div>
+        <h3>Porcelain Veneers</h3>
+        <p>Hand-finished veneers that reshape, brighten, and renew your smile &mdash; designed to look entirely natural while quietly transforming the way you face the world.</p>
+        <span class="svc-tag">Bespoke &middot; Lifelike</span>
+      </article>
+
+      <article class="svc-card reveal">
+        <span class="svc-num">03 / Alignment</span>
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 24h40M8 32h40"/>
+            <circle cx="16" cy="24" r="3.5"/><circle cx="28" cy="24" r="3.5"/><circle cx="40" cy="24" r="3.5"/>
+            <circle cx="16" cy="32" r="3.5"/><circle cx="28" cy="32" r="3.5"/><circle cx="40" cy="32" r="3.5"/>
+          </svg>
+        </div>
+        <h3>Orthodontics</h3>
+        <p>Comprehensive braces and orthodontic care for teens and adults &mdash; gently guiding teeth into healthy, confident alignment with treatment plans explained every step of the way.</p>
+        <span class="svc-tag">All Ages &middot; Guided</span>
+      </article>
+
+      <article class="svc-card reveal d1">
+        <span class="svc-num">04 / Restoration</span>
+        <div class="svc-icon" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M28 10c5 0 9 3 9 8 0 6-3 9-3 15l-2 12c0 2-1 3-2 3s-2-1-2-3l-1-8h-2l-1 8c0 2-1 3-2 3s-2-1-2-3l-2-12c0-6-3-9-3-15 0-5 4-8 9-8z"/>
+            <path d="M22 22h12"/>
+          </svg>
+        </div>
+        <h3>Dental Implants</h3>
+        <p>Permanent, natural-feeling replacements for missing teeth &mdash; restoring full function and a complete smile with durable, expertly-placed implants built to stand the test of time.</p>
+        <span class="svc-tag">Permanent &middot; Natural</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band visit" id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Visiting Dentalme</span>
+      <h2 id="visit-h">Find us in the <em>Old City.</em></h2>
+      <p>Tucked into the Phra-Sing neighbourhood of Chiang Mai's walled Old City &mdash; the historic craft heritage quarter, easy to reach on foot, by songthaew, or by ride-share.</p>
+    </div>
+
+    <div class="visit-grid">
+      <div class="visit-card reveal">
+        <h3 style="font-family:var(--serif)">Dentalme Clinic</h3>
+        <div class="area">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Phra-Sing &middot; Old City / Ratchadamnoen, Chiang Mai
+        </div>
+
+        <div class="info-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.73a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.35-1.27a2 2 0 0 1 2.11-.45c.87.34 1.79.57 2.73.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div class="meta">
+            <div class="k">Call the Clinic</div>
+            <div class="v"><a href="tel:+6653327203">+66 53 327 203</a></div>
+            <small>Speak with our English-friendly front desk</small>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+          <div class="meta">
+            <div class="k">Opening Hours</div>
+            <div class="v">Open daily &middot; until 8:00 PM</div>
+            <small>Seven days a week, including evenings</small>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></span>
+          <div class="meta">
+            <div class="k">Message in English</div>
+            <div class="v"><a href="https://wa.me/6653327203">WhatsApp Booking</a></div>
+            <small>Questions, appointments &amp; treatment plans</small>
+          </div>
+        </div>
+
+        <div class="hours-badge">
+          <span class="open-pill"><span class="dot" aria-hidden="true"></span>Open now &middot; closes 8:00 PM</span>
+        </div>
+      </div>
+
+      <div class="visit-map reveal d1" role="img" aria-label="Stylised map of Chiang Mai's Old City showing the moated, square historic quarter where the clinic is located.">
+        <svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="mapbg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#1b2a52"/>
+              <stop offset="100%" stop-color="#0a1126"/>
+            </linearGradient>
+          </defs>
+          <rect width="480" height="480" fill="url(#mapbg)"/>
+          <g stroke="#2e447f" stroke-width="1" opacity="0.4">
+            <path d="M0 80 H480 M0 160 H480 M0 240 H480 M0 320 H480 M0 400 H480"/>
+            <path d="M80 0 V480 M160 0 V480 M240 0 V480 M320 0 V480 M400 0 V480"/>
+          </g>
+          <rect x="110" y="110" width="260" height="260" fill="none" stroke="#4d6bb0" stroke-width="10" opacity="0.55" rx="6"/>
+          <rect x="110" y="110" width="260" height="260" fill="rgba(46,68,127,0.25)" stroke="#c8954a" stroke-width="2" rx="6"/>
+          <g stroke="#8aa3d4" stroke-width="1.2" opacity="0.4">
+            <path d="M110 200 H370 M110 280 H370 M200 110 V370 M280 110 V370"/>
+          </g>
+          <path d="M110 240 L240 240 L240 110" fill="none" stroke="#e0b366" stroke-width="2.5" opacity="0.7"/>
+          <g transform="translate(218,256)">
+            <circle r="22" fill="rgba(200,149,74,0.18)">
+              <animate attributeName="r" values="16;26;16" dur="2.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.5;0;0.5" dur="2.6s" repeatCount="indefinite"/>
+            </circle>
+            <path d="M0 -16c-6.6 0-12 5.4-12 12 0 9 12 20 12 20s12-11 12-20c0-6.6-5.4-12-12-12z" fill="#e0b366" stroke="#a3742f" stroke-width="1.5"/>
+            <circle cy="-4" r="4.5" fill="#0d162e"/>
+          </g>
+        </svg>
+        <div class="map-tag">
+          <strong>Old City Quarter</strong>
+          Inside the historic moat &mdash; Chiang Mai's craft heritage heart.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="band contact" id="contact" aria-labelledby="contact-h">
+  <div class="weave-bg" aria-hidden="true">
+    <svg width="100%" height="100%" preserveAspectRatio="none" viewBox="0 0 1200 700">
+      <g stroke="#2e447f" stroke-width="1" opacity="0.4">
+        <path d="M0 70 H1200 M0 140 H1200 M0 210 H1200 M0 280 H1200 M0 350 H1200 M0 420 H1200 M0 490 H1200 M0 560 H1200 M0 630 H1200"/>
+      </g>
+      <g stroke="#223468" stroke-width="1" opacity="0.35">
+        <path d="M120 0 V700 M240 0 V700 M360 0 V700 M480 0 V700 M600 0 V700 M720 0 V700 M840 0 V700 M960 0 V700 M1080 0 V700"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="wrap contact-inner">
+    <span class="eyebrow center reveal" style="justify-content:center;">Book Your Visit</span>
+    <h2 id="contact-h" class="reveal d1">Let's craft your <em>best smile.</em></h2>
+    <p class="lede reveal d1">
+      Reach us in whichever way suits you best. Our team will happily answer your questions and help you book &mdash;
+      in clear, friendly English.
+    </p>
+
+    <div class="channels reveal d2">
+      <a class="chan chan-whatsapp" href="https://wa.me/6653327203">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.06c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.24-3.26-.68-2.76-1.09-4.5-3.92-4.64-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.35.71-2.01.96-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.59.82 2.02.89 2.17.07.15.12.32.02.51-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.86.27.14.45.2.51.31.07.11.07.64-.17 1.32z"/></svg>
+        WhatsApp
+      </a>
+      <a class="chan chan-phone" href="tel:+6653327203">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.94.36 1.86.7 2.73a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.35-1.27a2 2 0 0 1 2.11-.45c.87.34 1.79.57 2.73.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call +66 53 327 203
+      </a>
+      <!-- LINE official account URL not yet known; href="#" placeholder until the clinic provides it -->
+      <a class="chan chan-line" href="#" aria-label="Add Dentalme Clinic on LINE (link coming soon)">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.07 3.55 7.48 8.35 8.12.32.07.77.21.88.49.1.25.07.64.03.89l-.14.85c-.04.25-.2.99.86.54s5.72-3.37 7.8-5.77C21.36 13.94 22 12.16 22 10.23 22 5.69 17.52 2 12 2zM8.13 12.6H6.1a.53.53 0 0 1-.53-.53V8.01a.53.53 0 0 1 1.06 0v3.53h1.5a.53.53 0 0 1 0 1.06zm2.07-.53a.53.53 0 0 1-1.06 0V8.01a.53.53 0 0 1 1.06 0v4.06zm4.76 0a.53.53 0 0 1-.36.5.55.55 0 0 1-.17.03.53.53 0 0 1-.43-.21l-2.08-2.83v2.51a.53.53 0 0 1-1.06 0V8.01a.53.53 0 0 1 .36-.5.53.53 0 0 1 .6.18l2.08 2.83V8.01a.53.53 0 0 1 1.06 0v4.06zm3.4-2.56a.53.53 0 0 1 0 1.06h-1.5v.97h1.5a.53.53 0 0 1 0 1.06h-2.03a.53.53 0 0 1-.53-.53V8.01a.53.53 0 0 1 .53-.53h2.03a.53.53 0 0 1 0 1.06h-1.5v.97h1.5z"/></svg>
+        Add on LINE
+      </a>
+      <!-- Facebook page exists but exact URL is unknown; href="#" placeholder until confirmed -->
+      <a class="chan chan-fb" href="#" aria-label="Visit Dentalme Clinic on Facebook (link coming soon)">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        Facebook
+      </a>
+      <!-- Book Online intentionally non-functional: online booking platform coming soon -->
+      <button class="chan chan-book" type="button" disabled aria-disabled="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+        Book Online
+        <span class="soon">Coming Soon</span>
+      </button>
+    </div>
+
+    <p class="contact-note reveal d2">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+      Online booking is on its way &mdash; for now, WhatsApp is the fastest way to reserve your appointment in English.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer aria-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Dentalme Clinic">
+          <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="9" fill="#1b2a52"/>
+            <g stroke="#e8d9b8" stroke-width="1.5" fill="none" opacity="0.95"><path d="M10 11v18M15 11v18M20 11v18M25 11v18M30 11v18"/></g>
+            <g stroke="#c8954a" stroke-width="1.5" fill="none"><path d="M8 15h24M8 20h24M8 25h24"/></g>
+          </svg>
+          <span>Dentalme<span class="sub">Phra-Sing &middot; Chiang Mai</span></span>
+        </a>
+        <p>Modern, English-speaking dental care woven into the heart of Chiang Mai's historic Old City &mdash; where craft, comfort and clarity come together.</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <ul>
+          <li>Phra-Sing, Old City</li>
+          <li>Ratchadamnoen &middot; Chiang Mai</li>
+          <li><a href="tel:+6653327203">+66 53 327 203</a></li>
+          <li>Open daily &middot; until 8:00 PM</li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://wa.me/6653327203">WhatsApp Booking</a></li>
+          <!-- LINE official account URL unknown - placeholder -->
+          <li><a href="#">LINE Official Account</a></li>
+          <!-- Facebook page URL unknown - placeholder -->
+          <li><a href="#">Facebook Page</a></li>
+        </ul>
+        <div class="foot-social">
+          <a href="https://wa.me/6653327203" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.8 14.06c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.24-3.26-.68-2.76-1.09-4.5-3.92-4.64-4.1-.13-.18-1.11-1.48-1.11-2.82 0-1.35.71-2.01.96-2.28.24-.27.53-.34.71-.34.18 0 .36 0 .51.01.16.01.39-.06.6.46.24.59.82 2.02.89 2.17.07.15.12.32.02.51-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.53 1.9 1.05.94 1.94 1.23 2.21 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.24.09 1.55.73 1.81.86.27.14.45.2.51.31.07.11.07.64-.17 1.32z"/></svg>
+          </a>
+          <!-- LINE placeholder -->
+          <a href="#" aria-label="LINE (coming soon)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.07 3.55 7.48 8.35 8.12.32.07.77.21.88.49.1.25.07.64.03.89l-.14.85c-.04.25-.2.99.86.54s5.72-3.37 7.8-5.77C21.36 13.94 22 12.16 22 10.23 22 5.69 17.52 2 12 2zM8.13 12.6H6.1a.53.53 0 0 1-.53-.53V8.01a.53.53 0 0 1 1.06 0v3.53h1.5a.53.53 0 0 1 0 1.06zm2.07-.53a.53.53 0 0 1-1.06 0V8.01a.53.53 0 0 1 1.06 0v4.06zm4.76 0a.53.53 0 0 1-.36.5.55.55 0 0 1-.17.03.53.53 0 0 1-.43-.21l-2.08-2.83v2.51a.53.53 0 0 1-1.06 0V8.01a.53.53 0 0 1 .36-.5.53.53 0 0 1 .6.18l2.08 2.83V8.01a.53.53 0 0 1 1.06 0v4.06zm3.4-2.56a.53.53 0 0 1 0 1.06h-1.5v.97h1.5a.53.53 0 0 1 0 1.06h-2.03a.53.53 0 0 1-.53-.53V8.01a.53.53 0 0 1 .53-.53h2.03a.53.53 0 0 1 0 1.06h-1.5v.97h1.5z"/></svg>
+          </a>
+          <!-- Facebook placeholder -->
+          <a href="#" aria-label="Facebook (coming soon)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>&copy; <span id="yr">2026</span> Dentalme Clinic &middot; Phra-Sing, Old City, Chiang Mai. All rights reserved.</span>
+      <span class="foot-credit">Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener">Stellar Haus Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var yr = document.getElementById('yr');
+    if (yr) yr.textContent = new Date().getFullYear();
+
+    var nav = document.getElementById('nav');
+    function onScroll() {
+      if (window.scrollY > 30) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    var toggle = document.getElementById('menuToggle');
+    if (toggle) {
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+      nav.querySelectorAll('.nav-links a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Open menu');
+        });
+      });
+    }
+
+    var targets = document.querySelectorAll('.reveal, .weave-draw');
+    if (reduce || !('IntersectionObserver' in window)) {
+      targets.forEach(function (el) { el.classList.add('in'); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+      targets.forEach(function (el) { io.observe(el); });
+    }
+
+    var heroWeave = document.getElementById('heroWeave');
+    if (heroWeave && !reduce) {
+      requestAnimationFrame(function () { heroWeave.classList.add('in'); });
+    } else if (heroWeave) {
+      heroWeave.classList.add('in');
+    }
+  })();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text or WhatsApp.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+6653327203", CHAN="", CHANLABEL="", CHANS=[["https://page.line.me/uvw9344n", "Message us on LINE"], ["https://wa.me/6653327203", "Message us on WhatsApp"]];
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHANS&&CHANS.length){var base=document.getElementById('shmbk-chan');var prev=base;CHANS.forEach(function(c,i){var el=(i===0)?base:base.cloneNode(false);if(i>0)el.removeAttribute('id');el.href=c[0];el.textContent=c[1];el.classList.remove('shm-bk-hide');if(i>0)prev.parentNode.insertBefore(el,prev.nextSibling);prev=el;});}
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>

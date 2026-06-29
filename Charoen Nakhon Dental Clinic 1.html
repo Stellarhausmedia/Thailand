@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Charoen Nakhon Dental Clinic — English-Speaking Dentist Beside ICONSIAM, Riverside Bangkok</title>
+<meta name="description" content="Gentle, expert dental care welcomed in English on the Chao Phraya river, beside ICONSIAM. General dentistry and a full range of treatments. Rated 5.0 from 431 reviews. Open every day until 8pm." />
+<meta name="theme-color" content="#0A2E32" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230A2E32'/%3E%3Cpath d='M5 21q5-4 11 0t11 0' fill='none' stroke='%23D9B26A' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M16 6c3 3 4.5 6 4.5 8.5a4.5 4.5 0 1 1-9 0C11.5 12 13 9 16 6Z' fill='none' stroke='%23F3EFE3' stroke-width='1.6' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --teal-900:#062225;
+    --teal-800:#0A2E32;
+    --teal-700:#0E3B40;
+    --teal-600:#155055;
+    --teal-glow:#1E6B70;
+    --gold:#D9B26A;
+    --gold-bright:#EBCB8A;
+    --gold-deep:#B98E45;
+    --cream:#F4EEE0;
+    --cream-2:#EBE2CE;
+    --paper:#FBF7EC;
+    --ink:#10262A;
+    --muted:#5E6E6E;
+    --on-dark:#F1EADA;
+    --on-dark-muted:rgba(241,234,218,.70);
+    --on-dark-line:rgba(217,178,106,.22);
+    --line:rgba(16,38,42,.14);
+    --line-strong:rgba(16,38,42,.30);
+    --font-display:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+    --font-text:'Manrope',system-ui,-apple-system,sans-serif;
+    --gut:clamp(20px,5vw,72px);
+    --maxw:1240px;
+    --ease:cubic-bezier(.22,.68,.18,1);
+    --ease-out:cubic-bezier(.16,.84,.30,1);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:var(--font-text);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.62;
+    overflow-x:hidden;
+    font-size:clamp(15px,1.04vw,17px);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.04;letter-spacing:-.01em}
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  ::selection{background:var(--gold);color:var(--teal-900)}
+
+  /* ---- Focus ---- */
+  a:focus-visible,button:focus-visible{
+    outline:2px solid var(--gold-bright);
+    outline-offset:3px;
+    border-radius:6px;
+  }
+  .skip{
+    position:absolute;left:14px;top:-60px;z-index:200;
+    background:var(--gold);color:var(--teal-900);
+    padding:11px 18px;border-radius:10px;font-weight:700;font-size:14px;
+    transition:top .22s var(--ease);
+  }
+  .skip:focus{top:14px}
+
+  /* ---- Layout ---- */
+  .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
+  section{position:relative}
+  .eyebrow{
+    font-family:var(--font-text);
+    font-weight:600;font-size:12px;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--gold-deep);
+    display:inline-flex;align-items:center;gap:11px;
+  }
+  .eyebrow.on-dark{color:var(--gold-bright)}
+  .eyebrow::before{
+    content:"";width:30px;height:1px;background:currentColor;opacity:.7;
+  }
+
+  /* =========================================================
+     NAV
+  ========================================================= */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    transition:background .4s var(--ease),box-shadow .4s var(--ease),padding .4s var(--ease);
+    padding:18px 0;
+  }
+  header.nav.scrolled{
+    background:rgba(8,34,37,.86);
+    -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+    box-shadow:0 1px 0 var(--on-dark-line),0 18px 40px -28px rgba(0,0,0,.7);
+    padding:12px 0;
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}
+  .brand{display:flex;align-items:center;gap:13px;color:var(--on-dark)}
+  .brand .mark{flex:0 0 auto;width:40px;height:40px}
+  .brand .mark svg{width:100%;height:100%}
+  .brand .name{line-height:1.04}
+  .brand .name b{
+    display:block;font-family:var(--font-display);font-weight:600;
+    font-size:21px;letter-spacing:.005em;color:var(--cream);
+  }
+  .brand .name span{
+    display:block;font-family:var(--font-text);font-weight:600;
+    font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--gold-bright);margin-top:1px;
+  }
+  .nav-links{display:none;align-items:center;gap:34px}
+  .nav-links a{
+    font-size:13.5px;font-weight:500;color:var(--on-dark-muted);
+    position:relative;padding:5px 0;transition:color .25s var(--ease);
+  }
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:-1px;height:1px;width:0;
+    background:var(--gold-bright);transition:width .3s var(--ease);
+  }
+  .nav-links a:hover{color:var(--cream)}
+  .nav-links a:hover::after{width:100%}
+  .nav-cta{
+    display:none;align-items:center;gap:9px;
+    font-size:13.5px;font-weight:700;color:var(--teal-900);
+    background:linear-gradient(120deg,var(--gold-bright),var(--gold));
+    padding:11px 20px;border-radius:999px;
+    box-shadow:0 10px 24px -12px rgba(217,178,106,.8);
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease);
+  }
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(217,178,106,.95)}
+  .nav-cta svg{width:15px;height:15px}
+  @media(min-width:940px){
+    .nav-links{display:flex}
+    .nav-cta{display:inline-flex}
+  }
+
+  /* =========================================================
+     HERO
+  ========================================================= */
+  .hero{
+    position:relative;
+    min-height:100svh;
+    background:
+      radial-gradient(120% 90% at 78% 8%, rgba(30,107,112,.55) 0%, rgba(10,46,50,0) 55%),
+      radial-gradient(140% 120% at 12% 110%, rgba(217,178,106,.18) 0%, rgba(10,46,50,0) 50%),
+      linear-gradient(180deg,var(--teal-900) 0%,var(--teal-800) 46%,var(--teal-700) 100%);
+    color:var(--on-dark);
+    display:flex;flex-direction:column;justify-content:flex-end;
+    overflow:hidden;
+    padding-bottom:clamp(40px,7vh,86px);
+  }
+  /* river scene (svg) */
+  .hero-scene{position:absolute;inset:0;z-index:0;pointer-events:none}
+  .hero-scene svg{position:absolute;width:100%;height:100%;inset:0}
+  .hero-grain{
+    position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.5;
+    background-image:radial-gradient(rgba(241,234,218,.05) 1px,transparent 1px);
+    background-size:3px 3px;mix-blend-mode:screen;
+  }
+  /* faint shimmer band sweeping the gold */
+  .hero-shimmer{
+    position:absolute;left:-30%;top:0;bottom:0;width:55%;z-index:2;pointer-events:none;
+    background:linear-gradient(105deg,transparent 0%,rgba(235,203,138,.10) 45%,rgba(255,255,255,.16) 50%,rgba(235,203,138,.10) 55%,transparent 100%);
+    transform:skewX(-14deg);
+    animation:shimmerSweep 9s ease-in-out infinite;
+    mix-blend-mode:screen;
+  }
+  @keyframes shimmerSweep{
+    0%,100%{left:-40%;opacity:0}
+    35%{opacity:1}
+    70%{left:120%;opacity:0}
+  }
+
+  .hero-content{position:relative;z-index:5;width:100%}
+  .hero-tag{
+    display:inline-flex;align-items:center;gap:12px;
+    padding:8px 16px 8px 12px;border-radius:999px;
+    border:1px solid var(--on-dark-line);
+    background:rgba(6,34,37,.4);
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+    font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+    color:var(--gold-bright);
+    margin-bottom:26px;
+  }
+  .hero-tag .dot{
+    width:8px;height:8px;border-radius:50%;background:var(--gold-bright);
+    box-shadow:0 0 0 0 rgba(235,203,138,.6);
+    animation:pulse 2.6s var(--ease) infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(235,203,138,.55)}
+    70%{box-shadow:0 0 0 9px rgba(235,203,138,0)}
+    100%{box-shadow:0 0 0 0 rgba(235,203,138,0)}
+  }
+  .hero h1{
+    font-size:clamp(2.9rem,8.2vw,6.4rem);
+    font-weight:500;
+    letter-spacing:-.018em;
+    max-width:16ch;
+    margin-bottom:.42em;
+  }
+  .hero h1 .ital{font-style:italic;font-weight:500;color:var(--gold-bright)}
+  .hero h1 .line{display:block;overflow:hidden}
+  .hero h1 .line > span{display:inline-block;will-change:transform}
+  .hero-lede{
+    font-size:clamp(1.04rem,1.5vw,1.28rem);
+    color:var(--on-dark-muted);
+    max-width:54ch;line-height:1.6;font-weight:400;
+    margin-bottom:34px;
+  }
+  .hero-lede b{color:var(--cream);font-weight:600}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+  .hero-meta{
+    display:flex;flex-wrap:wrap;gap:26px 38px;align-items:center;
+    margin-top:46px;padding-top:30px;
+    border-top:1px solid var(--on-dark-line);
+  }
+  .hm{display:flex;flex-direction:column;gap:3px}
+  .hm .v{
+    font-family:var(--font-display);font-size:clamp(1.5rem,2.6vw,2.1rem);
+    font-weight:600;color:var(--gold-bright);line-height:1;letter-spacing:.01em;
+    display:flex;align-items:baseline;gap:7px;
+  }
+  .hm .l{font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--on-dark-muted)}
+  .hm .stars{display:inline-flex;gap:2px;align-self:center}
+  .hm .stars svg{width:15px;height:15px}
+
+  /* buttons */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-family:var(--font-text);font-weight:700;font-size:14.5px;letter-spacing:.01em;
+    padding:14px 24px;border-radius:999px;cursor:pointer;border:1px solid transparent;
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease);
+    white-space:nowrap;
+  }
+  .btn svg{width:17px;height:17px;flex:0 0 auto}
+  .btn-gold{
+    background:linear-gradient(120deg,var(--gold-bright),var(--gold) 60%,var(--gold-deep));
+    color:var(--teal-900);
+    box-shadow:0 14px 34px -14px rgba(217,178,106,.85),inset 0 1px 0 rgba(255,255,255,.4);
+  }
+  .btn-gold:hover{transform:translateY(-3px);box-shadow:0 22px 44px -16px rgba(235,203,138,1),inset 0 1px 0 rgba(255,255,255,.5)}
+  .btn-outline{
+    background:rgba(241,234,218,.04);color:var(--cream);
+    border-color:var(--on-dark-line);
+  }
+  .btn-outline:hover{transform:translateY(-3px);border-color:var(--gold-bright);background:rgba(217,178,106,.1)}
+  .btn-soon{
+    background:rgba(241,234,218,.05);color:var(--on-dark-muted);
+    border:1px dashed var(--on-dark-line);cursor:not-allowed;position:relative;
+  }
+  .btn-soon:hover{border-color:rgba(217,178,106,.45);color:var(--cream)}
+  .btn-soon .pill{
+    font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+    background:var(--gold);color:var(--teal-900);
+    padding:2px 7px;border-radius:999px;margin-left:2px;
+  }
+  .scroll-cue{
+    position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:5;
+    display:flex;flex-direction:column;align-items:center;gap:8px;
+    font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--on-dark-muted);
+  }
+  .scroll-cue .bar{width:1px;height:34px;background:linear-gradient(var(--gold-bright),transparent);overflow:hidden;position:relative}
+  .scroll-cue .bar::after{content:"";position:absolute;top:-34px;left:0;width:100%;height:34px;background:var(--gold-bright);animation:cueDrop 2.2s var(--ease) infinite}
+  @keyframes cueDrop{0%{top:-34px}60%,100%{top:34px}}
+  @media(max-width:560px){.scroll-cue{display:none}}
+
+  /* =========================================================
+     WELCOME / ENGLISH HOOK
+  ========================================================= */
+  .welcome{
+    background:linear-gradient(180deg,var(--paper) 0%,var(--cream) 100%);
+    padding:clamp(74px,11vw,140px) 0;
+    position:relative;overflow:hidden;
+  }
+  .welcome-grid{display:grid;gap:clamp(40px,6vw,80px);grid-template-columns:1fr}
+  @media(min-width:920px){.welcome-grid{grid-template-columns:1.05fr .95fr;align-items:center}}
+  .welcome h2{
+    font-size:clamp(2.1rem,4.6vw,3.5rem);font-weight:500;letter-spacing:-.015em;
+    margin:20px 0 .5em;color:var(--teal-800);max-width:18ch;
+  }
+  .welcome h2 .ital{font-style:italic;color:var(--gold-deep)}
+  .welcome p{color:var(--muted);font-size:clamp(1rem,1.3vw,1.16rem);max-width:50ch;margin-bottom:1.1em}
+  .welcome p strong{color:var(--teal-700);font-weight:600}
+  .welcome-card{
+    position:relative;border-radius:24px;
+    background:linear-gradient(155deg,var(--teal-800),var(--teal-700));
+    color:var(--on-dark);
+    padding:clamp(30px,4vw,46px);
+    box-shadow:0 40px 80px -50px rgba(6,34,37,.9);
+    border:1px solid var(--on-dark-line);
+    overflow:hidden;
+  }
+  .welcome-card .ribbon{
+    position:absolute;inset:0;z-index:0;opacity:.55;pointer-events:none;
+  }
+  .welcome-card > *{position:relative;z-index:1}
+  .speak-row{display:flex;align-items:center;gap:16px;margin-bottom:22px}
+  .speak-ico{
+    flex:0 0 auto;width:58px;height:58px;border-radius:16px;
+    background:radial-gradient(circle at 30% 25%,var(--teal-glow),var(--teal-700));
+    border:1px solid var(--on-dark-line);
+    display:grid;place-items:center;
+  }
+  .speak-ico svg{width:30px;height:30px}
+  .speak-row .t b{display:block;font-family:var(--font-display);font-size:1.45rem;font-weight:600;color:var(--gold-bright)}
+  .speak-row .t span{font-size:12.5px;letter-spacing:.06em;color:var(--on-dark-muted)}
+  .welcome-card .quote{
+    font-family:var(--font-display);font-style:italic;font-weight:400;
+    font-size:clamp(1.3rem,2vw,1.62rem);line-height:1.4;color:var(--cream);
+    margin-bottom:24px;
+  }
+  .welcome-card .quote .hl{color:var(--gold-bright);font-style:italic}
+  .card-points{display:flex;flex-direction:column;gap:13px;border-top:1px solid var(--on-dark-line);padding-top:22px}
+  .card-points li{display:flex;align-items:flex-start;gap:12px;list-style:none;font-size:14.5px;color:var(--on-dark-muted)}
+  .card-points li b{color:var(--cream);font-weight:600}
+  .card-points .tick{
+    flex:0 0 auto;width:21px;height:21px;border-radius:50%;margin-top:1px;
+    background:linear-gradient(140deg,var(--gold-bright),var(--gold-deep));
+    display:grid;place-items:center;
+  }
+  .card-points .tick svg{width:11px;height:11px}
+
+  /* =========================================================
+     SERVICES
+  ========================================================= */
+  .services{
+    background:linear-gradient(180deg,var(--cream) 0%,var(--paper) 100%);
+    padding:clamp(74px,11vw,140px) 0;
+  }
+  .svc-head{
+    display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;
+    gap:24px;margin-bottom:clamp(40px,5vw,64px);
+  }
+  .svc-head h2{
+    font-size:clamp(2.1rem,4.8vw,3.6rem);font-weight:500;color:var(--teal-800);
+    letter-spacing:-.015em;max-width:16ch;margin-top:18px;
+  }
+  .svc-head h2 .ital{font-style:italic;color:var(--gold-deep)}
+  .svc-head .intro{max-width:38ch;color:var(--muted);font-size:1.02rem}
+  .svc-grid{display:grid;gap:18px;grid-template-columns:1fr}
+  @media(min-width:640px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:980px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+  .svc-card{
+    position:relative;border:1px solid var(--line);border-radius:var(--radius);
+    background:linear-gradient(180deg,#fff,var(--paper));
+    padding:30px 28px 32px;overflow:hidden;
+    transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease);
+  }
+  .svc-card::after{
+    content:"";position:absolute;left:0;right:0;bottom:0;height:3px;
+    background:linear-gradient(90deg,var(--gold-bright),var(--gold-deep));
+    transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease);
+  }
+  .svc-card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -38px rgba(16,38,42,.5);border-color:var(--gold)}
+  .svc-card:hover::after{transform:scaleX(1)}
+  .svc-num{
+    position:absolute;top:22px;right:24px;font-family:var(--font-display);
+    font-size:1.1rem;color:var(--line-strong);font-weight:600;
+  }
+  .svc-ico{
+    width:54px;height:54px;border-radius:14px;margin-bottom:20px;
+    background:radial-gradient(circle at 32% 28%,rgba(217,178,106,.22),rgba(21,80,85,.10));
+    border:1px solid var(--line);display:grid;place-items:center;
+    transition:transform .4s var(--ease);
+  }
+  .svc-card:hover .svc-ico{transform:translateY(-3px) rotate(-4deg)}
+  .svc-ico svg{width:28px;height:28px}
+  .svc-card h3{font-size:1.55rem;font-weight:600;color:var(--teal-800);margin-bottom:8px}
+  .svc-card p{color:var(--muted);font-size:14.6px;line-height:1.62}
+  .svc-note{
+    margin-top:30px;text-align:center;color:var(--muted);font-size:14.5px;
+  }
+  .svc-note b{color:var(--teal-700)}
+
+  /* =========================================================
+     VISIT / LOCATION + HOURS
+  ========================================================= */
+  .visit{
+    background:
+      radial-gradient(120% 80% at 85% 10%,rgba(30,107,112,.5),transparent 55%),
+      linear-gradient(180deg,var(--teal-800),var(--teal-900));
+    color:var(--on-dark);
+    padding:clamp(74px,11vw,140px) 0;
+    position:relative;overflow:hidden;
+  }
+  .visit-current{position:absolute;inset:0;z-index:0;opacity:.5;pointer-events:none}
+  .visit .wrap{position:relative;z-index:1}
+  .visit-grid{display:grid;gap:clamp(36px,5vw,64px);grid-template-columns:1fr}
+  @media(min-width:900px){.visit-grid{grid-template-columns:1fr 1fr;align-items:center}}
+  .visit h2{
+    font-size:clamp(2.1rem,4.8vw,3.6rem);font-weight:500;letter-spacing:-.015em;
+    margin:18px 0 .55em;color:var(--cream);max-width:15ch;
+  }
+  .visit h2 .ital{font-style:italic;color:var(--gold-bright)}
+  .visit-lede{color:var(--on-dark-muted);font-size:1.05rem;max-width:46ch;margin-bottom:30px}
+  .visit-lede b{color:var(--cream);font-weight:600}
+  .addr-list{display:flex;flex-direction:column;gap:18px}
+  .addr-item{display:flex;gap:16px;align-items:flex-start}
+  .addr-item .ic{
+    flex:0 0 auto;width:46px;height:46px;border-radius:13px;
+    background:rgba(217,178,106,.1);border:1px solid var(--on-dark-line);
+    display:grid;place-items:center;
+  }
+  .addr-item .ic svg{width:22px;height:22px}
+  .addr-item .tx b{display:block;font-family:var(--font-display);font-size:1.2rem;color:var(--cream);font-weight:600;margin-bottom:1px}
+  .addr-item .tx span,.addr-item .tx a{display:block;color:var(--on-dark-muted);font-size:14.5px}
+  .addr-item .tx a:hover{color:var(--gold-bright);text-decoration:underline;text-underline-offset:3px}
+
+  /* hours panel */
+  .hours-panel{
+    border-radius:24px;border:1px solid var(--on-dark-line);
+    background:linear-gradient(160deg,rgba(21,80,85,.55),rgba(6,34,37,.65));
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+    padding:clamp(28px,3.4vw,40px);
+    box-shadow:0 50px 90px -55px #000;
+  }
+  .hours-top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:22px;flex-wrap:wrap}
+  .hours-top h3{font-size:1.7rem;color:var(--cream);font-weight:600}
+  .open-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+    color:#9fe6c3;background:rgba(60,180,120,.12);
+    border:1px solid rgba(120,220,170,.3);padding:6px 13px;border-radius:999px;
+  }
+  .open-badge .d{width:8px;height:8px;border-radius:50%;background:#56d394;box-shadow:0 0 10px #56d394;animation:pulse 2.6s var(--ease) infinite}
+  .hours-rows{display:flex;flex-direction:column}
+  .hr-row{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:13px 0;border-bottom:1px solid var(--on-dark-line);
+    font-size:15px;
+  }
+  .hr-row:last-child{border-bottom:0}
+  .hr-row .day{color:var(--on-dark-muted);font-weight:500}
+  .hr-row .time{color:var(--cream);font-weight:600;font-variant-numeric:tabular-nums}
+  .hr-row.today{position:relative}
+  .hr-row.today .day{color:var(--gold-bright);font-weight:700}
+  .hr-row.today .time{color:var(--gold-bright)}
+  .hr-row.today::before{
+    content:"";position:absolute;left:-14px;top:50%;transform:translateY(-50%);
+    width:5px;height:5px;border-radius:50%;background:var(--gold-bright);
+  }
+  .hours-foot{
+    margin-top:20px;padding-top:18px;border-top:1px solid var(--on-dark-line);
+    font-size:13px;color:var(--on-dark-muted);display:flex;align-items:center;gap:10px;
+  }
+  .hours-foot svg{width:17px;height:17px;flex:0 0 auto;color:var(--gold-bright)}
+
+  /* =========================================================
+     TRUST
+  ========================================================= */
+  .trust{
+    background:linear-gradient(180deg,var(--paper),var(--cream));
+    padding:clamp(74px,11vw,140px) 0;text-align:center;position:relative;overflow:hidden;
+  }
+  .trust-rating{
+    display:inline-flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:14px;
+  }
+  .trust .stars{display:inline-flex;gap:6px}
+  .trust .stars svg{width:clamp(26px,4vw,38px);height:clamp(26px,4vw,38px)}
+  .trust .score{
+    font-family:var(--font-display);font-size:clamp(3.4rem,9vw,6rem);font-weight:600;
+    color:var(--teal-800);line-height:.9;letter-spacing:.01em;
+  }
+  .trust .score em{font-style:italic;color:var(--gold-deep);font-size:.5em;font-weight:500}
+  .trust h2{
+    font-size:clamp(1.7rem,3.6vw,2.7rem);font-weight:500;color:var(--teal-800);
+    max-width:22ch;margin:18px auto 14px;letter-spacing:-.012em;
+  }
+  .trust h2 .ital{font-style:italic;color:var(--gold-deep)}
+  .trust .sub{color:var(--muted);max-width:50ch;margin:0 auto 44px;font-size:1.04rem}
+  .trust .sub b{color:var(--teal-700);font-weight:600}
+  .trust-strip{
+    display:grid;gap:16px;grid-template-columns:1fr;max-width:880px;margin:0 auto;
+  }
+  @media(min-width:720px){.trust-strip{grid-template-columns:repeat(3,1fr)}}
+  .ts-card{
+    border:1px solid var(--line);border-radius:16px;background:#fff;
+    padding:26px 22px;text-align:left;position:relative;overflow:hidden;
+    transition:transform .4s var(--ease),box-shadow .4s var(--ease);
+  }
+  .ts-card:hover{transform:translateY(-5px);box-shadow:0 26px 50px -36px rgba(16,38,42,.45)}
+  .ts-card .qmark{font-family:var(--font-display);font-size:3rem;line-height:.6;color:var(--gold);opacity:.55;height:24px}
+  .ts-card p{font-family:var(--font-display);font-style:italic;font-size:1.18rem;line-height:1.42;color:var(--teal-800);margin:6px 0 14px}
+  .ts-card .who{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted);letter-spacing:.04em}
+  .ts-card .who .vstars{display:inline-flex;gap:1px}
+  .ts-card .who .vstars svg{width:12px;height:12px}
+  .trust-foot{margin-top:26px;font-size:13px;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+  .trust-foot svg{width:16px;height:16px;color:var(--gold-deep)}
+
+  /* =========================================================
+     CONTACT
+  ========================================================= */
+  .contact{
+    background:
+      radial-gradient(110% 80% at 15% 0%,rgba(30,107,112,.45),transparent 55%),
+      linear-gradient(180deg,var(--teal-800),var(--teal-900) 70%,var(--teal-900));
+    color:var(--on-dark);
+    padding:clamp(78px,12vw,150px) 0;
+    position:relative;overflow:hidden;
+  }
+  .contact-scene{position:absolute;inset:0;z-index:0;opacity:.6;pointer-events:none}
+  .contact .wrap{position:relative;z-index:1}
+  .contact-grid{display:grid;gap:clamp(40px,5vw,72px);grid-template-columns:1fr}
+  @media(min-width:920px){.contact-grid{grid-template-columns:1.1fr .9fr;align-items:start}}
+  .contact h2{
+    font-size:clamp(2.3rem,5.4vw,4.2rem);font-weight:500;letter-spacing:-.018em;
+    color:var(--cream);margin:20px 0 .4em;max-width:14ch;
+  }
+  .contact h2 .ital{font-style:italic;color:var(--gold-bright)}
+  .contact-lede{color:var(--on-dark-muted);font-size:1.08rem;max-width:46ch;margin-bottom:34px}
+  .contact-lede b{color:var(--cream);font-weight:600}
+  .phone-cta{
+    display:inline-flex;align-items:center;gap:16px;margin-bottom:30px;
+    padding:18px 26px;border-radius:18px;
+    background:linear-gradient(150deg,rgba(217,178,106,.14),rgba(21,80,85,.2));
+    border:1px solid var(--on-dark-line);
+    transition:transform .3s var(--ease),border-color .3s var(--ease),box-shadow .3s var(--ease);
+  }
+  .phone-cta:hover{transform:translateY(-3px);border-color:var(--gold-bright);box-shadow:0 22px 44px -28px rgba(217,178,106,.8)}
+  .phone-cta .ic{
+    flex:0 0 auto;width:52px;height:52px;border-radius:14px;
+    background:linear-gradient(140deg,var(--gold-bright),var(--gold-deep));
+    display:grid;place-items:center;
+  }
+  .phone-cta .ic svg{width:25px;height:25px;color:var(--teal-900)}
+  .phone-cta .tx span{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-bright)}
+  .phone-cta .tx b{display:block;font-family:var(--font-display);font-size:1.85rem;font-weight:600;color:var(--cream);letter-spacing:.01em;line-height:1.1}
+
+  .channels{display:flex;flex-direction:column;gap:12px}
+  .channels-label{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--on-dark-muted);margin-bottom:2px}
+  .ch-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:420px){.ch-row{grid-template-columns:1fr}}
+  .ch{
+    display:flex;align-items:center;gap:11px;
+    padding:14px 16px;border-radius:14px;
+    border:1px solid var(--on-dark-line);
+    background:rgba(241,234,218,.04);
+    font-size:14px;font-weight:600;color:var(--cream);
+    transition:transform .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease);
+  }
+  .ch:hover{transform:translateY(-3px);background:rgba(241,234,218,.09);border-color:var(--gold-bright)}
+  .ch .cic{flex:0 0 auto;width:34px;height:34px;border-radius:9px;display:grid;place-items:center}
+  .ch .cic svg{width:19px;height:19px}
+  .ch small{display:block;font-weight:500;font-size:11px;color:var(--on-dark-muted);letter-spacing:.02em}
+  .ch-line .cic{background:#06C755}
+  .ch-fb .cic{background:#1877F2}
+  .ch-ig .cic{background:linear-gradient(135deg,#F58529,#DD2A7B 50%,#8134AF)}
+  .ch-wa .cic{background:#25D366}
+  .ch-book{
+    border-style:dashed;background:rgba(217,178,106,.06);color:var(--on-dark-muted);
+    cursor:not-allowed;grid-column:1 / -1;justify-content:space-between;
+  }
+  .ch-book:hover{transform:none;border-color:rgba(217,178,106,.5)}
+  .ch-book .left{display:flex;align-items:center;gap:11px}
+  .ch-book .cic{background:linear-gradient(140deg,var(--gold-bright),var(--gold-deep))}
+  .ch-book .cic svg{color:var(--teal-900)}
+  .ch-book b{color:var(--cream)}
+  .ch-book .soon{font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:var(--teal-900);padding:3px 9px;border-radius:999px}
+
+  /* contact card / map abstraction */
+  .map-card{
+    border-radius:24px;border:1px solid var(--on-dark-line);overflow:hidden;
+    background:linear-gradient(160deg,rgba(21,80,85,.5),rgba(6,34,37,.6));
+    box-shadow:0 50px 90px -55px #000;
+  }
+  .map-vis{position:relative;height:clamp(190px,26vw,250px);overflow:hidden;background:var(--teal-900)}
+  .map-vis svg{position:absolute;inset:0;width:100%;height:100%}
+  .map-pin{
+    position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);z-index:3;
+    display:flex;flex-direction:column;align-items:center;gap:6px;
+  }
+  .map-pin .pin{
+    width:42px;height:42px;border-radius:50% 50% 50% 2px;transform:rotate(45deg);
+    background:linear-gradient(140deg,var(--gold-bright),var(--gold-deep));
+    box-shadow:0 8px 22px -6px rgba(217,178,106,.8);
+    display:grid;place-items:center;
+    animation:pinFloat 3.4s var(--ease) infinite;
+  }
+  .map-pin .pin svg{transform:rotate(-45deg);width:18px;height:18px;color:var(--teal-900)}
+  @keyframes pinFloat{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(-7px)}}
+  .map-pin .lbl{
+    transform:translateY(2px);font-size:11px;font-weight:700;letter-spacing:.04em;
+    color:var(--teal-900);background:var(--cream);padding:4px 11px;border-radius:999px;white-space:nowrap;
+    box-shadow:0 6px 16px -8px #000;
+  }
+  .map-body{padding:24px 26px 28px}
+  .map-body h3{font-family:var(--font-display);font-size:1.5rem;color:var(--cream);font-weight:600;margin-bottom:6px}
+  .map-body p{color:var(--on-dark-muted);font-size:14px;margin-bottom:18px;line-height:1.55}
+  .map-body .dirbtn{
+    display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:700;
+    color:var(--gold-bright);padding:11px 18px;border-radius:999px;
+    border:1px solid var(--on-dark-line);transition:background .25s var(--ease),border-color .25s var(--ease),transform .25s var(--ease);
+  }
+  .map-body .dirbtn:hover{background:rgba(217,178,106,.1);border-color:var(--gold-bright);transform:translateY(-2px)}
+  .map-body .dirbtn svg{width:16px;height:16px}
+
+  /* =========================================================
+     FOOTER
+  ========================================================= */
+  footer{background:var(--teal-900);color:var(--on-dark);padding:clamp(54px,7vw,84px) 0 36px;position:relative;overflow:hidden}
+  .footer-wave{position:absolute;top:0;left:0;right:0;height:60px;z-index:0;opacity:.4}
+  .footer-wave svg{width:100%;height:100%}
+  footer .wrap{position:relative;z-index:1}
+  .foot-top{
+    display:grid;gap:36px;grid-template-columns:1fr;
+    padding-bottom:40px;border-bottom:1px solid var(--on-dark-line);
+  }
+  @media(min-width:760px){.foot-top{grid-template-columns:1.4fr 1fr 1fr}}
+  .foot-brand .brand{margin-bottom:18px}
+  .foot-brand p{color:var(--on-dark-muted);font-size:14px;max-width:36ch;line-height:1.6}
+  .foot-col h4{font-family:var(--font-text);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:16px;font-weight:700}
+  .foot-col a,.foot-col p{display:block;color:var(--on-dark-muted);font-size:14px;margin-bottom:11px;transition:color .2s var(--ease)}
+  .foot-col a:hover{color:var(--cream)}
+  .foot-bottom{
+    display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;
+    padding-top:26px;
+  }
+  .foot-bottom .legal{font-size:12.5px;color:var(--on-dark-muted)}
+  .credit{font-size:12.5px;color:var(--on-dark-muted);display:inline-flex;align-items:center;gap:7px}
+  .credit a{color:var(--gold-bright);font-weight:600;transition:color .2s var(--ease)}
+  .credit a:hover{color:var(--gold-bright);text-decoration:underline;text-underline-offset:3px}
+  .credit .star{width:13px;height:13px;color:var(--gold)}
+
+  /* =========================================================
+     REVEALS
+  ========================================================= */
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity 1s var(--ease-out),transform 1s var(--ease-out)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal[data-d="1"]{transition-delay:.08s}
+  .reveal[data-d="2"]{transition-delay:.16s}
+  .reveal[data-d="3"]{transition-delay:.24s}
+  .reveal[data-d="4"]{transition-delay:.32s}
+  .reveal[data-d="5"]{transition-delay:.40s}
+
+  /* river drift animation for current lines */
+  .drift{animation:drift 14s linear infinite}
+  .drift-2{animation:drift 20s linear infinite}
+  @keyframes drift{0%{transform:translateX(0)}100%{transform:translateX(-80px)}}
+  .boat-glide{animation:boatGlide 18s ease-in-out infinite}
+  @keyframes boatGlide{0%,100%{transform:translateX(0) translateY(0)}50%{transform:translateX(26px) translateY(-5px)}}
+  .reflect{animation:reflect 5s ease-in-out infinite}
+  @keyframes reflect{0%,100%{opacity:.35}50%{opacity:.7}}
+
+  /* =========================================================
+     REDUCED MOTION
+  ========================================================= */
+  @media(prefers-reduced-motion:reduce){
+    *,*::before,*::after{
+      animation-duration:.001ms !important;animation-iteration-count:1 !important;
+      transition-duration:.001ms !important;scroll-behavior:auto !important;
+    }
+    .reveal{opacity:1 !important;transform:none !important}
+    .hero-shimmer{display:none}
+    .hero h1 .line > span{transform:none !important}
+  }
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#d9b26a;--bk-accent-ink:#0d0d0f;--bk-ink:#10262a;--bk-panel:#fbf7ec;--bk-muted:rgba(16,38,42,0.6);--bk-line:rgba(16,38,42,0.14);--bk-serif:"Cormorant Garamond", Georgia, serif;--bk-sans:"Manrope", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ========================= NAV ========================= -->
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Charoen Nakhon Dental Clinic — home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none">
+          <rect width="48" height="48" rx="11" fill="#0E3B40" stroke="#D9B26A" stroke-opacity=".4"/>
+          <path d="M7 31q8.5-6 17 0t17 0" stroke="#D9B26A" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <path d="M24 9c4.4 4.4 6.6 8.6 6.6 12a6.6 6.6 0 1 1-13.2 0C17.4 17.6 19.6 13.4 24 9Z" stroke="#F3EFE3" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+        </svg>
+      </span>
+      <span class="name">
+        <b>Charoen Nakhon</b>
+        <span>Dental · Riverside</span>
+      </span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#welcome">Welcome</a>
+      <a href="#services">Treatments</a>
+      <a href="#visit">Visit Us</a>
+      <a href="#trust">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="tel:+66936403265" aria-label="Call the clinic at +66 93 640 3265">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+      Call Us
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ========================= HERO ========================= -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-scene" aria-hidden="true">
+      <!-- Riverside evening scene: sky glow, water, current lines, gold reflections, longtail boat -->
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice">
+        <defs>
+          <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#0E3B40"/>
+            <stop offset="1" stop-color="#06222A"/>
+          </linearGradient>
+          <linearGradient id="goldRefl" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#EBCB8A" stop-opacity=".0"/>
+            <stop offset=".5" stop-color="#D9B26A" stop-opacity=".55"/>
+            <stop offset="1" stop-color="#EBCB8A" stop-opacity="0"/>
+          </linearGradient>
+          <radialGradient id="moon" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#F6ECD2"/>
+            <stop offset=".6" stop-color="#EBCB8A" stop-opacity=".5"/>
+            <stop offset="1" stop-color="#EBCB8A" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+
+        <!-- soft moon / sun glow -->
+        <circle cx="1150" cy="170" r="190" fill="url(#moon)" class="reflect"/>
+        <circle cx="1150" cy="170" r="58" fill="#F6ECD2" opacity=".85"/>
+
+        <!-- distant skyline silhouettes (ICONSIAM riverside hint) -->
+        <g fill="#06222A" opacity=".75">
+          <rect x="80" y="430" width="60" height="150"/>
+          <rect x="150" y="400" width="40" height="180"/>
+          <rect x="980" y="380" width="46" height="200"/>
+          <rect x="1034" y="345" width="70" height="235" rx="4"/>
+          <rect x="1112" y="410" width="38" height="170"/>
+          <rect x="1230" y="395" width="54" height="185"/>
+          <rect x="1295" y="365" width="44" height="215"/>
+          <path d="M1034 345 l35 -30 35 30 Z"/>
+        </g>
+        <g fill="#0A2E32" opacity=".9">
+          <rect x="240" y="470" width="50" height="110"/>
+          <rect x="300" y="450" width="34" height="130"/>
+          <rect x="880" y="455" width="44" height="125"/>
+        </g>
+
+        <!-- water plane -->
+        <rect x="0" y="560" width="1440" height="340" fill="url(#water)"/>
+
+        <!-- vertical gold reflection under the moon -->
+        <rect x="1120" y="560" width="60" height="340" fill="url(#goldRefl)" class="reflect"/>
+
+        <!-- gentle current lines drifting -->
+        <g stroke="#1E6B70" stroke-width="2" fill="none" opacity=".55">
+          <path class="drift" d="M-120 620 q60 -12 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+          <path class="drift-2" d="M-120 670 q70 -14 140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0"/>
+        </g>
+        <g stroke="#D9B26A" stroke-width="1.4" fill="none" opacity=".4">
+          <path class="drift-2" d="M-120 730 q60 -10 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+          <path class="drift" d="M-120 790 q70 -12 140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0"/>
+        </g>
+
+        <!-- gold sparkle reflections -->
+        <g fill="#EBCB8A" class="reflect">
+          <circle cx="1140" cy="650" r="2.5"/>
+          <circle cx="1162" cy="700" r="2"/>
+          <circle cx="1130" cy="745" r="1.8"/>
+          <circle cx="1158" cy="800" r="2.4"/>
+          <circle cx="1145" cy="610" r="1.6"/>
+        </g>
+
+        <!-- elegant Thai longtail boat gliding on the river -->
+        <g class="boat-glide">
+          <g transform="translate(360 600)">
+            <!-- long curved hull -->
+            <path d="M-160 36 C-120 70 120 70 195 18 C150 30 -40 28 -160 36 Z" fill="#0A2E32" stroke="#D9B26A" stroke-width="2"/>
+            <path d="M-150 30 C-90 50 110 50 180 14" fill="none" stroke="#EBCB8A" stroke-width="1.4" opacity=".8"/>
+            <!-- upswept prow with ribbon -->
+            <path d="M195 18 C220 6 232 -16 236 -42" fill="none" stroke="#D9B26A" stroke-width="3" stroke-linecap="round"/>
+            <path d="M236 -42 q-10 6 -20 4 q8 6 6 16" fill="none" stroke="#EBCB8A" stroke-width="2" stroke-linecap="round"/>
+            <!-- canopy posts + roof -->
+            <line x1="-90" y1="26" x2="-90" y2="-26" stroke="#D9B26A" stroke-width="2"/>
+            <line x1="20" y1="22" x2="20" y2="-30" stroke="#D9B26A" stroke-width="2"/>
+            <path d="M-118 -26 Q-35 -46 48 -30" fill="none" stroke="#F3EFE3" stroke-width="3" stroke-linecap="round"/>
+            <path d="M-112 -20 Q-35 -38 42 -24" fill="none" stroke="#D9B26A" stroke-width="1.4" opacity=".7"/>
+            <!-- long-tail engine shaft astern -->
+            <line x1="-160" y1="34" x2="-235" y2="62" stroke="#D9B26A" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="-235" cy="62" r="4" fill="#EBCB8A"/>
+          </g>
+        </g>
+
+        <!-- boat's wake reflection -->
+        <path d="M200 660 q160 16 360 -8" fill="none" stroke="#D9B26A" stroke-width="1.2" opacity=".35" class="reflect"/>
+      </svg>
+    </div>
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="hero-shimmer" aria-hidden="true"></div>
+
+    <div class="wrap hero-content">
+      <span class="hero-tag"><span class="dot" aria-hidden="true"></span>Riverside Bangkok · Beside ICONSIAM</span>
+      <h1>
+        <span class="line"><span data-w>Riverside dental care,</span></span>
+        <span class="line"><span data-w><i class="ital">welcomed in English.</i></span></span>
+      </h1>
+      <p class="hero-lede">A calm, elegant dental clinic on the banks of the <b>Chao Phraya river</b> — where international patients are looked after in fluent English, just steps from ICONSIAM.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="tel:+66936403265">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          Call +66 93 640 3265
+        </a>
+        <a class="btn btn-outline" href="#services">Explore Treatments</a>
+        <!-- Booking is live for the clinic, but online booking widget is not yet wired -->
+        <button class="btn btn-soon" type="button" disabled aria-disabled="true" aria-label="Book online — coming soon">
+          Book Online <span class="pill">Soon</span>
+        </button>
+      </div>
+
+      <div class="hero-meta">
+        <div class="hm">
+          <span class="v">5.0
+            <span class="stars" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="#EBCB8A"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 21.2l1.4-6.8L2.2 9.7l6.9-.7z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#EBCB8A"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 21.2l1.4-6.8L2.2 9.7l6.9-.7z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#EBCB8A"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 21.2l1.4-6.8L2.2 9.7l6.9-.7z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#EBCB8A"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 21.2l1.4-6.8L2.2 9.7l6.9-.7z"/></svg>
+              <svg viewBox="0 0 24 24" fill="#EBCB8A"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 21.2l1.4-6.8L2.2 9.7l6.9-.7z"/></svg>
+            </span>
+          </span>
+          <span class="l">431 Google reviews</span>
+        </div>
+        <div class="hm">
+          <span class="v">7 days</span>
+          <span class="l">Open daily · until 8pm</span>
+        </div>
+        <div class="hm">
+          <span class="v">EN</span>
+          <span class="l">English-speaking dentist</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>Scroll</span>
+      <span class="bar"></span>
+    </div>
+  </section>
+
+  <!-- ========================= WELCOME / ENGLISH HOOK ========================= -->
+  <section class="welcome" id="welcome" aria-labelledby="welcome-h">
+    <div class="wrap welcome-grid">
+      <div class="welcome-copy reveal">
+        <span class="eyebrow">A Warm Welcome</span>
+        <h2 id="welcome-h">Care that speaks <span class="ital">your language</span>, on the river.</h2>
+        <p>Moving abroad is enough to think about — your dentist shouldn't be one of the worries. At Charoen Nakhon Dental Clinic, a member of our team speaks <strong>fluent English</strong>, so every question, treatment plan and gentle reassurance is shared clearly, with nothing lost along the way.</p>
+        <p>We sit right beside ICONSIAM on the Chao Phraya, an easy stop by river boat, BTS Gold Line or taxi. Come for a check-up, stay for the calm of the riverside — and leave knowing exactly what was done and why.</p>
+        <div class="hero-actions" style="margin-top:28px">
+          <a class="btn btn-gold" href="#contact">Plan Your Visit</a>
+          <a class="btn btn-outline" style="color:var(--teal-700);border-color:var(--line-strong);background:transparent" href="#services">See What We Offer</a>
+        </div>
+      </div>
+
+      <aside class="welcome-card reveal" data-d="1" aria-label="Why English-speaking patients choose us">
+        <div class="ribbon" aria-hidden="true">
+          <svg viewBox="0 0 500 500" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+            <g stroke="#1E6B70" stroke-width="2" fill="none" opacity=".5">
+              <path class="drift" d="M-60 120 q60 -16 120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+              <path class="drift-2" d="M-60 180 q70 -18 140 0 t140 0 t140 0 t140 0 t140 0"/>
+            </g>
+            <g stroke="#D9B26A" stroke-width="1.4" fill="none" opacity=".4">
+              <path class="drift-2" d="M-60 300 q60 -14 120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+              <path class="drift" d="M-60 380 q70 -16 140 0 t140 0 t140 0 t140 0 t140 0"/>
+            </g>
+          </svg>
+        </div>
+        <div class="speak-row">
+          <span class="speak-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 5h16v10H9l-4 4v-4H4z" stroke="#EBCB8A" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="#EBCB8A" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </span>
+          <span class="t">
+            <b>We speak English</b>
+            <span>Fluent, friendly, jargon-free</span>
+          </span>
+        </div>
+        <p class="quote">“You'll always know <span class="hl">what's happening, why it matters,</span> and what it costs — before we begin.”</p>
+        <ul class="card-points">
+          <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0A2E32" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>A dentist on the team who <b>speaks fluent English</b> — explained in plain terms.</span></li>
+          <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0A2E32" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>5.0 stars from 431 reviews</b> — the kind of trust that's earned, visit by visit.</span></li>
+          <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0A2E32" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><b>Open every day until 8pm</b> — evenings and weekends made easy.</span></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ========================= SERVICES ========================= -->
+  <section class="services" id="services" aria-labelledby="svc-h">
+    <div class="wrap">
+      <div class="svc-head">
+        <div class="reveal">
+          <span class="eyebrow">Treatments</span>
+          <h2 id="svc-h">A full range of care, <span class="ital">gently delivered.</span></h2>
+        </div>
+        <p class="intro reveal" data-d="1">From routine check-ups to complete treatment plans — thoughtful, modern dentistry for the whole family, all under one riverside roof.</p>
+      </div>
+
+      <div class="svc-grid">
+        <article class="svc-card reveal" data-d="1">
+          <span class="svc-num">01</span>
+          <span class="svc-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3c3 3 4.5 6 4.5 8.5a4.5 4.5 0 1 1-9 0C7.5 9 9 6 12 3Z" stroke="#155055" stroke-width="1.6" stroke-linejoin="round"/><path d="M9.5 11.5a2.5 2.5 0 0 1 2.5-2" stroke="#D9B26A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </span>
+          <h3>General Dentistry</h3>
+          <p>Check-ups, professional cleaning, scaling and polishing to keep your smile healthy, bright and comfortable all year round.</p>
+        </article>
+
+        <article class="svc-card reveal" data-d="2">
+          <span class="svc-num">02</span>
+          <span class="svc-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 4c-2 0-3.5 1.7-3.5 4 0 3 1 5 1.6 8 .4 2 .9 3.5 2 3.5s1.3-2 1.9-3.8c.3-.9.6-1.2 1-1.2s.7.3 1 1.2c.6 1.8.8 3.8 1.9 3.8s1.6-1.5 2-3.5c.6-3 1.6-5 1.6-8 0-2.3-1.5-4-3.5-4-1.6 0-2.3 1-3 1s-1.4-1-3-1Z" stroke="#155055" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Fillings &amp; Restoration</h3>
+          <p>Tooth-coloured fillings and restorations that blend in naturally, repairing decay and small damage so teeth feel whole again.</p>
+        </article>
+
+        <article class="svc-card reveal" data-d="3">
+          <span class="svc-num">03</span>
+          <span class="svc-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5" stroke="#155055" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="#D9B26A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Root Canal Care</h3>
+          <p>Comfortable, careful treatment to save a painful or infected tooth — relieving discomfort while keeping your natural smile intact.</p>
+        </article>
+
+        <article class="svc-card reveal" data-d="1">
+          <span class="svc-num">04</span>
+          <span class="svc-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.2 4.8 5.3.5-4 3.6 1.2 5.2L12 14.9 7.3 17.7l1.2-5.2-4-3.6 5.3-.5z" stroke="#155055" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          </span>
+          <h3>Cosmetic &amp; Whitening</h3>
+          <p>Brightening and aesthetic treatments to refresh your smile — subtle, natural results designed around the look you're hoping for.</p>
+        </article>
+
+        <article class="svc-card reveal" data-d="2">
+          <span class="svc-num">05</span>
+          <span class="svc-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="8" width="14" height="11" rx="2.5" stroke="#155055" stroke-width="1.5"/><path d="M9 8V6.5A3 3 0 0 1 15 6.5V8" stroke="#D9B26A" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="13.5" r="1.6" fill="#155055"/></svg>
+          </span>
+          <h3>Crowns &amp; Bridges</h3>
+          <p>Strong, lifelike crowns and bridges to rebuild and replace teeth — restoring both the function and the natural feel of your bite.</p>
+        </article>
+
+        <article class="svc-card reveal" data-d="3">
+          <span class="svc-num">06</span>
+          <span class="svc-ico" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.3-7-9.5A4 4 0 0 1 12 8a4 4 0 0 1 7 3.5C19 16.7 12 21 12 21Z" stroke="#155055" stroke-width="1.5" stroke-linejoin="round"/><path d="M9.5 11.5h5" stroke="#D9B26A" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </span>
+          <h3>Family &amp; Preventive</h3>
+          <p>Gentle care for every age, with friendly guidance on keeping teeth strong between visits — comfortable for nervous patients too.</p>
+        </article>
+      </div>
+      <p class="svc-note reveal">Not sure what you need? <b>Just ask — we'll talk it through in English</b> and recommend only what's right for you.</p>
+    </div>
+  </section>
+
+  <!-- ========================= VISIT / LOCATION + HOURS ========================= -->
+  <section class="visit" id="visit" aria-labelledby="visit-h">
+    <div class="visit-current" aria-hidden="true">
+      <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
+        <g stroke="#1E6B70" stroke-width="2" fill="none" opacity=".4">
+          <path class="drift" d="M-120 140 q70 -16 140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0"/>
+          <path class="drift-2" d="M-120 460 q70 -16 140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0"/>
+        </g>
+        <g stroke="#D9B26A" stroke-width="1.2" fill="none" opacity=".25">
+          <path class="drift-2" d="M-120 300 q60 -12 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+        </g>
+      </svg>
+    </div>
+    <div class="wrap visit-grid">
+      <div class="visit-copy reveal">
+        <span class="eyebrow on-dark">Visiting Us</span>
+        <h2 id="visit-h">Find us by the <span class="ital">water's edge.</span></h2>
+        <p class="visit-lede">We're in the <b>Charoen Nakhon / Riverside</b> district, right beside <b>ICONSIAM</b> on the Chao Phraya river — one of the easiest spots in Bangkok to reach, by boat, train or taxi.</p>
+        <div class="addr-list">
+          <div class="addr-item">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.3 7-10.5A7 7 0 0 0 5 10.5C5 15.7 12 21 12 21Z" stroke="#EBCB8A" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10.5" r="2.4" stroke="#EBCB8A" stroke-width="1.6"/></svg></span>
+            <span class="tx">
+              <b>Charoen Nakhon, Riverside</b>
+              <span>Beside ICONSIAM · Khlong San, Bangkok</span>
+            </span>
+          </div>
+          <div class="addr-item">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 6a2 2 0 0 1 2-2Z" stroke="#EBCB8A" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+            <span class="tx">
+              <b>Call to book or ask</b>
+              <a href="tel:+66936403265">+66 93 640 3265</a>
+            </span>
+          </div>
+          <div class="addr-item">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7l8-4 8 4v6c0 5-4 7-8 8-4-1-8-3-8-8V7Z" stroke="#EBCB8A" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="#EBCB8A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="tx">
+              <b>Easy riverside access</b>
+              <span>BTS Gold Line · Chao Phraya boat · taxi &amp; parking nearby</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hours-panel reveal" data-d="1">
+        <div class="hours-top">
+          <h3>Opening Hours</h3>
+          <span class="open-badge"><span class="d" aria-hidden="true"></span>Open every day</span>
+        </div>
+        <div class="hours-rows" id="hours">
+          <div class="hr-row" data-day="1"><span class="day">Monday</span><span class="time">10:00 — 20:00</span></div>
+          <div class="hr-row" data-day="2"><span class="day">Tuesday</span><span class="time">10:00 — 20:00</span></div>
+          <div class="hr-row" data-day="3"><span class="day">Wednesday</span><span class="time">10:00 — 20:00</span></div>
+          <div class="hr-row" data-day="4"><span class="day">Thursday</span><span class="time">10:00 — 20:00</span></div>
+          <div class="hr-row" data-day="5"><span class="day">Friday</span><span class="time">10:00 — 20:00</span></div>
+          <div class="hr-row" data-day="6"><span class="day">Saturday</span><span class="time">10:00 — 20:00</span></div>
+          <div class="hr-row" data-day="0"><span class="day">Sunday</span><span class="time">10:00 — 20:00</span></div>
+        </div>
+        <div class="hours-foot">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Closing time is 8:00pm daily. Evening and weekend appointments welcome — a quick call confirms your slot.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= TRUST ========================= -->
+  <section class="trust" id="trust" aria-labelledby="trust-h">
+    <div class="wrap">
+      <div class="trust-rating reveal">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#D9B26A"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 21.2l1.4-6.8L2.2 9.7l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#D9B26A"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 21.2l1.4-6.8L2.2 9.7l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#D9B26A"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 21.2l1.4-6.8L2.2 9.7l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#D9B26A"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 21.2l1.4-6.8L2.2 9.7l6.9-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#D9B26A"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 21.2l1.4-6.8L2.2 9.7l6.9-.7z"/></svg>
+        </span>
+        <span class="score" aria-label="Rated 5.0 out of 5">5.0<em>/5</em></span>
+      </div>
+      <h2 id="trust-h" class="reveal" data-d="1">A reputation earned, <span class="ital">review by review.</span></h2>
+      <p class="sub reveal" data-d="1"><b>431 patients</b> have rated their visit a perfect five stars on Google. Here is the kind of care that number reflects.</p>
+
+      <div class="trust-strip">
+      </div>
+      <p class="trust-foot reveal">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 21.2l1.4-6.8L2.2 9.7l6.9-.7z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+        Reflecting our overall 5.0★ Google rating across 431 reviews. Individual experiences may vary.
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================= CONTACT ========================= -->
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <div class="contact-scene" aria-hidden="true">
+      <svg viewBox="0 0 1440 700" preserveAspectRatio="xMidYMax slice" width="100%" height="100%">
+        <defs>
+          <linearGradient id="cgold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#EBCB8A" stop-opacity="0"/>
+            <stop offset=".5" stop-color="#D9B26A" stop-opacity=".4"/>
+            <stop offset="1" stop-color="#EBCB8A" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <rect x="180" y="380" width="44" height="320" fill="url(#cgold)" class="reflect"/>
+        <g stroke="#1E6B70" stroke-width="2" fill="none" opacity=".4">
+          <path class="drift" d="M-120 470 q70 -16 140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0"/>
+          <path class="drift-2" d="M-120 540 q70 -16 140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0"/>
+        </g>
+        <g stroke="#D9B26A" stroke-width="1.3" fill="none" opacity=".3">
+          <path class="drift-2" d="M-120 610 q60 -12 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0"/>
+        </g>
+      </svg>
+    </div>
+    <div class="wrap contact-grid">
+      <div class="contact-copy reveal">
+        <span class="eyebrow on-dark">Get In Touch</span>
+        <h2 id="contact-h">Let's get you <span class="ital">smiling.</span></h2>
+        <p class="contact-lede">Booking is simple. Call us directly and we'll find a time that suits you — <b>in English, with a warm welcome</b>. We'd love to look after your smile.</p>
+
+        <a class="phone-cta" href="tel:+66936403265" aria-label="Call Charoen Nakhon Dental Clinic at +66 93 640 3265">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6.5 4h3l1.5 4-2 1.5a12 12 0 0 0 5.5 5.5l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span>
+          <span class="tx">
+            <span>Call the clinic</span>
+            <b>+66 93 640 3265</b>
+          </span>
+        </a>
+
+        <div class="channels">
+          <span class="channels-label">Or reach us your way</span>
+          <div class="ch-row">
+            <!-- LINE handle/ID unknown — placeholder until provided -->
+            <a class="ch ch-line" href="#" aria-label="Add us on LINE (link coming soon)">
+              <span class="cic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3C6.8 3 2.5 6.4 2.5 10.6c0 3.8 3.5 7 8.2 7.5.3 0 .7.2.8.5.1.3 0 .8 0 .8l-.2 1c0 .3-.2 1.1.9.6 1.1-.5 6-3.5 8.1-6 1.4-1.5 2.2-3 2.2-4.9C22.5 6.4 18.2 3 12 3Z"/></svg></span>
+              <span>LINE<small>Chat with us</small></span>
+            </a>
+            <!-- Facebook page URL unknown — placeholder until provided -->
+            <a class="ch ch-fb" href="#" aria-label="Find us on Facebook (link coming soon)">
+              <span class="cic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M14 9V7c0-1 .3-1.5 1.5-1.5H17V2.5h-2.5C11.6 2.5 10 4.2 10 7v2H7.5v3H10v9.5h4V12h2.7l.3-3z"/></svg></span>
+              <span>Facebook<small>Our page</small></span>
+            </a>
+          </div>
+          <div class="ch-row">
+            <!-- Instagram handle is a placeholder — replace <handle> with the clinic's real IG username -->
+            <a class="ch ch-ig" href="https://instagram.com/<handle>" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+              <span class="cic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="#fff" stroke-width="1.8"/><circle cx="17" cy="7" r="1.2" fill="#fff"/></svg></span>
+              <span>Instagram<small>@&lt;handle&gt;</small></span>
+            </a>
+            <!-- WhatsApp number not provided by the clinic — left as placeholder -->
+            <a class="ch ch-wa" href="#" aria-label="Message us on WhatsApp (number coming soon)">
+              <span class="cic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Zm0 16.3c-1.4 0-2.7-.4-3.9-1l-.3-.2-2.7.7.7-2.6-.2-.3A7.3 7.3 0 1 1 12 19.3Zm4.1-5.2c-.2-.1-1.3-.7-1.5-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6 6 0 0 1-3-2.6c-.2-.4.2-.4.6-1.2.1-.1 0-.3 0-.4l-.7-1.7c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3c-.3.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.7 3 .6.5 0 1.3-.5 1.5-1.1.2-.5.2-1 .1-1.1-.1-.1-.2-.2-.4-.3Z"/></svg></span>
+              <span>WhatsApp<small>Message us</small></span>
+            </a>
+          </div>
+          <div class="ch-row">
+            <!-- Booking is live at the clinic; online booking widget not yet integrated -->
+            <button class="ch ch-book" type="button" disabled aria-disabled="true" aria-label="Book online — coming soon">
+              <span class="left">
+                <span class="cic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="5" width="16" height="16" rx="3" stroke="#0A2E32" stroke-width="1.7"/><path d="M4 9h16M8 3v4M16 3v4" stroke="#0A2E32" stroke-width="1.7" stroke-linecap="round"/><path d="M9 14l2 2 4-4" stroke="#0A2E32" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <b>Book Online</b>
+              </span>
+              <span class="soon">Coming soon</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <aside class="map-card reveal" data-d="1" aria-label="Our location beside ICONSIAM">
+        <div class="map-vis">
+          <svg viewBox="0 0 500 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <rect width="500" height="300" fill="#0A2E32"/>
+            <!-- river band -->
+            <path d="M0 120 C140 90 200 170 320 150 C420 134 470 180 500 165 L500 300 L0 300 Z" fill="#0E3B40"/>
+            <path d="M0 130 C140 100 200 180 320 160 C420 144 470 190 500 175" fill="none" stroke="#1E6B70" stroke-width="2" opacity=".6"/>
+            <!-- current lines on river -->
+            <g stroke="#D9B26A" stroke-width="1.2" fill="none" opacity=".3">
+              <path class="drift" d="M-40 200 q40 -10 80 0 t80 0 t80 0 t80 0 t80 0 t80 0 t80 0"/>
+              <path class="drift-2" d="M-40 240 q50 -12 100 0 t100 0 t100 0 t100 0 t100 0 t100 0"/>
+            </g>
+            <!-- street grid on land -->
+            <g stroke="#155055" stroke-width="1.4" opacity=".5">
+              <line x1="0" y1="60" x2="500" y2="40"/>
+              <line x1="120" y1="0" x2="150" y2="120"/>
+              <line x1="300" y1="0" x2="320" y2="150"/>
+            </g>
+            <!-- ICONSIAM block hint -->
+            <rect x="300" y="40" width="74" height="58" rx="4" fill="#155055" opacity=".55"/>
+            <rect x="312" y="30" width="14" height="20" fill="#155055" opacity=".7"/>
+            <rect x="348" y="22" width="12" height="28" fill="#155055" opacity=".7"/>
+          </svg>
+          <div class="map-pin" aria-hidden="true">
+            <span class="pin"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c3 3 4.5 6 4.5 8.5a4.5 4.5 0 1 1-9 0C7.5 9 9 6 12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span>
+            <span class="lbl">We're here</span>
+          </div>
+        </div>
+        <div class="map-body">
+          <h3>Charoen Nakhon · Riverside</h3>
+          <p>On the Chao Phraya river, right beside ICONSIAM in the Khlong San district of Bangkok.</p>
+          <!-- Replace # with the clinic's Google Maps listing URL when available -->
+          <a class="dirbtn" href="#" aria-label="Get directions to the clinic (link coming soon)">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.3 7-10.5A7 7 0 0 0 5 10.5C5 15.7 12 21 12 21Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10.5" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
+            Get Directions
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<!-- ========================= FOOTER ========================= -->
+<footer>
+  <div class="footer-wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path class="drift" d="M-120 30 q70 -16 140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0 t140 0" fill="none" stroke="#D9B26A" stroke-width="1.4" opacity=".5"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Charoen Nakhon Dental Clinic — home">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect width="48" height="48" rx="11" fill="#0E3B40" stroke="#D9B26A" stroke-opacity=".4"/>
+              <path d="M7 31q8.5-6 17 0t17 0" stroke="#D9B26A" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+              <path d="M24 9c4.4 4.4 6.6 8.6 6.6 12a6.6 6.6 0 1 1-13.2 0C17.4 17.6 19.6 13.4 24 9Z" stroke="#F3EFE3" stroke-width="1.8" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </span>
+          <span class="name">
+            <b>Charoen Nakhon</b>
+            <span>Dental · Riverside</span>
+          </span>
+        </a>
+        <p>Gentle, English-friendly dental care on the Chao Phraya river, beside ICONSIAM. Open every day until 8pm.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="#welcome">Welcome</a>
+        <a href="#services">Treatments</a>
+        <a href="#visit">Visit Us</a>
+        <a href="#trust">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Visit &amp; Contact</h4>
+        <a href="tel:+66936403265">+66 93 640 3265</a>
+        <p>Charoen Nakhon / Riverside<br/>Beside ICONSIAM, Bangkok</p>
+        <p>Mon–Sun · until 8:00pm</p>
+        <!-- Replace <handle> with the clinic's real Instagram username -->
+        <a href="https://instagram.com/<handle>" target="_blank" rel="noopener">Instagram &rarr;</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="legal">&copy; <span id="yr">2026</span> Charoen Nakhon Dental Clinic · Riverside, Bangkok. All rights reserved.</span>
+      <span class="credit">
+        <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.7-5.1 4.7 1.4 6.8L12 17.8 5.9 21.2l1.4-6.8L2.2 9.7l6.9-.7z"/></svg>
+        Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener">Stellar Haus Media</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- Year ---- */
+  var yr = document.getElementById('yr');
+  if (yr) yr.textContent = new Date().getFullYear();
+
+  /* ---- Nav scrolled state ---- */
+  var nav = document.querySelector('header.nav');
+  var onScroll = function(){
+    if (window.scrollY > 24) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* ---- Highlight today's opening-hours row ---- */
+  try {
+    var today = new Date().getDay(); // 0 Sun - 6 Sat
+    var row = document.querySelector('.hr-row[data-day="' + today + '"]');
+    if (row) row.classList.add('today');
+  } catch(e){}
+
+  /* ---- IntersectionObserver reveals ---- */
+  var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if (reduce || !('IntersectionObserver' in window)) {
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting){
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.14, rootMargin:'0px 0px -8% 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+
+  /* ---- Hero headline stagger (motion-safe) ---- */
+  if (!reduce) {
+    var spans = document.querySelectorAll('.hero h1 .line > span');
+    spans.forEach(function(s, i){
+      s.style.transform = 'translateY(110%)';
+      s.style.transition = 'transform 1.05s cubic-bezier(.16,.84,.30,1)';
+      s.style.transitionDelay = (0.18 + i * 0.14) + 's';
+    });
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        spans.forEach(function(s){ s.style.transform = 'translateY(0)'; });
+      });
+    });
+  }
+})();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+66936403265", CHAN="", CHANLABEL="";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>

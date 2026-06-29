@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Asoke Dental Clinic — English-Speaking Dentist at Asok / Soi 21, Bangkok</title>
+<meta name="description" content="Gentle, careful dental care in English at Bangkok's Asok interchange. General dentistry, cleaning and fillings. Rated 4.9 from 54 reviews. Open Mon-Sat." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0B0D'/%3E%3Cpath d='M16 4v24M4 16h24' stroke='%23E8E6DF' stroke-width='1'/%3E%3Ccircle cx='16' cy='16' r='4.5' fill='none' stroke='%23FF4D2E' stroke-width='2'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0B0B0D;
+    --ink-2:#16161A;
+    --paper:#F4F2EB;
+    --paper-2:#EAE7DD;
+    --line:rgba(11,11,13,.14);
+    --line-strong:rgba(11,11,13,.32);
+    --muted:#5B5A55;
+    --accent:#FF4D2E;
+    --accent-ink:#B3290F;
+    --on-ink:#E8E6DF;
+    --on-ink-muted:rgba(232,230,223,.62);
+    --on-ink-line:rgba(232,230,223,.16);
+    --font-display:'Space Grotesk',system-ui,sans-serif;
+    --font-text:'Archivo',system-ui,sans-serif;
+    --gut:clamp(18px,5vw,64px);
+    --maxw:1280px;
+    --ease:cubic-bezier(.2,.7,.2,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:var(--font-text);
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.55;
+    overflow-x:hidden;
+    font-size:clamp(15px,1.05vw,17px);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+  img,svg{display:block;max-width:100%}
+  button{font:inherit;cursor:pointer;border:none;background:none;color:inherit}
+  ::selection{background:var(--accent);color:#fff}
+  :focus-visible{outline:2.5px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--gut);width:100%}
+  .mono{font-family:var(--font-display);font-weight:500;letter-spacing:.16em;text-transform:uppercase;font-size:.66rem}
+  .coord{font-family:var(--font-display);font-weight:500;letter-spacing:.1em;font-size:.62rem;color:var(--muted);text-transform:uppercase}
+  h1,h2,h3{font-family:var(--font-display);font-weight:600;line-height:.98;letter-spacing:-.02em}
+
+  .skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--ink);color:var(--on-ink);padding:.7em 1.1em;font-family:var(--font-display);font-size:.8rem}
+  .skip:focus{left:12px;top:12px}
+
+  .gridbg{position:fixed;inset:0;z-index:0;pointer-events:none}
+  .gridbg svg{width:100%;height:100%}
+  .gline{stroke:var(--line);stroke-width:1;vector-effect:non-scaling-stroke}
+  .gline.v,.gline.h{
+    stroke-dasharray:1 1;
+    stroke-dashoffset:1;
+    animation:dashdraw 1.4s var(--ease) forwards;
+  }
+  @keyframes dashdraw{to{stroke-dashoffset:0}}
+
+  header.nav{position:sticky;top:0;z-index:100;background:rgba(244,242,235,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:1rem}
+  .brand{display:flex;align-items:center;gap:.7rem;font-family:var(--font-display);font-weight:700;letter-spacing:-.01em;font-size:1.02rem}
+  .brand .node-mark{width:26px;height:26px;flex:none;position:relative}
+  .brand .node-mark svg{width:100%;height:100%}
+  .navlinks{display:flex;align-items:center;gap:clamp(1rem,2.2vw,2.1rem)}
+  .navlinks a{font-family:var(--font-display);font-weight:500;font-size:.82rem;letter-spacing:.01em;position:relative;padding:.25em 0;color:var(--ink)}
+  .navlinks a::after{content:"";position:absolute;left:0;right:100%;bottom:-2px;height:2px;background:var(--accent);transition:right .35s var(--ease)}
+  .navlinks a:hover::after,.navlinks a:focus-visible::after{right:0}
+  .nav-cta{display:inline-flex;align-items:center;gap:.5em;background:var(--ink);color:var(--on-ink);padding:.62em 1.05em;font-family:var(--font-display);font-weight:600;font-size:.8rem;letter-spacing:.02em;transition:background .25s,transform .25s}
+  .nav-cta:hover{background:var(--accent);transform:translateY(-1px)}
+  .nav-desktop{display:flex;align-items:center;gap:clamp(1rem,2.4vw,2.2rem)}
+  .burger{display:none;width:42px;height:42px;border:1px solid var(--line-strong);align-items:center;justify-content:center;flex-direction:column;gap:5px}
+  .burger span{width:18px;height:2px;background:var(--ink);transition:transform .3s,opacity .3s}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .mobile-menu{position:fixed;inset:64px 0 0;z-index:99;background:var(--ink);color:var(--on-ink);display:flex;flex-direction:column;justify-content:center;padding:0 var(--gut);transform:translateY(-100%);transition:transform .5s var(--ease);visibility:hidden}
+  .mobile-menu.open{transform:translateY(0);visibility:visible}
+  .mobile-menu a{font-family:var(--font-display);font-weight:600;font-size:clamp(1.8rem,9vw,2.6rem);letter-spacing:-.02em;padding:.32em 0;border-bottom:1px solid var(--on-ink-line);display:flex;justify-content:space-between;align-items:baseline}
+  .mobile-menu a .idx{font-size:.7rem;color:var(--accent);letter-spacing:.1em}
+  .mobile-menu .mm-cta{margin-top:1.6rem;color:var(--accent)}
+
+  main{position:relative;z-index:1}
+  section{position:relative}
+  .sec-pad{padding-block:clamp(72px,11vw,150px)}
+  .sec-head{display:flex;align-items:flex-start;gap:1rem;margin-bottom:clamp(2rem,5vw,3.6rem)}
+  .sec-tag{display:inline-flex;align-items:center;gap:.6em;color:var(--accent-ink)}
+  .sec-tag .dot{width:8px;height:8px;background:var(--accent);transform:rotate(45deg);flex:none}
+  .node-label{position:absolute;display:flex;align-items:center;gap:.5em;color:var(--muted);font-family:var(--font-display);font-weight:500;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase}
+  .node-label .ring{width:11px;height:11px;border:1.5px solid var(--accent);border-radius:50%;flex:none}
+
+  .hero{min-height:clamp(640px,98vh,1000px);display:flex;flex-direction:column;justify-content:center;position:relative;padding-block:clamp(40px,8vh,90px);overflow:hidden}
+  .hero-grid{position:absolute;inset:0;z-index:0;pointer-events:none}
+  .hero-grid svg{width:100%;height:100%}
+  .hl{stroke:var(--line-strong);stroke-width:1.4;fill:none;vector-effect:non-scaling-stroke}
+  .hl.draw{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);animation:heroDraw 1.6s var(--ease) forwards}
+  .hl.draw.d2{animation-delay:.25s}
+  .hl.draw.d3{animation-delay:.5s}
+  @keyframes heroDraw{to{stroke-dashoffset:0}}
+  .hnode{fill:var(--paper);stroke:var(--accent);stroke-width:2;opacity:0;transform-box:fill-box;transform-origin:center;animation:nodePop .5s var(--ease) forwards}
+  .hnode.n1{animation-delay:1.05s}
+  .hnode.n2{animation-delay:1.25s}
+  .hnode.n3{animation-delay:1.45s}
+  .hnode.core{animation-delay:1.55s}
+  @keyframes nodePop{0%{opacity:0;transform:scale(.2)}60%{opacity:1;transform:scale(1.25)}100%{opacity:1;transform:scale(1)}}
+  .hpulse{fill:none;stroke:var(--accent);stroke-width:1.5;opacity:0;transform-box:fill-box;transform-origin:center;animation:pulse 2.6s ease-out infinite;animation-delay:1.7s}
+  @keyframes pulse{0%{opacity:.5;transform:scale(.6)}80%,100%{opacity:0;transform:scale(2.4)}}
+
+  .hero-content{position:relative;z-index:2}
+  .hero-eyebrow{display:flex;flex-wrap:wrap;align-items:center;gap:.7em 1.2em;margin-bottom:clamp(1.4rem,3vw,2.2rem);opacity:0;animation:fadeUp .8s var(--ease) .2s forwards}
+  .hero-eyebrow .pill{display:inline-flex;align-items:center;gap:.55em;border:1px solid var(--line-strong);padding:.42em .85em;color:var(--ink)}
+  .hero-eyebrow .pill .live{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 0 var(--accent);animation:liveBeat 2s infinite}
+  @keyframes liveBeat{0%{box-shadow:0 0 0 0 rgba(255,77,46,.5)}70%{box-shadow:0 0 0 7px rgba(255,77,46,0)}100%{box-shadow:0 0 0 0 rgba(255,77,46,0)}}
+  h1.hero-title{font-size:clamp(2.7rem,11.5vw,9.3rem);font-weight:700;letter-spacing:-.035em;text-transform:uppercase}
+  h1.hero-title .ln{display:block;overflow:hidden}
+  h1.hero-title .ln > span{display:block;transform:translateY(105%);animation:lineUp .9s var(--ease) forwards}
+  h1.hero-title .ln:nth-child(1) > span{animation-delay:.35s}
+  h1.hero-title .ln:nth-child(2) > span{animation-delay:.5s}
+  h1.hero-title .ln:nth-child(3) > span{animation-delay:.65s}
+  @keyframes lineUp{to{transform:translateY(0)}}
+  h1.hero-title .accent{color:var(--accent);position:relative}
+  h1.hero-title .stroke{color:transparent;-webkit-text-stroke:1.6px var(--ink);text-stroke:1.6px var(--ink)}
+  .hero-sub{display:flex;flex-wrap:wrap;gap:clamp(1.4rem,4vw,3.4rem);margin-top:clamp(1.6rem,4vw,2.6rem);align-items:flex-end;opacity:0;animation:fadeUp .8s var(--ease) .85s forwards}
+  .hero-sub p{max-width:34ch;font-size:clamp(1rem,1.5vw,1.18rem);color:var(--ink);line-height:1.5}
+  .hero-sub p b{font-family:var(--font-display);font-weight:600}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+  .hero-meta{margin-top:clamp(2.4rem,5vw,3.4rem);display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--line);opacity:0;animation:fadeUp .8s var(--ease) 1s forwards}
+  .hero-meta .cell{flex:1 1 160px;padding:1rem 1.2rem 0 0;border-right:1px solid var(--line)}
+  .hero-meta .cell:last-child{border-right:none}
+  .hero-meta .k{font-family:var(--font-display);font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.02em;display:flex;align-items:baseline;gap:.25em}
+  .hero-meta .k .u{font-size:.5em;color:var(--accent-ink);letter-spacing:0}
+  .hero-meta .l{margin-top:.2em}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+  .btn{display:inline-flex;align-items:center;gap:.6em;font-family:var(--font-display);font-weight:600;font-size:.86rem;letter-spacing:.01em;padding:.85em 1.35em;transition:transform .25s var(--ease),background .25s,color .25s,box-shadow .25s;position:relative;border:1.5px solid transparent;white-space:nowrap}
+  .btn svg{width:1.05em;height:1.05em;flex:none}
+  .btn-primary{background:var(--accent);color:#fff}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:6px 6px 0 var(--ink)}
+  .btn-ink{background:var(--ink);color:var(--on-ink)}
+  .btn-ink:hover{transform:translateY(-2px);background:var(--ink-2);box-shadow:6px 6px 0 var(--accent)}
+  .btn-ghost{border-color:var(--line-strong);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink);transform:translateY(-2px);background:var(--ink);color:var(--on-ink)}
+
+  .btn-book{background:transparent;color:var(--ink);border:1.5px dashed var(--line-strong)}
+  .btn-book:hover{border-color:var(--accent);color:var(--accent-ink);transform:translateY(-2px)}
+  .btn-book .soon{font-family:var(--font-display);font-weight:500;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:#fff;padding:.18em .5em;line-height:1}
+  .toast{position:fixed;left:50%;bottom:28px;z-index:300;background:var(--ink);color:var(--on-ink);padding:.95em 1.3em;display:flex;align-items:center;gap:.8em;font-family:var(--font-display);font-size:.84rem;font-weight:500;opacity:0;pointer-events:none;transition:opacity .35s,transform .35s;box-shadow:0 12px 40px rgba(0,0,0,.3);max-width:90vw;transform:translateX(-50%) translateY(40px)}
+  .toast::before{content:"";width:9px;height:9px;background:var(--accent);transform:rotate(45deg);flex:none}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  .rv{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+  .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}.rv.d5{transition-delay:.4s}
+
+  .welcome{background:var(--ink);color:var(--on-ink);position:relative;overflow:hidden}
+  .welcome .gridbg-ink{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.5}
+  .welcome .gridbg-ink .gl{stroke:var(--on-ink-line);stroke-width:1;vector-effect:non-scaling-stroke}
+  .welcome .wrap{position:relative;z-index:1}
+  .welcome .sec-tag{color:var(--accent)}
+  .welcome-grid{display:grid;grid-template-columns:1fr;gap:clamp(2.4rem,6vw,5rem);align-items:center}
+  .welcome-lead h2{font-size:clamp(2rem,6.2vw,4.6rem);color:var(--on-ink);letter-spacing:-.03em}
+  .welcome-lead h2 .hl-ac{color:var(--accent)}
+  .welcome-lead .big-quote{font-size:clamp(1.15rem,2.4vw,1.7rem);color:var(--on-ink);line-height:1.45;margin-top:clamp(1.6rem,4vw,2.4rem);max-width:30ch;font-family:var(--font-display);font-weight:400}
+  .welcome-lead .big-quote b{color:var(--accent);font-weight:600}
+  .lang-strip{margin-top:clamp(1.8rem,4vw,2.6rem);display:flex;flex-wrap:wrap;gap:.6rem}
+  .lang-strip .chip{display:inline-flex;align-items:center;gap:.5em;border:1px solid var(--on-ink-line);padding:.5em .9em;font-family:var(--font-display);font-weight:500;font-size:.78rem;color:var(--on-ink)}
+  .lang-strip .chip.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .welcome-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--on-ink-line);border:1px solid var(--on-ink-line)}
+  .wcard{background:var(--ink);padding:clamp(1.5rem,3vw,2rem);position:relative;min-height:180px;display:flex;flex-direction:column;justify-content:space-between;transition:background .35s}
+  .wcard:hover{background:var(--ink-2)}
+  .wcard .wc-no{font-family:var(--font-display);font-weight:700;font-size:.7rem;letter-spacing:.1em;color:var(--accent)}
+  .wcard .wc-ic{width:34px;height:34px;color:var(--accent)}
+  .wcard h3{font-size:1.18rem;color:var(--on-ink);margin-top:1rem;letter-spacing:-.01em}
+  .wcard p{color:var(--on-ink-muted);font-size:.9rem;margin-top:.5em;line-height:1.5}
+
+  .services .sec-tag{color:var(--accent-ink)}
+  .svc-list{border-top:1px solid var(--line-strong)}
+  .svc{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:clamp(1rem,3vw,2.5rem);padding:clamp(1.6rem,3.4vw,2.6rem) 0;border-bottom:1px solid var(--line);position:relative;transition:padding-left .4s var(--ease)}
+  .svc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0;background:var(--accent);transition:width .4s var(--ease)}
+  .svc:hover::before{width:5px}
+  .svc:hover{padding-left:clamp(12px,2vw,28px)}
+  .svc-no{font-family:var(--font-display);font-weight:700;font-size:.78rem;color:var(--muted);letter-spacing:.1em;align-self:flex-start;padding-top:.4em}
+  .svc-main h3{font-size:clamp(1.6rem,4.5vw,3rem);letter-spacing:-.02em;line-height:1;transition:color .3s}
+  .svc:hover .svc-main h3{color:var(--accent-ink)}
+  .svc-main p{color:var(--muted);margin-top:.7em;max-width:54ch;font-size:clamp(.92rem,1.4vw,1.05rem)}
+  .svc-tags{display:flex;flex-wrap:wrap;gap:.5em;margin-top:.9em}
+  .svc-tags span{font-family:var(--font-display);font-weight:500;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);padding:.32em .6em}
+  .svc-mark{width:clamp(48px,8vw,84px);height:clamp(48px,8vw,84px);flex:none;color:var(--ink);transition:transform .5s var(--ease),color .3s}
+  .svc:hover .svc-mark{transform:rotate(90deg);color:var(--accent)}
+  .svc-foot{margin-top:clamp(2.2rem,4vw,3.2rem);display:flex;flex-wrap:wrap;gap:1.4rem;align-items:center;justify-content:space-between}
+  .svc-foot p{color:var(--muted);max-width:46ch;font-size:.92rem}
+
+  .visiting{background:var(--paper-2);position:relative;overflow:hidden}
+  .visit-grid{display:grid;grid-template-columns:1fr;gap:clamp(2.5rem,5vw,4rem)}
+  .map-panel{position:relative;background:var(--ink);aspect-ratio:1/.82;min-height:340px;overflow:hidden;border:1px solid var(--ink)}
+  .map-panel svg{position:absolute;inset:0;width:100%;height:100%}
+  .map-rd{stroke:var(--on-ink-line);stroke-width:1.4;fill:none;vector-effect:non-scaling-stroke}
+  .map-rd.main{stroke:rgba(232,230,223,.4);stroke-width:2.2}
+  .map-rail{stroke:var(--accent);stroke-width:2;fill:none;stroke-dasharray:8 5;vector-effect:non-scaling-stroke;opacity:.85}
+  .map-here{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);z-index:2;text-align:center}
+  .map-here .pin{width:22px;height:22px;background:var(--accent);border-radius:50% 50% 50% 0;transform:rotate(-45deg);margin:0 auto;box-shadow:0 0 0 6px rgba(255,77,46,.22);position:relative}
+  .map-here .pin::after{content:"";position:absolute;inset:6px;background:var(--paper);border-radius:50%}
+  .map-here .lbl{margin-top:1.2rem;font-family:var(--font-display);font-weight:700;color:var(--on-ink);font-size:.92rem;letter-spacing:.02em}
+  .map-here .sub{font-family:var(--font-display);font-weight:500;color:var(--accent);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;margin-top:.3em}
+  .map-tag{position:absolute;font-family:var(--font-display);font-weight:500;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--on-ink-muted)}
+  .map-cross{position:absolute;color:var(--on-ink-muted)}
+  .map-cross::before,.map-cross::after{content:"";position:absolute;background:var(--on-ink-muted)}
+  .map-cross::before{width:14px;height:1px;left:-7px;top:0}
+  .map-cross::after{width:1px;height:14px;left:0;top:-7px}
+
+  .visit-info h2{font-size:clamp(1.9rem,5.5vw,4rem);letter-spacing:-.03em;line-height:1}
+  .visit-info .addr{margin-top:1.4rem;font-size:clamp(1.05rem,1.6vw,1.25rem);max-width:36ch;color:var(--ink)}
+  .info-rows{margin-top:clamp(1.8rem,4vw,2.6rem);border-top:1px solid var(--line-strong)}
+  .irow{display:grid;grid-template-columns:auto 1fr auto;gap:1rem;align-items:center;padding:1.1rem 0;border-bottom:1px solid var(--line)}
+  .irow .ic{width:26px;height:26px;color:var(--accent-ink);flex:none}
+  .irow .ttl{font-family:var(--font-display);font-weight:600;font-size:.95rem}
+  .irow .val{color:var(--muted);font-size:.86rem;margin-top:.1em}
+  .irow .badge{font-family:var(--font-display);font-weight:600;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;padding:.4em .7em;background:var(--ink);color:var(--on-ink)}
+  .irow .badge.open{background:var(--accent);color:#fff}
+  .hours-grid{margin-top:1.4rem;display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+  .hcol{text-align:center;border:1px solid var(--line);padding:.7em .2em;background:var(--paper)}
+  .hcol.cls{opacity:.4}
+  .hcol .d{font-family:var(--font-display);font-weight:700;font-size:.74rem;letter-spacing:.02em}
+  .hcol .t{font-family:var(--font-display);font-weight:500;font-size:.58rem;color:var(--muted);margin-top:.3em;letter-spacing:.02em}
+  .hcol.cls .t{color:var(--accent-ink)}
+  .visit-cta{margin-top:clamp(1.8rem,3vw,2.4rem);display:flex;flex-wrap:wrap;gap:.7rem}
+
+  .trust{background:var(--ink);color:var(--on-ink);position:relative;overflow:hidden;text-align:center}
+  .trust .gridbg-ink{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.4}
+  .trust .gridbg-ink .gl{stroke:var(--on-ink-line);stroke-width:1;vector-effect:non-scaling-stroke}
+  .trust .wrap{position:relative;z-index:1}
+  .trust .sec-tag{color:var(--accent);justify-content:center}
+  .rating-mega{font-family:var(--font-display);font-weight:700;font-size:clamp(6rem,28vw,22rem);line-height:.82;letter-spacing:-.04em;color:var(--on-ink);position:relative;display:inline-block}
+  .rating-mega .of{font-size:.18em;color:var(--accent);vertical-align:super;letter-spacing:0}
+  .stars{display:flex;justify-content:center;gap:.45rem;margin-top:1.4rem}
+  .stars svg{width:clamp(26px,5vw,42px);height:clamp(26px,5vw,42px);color:var(--accent);opacity:0;transform:scale(.4) rotate(-20deg)}
+  .stars.lit svg{animation:starLit .5s var(--ease) forwards}
+  .stars svg:nth-child(1){animation-delay:.05s}.stars svg:nth-child(2){animation-delay:.13s}.stars svg:nth-child(3){animation-delay:.21s}.stars svg:nth-child(4){animation-delay:.29s}.stars svg:nth-child(5){animation-delay:.37s}
+  @keyframes starLit{to{opacity:1;transform:none}}
+  .trust-sub{margin-top:1.4rem;font-family:var(--font-display);font-weight:500;font-size:clamp(.95rem,1.8vw,1.2rem);color:var(--on-ink);letter-spacing:.02em}
+  .trust-sub b{color:var(--accent)}
+  .trust-line{margin-top:clamp(1.2rem,3vw,2rem);max-width:46ch;margin-inline:auto;color:var(--on-ink-muted);font-size:clamp(.95rem,1.5vw,1.1rem)}
+  .trust-stats{margin-top:clamp(2.6rem,5vw,4rem);display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--on-ink-line);border:1px solid var(--on-ink-line);text-align:left}
+  .tstat{background:var(--ink);padding:clamp(1.4rem,3vw,2rem)}
+  .tstat .n{font-family:var(--font-display);font-weight:700;font-size:clamp(1.7rem,3.6vw,2.6rem);letter-spacing:-.02em;display:flex;align-items:baseline;gap:.2em}
+  .tstat .n .u{font-size:.42em;color:var(--accent);letter-spacing:.04em}
+  .tstat .lab{color:var(--on-ink-muted);font-size:.82rem;margin-top:.4em}
+
+  .contact{position:relative;overflow:hidden}
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:clamp(2.4rem,5vw,4rem)}
+  .contact-lead h2{font-size:clamp(2.4rem,9vw,6.4rem);letter-spacing:-.035em;line-height:.94;text-transform:uppercase}
+  .contact-lead h2 .ac{color:var(--accent)}
+  .contact-lead p{margin-top:1.4rem;max-width:38ch;color:var(--muted);font-size:clamp(1rem,1.5vw,1.15rem)}
+  .phone-block{margin-top:clamp(1.8rem,4vw,2.6rem);display:inline-flex;flex-direction:column}
+  .phone-block .lbl{font-family:var(--font-display);font-weight:500;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+  .phone-block a{font-family:var(--font-display);font-weight:700;font-size:clamp(1.8rem,4.5vw,3.2rem);letter-spacing:-.02em;display:inline-flex;align-items:center;gap:.4em;margin-top:.2em;transition:color .25s}
+  .phone-block a:hover{color:var(--accent)}
+  .phone-block a .ico{width:.8em;height:.8em;color:var(--accent)}
+
+  .contact-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+  .cact{background:var(--paper);padding:clamp(1.4rem,3vw,1.9rem);display:flex;flex-direction:column;gap:1rem;justify-content:space-between;min-height:150px;transition:background .3s,transform .3s;position:relative}
+  .cact:hover{background:var(--ink);transform:translateY(-2px)}
+  .cact:hover *{color:var(--on-ink)!important}
+  .cact:hover .cact-ic{color:var(--accent)!important}
+  .cact-top{display:flex;align-items:center;justify-content:space-between}
+  .cact-ic{width:30px;height:30px;color:var(--ink);transition:color .3s}
+  .cact-ar{width:18px;height:18px;color:var(--muted);transition:transform .3s,color .3s}
+  .cact:hover .cact-ar{transform:translate(3px,-3px)}
+  .cact .ct-k{font-family:var(--font-display);font-weight:600;font-size:1.05rem}
+  .cact .ct-v{color:var(--muted);font-size:.8rem;margin-top:.2em;word-break:break-word}
+  .cact.line-c:hover{background:#06C755}
+  .cact.fb-c:hover{background:#1877F2}
+  .cact .soon-tag{position:absolute;top:.9rem;right:.9rem;font-family:var(--font-display);font-weight:600;font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);border:1px solid var(--accent);padding:.2em .45em}
+
+  footer{background:var(--ink);color:var(--on-ink);position:relative;overflow:hidden;padding-block:clamp(3rem,6vw,5rem) clamp(1.6rem,3vw,2.2rem)}
+  footer .gridbg-ink{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.35}
+  footer .gridbg-ink .gl{stroke:var(--on-ink-line);stroke-width:1;vector-effect:non-scaling-stroke}
+  footer .wrap{position:relative;z-index:1}
+  .foot-top{display:grid;grid-template-columns:1fr;gap:clamp(2rem,4vw,3rem);padding-bottom:clamp(2.4rem,5vw,3.4rem);border-bottom:1px solid var(--on-ink-line)}
+  .foot-brand{display:flex;align-items:center;gap:.8rem;font-family:var(--font-display);font-weight:700;font-size:1.5rem;color:var(--on-ink)}
+  .foot-brand .node-mark{width:34px;height:34px;flex:none}
+  .foot-mega{font-family:var(--font-display);font-weight:700;font-size:clamp(2.4rem,11vw,7rem);letter-spacing:-.04em;line-height:.9;text-transform:uppercase;color:var(--on-ink);margin-top:1rem}
+  .foot-mega .ac{color:var(--accent);-webkit-text-stroke:0}
+  .foot-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.6rem}
+  .fcol h4{font-family:var(--font-display);font-weight:500;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+  .fcol a,.fcol p{display:block;color:var(--on-ink-muted);font-size:.88rem;padding:.3em 0;transition:color .25s}
+  .fcol a:hover{color:var(--on-ink)}
+  .foot-bottom{padding-top:1.6rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+  .foot-bottom .coord{color:var(--on-ink-muted)}
+  .credit{font-family:var(--font-display);font-size:.78rem;color:var(--on-ink-muted)}
+  .credit a{color:var(--on-ink);border-bottom:1px solid var(--accent);padding-bottom:1px;transition:color .25s}
+  .credit a:hover{color:var(--accent)}
+
+  @media (min-width:760px){
+    .welcome-grid{grid-template-columns:1fr 1fr}
+    .visit-grid{grid-template-columns:.9fr 1.1fr;align-items:start}
+    .contact-grid{grid-template-columns:1fr 1fr;align-items:end}
+    .foot-top{grid-template-columns:1.2fr 1fr}
+  }
+  @media (max-width:759px){
+    .nav-desktop{display:none}
+    .burger{display:flex}
+    .hero-meta .cell{flex:1 1 50%;border-right:none;border-bottom:1px solid var(--line);padding:1rem 0 .8rem}
+    .hero-meta .cell:nth-child(odd){padding-right:1rem;border-right:1px solid var(--line)}
+    .svc{grid-template-columns:auto 1fr;gap:.8rem 1.2rem}
+    .svc-mark{display:none}
+    .hours-grid{grid-template-columns:repeat(4,1fr)}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation-duration:.001s!important;animation-delay:0s!important;transition-duration:.001s!important;scroll-behavior:auto!important}
+    .gline.v,.gline.h{stroke-dasharray:none;stroke-dashoffset:0}
+    .hl.draw{stroke-dasharray:none;stroke-dashoffset:0}
+    .hnode,.stars svg,.hpulse{opacity:1!important;transform:none!important}
+    h1.hero-title .ln > span{transform:none!important}
+    .hero-eyebrow,.hero-sub,.hero-meta{opacity:1!important;transform:none!important}
+    .rv{opacity:1!important;transform:none!important}
+  }
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#ff4d2e;--bk-accent-ink:#ffffff;--bk-ink:#0b0b0d;--bk-panel:#f4f2eb;--bk-muted:rgba(11,11,13,0.6);--bk-line:rgba(11,11,13,0.14);--bk-serif:Georgia, "Times New Roman", serif;--bk-sans:"Space Grotesk", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="gridbg" aria-hidden="true">
+  <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+    <line class="gline v" x1="16.6" y1="0" x2="16.6" y2="100"/>
+    <line class="gline v" x1="50" y1="0" x2="50" y2="100"/>
+    <line class="gline v" x1="83.3" y1="0" x2="83.3" y2="100"/>
+    <line class="gline h" x1="0" y1="33.3" x2="100" y2="33.3"/>
+    <line class="gline h" x1="0" y1="66.6" x2="100" y2="66.6"/>
+  </svg>
+</div>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Asoke Dental Clinic, home">
+      <span class="node-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><path d="M16 2v28M2 16h28" stroke="currentColor" stroke-width="1"/><circle cx="16" cy="16" r="5" fill="none" stroke="#FF4D2E" stroke-width="2.4"/></svg>
+      </span>
+      <span>Asoke&nbsp;Dental</span>
+    </a>
+    <nav class="nav-desktop" aria-label="Primary">
+      <div class="navlinks">
+        <a href="#welcome">English Care</a>
+        <a href="#services">Services</a>
+        <a href="#visiting">Visiting</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="tel:+66854496414">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        Call now
+      </a>
+    </nav>
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+  <a href="#welcome"><span>English Care</span><span class="idx">N&middot;01</span></a>
+  <a href="#services"><span>Services</span><span class="idx">N&middot;02</span></a>
+  <a href="#visiting"><span>Visiting</span><span class="idx">N&middot;03</span></a>
+  <a href="#reviews"><span>Reviews</span><span class="idx">N&middot;04</span></a>
+  <a href="#contact"><span>Contact</span><span class="idx">N&middot;05</span></a>
+  <a class="mm-cta" href="tel:+66854496414"><span>Call +66 85 449 6414</span><span class="idx">&rarr;</span></a>
+</nav>
+
+<main id="main">
+<span id="top"></span>
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-grid" aria-hidden="true">
+    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+      <line class="hl draw" style="--len:1200" x1="0" y1="300" x2="1200" y2="300"/>
+      <line class="hl draw d2" style="--len:1200" x1="0" y1="560" x2="1200" y2="560"/>
+      <line class="hl draw" style="--len:800" x1="320" y1="0" x2="320" y2="800"/>
+      <line class="hl draw d2" style="--len:800" x1="780" y1="0" x2="780" y2="800"/>
+      <line class="hl draw d3" style="--len:980" x1="120" y1="760" x2="1100" y2="40"/>
+      <circle class="hnode n1" cx="320" cy="300" r="7"/>
+      <circle class="hnode n2" cx="780" cy="300" r="7"/>
+      <circle class="hnode n3" cx="320" cy="560" r="7"/>
+      <circle class="hnode core" cx="780" cy="560" r="11"/>
+      <circle class="hpulse" cx="780" cy="560" r="11"/>
+    </svg>
+  </div>
+
+  <div class="wrap hero-content">
+    <div class="hero-eyebrow mono">
+      <span class="pill"><span class="live"></span>English spoken here</span>
+      <span class="coord">13.7376&deg; N &middot; 100.5601&deg; E</span>
+      <span class="coord">Asok &middot; Soi 21 &middot; Bangkok</span>
+    </div>
+
+    <h1 class="hero-title" id="hero-title">
+      <span class="ln"><span>Gentle</span></span>
+      <span class="ln"><span class="stroke">dentistry</span></span>
+      <span class="ln"><span>in <span class="accent">English</span>.</span></span>
+    </h1>
+
+    <div class="hero-sub">
+      <p>Careful, unhurried dental care at Bangkok's busiest interchange. International patients <b>welcomed in English</b> &mdash; right where the BTS lines cross at Asok.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+66854496414">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Call the clinic
+        </a>
+        <button class="btn btn-book" id="book-hero" type="button" aria-label="Online booking coming soon">
+          Book online
+          <span class="soon">Soon</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-meta">
+      <div class="cell">
+        <div class="k">4.9<span class="u">/5</span></div>
+        <div class="l coord">Google rating &middot; 54 reviews</div>
+      </div>
+      <div class="cell">
+        <div class="k">Mon&ndash;Sat</div>
+        <div class="l coord">Open six days &middot; closes 6 pm</div>
+      </div>
+      <div class="cell">
+        <div class="k">Asok</div>
+        <div class="l coord">Soi 21 interchange &middot; central</div>
+      </div>
+      <div class="cell">
+        <div class="k">EN<span class="u">&middot;spoken</span></div>
+        <div class="l coord">Expats &amp; visitors welcome</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="welcome sec-pad" id="welcome" aria-labelledby="welcome-h">
+  <div class="gridbg-ink" aria-hidden="true">
+    <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+      <line class="gl" x1="25" y1="0" x2="25" y2="100"/><line class="gl" x1="75" y1="0" x2="75" y2="100"/>
+      <line class="gl" x1="0" y1="50" x2="100" y2="50"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <span class="node-label" style="top:clamp(28px,5vw,52px);right:var(--gut)"><span class="ring"></span>NODE 01 / EN</span>
+    <div class="sec-head rv">
+      <span class="sec-tag mono"><span class="dot"></span>You'll be understood</span>
+    </div>
+    <div class="welcome-grid">
+      <div class="welcome-lead">
+        <h2 class="rv" id="welcome-h">New in Bangkok?<br><span class="hl-ac">We speak</span><br>your language.</h2>
+        <p class="big-quote rv d1">Patients tell us the same thing: the treatment is <b>gentle, careful and never rushed</b> &mdash; and every step is explained clearly in English.</p>
+        <div class="lang-strip rv d2" aria-label="Languages spoken">
+          <span class="chip on">English</span>
+          <span class="chip">&#3616;&#3634;&#3625;&#3634;&#3652;&#3607;&#3618;</span>
+          <span class="chip">Friendly &amp; clear</span>
+        </div>
+      </div>
+      <div class="welcome-cards rv d2" aria-label="Why patients choose us">
+        <article class="wcard">
+          <div>
+            <div class="wc-no mono">A&middot;01</div>
+            <svg class="wc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div><h3>Explained in English</h3><p>Every diagnosis and option, described clearly &mdash; no guessing, no language barrier.</p></div>
+        </article>
+        <article class="wcard">
+          <div>
+            <div class="wc-no mono">A&middot;02</div>
+            <svg class="wc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div><h3>Gentle &amp; unhurried</h3><p>A calm, careful chair-side manner that nervous and first-time patients notice.</p></div>
+        </article>
+        <article class="wcard">
+          <div>
+            <div class="wc-no mono">A&middot;03</div>
+            <svg class="wc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V5z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div><h3>Trusted by locals</h3><p>A 4.9-star neighbourhood clinic, rated by expats and Bangkok residents alike.</p></div>
+        </article>
+        <article class="wcard">
+          <div>
+            <div class="wc-no mono">A&middot;04</div>
+            <svg class="wc-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/></svg>
+          </div>
+          <div><h3>Right at Asok</h3><p>At the Soi 21 interchange &mdash; the easiest place in the city to reach by BTS.</p></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services sec-pad" id="services" aria-labelledby="services-h">
+  <div class="wrap">
+    <span class="node-label" style="top:clamp(28px,5vw,52px);right:var(--gut)"><span class="ring"></span>NODE 02 / CARE</span>
+    <div class="sec-head rv">
+      <span class="sec-tag mono"><span class="dot"></span>What we do</span>
+    </div>
+    <h2 class="rv" id="services-h" style="font-size:clamp(2rem,7vw,5rem);letter-spacing:-.03em;line-height:.95;margin-bottom:clamp(2rem,4vw,3rem)">Honest, everyday<br>dentistry.</h2>
+
+    <div class="svc-list">
+      <article class="svc rv">
+        <div class="svc-no mono">01</div>
+        <div class="svc-main">
+          <h3>General dentistry</h3>
+          <p>Routine check-ups, friendly advice and a clear plan for keeping your teeth healthy &mdash; the steady, attentive care that brings patients back.</p>
+          <div class="svc-tags"><span>Check-ups</span><span>Consultations</span><span>Oral health</span></div>
+        </div>
+        <svg class="svc-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M32 4v56M4 32h56"/><circle cx="32" cy="32" r="11"/></svg>
+      </article>
+
+      <article class="svc rv d1">
+        <div class="svc-no mono">02</div>
+        <div class="svc-main">
+          <h3>Cleaning &amp; scaling</h3>
+          <p>A thorough, gentle professional clean to remove plaque and stains &mdash; leaving your mouth fresh, bright and properly cared for.</p>
+          <div class="svc-tags"><span>Scaling</span><span>Polishing</span><span>Plaque removal</span></div>
+        </div>
+        <svg class="svc-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 16 48 48M48 16 16 48"/><rect x="20" y="20" width="24" height="24"/></svg>
+      </article>
+
+      <article class="svc rv d2">
+        <div class="svc-no mono">03</div>
+        <div class="svc-main">
+          <h3>Fillings</h3>
+          <p>Comfortable, tooth-coloured fillings to treat cavities and restore a tooth &mdash; carried out carefully, with every step explained as we go.</p>
+          <div class="svc-tags"><span>Cavities</span><span>Restorations</span><span>Tooth-coloured</span></div>
+        </div>
+        <svg class="svc-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="32" cy="32" r="26"/><circle cx="32" cy="32" r="9"/><path d="M32 6v12M32 46v12M6 32h12M46 32h12"/></svg>
+      </article>
+    </div>
+
+    <div class="svc-foot rv">
+      <p>Not sure what you need? Call us and we'll talk it through in plain English before you book.</p>
+      <a class="btn btn-ink" href="tel:+66854496414">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        Ask a question
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="visiting sec-pad" id="visiting" aria-labelledby="visiting-h">
+  <div class="wrap">
+    <span class="node-label" style="top:clamp(28px,5vw,52px);right:var(--gut)"><span class="ring"></span>NODE 03 / MAP</span>
+    <div class="sec-head rv">
+      <span class="sec-tag mono"><span class="dot"></span>Find us &amp; hours</span>
+    </div>
+
+    <div class="visit-grid">
+      <div class="map-panel rv" role="img" aria-label="Schematic map of the Asok / Soi 21 interchange showing the clinic location where the transit lines cross.">
+        <svg viewBox="0 0 400 330" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <line class="map-rd" x1="0" y1="90" x2="400" y2="90"/>
+          <line class="map-rd" x1="0" y1="240" x2="400" y2="240"/>
+          <line class="map-rd main" x1="0" y1="158" x2="400" y2="158"/>
+          <line class="map-rd" x1="110" y1="0" x2="110" y2="330"/>
+          <line class="map-rd" x1="300" y1="0" x2="300" y2="330"/>
+          <line class="map-rd main" x1="200" y1="0" x2="200" y2="330"/>
+          <line class="map-rail" x1="0" y1="158" x2="400" y2="158"/>
+          <line class="map-rail" x1="200" y1="0" x2="200" y2="330"/>
+        </svg>
+        <span class="map-cross" style="left:110px;top:90px"></span>
+        <span class="map-cross" style="left:300px;top:240px"></span>
+        <span class="map-cross" style="left:300px;top:90px"></span>
+        <span class="map-tag" style="left:14px;top:10px">Sukhumvit Rd</span>
+        <span class="map-tag" style="left:206px;top:10px">Asok&nbsp;&middot;&nbsp;Soi&nbsp;21</span>
+        <span class="map-tag" style="right:12px;bottom:10px">Petchaburi Rd &uarr;</span>
+        <div class="map-here">
+          <div class="pin"></div>
+          <div class="lbl">Asoke Dental</div>
+          <div class="sub">You are here</div>
+        </div>
+      </div>
+
+      <div class="visit-info">
+        <h2 class="rv" id="visiting-h">Where the<br>lines cross.</h2>
+        <p class="addr rv d1">Asoke Dental Clinic sits at the <b>Asok / Soi 21 interchange</b> &mdash; Bangkok's busiest crossroads and one of the easiest spots in the city to reach by train.</p>
+
+        <div class="info-rows rv d2">
+          <div class="irow">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/></svg>
+            <div><div class="ttl">Asok / Soi 21, Bangkok</div><div class="val">Sukhumvit interchange &middot; central expat hub</div></div>
+            <span class="badge">Central</span>
+          </div>
+          <div class="irow">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <div><div class="ttl" id="hours-ttl">Monday &ndash; Saturday</div><div class="val">Open six days a week &middot; closes 6:00 pm</div></div>
+            <span class="badge open" id="open-badge">Open Sat</span>
+          </div>
+          <div class="irow">
+            <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            <div><div class="ttl">+66 85 449 6414</div><div class="val">English spoken &mdash; call to ask or arrange a visit</div></div>
+            <a class="badge" href="tel:+66854496414" style="text-decoration:none">Call</a>
+          </div>
+        </div>
+
+        <div class="hours-grid rv d3" aria-label="Opening hours by day">
+          <div class="hcol"><div class="d">Mon</div><div class="t">&ndash;6 pm</div></div>
+          <div class="hcol"><div class="d">Tue</div><div class="t">&ndash;6 pm</div></div>
+          <div class="hcol"><div class="d">Wed</div><div class="t">&ndash;6 pm</div></div>
+          <div class="hcol"><div class="d">Thu</div><div class="t">&ndash;6 pm</div></div>
+          <div class="hcol"><div class="d">Fri</div><div class="t">&ndash;6 pm</div></div>
+          <div class="hcol"><div class="d">Sat</div><div class="t">&ndash;6 pm</div></div>
+          <div class="hcol cls"><div class="d">Sun</div><div class="t">Closed</div></div>
+        </div>
+
+        <div class="visit-cta rv d3">
+          <a class="btn btn-primary" href="tel:+66854496414">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            Call +66 85 449 6414
+          </a>
+          <button class="btn btn-book" id="book-visit" type="button" aria-label="Online booking coming soon">
+            Book online
+            <span class="soon">Soon</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust sec-pad" id="reviews" aria-labelledby="reviews-h">
+  <div class="gridbg-ink" aria-hidden="true">
+    <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+      <line class="gl" x1="33.3" y1="0" x2="33.3" y2="100"/><line class="gl" x1="66.6" y1="0" x2="66.6" y2="100"/>
+      <line class="gl" x1="0" y1="50" x2="100" y2="50"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="sec-head rv" style="justify-content:center">
+      <span class="sec-tag mono"><span class="dot"></span>What patients say</span>
+    </div>
+    <div class="rv">
+      <div class="rating-mega" id="reviews-h" aria-label="Rated 4.9 out of 5">4.9<span class="of">/5</span></div>
+    </div>
+    <div class="stars rv" id="stars" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01z"/></svg>
+    </div>
+    <p class="trust-sub rv d1"><b>4.9 stars</b> from <b>54 reviews</b> on Google</p>
+    <p class="trust-line rv d2">A consistently high rating from the people who matter most &mdash; the patients, expats and visitors who've sat in our chair.</p>
+
+    <div class="trust-stats rv d2">
+      <div class="tstat">
+        <div class="n">4.9<span class="u">/ 5</span></div>
+        <div class="lab">Average Google rating</div>
+      </div>
+      <div class="tstat">
+        <div class="n">54<span class="u">reviews</span></div>
+        <div class="lab">From real patients</div>
+      </div>
+      <div class="tstat">
+        <div class="n">EN<span class="u">spoken</span></div>
+        <div class="lab">Welcomed in English</div>
+      </div>
+      <div class="tstat">
+        <div class="n">6<span class="u">days</span></div>
+        <div class="lab">Open Monday to Saturday</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact sec-pad" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <span class="node-label" style="top:clamp(28px,5vw,52px);right:var(--gut)"><span class="ring"></span>NODE 04 / SAY HI</span>
+    <div class="sec-head rv">
+      <span class="sec-tag mono"><span class="dot"></span>Get in touch</span>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-lead">
+        <h2 class="rv" id="contact-h">Let's get<br>you <span class="ac">booked</span>.</h2>
+        <p class="rv d1">Call us in English, or reach out on the channels below. We'll help you find a time that works.</p>
+        <div class="phone-block rv d2">
+          <span class="lbl">Call the clinic</span>
+          <a href="tel:+66854496414">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            +66 85 449 6414
+          </a>
+        </div>
+        <div class="rv d3" style="margin-top:clamp(1.6rem,3vw,2.2rem)">
+          <button class="btn btn-book" id="book-contact" type="button" aria-label="Online booking coming soon" style="font-size:.92rem;padding:1em 1.5em">
+            Book online
+            <span class="soon">Coming soon</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="contact-actions rv d2" aria-label="Contact channels">
+        <!-- LINE add-friend URL not yet provided. Placeholder href="#". Replace with https://line.me/ti/p/~<id> when available. -->
+        <a class="cact line-c" href="#" aria-label="Add us on LINE (coming soon)">
+          <span class="soon-tag">Soon</span>
+          <div class="cact-top">
+            <svg class="cact-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.69 2 10.25c0 4.09 3.55 7.51 8.34 8.16.32.07.77.21.88.49.1.25.06.64.03.9l-.14.85c-.04.25-.2.99.87.54s5.77-3.4 7.87-5.82C21.39 13.71 22 12.05 22 10.25 22 5.69 17.52 2 12 2z"/></svg>
+            <svg class="cact-ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </div>
+          <div><div class="ct-k">LINE</div><div class="ct-v">Chat with us on LINE</div></div>
+        </a>
+
+        <!-- Facebook page URL not publicly listed. Placeholder href="#". Replace with https://facebook.com/<page> when available. -->
+
+        <a class="cact fb-c" href="#" aria-label="Visit our Facebook page">
+          <div class="cact-top">
+            <svg class="cact-ic" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+            <svg class="cact-ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </div>
+          <div><div class="ct-k">Facebook</div><div class="ct-v">Follow our page for updates</div></div>
+        </a>
+
+        <a class="cact" href="tel:+66854496414" aria-label="Call Asoke Dental Clinic">
+          <div class="cact-top">
+            <svg class="cact-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            <svg class="cact-ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </div>
+          <div><div class="ct-k">Phone</div><div class="ct-v">+66 85 449 6414</div></div>
+        </a>
+
+        <a class="cact" href="#visiting" aria-label="See location and directions">
+          <div class="cact-top">
+            <svg class="cact-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/></svg>
+            <svg class="cact-ar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </div>
+          <div><div class="ct-k">Location</div><div class="ct-v">Asok / Soi 21 &mdash; see the map</div></div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer aria-labelledby="foot-h">
+  <div class="gridbg-ink" aria-hidden="true">
+    <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+      <line class="gl" x1="25" y1="0" x2="25" y2="100"/><line class="gl" x1="50" y1="0" x2="50" y2="100"/><line class="gl" x1="75" y1="0" x2="75" y2="100"/>
+      <line class="gl" x1="0" y1="50" x2="100" y2="50"/>
+    </svg>
+  </div>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="foot-brand">
+          <span class="node-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M16 2v28M2 16h28" stroke="currentColor" stroke-width="1"/><circle cx="16" cy="16" r="5" fill="none" stroke="#FF4D2E" stroke-width="2.4"/></svg>
+          </span>
+          Asoke Dental
+        </div>
+        <h2 class="foot-mega" id="foot-h">Care at the<br><span class="ac">crossroads.</span></h2>
+      </div>
+      <div class="foot-cols">
+        <div class="fcol">
+          <h4>Visit</h4>
+          <p>Asok / Soi 21</p>
+          <p>Bangkok, Thailand</p>
+          <p>Mon&ndash;Sat &middot; closes 6 pm</p>
+          <a href="#visiting">See the map &rarr;</a>
+        </div>
+        <div class="fcol">
+          <h4>Contact</h4>
+          <a href="tel:+66854496414">+66 85 449 6414</a>
+          <a href="#" aria-label="LINE (coming soon)">LINE &rarr;</a> <!-- LINE placeholder: replace href with add-friend URL -->
+          <a href="#" aria-label="Facebook page">Facebook &rarr;</a> <!-- Facebook placeholder: replace href with page URL -->
+        </div>
+        <div class="fcol">
+          <h4>Care</h4>
+          <a href="#services">General dentistry</a>
+          <a href="#services">Cleaning</a>
+          <a href="#services">Fillings</a>
+          <a href="#welcome">English welcome</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="coord">&copy; <span id="yr">2026</span> Asoke Dental Clinic &middot; 13.7376&deg; N, 100.5601&deg; E &middot; Asok, Bangkok</span>
+      <span class="credit">Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener">Stellar Haus Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite">Online booking is coming soon &mdash; please call us to arrange a visit.</div>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var yr = document.getElementById('yr'); if(yr) yr.textContent = new Date().getFullYear();
+
+  var burger = document.querySelector('.burger');
+  var menu = document.getElementById('mobile-menu');
+  function setMenu(open){
+    burger.setAttribute('aria-expanded', open ? 'true':'false');
+    burger.setAttribute('aria-label', open ? 'Close menu':'Open menu');
+    menu.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden':'';
+  }
+  if(burger && menu){
+    burger.addEventListener('click', function(){ setMenu(!menu.classList.contains('open')); });
+    menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+    document.addEventListener('keydown', function(e){ if(e.key==='Escape' && menu.classList.contains('open')) setMenu(false); });
+  }
+
+  var revs = document.querySelectorAll('.rv');
+  if(reduce || !('IntersectionObserver' in window)){
+    revs.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    revs.forEach(function(el){ io.observe(el); });
+  }
+
+  var stars = document.getElementById('stars');
+  if(stars){
+    if(reduce || !('IntersectionObserver' in window)){
+      stars.classList.add('lit');
+    } else {
+      var so = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){ stars.classList.add('lit'); so.unobserve(en.target); } });
+      }, {threshold:0.5});
+      so.observe(stars);
+    }
+  }
+
+  var toast = document.getElementById('toast');
+  var toastTimer = null;
+  function showToast(){
+    if(!toast) return;
+    toast.classList.add('show');
+    if(toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 3600);
+  }
+  ['book-hero','book-visit','book-contact'].forEach(function(id){
+    var b = document.getElementById(id);
+    if(b) b.addEventListener('click', showToast);
+  });
+
+  try {
+    var badge = document.getElementById('open-badge');
+    if(badge){
+      var now = new Date();
+      var day = now.getDay();
+      var hr  = now.getHours();
+      var openNow = (day >= 1 && day <= 6) && (hr >= 9 && hr < 18);
+      if(openNow){ badge.textContent = 'Open now'; }
+      else if(day === 0){ badge.textContent = 'Closed Sun'; badge.classList.remove('open'); }
+      else { badge.textContent = (hr < 9) ? 'Opens 9 am' : 'Closed now'; badge.classList.remove('open'); }
+    }
+  } catch(e){}
+})();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+66854496414", CHAN="", CHANLABEL="";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>

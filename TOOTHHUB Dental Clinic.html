@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TOOTHHUB Dental Clinic — English-Speaking Dentist in Bangkok (Chong Nonsi)</title>
+<meta name="description" content="TOOTHHUB Dental Clinic on Chan Road, Chong Nonsi, Bangkok. Rated 5.0 stars across 482 reviews, with an English-speaking team and easy booking. General dentistry, orthodontics and cleaning. Open daily until 8pm." />
+<meta name="theme-color" content="#0A66FF" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230A66FF'/%3E%3Ccircle cx='16' cy='16' r='4' fill='white'/%3E%3Ccircle cx='8' cy='9' r='2.4' fill='white'/%3E%3Ccircle cx='24' cy='9' r='2.4' fill='white'/%3E%3Ccircle cx='8' cy='23' r='2.4' fill='white'/%3E%3Ccircle cx='24' cy='23' r='2.4' fill='white'/%3E%3Cg stroke='white' stroke-width='1.4' opacity='0.85'%3E%3Cline x1='16' y1='16' x2='8' y2='9'/%3E%3Cline x1='16' y1='16' x2='24' y2='9'/%3E%3Cline x1='16' y1='16' x2='8' y2='23'/%3E%3Cline x1='16' y1='16' x2='24' y2='23'/%3E%3C/g%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --blue: #0A66FF;
+    --blue-deep: #0846B3;
+    --blue-soft: #E8F0FF;
+    --blue-glow: rgba(10, 102, 255, 0.14);
+    --ink: #10141C;
+    --graphite: #2A3340;
+    --slate: #5A6573;
+    --mute: #8A93A2;
+    --line: #E4E9F1;
+    --line-soft: #EEF2F8;
+    --white: #FFFFFF;
+    --paper: #F7F9FD;
+    --paper-2: #FBFCFE;
+    --amber: #FFB020;
+    --radius: 18px;
+    --radius-sm: 12px;
+    --radius-lg: 28px;
+    --shadow-sm: 0 1px 2px rgba(16,20,28,0.04), 0 4px 16px rgba(16,20,28,0.04);
+    --shadow-md: 0 4px 12px rgba(16,20,28,0.05), 0 18px 50px rgba(10,102,255,0.07);
+    --shadow-lg: 0 10px 24px rgba(16,20,28,0.06), 0 40px 90px rgba(10,102,255,0.12);
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --maxw: 1180px;
+    --gut: clamp(20px, 5vw, 64px);
+    --sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+    --body: 'Manrope', system-ui, -apple-system, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    font-family: var(--body);
+    color: var(--graphite);
+    background: var(--white);
+    line-height: 1.65;
+    font-size: 17px;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, .nav-logo, .eyebrow, .stat-num { font-family: var(--sans); }
+
+  a { color: inherit; text-decoration: none; }
+
+  ::selection { background: var(--blue); color: #fff; }
+
+  .skip {
+    position: absolute; left: -999px; top: 0; z-index: 200;
+    background: var(--blue); color: #fff; padding: 12px 20px;
+    border-radius: 0 0 12px 0; font-weight: 600; font-family: var(--sans);
+  }
+  .skip:focus { left: 0; }
+
+  :focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  .wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gut); }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 9px;
+    font-size: 12.5px; font-weight: 600; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--blue);
+  }
+  .eyebrow::before {
+    content: ""; width: 22px; height: 1.5px; background: var(--blue);
+    display: inline-block;
+  }
+  .eyebrow.center::before { display: none; }
+
+  /* ============ NAV ============ */
+  header.nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    transition: background .4s var(--ease), box-shadow .4s var(--ease), border-color .4s var(--ease);
+    border-bottom: 1px solid transparent;
+  }
+  header.nav.scrolled {
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 4px 24px rgba(16,20,28,0.04);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 76px;
+  }
+  .nav-logo {
+    display: inline-flex; align-items: center; gap: 11px;
+    font-weight: 700; font-size: 19px; letter-spacing: -0.01em; color: var(--ink);
+  }
+  .nav-logo .mark { width: 34px; height: 34px; flex: none; }
+  .nav-logo b { color: var(--blue); font-weight: 700; }
+  .nav-links { display: flex; align-items: center; gap: 4px; }
+  .nav-links a.lnk {
+    font-family: var(--sans); font-size: 14.5px; font-weight: 500;
+    color: var(--graphite); padding: 10px 15px; border-radius: 10px;
+    transition: color .25s, background .25s; position: relative;
+  }
+  .nav-links a.lnk:hover { color: var(--blue); background: var(--blue-soft); }
+  .nav-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--sans); font-weight: 600; font-size: 14.5px;
+    background: var(--ink); color: #fff; padding: 12px 20px; border-radius: 12px;
+    transition: transform .25s var(--ease), background .25s, box-shadow .25s;
+    margin-left: 8px;
+  }
+  .nav-cta:hover { background: var(--blue); transform: translateY(-2px); box-shadow: 0 10px 24px var(--blue-glow); }
+  .nav-cta svg { width: 16px; height: 16px; }
+
+  .burger {
+    display: none; width: 46px; height: 46px; border: 1px solid var(--line);
+    background: rgba(255,255,255,0.7); border-radius: 12px; cursor: pointer;
+    align-items: center; justify-content: center; flex-direction: column; gap: 5px;
+  }
+  .burger span { width: 20px; height: 2px; background: var(--ink); border-radius: 2px; transition: transform .3s var(--ease), opacity .25s; }
+  .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* mobile menu sheet */
+  .m-sheet {
+    position: fixed; inset: 0 0 0 auto; width: min(86vw, 360px); z-index: 99;
+    background: #fff; box-shadow: -20px 0 60px rgba(16,20,28,0.16);
+    transform: translateX(100%); transition: transform .42s var(--ease);
+    padding: 100px 32px 40px; display: flex; flex-direction: column; gap: 6px;
+    border-left: 1px solid var(--line);
+  }
+  .m-sheet.open { transform: translateX(0); }
+  .m-sheet a.lnk {
+    font-family: var(--sans); font-size: 19px; font-weight: 500; color: var(--ink);
+    padding: 14px 0; border-bottom: 1px solid var(--line-soft); display: flex;
+    align-items: center; justify-content: space-between;
+  }
+  .m-sheet a.lnk span.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); opacity: 0; transition: opacity .25s; }
+  .m-sheet a.lnk:hover span.dot { opacity: 1; }
+  .m-sheet .m-cta {
+    margin-top: 18px; background: var(--blue); color: #fff; text-align: center;
+    padding: 16px; border-radius: 14px; font-family: var(--sans); font-weight: 600; font-size: 16px;
+  }
+  .scrim {
+    position: fixed; inset: 0; background: rgba(16,20,28,0.35); z-index: 98;
+    opacity: 0; visibility: hidden; transition: opacity .35s, visibility .35s;
+    backdrop-filter: blur(2px);
+  }
+  .scrim.show { opacity: 1; visibility: visible; }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative; padding: 150px 0 90px; overflow: hidden;
+    background:
+      radial-gradient(1200px 600px at 78% -8%, var(--blue-soft) 0%, rgba(232,240,255,0) 60%),
+      radial-gradient(900px 500px at 8% 105%, #EEF4FF 0%, rgba(238,244,255,0) 55%),
+      var(--white);
+  }
+  .hero::before {
+    content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background-image:
+      linear-gradient(var(--line-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size: 48px 48px;
+    -webkit-mask-image: radial-gradient(1000px 600px at 70% 20%, #000 0%, transparent 75%);
+    mask-image: radial-gradient(1000px 600px at 70% 20%, #000 0%, transparent 75%);
+    opacity: 0.65;
+  }
+  .hero-grid {
+    position: relative; z-index: 2;
+    display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(32px, 5vw, 72px);
+    align-items: center;
+  }
+  .hero-copy { max-width: 600px; }
+  .hero h1 {
+    font-size: clamp(40px, 6.6vw, 74px); line-height: 1.02; letter-spacing: -0.035em;
+    color: var(--ink); font-weight: 700; margin: 22px 0 0;
+  }
+  .hero h1 .accent { position: relative; color: var(--blue); white-space: nowrap; }
+  .hero h1 .accent::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0.06em; height: 0.14em;
+    background: linear-gradient(90deg, var(--blue) 0%, #5B9BFF 100%); border-radius: 4px;
+    transform: scaleX(0); transform-origin: left; opacity: 0.28;
+    animation: underdraw 1s var(--ease) 0.8s forwards;
+  }
+  @keyframes underdraw { to { transform: scaleX(1); } }
+  .hero p.lede {
+    font-size: clamp(17px, 2vw, 19.5px); color: var(--slate); margin: 26px 0 0;
+    max-width: 520px; line-height: 1.62;
+  }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px; cursor: pointer;
+    font-family: var(--sans); font-weight: 600; font-size: 15.5px; line-height: 1;
+    padding: 17px 26px; border-radius: 14px; border: 1px solid transparent;
+    transition: transform .25s var(--ease), box-shadow .3s var(--ease), background .25s, color .25s, border-color .25s;
+    position: relative; white-space: nowrap;
+  }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .btn-primary { background: var(--blue); color: #fff; box-shadow: 0 10px 24px var(--blue-glow); }
+  .btn-primary:hover { background: var(--blue-deep); transform: translateY(-3px); box-shadow: 0 16px 34px rgba(10,102,255,0.28); }
+  .btn-ghost { background: #fff; color: var(--ink); border-color: var(--line); box-shadow: var(--shadow-sm); }
+  .btn-ghost:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-3px); box-shadow: var(--shadow-md); }
+  .btn-soon {
+    background: var(--blue-soft); color: var(--blue-deep); border: 1px dashed rgba(10,102,255,0.4);
+    cursor: not-allowed;
+  }
+  .btn-soon:hover { background: #DCE8FF; }
+  .btn-soon .soon-tag {
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    background: var(--blue); color: #fff; padding: 3px 7px; border-radius: 7px; margin-left: 2px;
+  }
+
+  .hero-trust {
+    display: flex; align-items: center; gap: 16px; margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  .hero-trust .stars { display: inline-flex; gap: 2px; }
+  .hero-trust .stars svg { width: 19px; height: 19px; }
+  .hero-trust .rate-txt { font-size: 14.5px; color: var(--slate); }
+  .hero-trust .rate-txt b { color: var(--ink); font-family: var(--sans); font-weight: 600; }
+  .hero-trust .divid { width: 1px; height: 26px; background: var(--line); }
+  .hero-trust .lang-pill {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 600;
+    font-family: var(--sans); color: var(--graphite); background: #fff;
+    border: 1px solid var(--line); padding: 8px 14px; border-radius: 999px; box-shadow: var(--shadow-sm);
+  }
+  .hero-trust .lang-pill svg { width: 16px; height: 16px; color: var(--blue); }
+
+  /* hero visual — network */
+  .hero-visual { position: relative; min-height: 480px; }
+  .network-stage {
+    position: relative; width: 100%; aspect-ratio: 1 / 1; max-width: 540px; margin-inline: auto;
+  }
+  .network-svg { width: 100%; height: 100%; display: block; overflow: visible; }
+
+  .edge { fill: none; stroke: var(--blue); stroke-width: 1.4; stroke-linecap: round; opacity: 0.5; }
+  .edge.dim { stroke: #B9CEF2; opacity: 0.45; }
+  .node-dot { fill: #fff; stroke: var(--blue); stroke-width: 2; }
+  .node-dot.soft { stroke: #9CC0F5; }
+  .hub-ring { fill: none; stroke: var(--blue); stroke-width: 1.5; opacity: 0.35; }
+  .hub-core { fill: var(--blue); }
+  .pulse-dot { fill: var(--blue); }
+  .node-label {
+    font-family: var(--sans); font-size: 12.5px; font-weight: 600; fill: var(--graphite);
+  }
+
+  .hub-card {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+    background: #fff; border-radius: 18px; box-shadow: var(--shadow-lg);
+    border: 1px solid var(--line); padding: 16px 20px; text-align: center;
+    min-width: 168px; z-index: 5;
+  }
+  .hub-card .hub-mark {
+    width: 46px; height: 46px; margin: 0 auto 8px; display: block;
+  }
+  .hub-card .hub-name { font-family: var(--sans); font-weight: 700; font-size: 16px; color: var(--ink); letter-spacing: -0.01em; }
+  .hub-card .hub-sub { font-size: 12px; color: var(--mute); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin-top: 2px; }
+
+  /* floating chips around hub */
+  .chip-float {
+    position: absolute; background: #fff; border: 1px solid var(--line);
+    border-radius: 12px; padding: 9px 13px; font-family: var(--sans);
+    font-size: 12.5px; font-weight: 600; color: var(--graphite);
+    box-shadow: var(--shadow-md); display: inline-flex; align-items: center; gap: 7px;
+    z-index: 6; white-space: nowrap;
+  }
+  .chip-float i { width: 8px; height: 8px; border-radius: 50%; background: var(--blue); flex: none; }
+  .chip-float.c1 { top: 6%; left: 2%; }
+  .chip-float.c2 { top: 20%; right: -2%; }
+  .chip-float.c3 { bottom: 16%; left: -4%; }
+  .chip-float.c4 { bottom: 4%; right: 6%; }
+
+  .float-anim { animation: bob 6s ease-in-out infinite; }
+  .float-anim.d1 { animation-delay: -1.5s; }
+  .float-anim.d2 { animation-delay: -3s; }
+  .float-anim.d3 { animation-delay: -4.5s; }
+  @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+
+  /* marquee strip */
+  .strip {
+    position: relative; z-index: 2; margin-top: 70px; border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line); padding: 22px 0; overflow: hidden;
+    background: var(--paper-2);
+  }
+  .strip-track { display: flex; gap: 56px; width: max-content; animation: slide 32s linear infinite; }
+  .strip-item {
+    display: inline-flex; align-items: center; gap: 12px; font-family: var(--sans);
+    font-weight: 600; font-size: 15px; color: var(--graphite); white-space: nowrap;
+  }
+  .strip-item svg { width: 18px; height: 18px; color: var(--blue); flex: none; }
+  .strip-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--blue); opacity: 0.45; }
+  @keyframes slide { to { transform: translateX(-50%); } }
+
+  /* ============ SECTION SHELL ============ */
+  section { position: relative; }
+  .sec-head { max-width: 660px; margin-bottom: 56px; }
+  .sec-head.center { margin-inline: auto; text-align: center; }
+  .sec-head h2 {
+    font-size: clamp(30px, 4.4vw, 46px); line-height: 1.06; letter-spacing: -0.03em;
+    color: var(--ink); font-weight: 700; margin: 16px 0 0;
+  }
+  .sec-head p { font-size: 17.5px; color: var(--slate); margin: 18px 0 0; line-height: 1.6; }
+
+  /* ============ WELCOME (hook) ============ */
+  .welcome { padding: clamp(80px, 11vw, 130px) 0; background: var(--white); }
+  .welcome-grid {
+    display: grid; grid-template-columns: 0.95fr 1.05fr; gap: clamp(40px, 6vw, 80px); align-items: center;
+  }
+  .welcome-vis { position: relative; }
+  .welcome-panel {
+    position: relative; background: linear-gradient(160deg, #0B2C66 0%, #0A66FF 100%);
+    border-radius: var(--radius-lg); padding: 44px; color: #fff; overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .welcome-panel::before {
+    content: ""; position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.16) 1.4px, transparent 1.6px);
+    background-size: 26px 26px; opacity: 0.5;
+    -webkit-mask-image: radial-gradient(120% 120% at 100% 0%, #000, transparent 70%);
+    mask-image: radial-gradient(120% 120% at 100% 0%, #000, transparent 70%);
+  }
+  .welcome-panel .wp-top {
+    position: relative; display: flex; align-items: center; gap: 10px; margin-bottom: 26px;
+  }
+  .welcome-panel .wp-top .globe { width: 38px; height: 38px; }
+  .welcome-panel .wp-top span { font-family: var(--sans); font-weight: 600; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.85; }
+  .welcome-panel .wp-quote {
+    position: relative; font-family: var(--sans); font-size: clamp(21px, 2.6vw, 27px);
+    line-height: 1.32; font-weight: 600; letter-spacing: -0.015em;
+  }
+  .welcome-panel .wp-sub { position: relative; margin-top: 20px; font-size: 15px; opacity: 0.86; line-height: 1.6; }
+  .welcome-panel .wp-langs {
+    position: relative; display: flex; gap: 8px; flex-wrap: wrap; margin-top: 26px;
+  }
+  .welcome-panel .wp-langs span {
+    font-family: var(--sans); font-size: 12.5px; font-weight: 600; padding: 7px 13px;
+    border-radius: 999px; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.22);
+  }
+
+  .welcome-points { display: flex; flex-direction: column; gap: 4px; }
+  .wpoint {
+    display: flex; gap: 18px; padding: 22px 0; border-bottom: 1px solid var(--line-soft);
+  }
+  .wpoint:last-child { border-bottom: 0; }
+  .wpoint .wp-ico {
+    width: 50px; height: 50px; flex: none; border-radius: 14px; background: var(--blue-soft);
+    display: flex; align-items: center; justify-content: center; color: var(--blue);
+    transition: transform .3s var(--ease), background .3s;
+  }
+  .wpoint:hover .wp-ico { transform: translateY(-3px) scale(1.04); background: #DCE8FF; }
+  .wpoint .wp-ico svg { width: 24px; height: 24px; }
+  .wpoint h3 { font-family: var(--sans); font-size: 18.5px; color: var(--ink); font-weight: 600; letter-spacing: -0.01em; }
+  .wpoint p { font-size: 15.5px; color: var(--slate); margin-top: 5px; line-height: 1.55; }
+
+  /* ============ SERVICES ============ */
+  .services { padding: clamp(80px, 11vw, 130px) 0; background: var(--paper); border-block: 1px solid var(--line); position: relative; overflow: hidden; }
+  .services::before {
+    content: ""; position: absolute; top: -10%; right: -6%; width: 460px; height: 460px;
+    background: radial-gradient(circle, var(--blue-glow), transparent 70%); pointer-events: none;
+  }
+  .svc-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px;
+  }
+  .svc-card {
+    position: relative; background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 34px 30px 30px; overflow: hidden; box-shadow: var(--shadow-sm);
+    transition: transform .4s var(--ease), box-shadow .4s var(--ease), border-color .4s;
+  }
+  .svc-card::after {
+    content: ""; position: absolute; left: 0; top: 0; height: 3px; width: 100%;
+    background: linear-gradient(90deg, var(--blue), #5B9BFF); transform: scaleX(0);
+    transform-origin: left; transition: transform .45s var(--ease);
+  }
+  .svc-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: rgba(10,102,255,0.3); }
+  .svc-card:hover::after { transform: scaleX(1); }
+  .svc-num {
+    font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--blue);
+    letter-spacing: 0.1em; opacity: 0.8;
+  }
+  .svc-icon {
+    width: 62px; height: 62px; margin: 16px 0 22px; border-radius: 16px;
+    background: var(--blue-soft); display: flex; align-items: center; justify-content: center;
+    color: var(--blue); transition: transform .4s var(--ease);
+  }
+  .svc-card:hover .svc-icon { transform: rotate(-6deg) scale(1.06); }
+  .svc-icon svg { width: 30px; height: 30px; }
+  .svc-card h3 { font-family: var(--sans); font-size: 22px; color: var(--ink); font-weight: 600; letter-spacing: -0.015em; }
+  .svc-card p { font-size: 15.5px; color: var(--slate); margin-top: 12px; line-height: 1.58; }
+  .svc-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
+  .svc-tags span {
+    font-family: var(--sans); font-size: 12px; font-weight: 500; color: var(--graphite);
+    background: var(--paper); border: 1px solid var(--line); padding: 6px 11px; border-radius: 999px;
+  }
+
+  /* ============ VISIT / LOCATION ============ */
+  .visit { padding: clamp(80px, 11vw, 130px) 0; background: var(--white); }
+  .visit-grid {
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: clamp(36px, 5vw, 64px); align-items: stretch;
+  }
+  .visit-info { display: flex; flex-direction: column; gap: 14px; }
+  .info-row {
+    display: flex; gap: 18px; align-items: flex-start; padding: 24px;
+    background: var(--paper-2); border: 1px solid var(--line); border-radius: var(--radius);
+    transition: transform .3s var(--ease), box-shadow .3s, border-color .3s;
+  }
+  .info-row:hover { transform: translateX(5px); box-shadow: var(--shadow-md); border-color: rgba(10,102,255,0.3); }
+  .info-row .ir-ico {
+    width: 52px; height: 52px; flex: none; border-radius: 14px; background: var(--blue);
+    color: #fff; display: flex; align-items: center; justify-content: center;
+  }
+  .info-row .ir-ico svg { width: 26px; height: 26px; }
+  .info-row .ir-body h3 { font-family: var(--sans); font-size: 14px; color: var(--mute); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+  .info-row .ir-body p { font-size: 18px; color: var(--ink); margin-top: 6px; line-height: 1.5; font-weight: 500; }
+  .info-row .ir-body p.small { font-size: 15px; color: var(--slate); font-weight: 400; margin-top: 4px; }
+  .info-row .ir-body a { color: var(--blue); font-weight: 600; }
+  .info-row .ir-body a:hover { text-decoration: underline; }
+
+  .hours-badge {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 8px;
+    background: #EAFBF0; color: #0B7A3E; border: 1px solid #BDEBCC;
+    font-family: var(--sans); font-weight: 600; font-size: 13px; padding: 6px 12px; border-radius: 999px;
+  }
+  .hours-badge .lvdot { width: 8px; height: 8px; border-radius: 50%; background: #18B85C; position: relative; }
+  .hours-badge .lvdot::after {
+    content: ""; position: absolute; inset: -4px; border-radius: 50%; border: 2px solid #18B85C;
+    opacity: 0.6; animation: ring 2.2s ease-out infinite;
+  }
+  @keyframes ring { 0% { transform: scale(0.6); opacity: 0.7; } 100% { transform: scale(1.8); opacity: 0; } }
+
+  /* map-ish card */
+  .map-card {
+    position: relative; border-radius: var(--radius-lg); overflow: hidden;
+    border: 1px solid var(--line); box-shadow: var(--shadow-md); min-height: 420px;
+    background: linear-gradient(165deg, #F4F8FF 0%, #E8F1FF 100%); display: flex; flex-direction: column;
+  }
+  .map-canvas { position: relative; flex: 1; overflow: hidden; }
+  .map-canvas svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .map-pin {
+    position: absolute; left: 50%; top: 46%; transform: translate(-50%,-100%);
+    z-index: 4; text-align: center;
+  }
+  .map-pin .pin-mark {
+    width: 52px; height: 52px; background: var(--blue); border-radius: 50% 50% 50% 8px;
+    transform: rotate(45deg); box-shadow: 0 10px 24px rgba(10,102,255,0.4);
+    display: flex; align-items: center; justify-content: center; margin: 0 auto;
+    position: relative; z-index: 2;
+  }
+  .map-pin .pin-mark svg { width: 24px; height: 24px; color: #fff; transform: rotate(-45deg); }
+  .map-pin .pin-pulse {
+    position: absolute; left: 50%; top: 0; transform: translate(-50%,-50%);
+    width: 52px; height: 52px; border-radius: 50%; background: rgba(10,102,255,0.25);
+    animation: pinpulse 2.4s ease-out infinite; z-index: 1;
+  }
+  @keyframes pinpulse { 0% { transform: translate(-50%,-50%) scale(0.5); opacity: 0.6; } 100% { transform: translate(-50%,-50%) scale(2.6); opacity: 0; } }
+  .map-label {
+    position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 5;
+    background: rgba(255,255,255,0.95); backdrop-filter: blur(6px); border: 1px solid var(--line);
+    border-radius: 14px; padding: 12px 18px; box-shadow: var(--shadow-md); text-align: center;
+    white-space: nowrap;
+  }
+  .map-label strong { font-family: var(--sans); font-size: 15px; color: var(--ink); display: block; }
+  .map-label span { font-size: 13px; color: var(--slate); }
+  .map-foot {
+    position: relative; z-index: 5; background: #fff; border-top: 1px solid var(--line);
+    padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  }
+  .map-foot .mf-txt { font-family: var(--sans); font-size: 14px; font-weight: 500; color: var(--graphite); }
+  .map-foot .mf-txt small { display: block; color: var(--mute); font-size: 12.5px; font-weight: 400; }
+  .map-foot a {
+    font-family: var(--sans); font-size: 13.5px; font-weight: 600; color: var(--blue);
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .map-foot a svg { width: 15px; height: 15px; }
+
+  /* ============ TRUST ============ */
+  .trust { padding: clamp(80px, 11vw, 130px) 0; background: var(--ink); color: #fff; position: relative; overflow: hidden; }
+  .trust::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 52px 52px;
+    -webkit-mask-image: radial-gradient(900px 500px at 50% 0%, #000, transparent 70%);
+    mask-image: radial-gradient(900px 500px at 50% 0%, #000, transparent 70%);
+  }
+  .trust .eyebrow { color: #6FA8FF; }
+  .trust .eyebrow::before { background: #6FA8FF; }
+  .trust-head { position: relative; text-align: center; max-width: 620px; margin: 0 auto 60px; }
+  .trust-head h2 { font-size: clamp(30px, 4.4vw, 48px); letter-spacing: -0.03em; line-height: 1.05; color: #fff; font-weight: 700; margin-top: 16px; }
+  .trust-head p { color: #A7B3C4; margin-top: 18px; font-size: 17.5px; }
+
+  .trust-hero {
+    position: relative; display: flex; align-items: center; justify-content: center;
+    gap: clamp(28px, 5vw, 64px); flex-wrap: wrap; margin-bottom: 56px;
+  }
+  .big-rating { text-align: center; }
+  .big-rating .num {
+    font-family: var(--sans); font-size: clamp(78px, 13vw, 132px); font-weight: 700;
+    line-height: 0.9; letter-spacing: -0.04em;
+    background: linear-gradient(180deg, #fff 30%, #8FB8FF 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .big-rating .stars { display: inline-flex; gap: 4px; margin-top: 12px; }
+  .big-rating .stars svg { width: 26px; height: 26px; }
+  .big-rating .meta { margin-top: 12px; color: #A7B3C4; font-size: 15px; font-family: var(--sans); font-weight: 500; }
+  .big-rating .meta b { color: #fff; }
+  .rating-divid { width: 1px; height: 150px; background: linear-gradient(180deg, transparent, rgba(255,255,255,0.18), transparent); }
+  @media (max-width: 640px) { .rating-divid { width: 150px; height: 1px; } }
+
+  .rev-grid { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .rev-card {
+    background: rgba(255,255,255,0.045); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius); padding: 28px 26px; backdrop-filter: blur(4px);
+    transition: transform .35s var(--ease), background .35s, border-color .35s;
+  }
+  .rev-card:hover { transform: translateY(-6px); background: rgba(255,255,255,0.07); border-color: rgba(111,168,255,0.4); }
+  .rev-card .rc-stars { display: inline-flex; gap: 3px; margin-bottom: 16px; }
+  .rev-card .rc-stars svg { width: 17px; height: 17px; }
+  .rev-card p { color: #DCE3EE; font-size: 16px; line-height: 1.62; }
+  .rev-card .rc-foot { margin-top: 22px; display: flex; align-items: center; gap: 12px; }
+  .rev-card .rc-av {
+    width: 42px; height: 42px; border-radius: 50%; flex: none; display: flex; align-items: center;
+    justify-content: center; font-family: var(--sans); font-weight: 700; font-size: 15px; color: #fff;
+    background: linear-gradient(135deg, var(--blue), #5B9BFF);
+  }
+  .rev-card .rc-meta b { font-family: var(--sans); display: block; font-size: 14.5px; color: #fff; font-weight: 600; }
+  .rev-card .rc-meta span { font-size: 12.5px; color: #8893A4; }
+  .rev-card .rc-meta .vrf { display: inline-flex; align-items: center; gap: 4px; color: #6FA8FF; }
+  .rev-card .rc-meta .vrf svg { width: 12px; height: 12px; }
+
+  .trust-note {
+    position: relative; text-align: center; margin-top: 44px; font-size: 13.5px; color: #79859A;
+  }
+
+  /* ============ CONTACT ============ */
+  .contact { padding: clamp(80px, 11vw, 130px) 0; background: var(--white); position: relative; overflow: hidden; }
+  .contact-card {
+    position: relative; background: linear-gradient(165deg, #0A2862 0%, #0A52D6 60%, #0A66FF 100%);
+    border-radius: var(--radius-lg); padding: clamp(40px, 6vw, 72px); overflow: hidden;
+    box-shadow: var(--shadow-lg);
+  }
+  .contact-card::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.12) 1.2px, transparent 1.4px);
+    background-size: 30px 30px; opacity: 0.5;
+    -webkit-mask-image: radial-gradient(130% 130% at 0% 100%, #000, transparent 65%);
+    mask-image: radial-gradient(130% 130% at 0% 100%, #000, transparent 65%);
+  }
+  .contact-grid { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 5vw, 64px); align-items: center; }
+  .contact-left .eyebrow { color: #BAD2FF; }
+  .contact-left .eyebrow::before { background: #BAD2FF; }
+  .contact-left h2 { font-family: var(--sans); font-size: clamp(30px, 4.2vw, 46px); color: #fff; letter-spacing: -0.03em; line-height: 1.05; font-weight: 700; margin-top: 16px; }
+  .contact-left p { color: #CBDBF6; font-size: 17.5px; margin-top: 18px; line-height: 1.6; max-width: 440px; }
+  .contact-phone {
+    display: inline-flex; align-items: center; gap: 14px; margin-top: 32px;
+    font-family: var(--sans); font-weight: 700; font-size: clamp(24px, 3.4vw, 34px);
+    color: #fff; letter-spacing: -0.01em; transition: transform .25s var(--ease), color .25s;
+  }
+  .contact-phone:hover { transform: translateX(4px); color: #BAD2FF; }
+  .contact-phone .pi {
+    width: 54px; height: 54px; flex: none; border-radius: 16px; background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.25); display: flex; align-items: center; justify-content: center;
+  }
+  .contact-phone .pi svg { width: 26px; height: 26px; }
+
+  .contact-actions {
+    position: relative; background: #fff; border-radius: var(--radius);
+    padding: 30px; box-shadow: var(--shadow-lg);
+  }
+  .contact-actions h3 {
+    font-family: var(--sans); font-size: 19px; color: var(--ink); font-weight: 600; letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+  .contact-actions .ca-sub { font-size: 14.5px; color: var(--slate); margin-bottom: 22px; }
+  .ca-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+  .ca-btn {
+    display: flex; align-items: center; gap: 12px; padding: 15px 16px; border-radius: 14px;
+    font-family: var(--sans); font-weight: 600; font-size: 14.5px; cursor: pointer;
+    border: 1px solid var(--line); background: var(--paper-2); color: var(--ink);
+    transition: transform .25s var(--ease), box-shadow .3s, border-color .25s, background .25s;
+  }
+  .ca-btn .ca-ico { width: 36px; height: 36px; flex: none; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+  .ca-btn .ca-ico svg { width: 20px; height: 20px; }
+  .ca-btn span.lbl { line-height: 1.15; }
+  .ca-btn span.lbl small { display: block; font-weight: 500; font-size: 11.5px; color: var(--mute); }
+  .ca-btn:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--blue); background: #fff; }
+
+  .ca-line .ca-ico { background: #06C755; color: #fff; }
+  .ca-fb .ca-ico { background: #1877F2; color: #fff; }
+  .ca-wa .ca-ico { background: #25D366; color: #fff; }
+  .ca-ig .ca-ico { background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF); color: #fff; }
+  .ca-mail .ca-ico { background: var(--blue-soft); color: var(--blue); }
+  .ca-phone .ca-ico { background: var(--ink); color: #fff; }
+
+  .ca-book {
+    grid-column: 1 / -1; justify-content: center; margin-top: 4px;
+    background: var(--blue-soft); border: 1px dashed rgba(10,102,255,0.45); color: var(--blue-deep);
+    cursor: not-allowed; padding: 16px;
+  }
+  .ca-book:hover { transform: none; background: #DCE8FF; border-color: rgba(10,102,255,0.45); box-shadow: none; }
+  .ca-book .soon-tag {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
+    background: var(--blue); color: #fff; padding: 3px 8px; border-radius: 7px;
+  }
+
+  /* ============ FOOTER ============ */
+  footer.ft { background: var(--paper); border-top: 1px solid var(--line); padding: 64px 0 30px; position: relative; }
+  .ft-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding-bottom: 44px; border-bottom: 1px solid var(--line); }
+  .ft-brand .nav-logo { margin-bottom: 16px; }
+  .ft-brand p { font-size: 15px; color: var(--slate); max-width: 320px; line-height: 1.6; }
+  .ft-brand .ft-social { display: flex; gap: 10px; margin-top: 22px; }
+  .ft-brand .ft-social a {
+    width: 42px; height: 42px; border-radius: 12px; border: 1px solid var(--line); background: #fff;
+    display: flex; align-items: center; justify-content: center; color: var(--graphite);
+    transition: transform .25s var(--ease), color .25s, border-color .25s, box-shadow .25s;
+  }
+  .ft-brand .ft-social a:hover { transform: translateY(-3px); color: var(--blue); border-color: var(--blue); box-shadow: var(--shadow-sm); }
+  .ft-brand .ft-social a svg { width: 18px; height: 18px; }
+  .ft-col h4 { font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--mute); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 18px; }
+  .ft-col a, .ft-col p { display: block; font-size: 15px; color: var(--graphite); padding: 7px 0; transition: color .2s; line-height: 1.4; }
+  .ft-col a:hover { color: var(--blue); }
+  .ft-col .ft-hours-now { display: inline-flex; align-items: center; gap: 7px; font-family: var(--sans); font-weight: 600; font-size: 13px; color: #0B7A3E; margin-top: 6px; }
+  .ft-col .ft-hours-now .lvdot { width: 7px; height: 7px; border-radius: 50%; background: #18B85C; }
+
+  .ft-bottom {
+    display: flex; align-items: center; justify-content: space-between; gap: 18px;
+    padding-top: 26px; flex-wrap: wrap;
+  }
+  .ft-bottom .copy { font-size: 13.5px; color: var(--mute); }
+  .ft-credit {
+    font-size: 13.5px; color: var(--slate); display: inline-flex; align-items: center; gap: 7px;
+  }
+  .ft-credit a { color: var(--graphite); font-weight: 600; font-family: var(--sans); transition: color .2s; }
+  .ft-credit a:hover { color: var(--blue); }
+  .ft-credit .star { width: 14px; height: 14px; color: var(--blue); }
+
+  /* ============ REVEAL ============ */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal.d1 { transition-delay: .08s; }
+  .reveal.d2 { transition-delay: .16s; }
+  .reveal.d3 { transition-delay: .24s; }
+  .reveal.d4 { transition-delay: .32s; }
+  .reveal.d5 { transition-delay: .40s; }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width: 980px) {
+    .nav-links { display: none; }
+    .burger { display: flex; }
+    .hero-grid { grid-template-columns: 1fr; gap: 56px; }
+    .hero-visual { order: -1; min-height: 420px; }
+    .hero-copy { max-width: 100%; }
+    .welcome-grid, .visit-grid, .contact-grid, .trust-hero { grid-template-columns: 1fr; }
+    .welcome-grid .welcome-vis { order: -1; }
+    .svc-grid { grid-template-columns: 1fr 1fr; }
+    .rev-grid { grid-template-columns: 1fr; }
+    .ft-top { grid-template-columns: 1fr 1fr; }
+    .ft-brand { grid-column: 1 / -1; }
+  }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .hero { padding: 128px 0 70px; }
+    .hero-cta { gap: 10px; }
+    .hero-cta .btn { flex: 1 1 100%; justify-content: center; }
+    .svc-grid { grid-template-columns: 1fr; }
+    .contact-actions { padding: 24px; }
+    .ca-grid { grid-template-columns: 1fr; }
+    .ft-top { grid-template-columns: 1fr; }
+    .chip-float { font-size: 11.5px; padding: 7px 11px; }
+    .chip-float.c2 { right: 0; }
+    .chip-float.c3 { left: 0; }
+    .strip-track { gap: 36px; }
+    .contact-phone { font-size: 26px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .reveal { opacity: 1 !important; transform: none !important; }
+    .hero h1 .accent::after { transform: scaleX(1); opacity: 0.28; }
+    .float-anim { animation: none !important; }
+  }
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#ffb020;--bk-accent-ink:#0d0d0f;--bk-ink:#10141c;--bk-panel:#f7f9fd;--bk-muted:rgba(16,20,28,0.6);--bk-line:rgba(16,20,28,0.14);--bk-serif:Georgia, "Times New Roman", serif;--bk-sans:"Space Grotesk", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="nav-logo" aria-label="TOOTHHUB Dental Clinic — home">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="#0A66FF"/>
+        <circle cx="16" cy="16" r="4" fill="#fff"/>
+        <circle cx="8" cy="9" r="2.4" fill="#fff"/>
+        <circle cx="24" cy="9" r="2.4" fill="#fff"/>
+        <circle cx="8" cy="23" r="2.4" fill="#fff"/>
+        <circle cx="24" cy="23" r="2.4" fill="#fff"/>
+        <g stroke="#fff" stroke-width="1.4" opacity="0.85">
+          <line x1="16" y1="16" x2="8" y2="9"/><line x1="16" y1="16" x2="24" y2="9"/>
+          <line x1="16" y1="16" x2="8" y2="23"/><line x1="16" y1="16" x2="24" y2="23"/>
+        </g>
+      </svg>
+      TOOTH<b>HUB</b>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="lnk" href="#welcome">Why us</a>
+      <a class="lnk" href="#services">Services</a>
+      <a class="lnk" href="#visit">Visit</a>
+      <a class="lnk" href="#reviews">Reviews</a>
+      <a class="nav-cta" href="tel:+66809792797">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        Call us
+      </a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="msheet">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="scrim" id="scrim"></div>
+<aside class="m-sheet" id="msheet" aria-label="Mobile menu" aria-hidden="true">
+  <a class="lnk" href="#welcome">Why us <span class="dot"></span></a>
+  <a class="lnk" href="#services">Services <span class="dot"></span></a>
+  <a class="lnk" href="#visit">Visit us <span class="dot"></span></a>
+  <a class="lnk" href="#reviews">Reviews <span class="dot"></span></a>
+  <a class="lnk" href="#contact">Contact <span class="dot"></span></a>
+  <a class="m-cta" href="tel:+66809792797">Call +66 80 979 2797</a>
+</aside>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">Chong Nonsi · Bangkok</span>
+      <h1 id="hero-title" class="reveal d1">Where every<br>smile <span class="accent">connects.</span></h1>
+      <p class="lede reveal d2">An English-speaking dental clinic on Chan Road, where international patients are welcomed, understood, and looked after — from a simple clean to full orthodontic care.</p>
+      <div class="hero-cta reveal d3">
+        <a class="btn btn-primary" href="tel:+66809792797">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Call the clinic
+        </a>
+        <a class="btn btn-ghost" href="#services">
+          Explore care
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+      <div class="hero-trust reveal d4">
+        <span class="stars" role="img" aria-label="Rated 5.0 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="#FFB020" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#FFB020" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#FFB020" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#FFB020" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#FFB020" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </span>
+        <span class="rate-txt"><b>5.0</b> · 482 Google reviews</span>
+        <span class="divid" aria-hidden="true"></span>
+        <span class="lang-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          English-speaking team
+        </span>
+      </div>
+    </div>
+
+    <!-- NETWORK SIGNATURE -->
+    <div class="hero-visual reveal d2">
+      <div class="network-stage" id="netstage" role="img" aria-label="An animated network with TOOTHHUB Dental Clinic at the centre, connected by lines to its services: general dentistry, orthodontics, cleaning, English-speaking care and easy booking.">
+        <svg class="network-svg" viewBox="0 0 540 540" id="netsvg" aria-hidden="true">
+          <!-- edges drawn from hub(270,270) to each node -->
+          <g id="edges">
+            <line class="edge"     data-len="0" x1="270" y1="270" x2="118" y2="96"  />
+            <line class="edge"     data-len="0" x1="270" y1="270" x2="430" y2="120" />
+            <line class="edge"     data-len="0" x1="270" y1="270" x2="470" y2="300" />
+            <line class="edge"     data-len="0" x1="270" y1="270" x2="392" y2="446" />
+            <line class="edge"     data-len="0" x1="270" y1="270" x2="150" y2="452" />
+            <line class="edge"     data-len="0" x1="270" y1="270" x2="74"  y2="280" />
+            <!-- secondary mesh between satellites -->
+            <line class="edge dim" data-len="0" x1="118" y1="96"  x2="430" y2="120" />
+            <line class="edge dim" data-len="0" x1="430" y1="120" x2="470" y2="300" />
+            <line class="edge dim" data-len="0" x1="470" y1="300" x2="392" y2="446" />
+            <line class="edge dim" data-len="0" x1="392" y1="446" x2="150" y2="452" />
+            <line class="edge dim" data-len="0" x1="150" y1="452" x2="74"  y2="280" />
+            <line class="edge dim" data-len="0" x1="74"  y1="280" x2="118" y2="96"  />
+          </g>
+          <!-- hub rings -->
+          <circle class="hub-ring" cx="270" cy="270" r="56" />
+          <circle class="hub-ring" cx="270" cy="270" r="84" style="opacity:.18" />
+          <!-- satellite nodes -->
+          <g id="nodes">
+            <circle class="node-dot"      cx="118" cy="96"  r="9" />
+            <circle class="node-dot"      cx="430" cy="120" r="9" />
+            <circle class="node-dot"      cx="470" cy="300" r="9" />
+            <circle class="node-dot"      cx="392" cy="446" r="9" />
+            <circle class="node-dot"      cx="150" cy="452" r="9" />
+            <circle class="node-dot soft" cx="74"  cy="280" r="7" />
+          </g>
+          <!-- pulse particles travel along main edges -->
+          <circle class="pulse-dot" r="3.5" id="p1" cx="270" cy="270" opacity="0"/>
+          <circle class="pulse-dot" r="3.5" id="p2" cx="270" cy="270" opacity="0"/>
+          <circle class="pulse-dot" r="3.5" id="p3" cx="270" cy="270" opacity="0"/>
+        </svg>
+
+        <!-- central hub card -->
+        <div class="hub-card float-anim">
+          <svg class="hub-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="9" fill="#0A66FF"/>
+            <circle cx="16" cy="16" r="4" fill="#fff"/>
+            <circle cx="8" cy="9" r="2.2" fill="#fff"/><circle cx="24" cy="9" r="2.2" fill="#fff"/>
+            <circle cx="8" cy="23" r="2.2" fill="#fff"/><circle cx="24" cy="23" r="2.2" fill="#fff"/>
+            <g stroke="#fff" stroke-width="1.3" opacity="0.85">
+              <line x1="16" y1="16" x2="8" y2="9"/><line x1="16" y1="16" x2="24" y2="9"/>
+              <line x1="16" y1="16" x2="8" y2="23"/><line x1="16" y1="16" x2="24" y2="23"/>
+            </g>
+          </svg>
+          <div class="hub-name">TOOTHHUB</div>
+          <div class="hub-sub">Dental Clinic</div>
+        </div>
+
+        <!-- floating service chips -->
+        <span class="chip-float c1 float-anim d1"><i></i>Orthodontics</span>
+        <span class="chip-float c2 float-anim d2"><i></i>Cleaning</span>
+        <span class="chip-float c3 float-anim d3"><i></i>General care</span>
+        <span class="chip-float c4 float-anim d1"><i></i>English service</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- marquee -->
+  <div class="strip" aria-hidden="true">
+    <div class="strip-track" id="striptrack">
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>English-speaking team</span><span class="strip-dot"></span>
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>5.0 across 482 reviews</span><span class="strip-dot"></span>
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>Open daily until 8pm</span><span class="strip-dot"></span>
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Chan Road, Chong Nonsi</span><span class="strip-dot"></span>
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Easy booking via LINE</span><span class="strip-dot"></span>
+      <!-- duplicate set for seamless loop -->
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>English-speaking team</span><span class="strip-dot"></span>
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>5.0 across 482 reviews</span><span class="strip-dot"></span>
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>Open daily until 8pm</span><span class="strip-dot"></span>
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Chan Road, Chong Nonsi</span><span class="strip-dot"></span>
+      <span class="strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Easy booking via LINE</span><span class="strip-dot"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WELCOME / HOOK ===================== -->
+<section class="welcome" id="welcome" aria-labelledby="welcome-title">
+  <div class="wrap welcome-grid">
+    <div class="welcome-vis reveal">
+      <div class="welcome-panel">
+        <div class="wp-top">
+          <svg class="globe" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span>Welcome, in your language</span>
+        </div>
+        <p class="wp-quote">"No translation app, no guesswork. Just a clear conversation about your teeth."</p>
+        <p class="wp-sub">From your first call to your follow-up visit, our team explains everything in plain English — so you always know exactly what is happening and why.</p>
+        <div class="wp-langs">
+          <span>Hello</span><span>Bienvenue</span><span>ようこそ</span><span>欢迎</span><span>ยินดีต้อนรับ</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span class="eyebrow reveal">For visitors &amp; expats</span>
+      <h2 id="welcome-title" class="sec-head" style="margin-bottom:32px;">
+        <span class="reveal d1" style="display:block;">Dental care that feels easy — even far from home.</span>
+      </h2>
+      <div class="welcome-points">
+        <div class="wpoint reveal d1">
+          <span class="wp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <div>
+            <h3>Everything explained in English</h3>
+            <p>Treatments, options and costs are talked through clearly before anything begins — questions are always welcome.</p>
+          </div>
+        </div>
+        <div class="wpoint reveal d2">
+          <span class="wp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+          <div>
+            <h3>Booking made simple</h3>
+            <p>Reach us by phone or LINE and reserve a time that suits your trip — straightforward, with no language barrier.</p>
+          </div>
+        </div>
+        <div class="wpoint reveal d3">
+          <span class="wp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></span>
+          <div>
+            <h3>Trusted by 482 patients</h3>
+            <p>A perfect 5.0-star rating on Google reflects the calm, careful experience we aim for at every appointment.</p>
+          </div>
+        </div>
+        <div class="wpoint reveal d4">
+          <span class="wp-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div>
+            <h3>Right in central Bangkok</h3>
+            <p>On Chan Road in Chong Nonsi — easy to reach for a quick clean or a longer course of treatment while you are in town.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="services" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center">Our care</span>
+      <h2 id="services-title">Connected care, under one roof.</h2>
+      <p>From routine upkeep to a straighter smile, our services link together around a single goal — keeping your teeth healthy and your visit easy.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc-card reveal d1">
+        <span class="svc-num">01</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5.5c-1.5-2-4-2.5-5.5-1.5C4.5 5.3 4 8 5 11c.8 2.4 1 6 2.5 8 1 1.3 2 .5 2.2-1 .2-1.6.3-3 2.3-3s2.1 1.4 2.3 3c.2 1.5 1.2 2.3 2.2 1 1.5-2 1.7-5.6 2.5-8 1-3 .5-5.7-1.5-7-1.5-1-4-.5-5.5 1.5z"/></svg>
+        </div>
+        <h3>General dentistry</h3>
+        <p>Check-ups, fillings and everyday treatments to keep small problems small — with honest advice on what your teeth actually need.</p>
+        <div class="svc-tags"><span>Check-ups</span><span>Fillings</span><span>Advice</span></div>
+      </article>
+      <article class="svc-card reveal d2">
+        <span class="svc-num">02</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="9" width="18" height="6" rx="2"/><line x1="7" y1="9" x2="7" y2="15"/><line x1="11" y1="9" x2="11" y2="15"/><line x1="15" y1="9" x2="15" y2="15"/><line x1="19" y1="9" x2="19" y2="15"/></svg>
+        </div>
+        <h3>Orthodontics</h3>
+        <p>Braces and alignment treatments to gently guide your teeth into place, planned around your timeline and explained at every step.</p>
+        <div class="svc-tags"><span>Braces</span><span>Alignment</span><span>Reviews</span></div>
+      </article>
+      <article class="svc-card reveal d3">
+        <span class="svc-num">03</span>
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4"/><path d="M8 6h8l1 5a5 5 0 0 1-5 5h0a5 5 0 0 1-5-5z"/><path d="M12 16v6"/><path d="M9 22h6"/></svg>
+        </div>
+        <h3>Cleaning &amp; hygiene</h3>
+        <p>A thorough professional clean to remove plaque and brighten your smile — the simplest way to keep your teeth and gums in good shape.</p>
+        <div class="svc-tags"><span>Scaling</span><span>Polish</span><span>Fresh feel</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VISIT / LOCATION ===================== -->
+<section class="visit" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Visiting us</span>
+      <h2 id="visit-title">Find us, and we will do the rest.</h2>
+      <p>We are easy to reach in Chong Nonsi and open every day — find the details below or give us a call to plan your visit.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-info">
+        <div class="info-row reveal d1">
+          <span class="ir-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div class="ir-body">
+            <h3>Location</h3>
+            <p>Chan Road, Chong Nonsi</p>
+            <p class="small">Bangkok, Thailand</p>
+          </div>
+        </div>
+        <div class="info-row reveal d2">
+          <span class="ir-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></span>
+          <div class="ir-body">
+            <h3>Opening hours</h3>
+            <p>Open daily · closes 8:00 PM</p>
+            <span class="hours-badge"><span class="lvdot"></span> Open now</span>
+          </div>
+        </div>
+        <div class="info-row reveal d3">
+          <span class="ir-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+          <div class="ir-body">
+            <h3>Call or message</h3>
+            <p><a href="tel:+66809792797">+66 80 979 2797</a></p>
+            <p class="small">Phone &amp; LINE · English welcome</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- map-style card -->
+      <div class="map-card reveal d2" role="img" aria-label="Stylised map showing the clinic's location on Chan Road in the Chong Nonsi area of Bangkok.">
+        <div class="map-canvas">
+          <svg viewBox="0 0 480 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <pattern id="mgrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M40 0H0V40" fill="none" stroke="#D6E4FB" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <rect width="480" height="420" fill="url(#mgrid)"/>
+            <!-- river -->
+            <path d="M-20 60 C 120 120, 80 220, 220 260 S 360 360, 520 320" fill="none" stroke="#CFE2FB" stroke-width="34" stroke-linecap="round" opacity="0.85"/>
+            <!-- main roads -->
+            <path d="M0 150 L480 110" stroke="#fff" stroke-width="14"/>
+            <path d="M0 150 L480 110" stroke="#E3ECF8" stroke-width="14" stroke-dasharray="2 14" opacity="0.6"/>
+            <path d="M120 0 L210 420" stroke="#fff" stroke-width="12"/>
+            <path d="M120 0 L210 420" stroke="#E3ECF8" stroke-width="12" stroke-dasharray="2 14" opacity="0.6"/>
+            <path d="M320 0 L380 420" stroke="#fff" stroke-width="10"/>
+            <path d="M40 300 L480 340" stroke="#fff" stroke-width="9"/>
+            <!-- blocks -->
+            <g fill="#EAF1FC" stroke="#DCE7F7" stroke-width="1">
+              <rect x="40" y="40" width="64" height="74" rx="6"/>
+              <rect x="240" y="150" width="78" height="70" rx="6"/>
+              <rect x="60" y="200" width="84" height="70" rx="6"/>
+              <rect x="280" y="250" width="70" height="78" rx="6"/>
+              <rect x="390" y="180" width="60" height="84" rx="6"/>
+            </g>
+          </svg>
+        </div>
+        <div class="map-pin" aria-hidden="true">
+          <span class="pin-pulse"></span>
+          <span class="pin-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="16" r="4"/><circle cx="6" cy="7" r="2"/><circle cx="18" cy="7" r="2"/><line x1="12" y1="12" x2="6" y2="9"/><line x1="12" y1="12" x2="18" y2="9"/></svg></span>
+        </div>
+        <div class="map-label" aria-hidden="true">
+          <strong>TOOTHHUB Dental Clinic</strong>
+          <span>Chan Road · Chong Nonsi</span>
+        </div>
+        <div class="map-foot">
+          <div class="mf-txt">Chong Nonsi, Bangkok<small>Open daily until 8:00 PM</small></div>
+          <a href="tel:+66809792797">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            Call to visit
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST / REVIEWS ===================== -->
+
+
+<!-- ===================== CONTACT ===================== -->
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <span class="eyebrow">Get in touch</span>
+          <h2 id="contact-title">Let's get you booked in.</h2>
+          <p>Call, message on LINE, or reach out however suits you. We will help you find a time and answer any questions in English before you arrive.</p>
+          <a class="contact-phone" href="tel:+66809792797">
+            <span class="pi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+            +66 80 979 2797
+          </a>
+        </div>
+
+        <div class="contact-actions">
+          <h3>Reach the hub</h3>
+          <p class="ca-sub">Pick whatever is easiest — we are happy to help in English.</p>
+          <div class="ca-grid">
+            <!-- Phone -->
+            <a class="ca-btn ca-phone" href="tel:+66809792797">
+              <span class="ca-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+              <span class="lbl">Call us<small>+66 80 979 2797</small></span>
+            </a>
+            <!-- LINE (placeholder — replace href="#" with official LINE / LINE OA URL when available) -->
+            <a class="ca-btn ca-line" href="#" aria-label="Message TOOTHHUB on LINE (link coming soon)">
+              <span class="ca-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.5 7.4 8.3 8.05.32.07.76.21.87.49.1.25.06.64.03.9l-.14.84c-.04.25-.2.97.85.53s5.66-3.33 7.72-5.7C21.2 13.6 22 11.99 22 10.2 22 5.7 17.5 2 12 2zM8.1 12.6H6.2c-.27 0-.49-.22-.49-.49V8.3c0-.27.22-.49.49-.49s.49.22.49.49v3.32H8.1c.27 0 .49.22.49.49s-.22.49-.49.49zm1.9-.49c0 .27-.22.49-.49.49s-.49-.22-.49-.49V8.3c0-.27.22-.49.49-.49s.49.22.49.49v3.81zm4.62 0c0 .21-.13.4-.34.46a.5.5 0 0 1-.15.02.49.49 0 0 1-.4-.2l-1.95-2.65v2.37c0 .27-.22.49-.49.49s-.49-.22-.49-.49V8.3c0-.21.14-.4.34-.46a.48.48 0 0 1 .55.18l1.96 2.66V8.3c0-.27.22-.49.49-.49s.49.22.49.49v3.81zm3.11-2.39c.27 0 .49.22.49.49s-.22.49-.49.49h-1.42v.92h1.42c.27 0 .49.22.49.49s-.22.49-.49.49h-1.9c-.27 0-.49-.22-.49-.49V8.3c0-.27.22-.49.49-.49h1.9c.27 0 .49.22.49.49s-.22.49-.49.49h-1.42v.92h1.42z"/></svg></span>
+              <span class="lbl">LINE<small>Chat &amp; book</small></span>
+            </a>
+            <!-- Facebook (placeholder — replace href="#" with official Facebook Page URL when available) -->
+            <a class="ca-btn ca-fb" href="#" aria-label="Visit TOOTHHUB on Facebook (link coming soon)">
+              <span class="ca-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></span>
+              <span class="lbl">Facebook<small>Our page</small></span>
+            </a>
+            <!-- Email (placeholder — no public clinic email address known; replace href="#" with mailto: when available) -->
+            <a class="ca-btn ca-mail" href="#" aria-label="Email TOOTHHUB (address coming soon)">
+              <span class="ca-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg></span>
+              <span class="lbl">Email<small>Coming soon</small></span>
+            </a>
+            <!-- Book online — non-functional, booking already exists via LINE/Google -->
+            <button class="ca-btn ca-book" type="button" aria-disabled="true" title="Online booking is coming soon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:20px;height:20px;"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
+              Book online <span class="soon-tag">Coming soon</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-top">
+      <div class="ft-brand">
+        <a href="#top" class="nav-logo" aria-label="TOOTHHUB Dental Clinic — home">
+          <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#0A66FF"/>
+            <circle cx="16" cy="16" r="4" fill="#fff"/>
+            <circle cx="8" cy="9" r="2.4" fill="#fff"/><circle cx="24" cy="9" r="2.4" fill="#fff"/>
+            <circle cx="8" cy="23" r="2.4" fill="#fff"/><circle cx="24" cy="23" r="2.4" fill="#fff"/>
+            <g stroke="#fff" stroke-width="1.4" opacity="0.85"><line x1="16" y1="16" x2="8" y2="9"/><line x1="16" y1="16" x2="24" y2="9"/><line x1="16" y1="16" x2="8" y2="23"/><line x1="16" y1="16" x2="24" y2="23"/></g>
+          </svg>
+          TOOTH<b>HUB</b>
+        </a>
+        <p>An English-speaking dental clinic in Chong Nonsi, Bangkok — where general dentistry, orthodontics and cleaning all connect around one caring team.</p>
+        <div class="ft-social">
+          <!-- LINE (placeholder — replace href="#" with official LINE URL when available) -->
+          <a href="#" aria-label="TOOTHHUB on LINE (coming soon)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.5 7.4 8.3 8.05.32.07.76.21.87.49.1.25.06.64.03.9l-.14.84c-.04.25-.2.97.85.53s5.66-3.33 7.72-5.7C21.2 13.6 22 11.99 22 10.2 22 5.7 17.5 2 12 2zM8.1 12.6H6.2c-.27 0-.49-.22-.49-.49V8.3c0-.27.22-.49.49-.49s.49.22.49.49v3.32H8.1c.27 0 .49.22.49.49s-.22.49-.49.49zm1.9-.49c0 .27-.22.49-.49.49s-.49-.22-.49-.49V8.3c0-.27.22-.49.49-.49s.49.22.49.49v3.81zm4.62 0c0 .21-.13.4-.34.46a.5.5 0 0 1-.15.02.49.49 0 0 1-.4-.2l-1.95-2.65v2.37c0 .27-.22.49-.49.49s-.49-.22-.49-.49V8.3c0-.21.14-.4.34-.46a.48.48 0 0 1 .55.18l1.96 2.66V8.3c0-.27.22-.49.49-.49s.49.22.49.49v3.81zm3.11-2.39c.27 0 .49.22.49.49s-.22.49-.49.49h-1.42v.92h1.42c.27 0 .49.22.49.49s-.22.49-.49.49h-1.9c-.27 0-.49-.22-.49-.49V8.3c0-.27.22-.49.49-.49h1.9c.27 0 .49.22.49.49s-.22.49-.49.49h-1.42v.92h1.42z"/></svg></a>
+          <!-- Facebook (placeholder — replace href="#" with official Facebook Page URL when available) -->
+          <a href="#" aria-label="TOOTHHUB on Facebook (coming soon)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="tel:+66809792797" aria-label="Call TOOTHHUB"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></a>
+        </div>
+      </div>
+      <div class="ft-col">
+        <h4>Visit</h4>
+        <p>Chan Road, Chong Nonsi</p>
+        <p>Bangkok, Thailand</p>
+        <a href="tel:+66809792797">+66 80 979 2797</a>
+        <span class="ft-hours-now"><span class="lvdot"></span> Open daily · until 8pm</span>
+      </div>
+      <div class="ft-col">
+        <h4>Care</h4>
+        <a href="#services">General dentistry</a>
+        <a href="#services">Orthodontics</a>
+        <a href="#services">Cleaning &amp; hygiene</a>
+        <a href="#reviews">Patient reviews</a>
+        <a href="#contact">Contact &amp; booking</a>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <div class="copy">© <span id="yr">2026</span> TOOTHHUB Dental Clinic · Chong Nonsi, Bangkok</div>
+      <div class="ft-credit">
+        <svg class="star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener">Stellar Haus Media</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- nav scrolled state ---- */
+  var nav = document.getElementById("nav");
+  function onScroll() {
+    if (window.scrollY > 24) nav.classList.add("scrolled");
+    else nav.classList.remove("scrolled");
+  }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  /* ---- mobile menu ---- */
+  var burger = document.getElementById("burger");
+  var sheet = document.getElementById("msheet");
+  var scrim = document.getElementById("scrim");
+  function setMenu(open) {
+    burger.setAttribute("aria-expanded", open ? "true" : "false");
+    sheet.setAttribute("aria-hidden", open ? "false" : "true");
+    sheet.classList.toggle("open", open);
+    scrim.classList.toggle("show", open);
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+  burger.addEventListener("click", function () {
+    setMenu(burger.getAttribute("aria-expanded") !== "true");
+  });
+  scrim.addEventListener("click", function () { setMenu(false); });
+  sheet.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () { setMenu(false); });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+      setMenu(false); burger.focus();
+    }
+  });
+
+  /* ---- year ---- */
+  var yr = document.getElementById("yr");
+  if (yr) yr.textContent = new Date().getFullYear();
+
+  /* ---- reveal on scroll ---- */
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+  if (reduce || !("IntersectionObserver" in window)) {
+    revealEls.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.14, rootMargin: "0px 0px -8% 0px" });
+    revealEls.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---- network assembly (hero signature) ---- */
+  var svg = document.getElementById("netsvg");
+  if (svg) {
+    var edges = Array.prototype.slice.call(svg.querySelectorAll(".edge"));
+    var nodes = Array.prototype.slice.call(svg.querySelectorAll("#nodes circle"));
+
+    edges.forEach(function (ln) {
+      var len = ln.getTotalLength ? ln.getTotalLength() : 300;
+      ln.style.strokeDasharray = len;
+      ln.style.strokeDashoffset = reduce ? 0 : len;
+      ln.style.transition = "stroke-dashoffset 0.9s cubic-bezier(0.22,1,0.36,1)";
+    });
+    nodes.forEach(function (n) {
+      n.style.transformBox = "fill-box";
+      n.style.transformOrigin = "center";
+      if (!reduce) {
+        n.style.transform = "scale(0)";
+        n.style.opacity = "0";
+        n.style.transition = "transform 0.6s cubic-bezier(0.34,1.56,0.64,1), opacity 0.5s ease";
+      }
+    });
+
+    function assemble() {
+      if (reduce) return;
+      nodes.forEach(function (n, i) {
+        setTimeout(function () {
+          n.style.transform = "scale(1)";
+          n.style.opacity = "1";
+        }, 120 + i * 110);
+      });
+      edges.forEach(function (ln, i) {
+        var isDim = ln.classList.contains("dim");
+        setTimeout(function () {
+          ln.style.strokeDashoffset = "0";
+        }, (isDim ? 700 : 200) + i * 90);
+      });
+      startPulses();
+    }
+
+    var mainTargets = [
+      {x:118,y:96}, {x:430,y:120}, {x:470,y:300}, {x:392,y:446}, {x:150,y:452}, {x:74,y:280}
+    ];
+    var pulses = [
+      document.getElementById("p1"),
+      document.getElementById("p2"),
+      document.getElementById("p3")
+    ].filter(Boolean);
+    var hub = { x: 270, y: 270 };
+    var rafId = null;
+
+    function startPulses() {
+      if (reduce || !pulses.length) return;
+      var t0 = performance.now();
+      function frame(now) {
+        var t = (now - t0) / 1000;
+        pulses.forEach(function (p, i) {
+          var dur = 2.6;
+          var phase = ((t + i * (dur / pulses.length)) % dur) / dur;
+          var tgt = mainTargets[(Math.floor((t + i) / dur) + i) % mainTargets.length];
+          var x = hub.x + (tgt.x - hub.x) * phase;
+          var y = hub.y + (tgt.y - hub.y) * phase;
+          p.setAttribute("cx", x.toFixed(1));
+          p.setAttribute("cy", y.toFixed(1));
+          var op = Math.sin(phase * Math.PI);
+          p.setAttribute("opacity", (op * 0.9).toFixed(2));
+        });
+        rafId = requestAnimationFrame(frame);
+      }
+      rafId = requestAnimationFrame(frame);
+    }
+
+    if (reduce) {
+      // static connected network shown via CSS defaults
+    } else if ("IntersectionObserver" in window) {
+      var nio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { assemble(); nio.disconnect(); }
+        });
+      }, { threshold: 0.3 });
+      nio.observe(document.getElementById("netstage"));
+    } else {
+      assemble();
+    }
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden && rafId) { cancelAnimationFrame(rafId); rafId = null; }
+      else if (!document.hidden && !rafId && !reduce) { startPulses(); }
+    });
+  }
+
+  /* ---- book-online + coming-soon: prevent navigation ---- */
+  document.querySelectorAll(".ca-book, .btn-soon, .ca-mail[href=\"#\"], .ca-line[href=\"#\"], .ca-fb[href=\"#\"]").forEach(function (b) {
+    b.addEventListener("click", function (e) { e.preventDefault(); });
+  });
+})();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+66809792797", CHAN="", CHANLABEL="";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>

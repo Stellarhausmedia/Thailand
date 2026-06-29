@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Smile Seasons · Asoke Tower — Dentistry in English, Bangkok</title>
+<meta name="description" content="Smile Seasons at Asoke Tower, Bangkok. International patients welcomed in English. Full-range dentistry, orthodontics, whitening and implants — open every day, Asok / Soi 21. Rated 4.9 from 837 reviews." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23A8C99B'/%3E%3Cstop offset='0.5' stop-color='%23E6C36A'/%3E%3Cstop offset='1' stop-color='%23D89AA0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3Cpath d='M16 8c-3 0-5 1.6-6.4 1.6C8.3 9.6 7.6 9 7 9c-1 0-1.4 1.1-1.4 2.6 0 4.2 2.4 11.4 4.6 11.4 1.2 0 1.7-1.8 3-1.8s1.8 1.8 3 1.8c2.2 0 4.6-7.2 4.6-11.4 0-1.5-.4-2.6-1.4-2.6-.6 0-1.3.6-2.6.6C21 9.6 19 8 16 8z' fill='%23fff' fill-opacity='0.92'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --spring: #A8C99B;
+    --spring-deep: #7FA571;
+    --summer: #E6C36A;
+    --summer-deep: #C9A24B;
+    --autumn: #D89AA0;
+    --autumn-deep: #B66E76;
+    --winter: #9FB6C4;
+    --winter-deep: #6E8B9C;
+
+    --ink: #3A3A36;
+    --ink-soft: #5E5E57;
+    --ink-faint: #87877E;
+    --paper: #FCFBF7;
+    --paper-warm: #F6F2E9;
+    --line: rgba(58, 58, 54, 0.12);
+    --line-soft: rgba(58, 58, 54, 0.07);
+
+    --font-display: 'Cormorant', Georgia, serif;
+    --font-body: 'Jost', system-ui, -apple-system, sans-serif;
+
+    --maxw: 1180px;
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+    --season-a: var(--spring);
+    --season-b: var(--summer);
+    --season-c: var(--autumn);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+  body {
+    font-family: var(--font-body);
+    font-weight: 300;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.7;
+    overflow-x: hidden;
+    letter-spacing: 0.01em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .season-field {
+    position: fixed;
+    inset: -10vh -10vw;
+    z-index: -2;
+    background:
+      radial-gradient(60% 55% at 18% 22%, color-mix(in oklab, var(--season-a) 70%, transparent) 0%, transparent 60%),
+      radial-gradient(55% 50% at 82% 30%, color-mix(in oklab, var(--season-b) 62%, transparent) 0%, transparent 58%),
+      radial-gradient(70% 60% at 50% 92%, color-mix(in oklab, var(--season-c) 58%, transparent) 0%, transparent 62%),
+      var(--paper);
+    opacity: 0.55;
+    transition: background 1.4s var(--ease);
+    will-change: background;
+  }
+  .season-field::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(120% 80% at 50% 0%, transparent 40%, color-mix(in oklab, var(--paper) 88%, transparent) 100%);
+  }
+
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; max-width: 100%; }
+
+  ::selection { background: color-mix(in oklab, var(--summer) 55%, transparent); color: var(--ink); }
+
+  .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.25rem, 5vw, 4rem); }
+
+  .eyebrow {
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: clamp(0.66rem, 1.4vw, 0.74rem);
+    letter-spacing: 0.42em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.04; letter-spacing: -0.01em; }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+
+  :focus-visible {
+    outline: 2.5px solid var(--autumn-deep);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  .skip-link {
+    position: absolute; left: 1rem; top: -100px;
+    background: var(--ink); color: var(--paper);
+    padding: 0.7rem 1.2rem; border-radius: 999px;
+    z-index: 200; font-size: 0.85rem; letter-spacing: 0.04em;
+    transition: top 0.3s var(--ease);
+  }
+  .skip-link:focus { top: 1rem; }
+
+  header.nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    transition: background 0.5s var(--ease), box-shadow 0.5s var(--ease), backdrop-filter 0.5s var(--ease);
+  }
+  header.nav.scrolled {
+    background: color-mix(in oklab, var(--paper) 82%, transparent);
+    backdrop-filter: blur(14px) saturate(1.3);
+    -webkit-backdrop-filter: blur(14px) saturate(1.3);
+    box-shadow: 0 1px 0 var(--line-soft);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    height: clamp(64px, 9vw, 84px);
+  }
+  .brand { display: flex; align-items: center; gap: 0.7rem; }
+  .brand-mark { width: 38px; height: 38px; flex: none; }
+  .brand-mark .seasons-arc { transition: stroke 1.2s var(--ease); }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; }
+  .brand-name {
+    font-family: var(--font-display); font-weight: 500;
+    font-size: clamp(1.15rem, 2.6vw, 1.4rem); letter-spacing: 0.01em;
+    color: var(--ink);
+  }
+  .brand-sub {
+    font-family: var(--font-body); font-weight: 400;
+    font-size: 0.6rem; letter-spacing: 0.32em; text-transform: uppercase;
+    color: var(--ink-faint); margin-top: 3px;
+  }
+
+  .nav-links { display: none; align-items: center; gap: clamp(1.4rem, 3vw, 2.4rem); }
+  .nav-links a {
+    font-size: 0.82rem; font-weight: 400; letter-spacing: 0.06em;
+    color: var(--ink-soft); position: relative; padding: 0.3rem 0;
+  }
+  .nav-links a::after {
+    content: ""; position: absolute; left: 0; bottom: -2px; height: 1px; width: 0;
+    background: var(--autumn-deep); transition: width 0.4s var(--ease);
+  }
+  .nav-links a:hover::after, .nav-links a:focus-visible::after { width: 100%; }
+
+  .nav-cta {
+    display: none;
+    font-family: var(--font-body); font-weight: 500; font-size: 0.8rem; letter-spacing: 0.05em;
+    color: var(--ink); padding: 0.6rem 1.3rem;
+    border: 1px solid var(--ink); border-radius: 999px;
+    transition: background 0.35s var(--ease), color 0.35s var(--ease), transform 0.35s var(--ease);
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--paper); transform: translateY(-1px); }
+
+  @media (min-width: 920px) {
+    .nav-links { display: flex; }
+    .nav-cta { display: inline-block; }
+    .nav-toggle { display: none; }
+  }
+
+  .nav-toggle {
+    display: inline-flex; flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 10px; margin-right: -10px;
+  }
+  .nav-toggle span {
+    width: 26px; height: 1.5px; background: var(--ink); border-radius: 2px;
+    transition: transform 0.4s var(--ease), opacity 0.3s var(--ease);
+  }
+  .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+  .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+  .mobile-menu {
+    position: fixed; inset: 0; z-index: 99;
+    background: color-mix(in oklab, var(--paper) 96%, transparent);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    gap: 1.2rem; padding: 2rem;
+    opacity: 0; visibility: hidden; transform: translateY(-12px);
+    transition: opacity 0.45s var(--ease), transform 0.45s var(--ease), visibility 0.45s;
+  }
+  .mobile-menu.open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .mobile-menu a {
+    font-family: var(--font-display); font-weight: 400;
+    font-size: clamp(1.7rem, 8vw, 2.4rem); color: var(--ink);
+  }
+  .mobile-menu .mm-cta {
+    margin-top: 1rem; font-family: var(--font-body); font-size: 0.95rem; letter-spacing: 0.05em;
+    padding: 0.8rem 2rem; border: 1px solid var(--ink); border-radius: 999px;
+  }
+  @media (min-width: 920px) { .mobile-menu { display: none; } }
+
+  .hero {
+    position: relative; min-height: 100svh;
+    display: flex; align-items: center;
+    padding-top: clamp(96px, 14vw, 140px); padding-bottom: clamp(3rem, 8vw, 6rem);
+    overflow: hidden;
+  }
+  .hero-canvas { position: absolute; inset: 0; z-index: -1; overflow: hidden; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(48px); opacity: 0.6; mix-blend-mode: multiply; }
+  .blob.b1 { width: 46vw; height: 46vw; min-width: 320px; min-height: 320px; left: -8vw; top: 6vh;  background: var(--spring); animation: drift1 22s var(--ease) infinite alternate; }
+  .blob.b2 { width: 40vw; height: 40vw; min-width: 280px; min-height: 280px; right: -6vw; top: 2vh;  background: var(--summer); animation: drift2 26s var(--ease) infinite alternate; }
+  .blob.b3 { width: 44vw; height: 44vw; min-width: 300px; min-height: 300px; right: 10vw; bottom: -14vh; background: var(--autumn); animation: drift3 30s var(--ease) infinite alternate; }
+  .blob.b4 { width: 30vw; height: 30vw; min-width: 220px; min-height: 220px; left: 22vw; bottom: -10vh; background: var(--winter); opacity: 0.4; animation: drift1 28s var(--ease) infinite alternate-reverse; }
+
+  @keyframes drift1 { from { transform: translate(0,0) scale(1); } to { transform: translate(8vw, 6vh) scale(1.18); } }
+  @keyframes drift2 { from { transform: translate(0,0) scale(1.05); } to { transform: translate(-7vw, 9vh) scale(0.9); } }
+  @keyframes drift3 { from { transform: translate(0,0) scale(1); } to { transform: translate(-6vw, -8vh) scale(1.2); } }
+
+  .hero-grid { display: grid; grid-template-columns: 1fr; gap: clamp(2.5rem, 6vw, 4rem); align-items: center; width: 100%; }
+  @media (min-width: 1000px) { .hero-grid { grid-template-columns: 1.15fr 0.85fr; } }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: color-mix(in oklab, var(--paper) 70%, transparent);
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 0.45rem 1rem 0.45rem 0.6rem;
+    font-size: 0.74rem; letter-spacing: 0.08em; color: var(--ink-soft);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    margin-bottom: 1.8rem;
+  }
+  .hero-badge .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--spring-deep); box-shadow: 0 0 0 4px color-mix(in oklab, var(--spring) 50%, transparent); }
+  .hero-badge .dot.live { animation: pulse 2.6s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 3px color-mix(in oklab, var(--spring) 50%, transparent);} 50% { box-shadow: 0 0 0 7px color-mix(in oklab, var(--spring) 0%, transparent);} }
+
+  h1.hero-title {
+    font-size: clamp(3rem, 9.5vw, 6.6rem);
+    line-height: 0.96; letter-spacing: -0.018em; color: var(--ink);
+    font-weight: 300;
+  }
+  h1.hero-title .reveal-line { display: block; overflow: hidden; }
+  h1.hero-title .reveal-line > span { display: block; transform: translateY(105%); }
+  h1.hero-title em {
+    font-style: italic; font-weight: 500;
+    background: linear-gradient(100deg, var(--spring-deep), var(--summer-deep) 42%, var(--autumn-deep) 84%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  .hero-lede {
+    max-width: 32rem; margin-top: 1.8rem;
+    font-size: clamp(1.02rem, 2.3vw, 1.22rem); font-weight: 300; color: var(--ink-soft);
+    line-height: 1.65;
+  }
+  .hero-lede strong { font-weight: 500; color: var(--ink); }
+
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2.2rem; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.55rem;
+    font-family: var(--font-body); font-weight: 500; font-size: 0.9rem; letter-spacing: 0.02em;
+    padding: 0.85rem 1.5rem; border-radius: 999px; cursor: pointer;
+    border: 1px solid transparent; transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease), background 0.35s var(--ease), color 0.35s var(--ease), border-color 0.35s var(--ease);
+    position: relative;
+  }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .btn-primary {
+    color: var(--paper);
+    background: linear-gradient(110deg, var(--spring-deep), var(--summer-deep) 45%, var(--autumn-deep));
+    background-size: 200% 100%; background-position: 0% 50%;
+    box-shadow: 0 10px 30px -12px color-mix(in oklab, var(--autumn-deep) 80%, transparent);
+  }
+  .btn-primary:hover { transform: translateY(-2px); background-position: 100% 50%; box-shadow: 0 16px 40px -12px color-mix(in oklab, var(--autumn-deep) 80%, transparent); }
+  .btn-ghost { color: var(--ink); border-color: var(--ink); background: transparent; }
+  .btn-ghost:hover { background: var(--ink); color: var(--paper); transform: translateY(-2px); }
+  .btn-soft {
+    color: var(--ink); background: color-mix(in oklab, var(--paper) 60%, transparent);
+    border-color: var(--line); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  }
+  .btn-soft:hover { background: var(--paper-warm); transform: translateY(-2px); border-color: var(--line); }
+
+  .btn-booking {
+    color: var(--ink-soft); background: color-mix(in oklab, var(--paper-warm) 80%, transparent);
+    border: 1px dashed var(--autumn-deep); cursor: not-allowed; position: relative;
+  }
+  .btn-booking:hover { transform: none; }
+  .btn-booking .soon {
+    font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase;
+    background: var(--autumn-deep); color: var(--paper);
+    padding: 0.12rem 0.5rem; border-radius: 999px; margin-left: 0.2rem;
+  }
+
+  .hero-art { position: relative; display: flex; justify-content: center; }
+  .seasonal-dial { width: min(86vw, 440px); aspect-ratio: 1; position: relative; }
+  .dial-ring { transform-origin: center; }
+
+  .dial-card {
+    position: absolute; right: -2%; bottom: 6%;
+    background: color-mix(in oklab, var(--paper) 88%, transparent);
+    border: 1px solid var(--line); border-radius: 18px;
+    padding: 0.9rem 1.1rem; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 24px 50px -28px rgba(58,58,54,0.45);
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .dial-card .rating-num { font-family: var(--font-display); font-size: 2rem; font-weight: 600; line-height: 1; color: var(--ink); }
+  .dial-card .stars { color: var(--summer-deep); font-size: 0.8rem; letter-spacing: 2px; }
+  .dial-card .rating-meta { font-size: 0.68rem; color: var(--ink-faint); letter-spacing: 0.04em; }
+
+  .scroll-cue {
+    position: absolute; left: 50%; bottom: 1.6rem; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    font-size: 0.62rem; letter-spacing: 0.34em; text-transform: uppercase; color: var(--ink-faint);
+  }
+  .scroll-cue .line { width: 1px; height: 42px; background: linear-gradient(var(--ink-faint), transparent); overflow: hidden; position: relative; }
+  .scroll-cue .line::after { content:""; position:absolute; top:-50%; left:0; width:100%; height:50%; background: var(--ink); animation: cueMove 2.4s var(--ease) infinite; }
+  @keyframes cueMove { 0% { top: -50%; } 60%,100% { top: 100%; } }
+
+  section { position: relative; padding: clamp(4.5rem, 12vw, 9rem) 0; }
+  .section-head { max-width: 46rem; margin-bottom: clamp(2.5rem, 6vw, 4rem); }
+  .section-head .eyebrow { display: inline-flex; align-items: center; gap: 0.7rem; margin-bottom: 1.1rem; }
+  .section-head .eyebrow::before { content:""; width: 28px; height: 1px; background: var(--autumn-deep); }
+  .section-head h2 {
+    font-size: clamp(2.1rem, 6vw, 3.9rem); color: var(--ink); font-weight: 300;
+    letter-spacing: -0.015em;
+  }
+  .section-head h2 em { font-style: italic; font-weight: 500; color: var(--autumn-deep); }
+  .section-head p { margin-top: 1.2rem; font-size: clamp(1rem, 2.2vw, 1.12rem); color: var(--ink-soft); max-width: 40rem; }
+
+  .welcome-grid { display: grid; grid-template-columns: 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+  @media (min-width: 900px) { .welcome-grid { grid-template-columns: 0.95fr 1.05fr; } }
+
+  .welcome-copy h2 {
+    font-family: var(--font-display); font-weight: 300;
+    font-size: clamp(2rem, 5.4vw, 3.6rem); line-height: 1.06; color: var(--ink); letter-spacing: -0.015em;
+  }
+  .welcome-copy h2 em { font-style: italic; font-weight: 500; color: var(--spring-deep); }
+  .welcome-copy p { margin-top: 1.4rem; font-size: clamp(1rem, 2.2vw, 1.12rem); color: var(--ink-soft); max-width: 34rem; }
+  .welcome-copy p strong { color: var(--ink); font-weight: 500; }
+
+  .welcome-points { list-style: none; margin-top: 2rem; display: grid; gap: 1.1rem; }
+  .welcome-points li { display: flex; gap: 0.9rem; align-items: flex-start; font-size: 0.98rem; color: var(--ink-soft); }
+  .welcome-points li .ic {
+    flex: none; width: 38px; height: 38px; border-radius: 12px;
+    display: grid; place-items: center; border: 1px solid var(--line);
+    background: color-mix(in oklab, var(--paper) 60%, transparent);
+  }
+  .welcome-points li .ic svg { width: 19px; height: 19px; }
+  .welcome-points li b { color: var(--ink); font-weight: 500; }
+
+  .greet-card {
+    position: relative; border-radius: 26px; overflow: hidden;
+    border: 1px solid var(--line);
+    background:
+      linear-gradient(160deg, color-mix(in oklab, var(--spring) 30%, var(--paper)) 0%, color-mix(in oklab, var(--summer) 22%, var(--paper)) 50%, color-mix(in oklab, var(--autumn) 28%, var(--paper)) 100%);
+    padding: clamp(2rem, 5vw, 3.2rem);
+    min-height: 360px; display: flex; flex-direction: column; justify-content: space-between;
+    box-shadow: 0 40px 80px -50px rgba(58,58,54,0.5);
+  }
+  .greet-card .hello-big {
+    font-family: var(--font-display); font-weight: 300; font-style: italic;
+    font-size: clamp(2.6rem, 9vw, 4.6rem); line-height: 0.95; color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .greet-card .hello-row { font-size: 0.92rem; color: var(--ink-soft); letter-spacing: 0.05em; margin-top: 0.4rem; }
+  .greet-card .greet-foot { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+  .greet-card .greet-foot .label { font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--ink-faint); }
+  .greet-leaf { position: absolute; top: -30px; right: -30px; width: 180px; height: 180px; opacity: 0.5; animation: spin 60s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .services-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  @media (min-width: 640px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1000px) { .services-grid { grid-template-columns: repeat(4, 1fr); } }
+
+  .svc {
+    position: relative; border: 1px solid var(--line); border-radius: 20px;
+    padding: clamp(1.5rem, 3vw, 2rem); overflow: hidden;
+    background: color-mix(in oklab, var(--paper) 55%, transparent);
+    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+    transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease), border-color 0.5s var(--ease);
+    min-height: 280px; display: flex; flex-direction: column;
+  }
+  .svc::before {
+    content: ""; position: absolute; inset: 0; opacity: 0; z-index: -1;
+    transition: opacity 0.6s var(--ease);
+    background: radial-gradient(120% 100% at 50% 0%, var(--svc-tint, var(--spring)) 0%, transparent 70%);
+  }
+  .svc:hover { transform: translateY(-6px); box-shadow: 0 30px 60px -36px rgba(58,58,54,0.45); border-color: color-mix(in oklab, var(--svc-tint, var(--spring)) 50%, var(--line)); }
+  .svc:hover::before { opacity: 0.5; }
+  .svc-num { font-family: var(--font-display); font-size: 0.95rem; color: var(--ink-faint); letter-spacing: 0.1em; }
+  .svc-ic {
+    width: 52px; height: 52px; border-radius: 14px; margin: 1.2rem 0 1.4rem;
+    display: grid; place-items: center;
+    background: color-mix(in oklab, var(--svc-tint, var(--spring)) 26%, var(--paper));
+    transition: transform 0.5s var(--ease);
+  }
+  .svc:hover .svc-ic { transform: scale(1.08) rotate(-4deg); }
+  .svc-ic svg { width: 26px; height: 26px; }
+  .svc h3 { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 1.7rem); font-weight: 500; color: var(--ink); }
+  .svc p { margin-top: 0.6rem; font-size: 0.9rem; color: var(--ink-soft); line-height: 1.6; }
+  .svc .svc-tags { margin-top: auto; padding-top: 1.2rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .svc .svc-tags span { font-size: 0.68rem; letter-spacing: 0.04em; color: var(--ink-faint); border: 1px solid var(--line); border-radius: 999px; padding: 0.18rem 0.65rem; }
+
+  .visit-grid { display: grid; grid-template-columns: 1fr; gap: clamp(1.5rem, 4vw, 2rem); }
+  @media (min-width: 900px) { .visit-grid { grid-template-columns: 1.1fr 0.9fr; } }
+
+  .visit-panel {
+    border: 1px solid var(--line); border-radius: 24px; padding: clamp(1.8rem, 4vw, 2.6rem);
+    background: color-mix(in oklab, var(--paper) 62%, transparent);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  }
+  .visit-panel h3 { font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.1rem); font-weight: 500; color: var(--ink); margin-bottom: 0.4rem; }
+
+  .map-art { position: relative; width: 100%; aspect-ratio: 4/3; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); margin-bottom: 1.6rem; }
+  .addr-row { display: flex; align-items: flex-start; gap: 0.75rem; font-size: 0.96rem; color: var(--ink-soft); }
+  .addr-row + .addr-row { margin-top: 0.8rem; }
+  .addr-row svg { width: 20px; height: 20px; flex: none; margin-top: 2px; color: var(--autumn-deep); }
+  .addr-row b { color: var(--ink); font-weight: 500; }
+  .addr-row a:hover { color: var(--autumn-deep); text-decoration: underline; text-underline-offset: 3px; }
+
+  .hours-head { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.4rem; }
+  .open-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.74rem; font-weight: 500; letter-spacing: 0.04em; color: var(--spring-deep);
+    background: color-mix(in oklab, var(--spring) 22%, var(--paper)); border: 1px solid color-mix(in oklab, var(--spring) 45%, transparent);
+    padding: 0.4rem 0.85rem; border-radius: 999px;
+  }
+  .open-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--spring-deep); }
+  .open-badge .dot.live { animation: pulse2 2.4s ease-in-out infinite; }
+  @keyframes pulse2 { 0%,100%{ box-shadow: 0 0 0 2px color-mix(in oklab, var(--spring) 50%, transparent);} 50%{ box-shadow: 0 0 0 6px color-mix(in oklab, var(--spring) 0%, transparent);} }
+
+  .hours-list { list-style: none; }
+  .hours-list li {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.75rem 0; border-bottom: 1px solid var(--line-soft);
+    font-size: 0.94rem; color: var(--ink-soft);
+  }
+  .hours-list li:last-child { border-bottom: none; }
+  .hours-list li.is-today { color: var(--ink); font-weight: 500; }
+  .hours-list li.is-today .day::before {
+    content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%;
+    background: var(--autumn-deep); margin-right: 0.55rem; vertical-align: middle;
+  }
+  .hours-list li .time { font-variant-numeric: tabular-nums; letter-spacing: 0.02em; }
+  .hours-note { margin-top: 1.3rem; font-size: 0.82rem; color: var(--ink-faint); display: flex; gap: 0.5rem; align-items: center; }
+
+  .trust { text-align: center; }
+  .trust-inner { max-width: 60rem; margin: 0 auto; }
+  .trust .big-rating {
+    font-family: var(--font-display); font-weight: 300;
+    font-size: clamp(5rem, 22vw, 13rem); line-height: 0.86; color: var(--ink);
+    letter-spacing: -0.03em; display: inline-flex; align-items: flex-start;
+  }
+  .trust .big-rating sup { font-size: 0.3em; font-weight: 400; color: var(--autumn-deep); margin-top: 0.5em; margin-left: 0.1em; }
+  .trust .stars-big { font-size: clamp(1.4rem, 5vw, 2.2rem); letter-spacing: 0.2em; color: var(--summer-deep); margin: 0.6rem 0 0.8rem; }
+  .trust .review-count { font-size: clamp(1rem, 2.4vw, 1.2rem); color: var(--ink-soft); letter-spacing: 0.03em; }
+  .trust .review-count b { color: var(--ink); font-weight: 500; }
+
+  .trust-line { width: 100%; max-width: 38rem; height: 1px; margin: clamp(2rem,5vw,3rem) auto; background: linear-gradient(90deg, transparent, var(--line), transparent); }
+
+  .trust-quotes { display: grid; grid-template-columns: 1fr; gap: 1.2rem; margin-top: clamp(2rem,5vw,3rem); text-align: left; }
+  @media (min-width: 760px) { .trust-quotes { grid-template-columns: repeat(3, 1fr); } }
+  .quote {
+    border: 1px solid var(--line); border-radius: 18px; padding: 1.6rem;
+    background: color-mix(in oklab, var(--paper) 55%, transparent);
+    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+    transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease);
+  }
+  .quote:hover { transform: translateY(-4px); box-shadow: 0 24px 50px -34px rgba(58,58,54,0.4); }
+  .quote .qmark { font-family: var(--font-display); font-size: 2.6rem; line-height: 0.5; color: var(--summer-deep); display: block; height: 0.6em; }
+  .quote p { font-family: var(--font-display); font-style: italic; font-size: 1.18rem; line-height: 1.45; color: var(--ink); margin: 0.8rem 0 1rem; font-weight: 400; }
+  .quote .qstars { color: var(--summer-deep); font-size: 0.78rem; letter-spacing: 2px; }
+  .quote .qmeta { font-size: 0.74rem; color: var(--ink-faint); letter-spacing: 0.04em; margin-top: 0.5rem; }
+
+  .contact-card {
+    position: relative; border-radius: 32px; overflow: hidden;
+    border: 1px solid var(--line);
+    background:
+      linear-gradient(135deg, color-mix(in oklab, var(--spring) 24%, var(--paper)) 0%, color-mix(in oklab, var(--summer) 20%, var(--paper)) 45%, color-mix(in oklab, var(--autumn) 26%, var(--paper)) 100%);
+    padding: clamp(2.2rem, 6vw, 4.5rem);
+    box-shadow: 0 50px 100px -60px rgba(58,58,54,0.55);
+  }
+  .contact-card .c-grid { display: grid; grid-template-columns: 1fr; gap: clamp(2rem, 5vw, 3rem); align-items: center; }
+  @media (min-width: 920px) { .contact-card .c-grid { grid-template-columns: 1fr 1fr; } }
+
+  .contact-card h2 { font-family: var(--font-display); font-weight: 300; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.02; color: var(--ink); letter-spacing: -0.015em; }
+  .contact-card h2 em { font-style: italic; font-weight: 500; color: var(--autumn-deep); }
+  .contact-card .c-lede { margin-top: 1.2rem; font-size: clamp(1rem, 2.3vw, 1.12rem); color: var(--ink-soft); max-width: 30rem; }
+
+  .phone-hero { display: inline-flex; align-items: center; gap: 0.9rem; margin-top: 1.8rem; }
+  .phone-hero a { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.7rem, 5vw, 2.5rem); color: var(--ink); letter-spacing: 0.01em; transition: color 0.3s var(--ease); }
+  .phone-hero a:hover { color: var(--autumn-deep); }
+  .phone-hero .pic { width: 48px; height: 48px; flex:none; border-radius: 14px; display:grid; place-items:center; background: color-mix(in oklab, var(--paper) 70%, transparent); border: 1px solid var(--line); }
+  .phone-hero .pic svg { width: 22px; height: 22px; color: var(--autumn-deep); }
+
+  .contact-actions { display: grid; gap: 0.7rem; }
+
+  .chan {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
+    font-family: var(--font-body); font-weight: 500; font-size: 0.92rem; letter-spacing: 0.01em;
+    padding: 0.95rem 1.2rem; border-radius: 14px; color: #fff; cursor: pointer;
+    transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), filter 0.3s var(--ease);
+    box-shadow: 0 10px 24px -14px rgba(0,0,0,0.5);
+  }
+  .chan svg { width: 20px; height: 20px; flex: none; }
+  .chan:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 16px 30px -16px rgba(0,0,0,0.55); }
+  .chan-line { background: #06C755; }
+  .chan-fb { background: #1877F2; }
+  .chan-wa { background: #25D366; }
+  .chan-ig { background: linear-gradient(45deg, #F58529, #DD2A7B 50%, #8134AF 90%); }
+  .chan-mail { background: var(--ink); }
+  .chan-full { grid-column: 1 / -1; }
+  .channel-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; }
+
+  footer.site-foot { padding: clamp(3rem, 7vw, 5rem) 0 2.5rem; border-top: 1px solid var(--line); margin-top: clamp(3rem,8vw,6rem); }
+  .foot-grid { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+  @media (min-width: 760px) { .foot-grid { grid-template-columns: 1.4fr 1fr 1fr; } }
+  .foot-brand .brand-name { font-size: 1.5rem; }
+  .foot-brand p { margin-top: 1rem; font-size: 0.9rem; color: var(--ink-soft); max-width: 24rem; }
+  .foot-col h4 { font-family: var(--font-body); font-weight: 500; font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 1rem; }
+  .foot-col ul { list-style: none; display: grid; gap: 0.6rem; }
+  .foot-col a, .foot-col li { font-size: 0.9rem; color: var(--ink-soft); transition: color 0.3s var(--ease); }
+  .foot-col a:hover { color: var(--ink); }
+  .foot-season { display: flex; gap: 0.35rem; margin-top: 1.4rem; }
+  .foot-season span { width: 26px; height: 26px; border-radius: 50%; border: 1px solid var(--line); }
+  .foot-bottom {
+    margin-top: clamp(2.5rem, 6vw, 4rem); padding-top: 1.8rem; border-top: 1px solid var(--line-soft);
+    display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;
+    font-size: 0.78rem; color: var(--ink-faint);
+  }
+  .foot-bottom a { color: var(--ink-soft); }
+  .credit { display: inline-flex; align-items: center; gap: 0.45rem; }
+  .credit a { font-weight: 500; color: var(--ink-soft); transition: color 0.3s var(--ease); position: relative; }
+  .credit a::after { content:""; position:absolute; left:0; bottom:-2px; height:1px; width:0; background: var(--autumn-deep); transition: width 0.35s var(--ease); }
+  .credit a:hover { color: var(--ink); }
+  .credit a:hover::after { width: 100%; }
+
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal.d1 { transition-delay: 0.08s; }
+  .reveal.d2 { transition-delay: 0.16s; }
+  .reveal.d3 { transition-delay: 0.24s; }
+  .reveal.d4 { transition-delay: 0.32s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+    .season-field { transition: none; }
+    .blob { animation: none !important; }
+    .hero-canvas { background: linear-gradient(135deg, color-mix(in oklab, var(--spring) 26%, var(--paper)), color-mix(in oklab, var(--summer) 20%, var(--paper)) 50%, color-mix(in oklab, var(--autumn) 26%, var(--paper))); }
+    .hero-canvas .blob { display: none; }
+    h1.hero-title .reveal-line > span { transform: none !important; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+    .scroll-cue .line::after { display: none; }
+    .greet-leaf { animation: none; }
+  }
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#c9a24b;--bk-accent-ink:#ffffff;--bk-ink:#3a3a36;--bk-panel:#fcfbf7;--bk-muted:rgba(58,58,54,0.6);--bk-line:rgba(58,58,54,0.14);--bk-serif:"Cormorant", Georgia, serif;--bk-sans:"Jost", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body>
+<div class="season-field" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="siteNav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Smile Seasons — home">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="brandg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#A8C99B"/>
+            <stop offset="0.5" stop-color="#E6C36A"/>
+            <stop offset="1" stop-color="#D89AA0"/>
+          </linearGradient>
+        </defs>
+        <circle cx="24" cy="24" r="22" fill="none" stroke="url(#brandg)" stroke-width="2.4" class="seasons-arc"/>
+        <path d="M24 13c-3.4 0-5.4 1.7-6.9 1.7-0.9 0-1.7-0.7-2.5-0.7-1.2 0-1.7 1.3-1.7 3 0 4.6 2.6 12.3 4.9 12.3 1.3 0 1.9-1.9 3.2-1.9s1.9 1.9 3.2 1.9c2.3 0 4.9-7.7 4.9-12.3 0-1.7-0.5-3-1.7-3-0.8 0-1.6 0.7-2.5 0.7C29.4 14.7 27.4 13 24 13z" fill="var(--ink)"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Smile Seasons</span>
+        <span class="brand-sub">Asoke Tower · Bangkok</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#welcome">Welcome</a>
+      <a href="#services">Care</a>
+      <a href="#visit">Visit</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="nav-cta" href="tel:+6621143274">Call +66 2 114 3274</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Site menu">
+  <a href="#welcome">Welcome</a>
+  <a href="#services">Care</a>
+  <a href="#visit">Visit</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a class="mm-cta" href="tel:+6621143274">Call +66 2 114 3274</a>
+</div>
+
+<main id="main">
+<span id="top"></span>
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-canvas" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="blob b4"></div>
+  </div>
+
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="hero-badge">
+        <span class="dot live"></span>
+        Open every day · Asok / Soi 21
+      </span>
+
+      <h1 class="hero-title" id="hero-title">
+        <span class="reveal-line"><span>Dentistry for</span></span>
+        <span class="reveal-line"><span>every <em>season</em></span></span>
+        <span class="reveal-line"><span>of your life.</span></span>
+      </h1>
+
+      <p class="hero-lede">
+        A calm, modern dental home in the heart of Asoke — where
+        <strong>international patients are welcomed in English</strong>,
+        every day of the week.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="tel:+6621143274">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.3 11.3 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .56 3.5 1 1 0 0 1-.24 1z"/></svg>
+          Call the clinic
+        </a>
+        <button class="btn btn-booking" type="button" aria-disabled="true" title="Online booking is coming soon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>
+          Book Online
+          <span class="soon">Soon</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-art">
+      <div class="seasonal-dial">
+        <svg viewBox="0 0 440 440" width="100%" role="img" aria-labelledby="dial-t dial-d">
+          <title id="dial-t">A four-season colour dial</title>
+          <desc id="dial-d">Concentric rings drifting from spring green through summer gold to autumn rose, with a soft tooth at the centre.</desc>
+          <defs>
+            <linearGradient id="seasonRing" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#A8C99B"/>
+              <stop offset="0.34" stop-color="#E6C36A"/>
+              <stop offset="0.7" stop-color="#D89AA0"/>
+              <stop offset="1" stop-color="#9FB6C4"/>
+            </linearGradient>
+            <linearGradient id="seasonRing2" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#7FA571"/>
+              <stop offset="0.5" stop-color="#E6C36A"/>
+              <stop offset="1" stop-color="#B66E76"/>
+            </linearGradient>
+            <radialGradient id="coreGlow" cx="0.5" cy="0.42" r="0.6">
+              <stop offset="0" stop-color="#FFFFFF"/>
+              <stop offset="1" stop-color="#F6F2E9"/>
+            </radialGradient>
+          </defs>
+
+          <g class="dial-ring" id="ringA" style="transform-origin:220px 220px;">
+            <circle cx="220" cy="220" r="200" fill="none" stroke="url(#seasonRing)" stroke-width="2" opacity="0.5"/>
+            <circle cx="220" cy="220" r="200" fill="none" stroke="url(#seasonRing)" stroke-width="20" stroke-dasharray="3 16" stroke-linecap="round" opacity="0.85"/>
+          </g>
+          <g class="dial-ring" id="ringB" style="transform-origin:220px 220px;">
+            <circle cx="220" cy="220" r="158" fill="none" stroke="url(#seasonRing2)" stroke-width="14" stroke-dasharray="46 26" stroke-linecap="round" opacity="0.55"/>
+          </g>
+          <g class="dial-ring" id="ringC" style="transform-origin:220px 220px;">
+            <circle cx="220" cy="220" r="120" fill="none" stroke="url(#seasonRing)" stroke-width="2" opacity="0.7"/>
+          </g>
+
+          <circle cx="220" cy="220" r="104" fill="url(#coreGlow)"/>
+          <circle cx="220" cy="220" r="104" fill="none" stroke="url(#seasonRing)" stroke-width="1.5" opacity="0.6"/>
+
+          <path d="M220 158c-15 0-24 7.4-30.5 7.4-4 0-7.4-3-11-3-5.3 0-7.6 5.7-7.6 13.2 0 20.4 11.5 54.4 21.7 54.4 5.7 0 8.4-8.4 14.2-8.4s8.4 8.4 14.2 8.4c10.2 0 21.7-34 21.7-54.4 0-7.5-2.3-13.2-7.6-13.2-3.6 0-7 3-11 3C244 165.4 235 158 220 158z" fill="#FCFBF7" stroke="#D89AA0" stroke-width="1.5" stroke-linejoin="round"/>
+
+          <g fill="#5E5E57" font-family="Jost, sans-serif" font-size="11" letter-spacing="2" text-anchor="middle">
+            <text x="220" y="34">SPRING</text>
+            <text x="416" y="224">SUMMER</text>
+            <text x="220" y="420">AUTUMN</text>
+            <text x="26" y="224">WINTER</text>
+          </g>
+        </svg>
+
+        <div class="dial-card">
+          <span class="rating-num">4.9</span>
+          <div>
+            <div class="stars" aria-hidden="true">★★★★★</div>
+            <div class="rating-meta">837 Google reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span class="line"></span>
+    Scroll
+  </div>
+</section>
+
+<section class="welcome" id="welcome" aria-labelledby="welcome-h">
+  <div class="wrap welcome-grid">
+    <div class="welcome-copy">
+      <span class="eyebrow reveal">Welcome, in your language</span>
+      <h2 id="welcome-h" class="reveal d1">New in Bangkok?<br /><em>We speak your language.</em></h2>
+      <p class="reveal d2">
+        Moving across the world is enough to think about — finding a dentist
+        shouldn't be one of them. At Smile Seasons, <strong>our team cares
+        for international patients in clear, friendly English</strong>, so every
+        appointment feels easy from the first hello.
+      </p>
+      <ul class="welcome-points">
+        <li class="reveal d2">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--spring-deep)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5h12M9 3v2m1.5 0c0 5-3 8.5-7.5 10M5 9c0 3 2.5 5.5 6 7M14 19l4-9 4 9M15.5 16h5"/></svg></span>
+          <span><b>Every consultation in English.</b> Treatment, options and costs explained plainly — no guessing, no translation app.</span>
+        </li>
+        <li class="reveal d3">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--summer-deep)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/><path d="M8 14h.01M12 14h.01M16 14h.01"/></svg></span>
+          <span><b>Open seven days a week.</b> Before work, after work, or on a Sunday — we keep hours that fit an expat schedule.</span>
+        </li>
+        <li class="reveal d4">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--autumn-deep)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5-9-10a5 5 0 0 1 9-2 5 5 0 0 1 9 2c-2 5-9 10-9 10z"/></svg></span>
+          <span><b>Trusted by 837 reviewers.</b> Visitors and residents alike rate us 4.9 stars — many of them writing in English.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="greet-card reveal d2">
+      <svg class="greet-leaf" viewBox="0 0 200 200" aria-hidden="true">
+        <g fill="none" stroke="rgba(58,58,54,0.18)" stroke-width="1.2">
+          <path d="M100 20C60 60 60 140 100 180C140 140 140 60 100 20Z"/>
+          <path d="M100 20V180"/>
+          <path d="M100 60L70 80M100 80L130 100M100 110L70 130M100 130L130 150"/>
+        </g>
+      </svg>
+      <div>
+        <div class="hello-big" id="helloRotator" aria-live="off">Hello.</div>
+        <div class="hello-row">However you'd say it — you're welcome here.</div>
+      </div>
+      <div class="greet-foot">
+        <div>
+          <div class="label">In English &amp; with care</div>
+          <div style="font-family:var(--font-display); font-size:1.5rem; font-weight:500; color:var(--ink); margin-top:0.2rem;">Asoke Tower, Soi 21</div>
+        </div>
+        <a class="btn btn-soft" href="#contact">Say hello
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="services-h">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">Care, crafted</span>
+      <h2 id="services-h" class="reveal d1">Everything your smile needs, <em>under one roof.</em></h2>
+      <p class="reveal d2">From a routine check-up to a complete transformation, our full-range practice keeps your care in one trusted place — explained clearly, every step of the way.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="svc reveal" style="--svc-tint: var(--spring);">
+        <span class="svc-num">01</span>
+        <span class="svc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--spring-deep)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4C8.5 4 6.5 5.7 5 5.7c-0.9 0-1.7-0.7-2.5-0.7C1.3 5 0.8 6.3 0.8 8c0 4.6 2.6 12.3 4.9 12.3 1.3 0 1.9-1.9 3.2-1.9" transform="translate(2.5 0)"/><path d="M12 4c3.5 0 5.5 1.7 7 1.7 0.9 0 1.7-0.7 2.5-0.7 1.2 0 1.7 1.3 1.7 3 0 4.6-2.6 12.3-4.9 12.3-1.3 0-1.9-1.9-3.2-1.9" transform="translate(-2.5 0)"/></svg></span>
+        <h3>General Dentistry</h3>
+        <p>Check-ups, cleanings, fillings and gentle preventive care to keep every season healthy.</p>
+        <div class="svc-tags"><span>Check-ups</span><span>Cleaning</span><span>Fillings</span></div>
+      </article>
+
+      <article class="svc reveal d1" style="--svc-tint: var(--summer);">
+        <span class="svc-num">02</span>
+        <span class="svc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--summer-deep)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16M6 8l1.5 9a2 2 0 0 0 2 1.7h5a2 2 0 0 0 2-1.7L18 8"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/><path d="M9.5 12h5"/></svg></span>
+        <h3>Orthodontics</h3>
+        <p>Clear aligners and braces that quietly straighten your smile, tracked from start to finish.</p>
+        <div class="svc-tags"><span>Aligners</span><span>Braces</span><span>Retainers</span></div>
+      </article>
+
+      <article class="svc reveal d2" style="--svc-tint: var(--autumn);">
+        <span class="svc-num">03</span>
+        <span class="svc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--autumn-deep)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.6 3.5L17 8l-3.4 1.5L12 13l-1.6-3.5L7 8l3.4-1.5z"/><path d="M5 15l0.8 1.8L8 18l-2.2 1L5 21l-0.8-2L2 18l2.2-1.2zM18 14l0.7 1.6L21 17l-2 0.9-0.9 2-0.8-2-2-0.9 2-1z"/></svg></span>
+        <h3>Whitening</h3>
+        <p>Professional whitening that lifts away years of coffee and tea for a brighter, natural glow.</p>
+        <div class="svc-tags"><span>In-clinic</span><span>Take-home</span></div>
+      </article>
+
+      <article class="svc reveal d3" style="--svc-tint: var(--winter);">
+        <span class="svc-num">04</span>
+        <span class="svc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--winter-deep)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v9M9 6h6M12 12c-2 0-3.2 1.6-3.2 4.2C8.8 19 10 22 12 22s3.2-3 3.2-5.8C15.2 13.6 14 12 12 12z"/></svg></span>
+        <h3>Implants</h3>
+        <p>Permanent, natural-feeling replacements that restore a complete bite and lasting confidence.</p>
+        <div class="svc-tags"><span>Single tooth</span><span>Full restore</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow reveal">Finding us</span>
+      <h2 id="visit-h" class="reveal d1">In the heart of Asoke, <em>open every day.</em></h2>
+      <p class="reveal d2">You'll find us inside Asoke Tower on Soi 21 — right in Bangkok's busiest expat and business quarter, minutes from the office and easy to reach after hours.</p>
+    </div>
+
+    <div class="visit-grid">
+      <div class="visit-panel reveal">
+        <div class="map-art" role="img" aria-label="Stylised map of the Asoke and Sukhumvit Soi 21 area showing Asoke Tower">
+          <svg viewBox="0 0 480 360" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="mapsky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#F6F2E9"/>
+                <stop offset="1" stop-color="#EFEDE2"/>
+              </linearGradient>
+            </defs>
+            <rect width="480" height="360" fill="url(#mapsky)"/>
+            <g fill="rgba(168,201,155,0.20)" stroke="rgba(58,58,54,0.10)">
+              <rect x="20" y="24" width="150" height="110" rx="6"/>
+              <rect x="330" y="40" width="130" height="120" rx="6"/>
+              <rect x="40" y="220" width="120" height="120" rx="6"/>
+              <rect x="320" y="230" width="140" height="110" rx="6"/>
+            </g>
+            <g fill="rgba(230,195,106,0.16)" stroke="rgba(58,58,54,0.08)">
+              <rect x="200" y="30" width="90" height="80" rx="6"/>
+              <rect x="200" y="250" width="90" height="90" rx="6"/>
+            </g>
+            <g stroke="#FCFBF7" stroke-width="26" fill="none" stroke-linecap="round">
+              <path d="M-10 185H490"/>
+              <path d="M250 -10V370"/>
+            </g>
+            <g stroke="rgba(58,58,54,0.14)" stroke-width="1" stroke-dasharray="6 8" fill="none">
+              <path d="M-10 185H490"/>
+              <path d="M250 -10V370"/>
+            </g>
+            <path d="M-10 150H200" stroke="#D89AA0" stroke-width="3" fill="none" stroke-dasharray="2 7" stroke-linecap="round"/>
+            <text x="40" y="142" font-family="Jost, sans-serif" font-size="11" letter-spacing="1.5" fill="#B66E76">BTS ASOK</text>
+            <text x="300" y="178" font-family="Jost, sans-serif" font-size="11" letter-spacing="1.5" fill="#87877E">SUKHUMVIT RD</text>
+            <text x="262" y="320" font-family="Jost, sans-serif" font-size="11" letter-spacing="1.5" fill="#87877E" transform="rotate(90 262 300)">SOI 21 · ASOKE</text>
+            <g transform="translate(250 185)">
+              <circle r="34" fill="rgba(216,154,160,0.18)">
+                <animate attributeName="r" values="22;40;22" dur="3s" repeatCount="indefinite"/>
+                <animate attributeName="opacity" values="0.5;0;0.5" dur="3s" repeatCount="indefinite"/>
+              </circle>
+              <path d="M0 -24c-8.8 0-16 7-16 15.6C-16 2 0 22 0 22s16-20 16-30.4C16 -17 8.8 -24 0 -24z" fill="#B66E76"/>
+              <circle cx="0" cy="-8.4" r="6.4" fill="#FCFBF7"/>
+            </g>
+            <text x="250" y="150" font-family="Cormorant, serif" font-weight="600" font-size="16" fill="#3A3A36" text-anchor="middle">Asoke Tower</text>
+          </svg>
+        </div>
+
+        <div class="addr-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.3-7-11a7 7 0 0 1 14 0c0 4.7-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span><b>Smile Seasons — Asoke Tower</b><br />Sukhumvit Soi 21 (Asoke), Watthana, Bangkok</span>
+        </div>
+        <div class="addr-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg>
+          <span>A short walk from <b>BTS Asok</b> and the MRT — easy on foot, by taxi or by train.</span>
+        </div>
+        <div class="addr-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.3 11.3 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .56 3.5 1 1 0 0 1-.24 1z"/></svg>
+          <span>Call us on <a href="tel:+6621143274"><b>+66 2 114 3274</b></a> — we'll help you find the way.</span>
+        </div>
+      </div>
+
+      <div class="visit-panel reveal d1">
+        <div class="hours-head">
+          <h3>Opening hours</h3>
+          <span class="open-badge"><span class="dot live"></span> Open daily</span>
+        </div>
+        <ul class="hours-list" id="hoursList">
+          <li data-day="1"><span class="day">Monday</span><span class="time">10:00 — 20:00</span></li>
+          <li data-day="2"><span class="day">Tuesday</span><span class="time">10:00 — 20:00</span></li>
+          <li data-day="3"><span class="day">Wednesday</span><span class="time">10:00 — 20:00</span></li>
+          <li data-day="4"><span class="day">Thursday</span><span class="time">10:00 — 20:00</span></li>
+          <li data-day="5"><span class="day">Friday</span><span class="time">10:00 — 20:00</span></li>
+          <li data-day="6"><span class="day">Saturday</span><span class="time">10:00 — 20:00</span></li>
+          <li data-day="0"><span class="day">Sunday</span><span class="time">10:00 — 20:00</span></li>
+        </ul>
+        <p class="hours-note">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="var(--ink-faint)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          Open every day of the week — closing at 8:00 pm. Public holidays may vary.
+        </p>
+        <div style="margin-top:1.8rem;">
+          <button class="btn btn-booking" type="button" aria-disabled="true" style="width:100%; justify-content:center;" title="Online booking is coming soon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>
+            Book Online <span class="soon">Soon</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <div class="c-grid">
+        <div>
+          <span class="eyebrow" style="display:inline-block; margin-bottom:1.1rem;">Get in touch</span>
+          <h2 id="contact-h">Let's get you<br /><em>smiling again.</em></h2>
+          <p class="c-lede">Reach us however suits you best — by phone, message or your favourite app. We'll reply in English and help you find a time.</p>
+
+          <div class="phone-hero">
+            <span class="pic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24 11.3 11.3 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.3 11.3 0 0 0 .56 3.5 1 1 0 0 1-.24 1z"/></svg></span>
+            <a href="tel:+6621143274">+66 2 114 3274</a>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <!-- LINE: clinic confirmed on LINE but URL not supplied. Replace href="#" with the official LINE account / add-friend link, e.g. https://line.me/R/ti/p/@YOURID -->
+          <a class="chan chan-line chan-full" href="#" aria-label="Add Smile Seasons on LINE">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.7 2 10.2c0 4 3.6 7.4 8.4 8 .3.07.78.22.9.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1 .9.55s5.9-3.48 8.05-5.96C21.4 13.4 22 11.9 22 10.2 22 5.7 17.5 2 12 2zM8.1 12.9H6.05c-.3 0-.55-.25-.55-.55V8.25c0-.3.25-.55.55-.55s.55.25.55.55v3.55H8.1c.3 0 .55.25.55.55s-.25.55-.55.55zm2.16-.55c0 .3-.25.55-.55.55s-.55-.25-.55-.55V8.25c0-.3.25-.55.55-.55s.55.25.55.55v4.1zm4.62 0c0 .24-.15.45-.38.52a.55.55 0 0 1-.6-.2L11.8 9.9v2.45c0 .3-.25.55-.55.55s-.55-.25-.55-.55V8.25a.55.55 0 0 1 .98-.33l1.86 2.52V8.25c0-.3.25-.55.55-.55s.55.25.55.55v4.1zm3.12-2.6c.3 0 .55.25.55.55s-.25.55-.55.55h-1.5v.95h1.5c.3 0 .55.25.55.55s-.25.55-.55.55h-2.05c-.3 0-.55-.25-.55-.55V8.25c0-.3.25-.55.55-.55h2.05c.3 0 .55.25.55.55s-.25.55-.55.55h-1.5v.95z"/></svg>
+            Add us on LINE
+          </a>
+
+          <!-- FACEBOOK: clinic confirmed on Facebook but URL not supplied. Replace href="#" with the Facebook Page URL, e.g. https://facebook.com/SmileSeasons -->
+          <a class="chan chan-fb" href="#" aria-label="Smile Seasons on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
+            Facebook
+          </a>
+
+          <!-- WHATSAPP: no number supplied in clinic data. Add the clinic WhatsApp number to wire wa.me/<international-number>, or remove this button. Placeholder only. -->
+          <a class="chan chan-wa" href="#" aria-label="Message Smile Seasons on WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.05L2 22l5.1-1.33A10 10 0 1 0 12 2zm0 18.1a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.03.79.81-2.95-.2-.31A8.1 8.1 0 1 1 12 20.1zm4.5-6.07c-.25-.12-1.47-.72-1.7-.8-.22-.09-.39-.13-.55.12s-.63.8-.77.96-.28.18-.53.06a6.6 6.6 0 0 1-1.95-1.2 7.3 7.3 0 0 1-1.35-1.68c-.14-.25 0-.38.11-.5.11-.11.25-.28.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43s-.55-1.34-.76-1.83c-.2-.48-.4-.42-.55-.43h-.47c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.55c.13.16 1.73 2.64 4.2 3.7.58.26 1.04.41 1.4.52.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.68-1.18.2-.58.2-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/></svg>
+            WhatsApp
+          </a>
+
+          <!-- INSTAGRAM: no handle supplied in clinic data. Replace href="#" with instagram.com/<handle>, or remove this button. Placeholder only. -->
+          <a class="chan chan-ig" href="#" aria-label="Smile Seasons on Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.42.56.22.96.48 1.38.9.42.42.68.82.9 1.38.17.42.37 1.06.42 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.42 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.17-1.06.37-2.23.42-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.42a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.17-.42-.37-1.06-.42-2.23C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.05-1.17.25-1.8.42-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.17 1.06-.37 2.23-.42C8.42 2.21 8.8 2.2 12 2.2zm0 1.8c-3.15 0-3.5.01-4.74.07-1.14.05-1.76.24-2.17.4-.55.22-.94.47-1.35.88-.41.41-.66.8-.88 1.35-.16.41-.35 1.03-.4 2.17C2.41 10.1 2.4 10.45 2.4 12s.01 1.9.07 3.14c.05 1.14.24 1.76.4 2.17.22.55.47.94.88 1.35.41.41.8.66 1.35.88.41.16 1.03.35 2.17.4 1.24.06 1.59.07 4.74.07s3.5-.01 4.74-.07c1.14-.05 1.76-.24 2.17-.4.55-.22.94-.47 1.35-.88.41-.41.66-.8.88-1.35.16-.41.35-1.03.4-2.17.06-1.24.07-1.59.07-3.14s-.01-1.9-.07-3.14c-.05-1.14-.24-1.76-.4-2.17a3.6 3.6 0 0 0-.88-1.35 3.6 3.6 0 0 0-1.35-.88c-.41-.16-1.03-.35-2.17-.4C15.5 4.01 15.15 4 12 4zm0 3.06A4.94 4.94 0 1 0 12 16.94 4.94 4.94 0 0 0 12 7.06zm0 8.15A3.21 3.21 0 1 1 12 8.8a3.21 3.21 0 0 1 0 6.41zm6.3-8.35a1.15 1.15 0 1 1-2.3 0 1.15 1.15 0 0 1 2.3 0z"/></svg>
+            Instagram
+          </a>
+
+          <button class="chan chan-mail chan-full" type="button" aria-disabled="true" title="Online booking is coming soon" style="border:1px dashed rgba(255,255,255,0.5); cursor:not-allowed;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>
+            Book Online — coming soon
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Smile Seasons — home">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+            <circle cx="24" cy="24" r="22" fill="none" stroke="url(#brandg)" stroke-width="2.4"/>
+            <path d="M24 13c-3.4 0-5.4 1.7-6.9 1.7-0.9 0-1.7-0.7-2.5-0.7-1.2 0-1.7 1.3-1.7 3 0 4.6 2.6 12.3 4.9 12.3 1.3 0 1.9-1.9 3.2-1.9s1.9 1.9 3.2 1.9c2.3 0 4.9-7.7 4.9-12.3 0-1.7-0.5-3-1.7-3-0.8 0-1.6 0.7-2.5 0.7C29.4 14.7 27.4 13 24 13z" fill="var(--ink)"/>
+          </svg>
+          <span class="brand-text">
+            <span class="brand-name">Smile Seasons</span>
+            <span class="brand-sub">Asoke Tower · Bangkok</span>
+          </span>
+        </a>
+        <p>A calm, modern dental home in Asoke — caring for Bangkok's international community in English, every day of the week.</p>
+        <div class="foot-season" aria-hidden="true">
+          <span style="background:var(--spring);"></span>
+          <span style="background:var(--summer);"></span>
+          <span style="background:var(--autumn);"></span>
+          <span style="background:var(--winter);"></span>
+        </div>
+      </div>
+
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#welcome">Welcome</a></li>
+          <li><a href="#services">Our care</a></li>
+          <li><a href="#visit">Visit &amp; hours</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Visit us</h4>
+        <ul>
+          <li>Asoke Tower, Sukhumvit Soi 21</li>
+          <li>Watthana, Bangkok</li>
+          <li><a href="tel:+6621143274">+66 2 114 3274</a></li>
+          <li>Open daily · 10:00 – 20:00</li>
+          <!-- Footer LINE & Facebook: same placeholders as contact section — wire both href="#" to the real URLs. -->
+          <li style="display:flex; gap:0.5rem; margin-top:0.4rem;">
+            <a href="#" aria-label="LINE" style="color:#06C755;">LINE</a>
+            <span aria-hidden="true" style="color:var(--line);">·</span>
+            <a href="#" aria-label="Facebook" style="color:#1877F2;">Facebook</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Smile Seasons · Asoke Tower, Bangkok. All rights reserved.</span>
+      <span class="credit">Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener noreferrer">Stellar Haus Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  var y = document.getElementById("year");
+  if (y) y.textContent = new Date().getFullYear();
+
+  var nav = document.getElementById("siteNav");
+  function onScrollNav() {
+    if (window.scrollY > 24) nav.classList.add("scrolled");
+    else nav.classList.remove("scrolled");
+  }
+  onScrollNav();
+  window.addEventListener("scroll", onScrollNav, { passive: true });
+
+  var toggle = document.getElementById("navToggle");
+  var menu = document.getElementById("mobileMenu");
+  function closeMenu() {
+    menu.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open menu");
+    document.body.style.overflow = "";
+  }
+  function openMenu() {
+    menu.classList.add("open");
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.setAttribute("aria-label", "Close menu");
+    document.body.style.overflow = "hidden";
+  }
+  toggle.addEventListener("click", function () {
+    if (menu.classList.contains("open")) closeMenu(); else openMenu();
+  });
+  menu.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeMenu); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && menu.classList.contains("open")) { closeMenu(); toggle.focus(); }
+  });
+
+  var lines = document.querySelectorAll(".hero-title .reveal-line > span");
+  if (reduceMotion) {
+    lines.forEach(function (s) { s.style.transform = "none"; });
+  } else {
+    lines.forEach(function (s, i) {
+      s.style.transition = "transform 1.05s cubic-bezier(0.22,0.61,0.36,1)";
+      s.style.transitionDelay = (0.15 + i * 0.12) + "s";
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { s.style.transform = "translateY(0)"; });
+      });
+    });
+  }
+
+  var revealEls = document.querySelectorAll(".reveal");
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealEls.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: "0px 0px -8% 0px" });
+    revealEls.forEach(function (el) { io.observe(el); });
+  }
+
+  var seasons = [
+    { a: [168,201,155], b: [230,195,106], c: [216,154,160] },
+    { a: [200,210,140], b: [230,195,106], c: [216,154,160] },
+    { a: [230,195,106], b: [216,154,160], c: [159,182,196] },
+    { a: [216,154,160], b: [180,150,170], c: [159,182,196] },
+    { a: [159,182,196], b: [168,190,180], c: [168,201,155] }
+  ];
+  function lerp(p, q, t) { return Math.round(p + (q - p) * t); }
+  function mix(c1, c2, t) { return [lerp(c1[0],c2[0],t), lerp(c1[1],c2[1],t), lerp(c1[2],c2[2],t)]; }
+  function rgb(c) { return "rgb(" + c[0] + "," + c[1] + "," + c[2] + ")"; }
+  var root = document.documentElement;
+  var ticking = false;
+
+  function applySeason() {
+    ticking = false;
+    var max = document.body.scrollHeight - window.innerHeight;
+    var prog = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    var seg = prog * (seasons.length - 1);
+    var i = Math.min(seasons.length - 2, Math.floor(seg));
+    var t = seg - i;
+    var s0 = seasons[i], s1 = seasons[i + 1];
+    root.style.setProperty("--season-a", rgb(mix(s0.a, s1.a, t)));
+    root.style.setProperty("--season-b", rgb(mix(s0.b, s1.b, t)));
+    root.style.setProperty("--season-c", rgb(mix(s0.c, s1.c, t)));
+  }
+  if (!reduceMotion) {
+    applySeason();
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; requestAnimationFrame(applySeason); }
+    }, { passive: true });
+    window.addEventListener("resize", applySeason, { passive: true });
+  } else {
+    root.style.setProperty("--season-a", rgb(seasons[0].a));
+    root.style.setProperty("--season-b", rgb(seasons[2].b));
+    root.style.setProperty("--season-c", rgb(seasons[3].c));
+  }
+
+  if (!reduceMotion) {
+    var ringA = document.getElementById("ringA");
+    var ringB = document.getElementById("ringB");
+    var dialTick = false;
+    function spinDial() {
+      dialTick = false;
+      var r = window.scrollY * 0.04;
+      if (ringA) ringA.style.transform = "rotate(" + r + "deg)";
+      if (ringB) ringB.style.transform = "rotate(" + (-r * 1.4) + "deg)";
+    }
+    window.addEventListener("scroll", function () {
+      if (!dialTick) { dialTick = true; requestAnimationFrame(spinDial); }
+    }, { passive: true });
+  }
+
+  var greetings = ["Hello.", "Bonjour.", "Hallo.", "Konnichiwa.", "Annyeong.", "Ciao.", "Sawasdee.", "Namaste."];
+  var rotator = document.getElementById("helloRotator");
+  if (rotator && !reduceMotion) {
+    var gi = 0;
+    rotator.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+    setInterval(function () {
+      rotator.style.opacity = "0";
+      rotator.style.transform = "translateY(8px)";
+      setTimeout(function () {
+        gi = (gi + 1) % greetings.length;
+        rotator.textContent = greetings[gi];
+        rotator.style.opacity = "1";
+        rotator.style.transform = "translateY(0)";
+      }, 600);
+    }, 2800);
+  }
+
+  var ratingEl = document.getElementById("ratingCount");
+  if (ratingEl) {
+    if (reduceMotion || !("IntersectionObserver" in window)) {
+      ratingEl.textContent = "4.9";
+    } else {
+      var counted = false;
+      var rio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !counted) {
+            counted = true;
+            var start = null, target = 4.9, dur = 1400;
+            function step(ts) {
+              if (!start) start = ts;
+              var p = Math.min(1, (ts - start) / dur);
+              var eased = 1 - Math.pow(1 - p, 3);
+              ratingEl.textContent = (target * eased).toFixed(1);
+              if (p < 1) requestAnimationFrame(step);
+              else ratingEl.textContent = "4.9";
+            }
+            requestAnimationFrame(step);
+            rio.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      rio.observe(ratingEl);
+    }
+  }
+
+  var today = new Date().getDay();
+  var todayLi = document.querySelector('#hoursList li[data-day="' + today + '"]');
+  if (todayLi) {
+    todayLi.classList.add("is-today");
+    var tEl = todayLi.querySelector(".time");
+    if (tEl) tEl.insertAdjacentHTML("beforeend", ' · Today');
+  }
+})();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+6621143274", CHAN="https://lin.ee/ZEZX3en", CHANLABEL="Message us on LINE";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Habito Dental Clinic — Your Dental Home in On Nut, Bangkok</title>
+<meta name="description" content="English-speaking dental care in On Nut / Phra Khanong, Bangkok. Friendly general dentistry inside Habito Mall — check-ups, cleaning, fillings and more. No worries about language barriers. Rated 4.8 stars." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23C8643C'/%3E%3Cpath d='M7 16 L16 8 L25 16' fill='none' stroke='%23F7EFE2' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10 15.5 V24 H22 V15.5' fill='none' stroke='%23F7EFE2' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3Crect x='14' y='18.5' width='4' height='5.5' rx='1' fill='%23F7EFE2'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --terracotta: #C8643C;
+    --terracotta-deep: #A24A28;
+    --terracotta-soft: #E2916E;
+    --sand: #F7EFE2;
+    --sand-deep: #EFE2CE;
+    --sand-warm: #F0DEC4;
+    --sage: #7C9A78;
+    --sage-deep: #5C7858;
+    --sage-soft: #A8C2A2;
+    --cream: #FDFAF4;
+    --ink: #3A2E26;
+    --ink-soft: #6B5A4D;
+    --white: #FFFFFF;
+
+    --font-display: 'Fredoka', system-ui, sans-serif;
+    --font-body: 'Nunito', system-ui, sans-serif;
+
+    --shadow-soft: 0 10px 30px -12px rgba(120, 70, 40, 0.22);
+    --shadow-lift: 0 22px 50px -20px rgba(120, 70, 40, 0.32);
+    --ease-home: cubic-bezier(0.22, 1, 0.36, 1);
+
+    --radius: 22px;
+    --radius-sm: 14px;
+    --maxw: 1180px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .display { font-family: var(--font-display); font-weight: 600; line-height: 1.08; letter-spacing: -0.01em; }
+
+  a { color: inherit; text-decoration: none; }
+
+  img, svg { display: block; max-width: 100%; }
+
+  .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 clamp(1.2rem, 4vw, 2.6rem); }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+  }
+
+  .skip-link {
+    position: absolute; left: 1rem; top: -60px; z-index: 200;
+    background: var(--terracotta); color: var(--white);
+    padding: 0.7rem 1.2rem; border-radius: 0 0 12px 12px; font-weight: 700;
+    transition: top 0.25s var(--ease-home);
+  }
+  .skip-link:focus { top: 0; }
+
+  a:focus-visible, button:focus-visible, .btn:focus-visible {
+    outline: 3px solid var(--sage-deep);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  /* ---------- NAV ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(10px);
+    background: rgba(253, 250, 244, 0.82);
+    border-bottom: 1px solid rgba(200, 100, 60, 0.10);
+    transition: box-shadow 0.3s var(--ease-home), background 0.3s var(--ease-home);
+  }
+  .nav.scrolled { box-shadow: 0 6px 24px -16px rgba(120,70,40,0.5); background: rgba(253, 250, 244, 0.95); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 74px; }
+
+  .brand { display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-display); font-weight: 600; font-size: 1.32rem; color: var(--ink); }
+  .brand .mark { width: 40px; height: 40px; flex: none; }
+  .brand .mark svg { width: 100%; height: 100%; }
+  .brand b { color: var(--terracotta); font-weight: 600; }
+  .brand .sub { display: block; font-family: var(--font-body); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--sage-deep); margin-top: -2px; }
+
+  .nav-links { display: flex; align-items: center; gap: 0.4rem; }
+  .nav-links a.navlink {
+    padding: 0.5rem 0.9rem; border-radius: 999px; font-weight: 600; font-size: 0.94rem; color: var(--ink-soft);
+    position: relative; transition: color 0.2s var(--ease-home), background 0.2s var(--ease-home);
+  }
+  .nav-links a.navlink:hover { color: var(--terracotta-deep); background: rgba(200,100,60,0.08); }
+
+  .nav-cta {
+    margin-left: 0.5rem; display: inline-flex; align-items: center; gap: 0.45rem;
+    background: var(--terracotta); color: var(--white); padding: 0.62rem 1.15rem; border-radius: 999px;
+    font-weight: 700; font-size: 0.94rem; box-shadow: var(--shadow-soft);
+    transition: transform 0.25s var(--ease-home), box-shadow 0.25s var(--ease-home), background 0.25s var(--ease-home);
+  }
+  .nav-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-lift); background: var(--terracotta-deep); }
+  .nav-cta svg { width: 17px; height: 17px; }
+
+  .nav-toggle {
+    display: none; background: var(--sand); border: 1px solid rgba(200,100,60,0.2); border-radius: 12px;
+    width: 46px; height: 46px; cursor: pointer; color: var(--terracotta-deep);
+    align-items: center; justify-content: center;
+  }
+  .nav-toggle svg { width: 24px; height: 24px; }
+
+  /* ---------- BUTTONS ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+    padding: 0.92rem 1.5rem; border-radius: 999px; font-family: var(--font-body); font-weight: 800; font-size: 1rem;
+    cursor: pointer; border: none; transition: transform 0.25s var(--ease-home), box-shadow 0.25s var(--ease-home), background 0.25s var(--ease-home), color 0.25s var(--ease-home);
+    white-space: nowrap;
+  }
+  .btn svg { width: 20px; height: 20px; flex: none; }
+  .btn-primary { background: var(--terracotta); color: var(--white); box-shadow: var(--shadow-soft); }
+  .btn-primary:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); background: var(--terracotta-deep); }
+  .btn-line { background: #06C755; color: var(--white); box-shadow: 0 10px 26px -12px rgba(6,199,85,0.6); }
+  .btn-line:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -16px rgba(6,199,85,0.7); background: #05b34c; }
+  .btn-fb { background: #1877F2; color: var(--white); box-shadow: 0 10px 26px -12px rgba(24,119,242,0.6); }
+  .btn-fb:hover { transform: translateY(-3px); box-shadow: 0 18px 40px -16px rgba(24,119,242,0.7); background: #1568d8; }
+  .btn-ghost { background: var(--white); color: var(--terracotta-deep); border: 2px solid var(--sand-deep); }
+  .btn-ghost:hover { transform: translateY(-3px); border-color: var(--terracotta-soft); box-shadow: var(--shadow-soft); }
+
+  /* ---------- HERO ---------- */
+  .hero { position: relative; padding: clamp(2.5rem, 6vw, 5rem) 0 clamp(3rem, 7vw, 6rem); overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; z-index: -2; background:
+      radial-gradient(120% 90% at 88% -5%, var(--sand-warm) 0%, transparent 55%),
+      radial-gradient(90% 80% at 5% 100%, #EAF0E6 0%, transparent 60%),
+      var(--cream); }
+  .hero-blob { position: absolute; z-index: -1; border-radius: 50%; filter: blur(40px); opacity: 0.5; }
+  .blob-1 { width: 420px; height: 420px; background: var(--terracotta-soft); top: -120px; right: -80px; }
+  .blob-2 { width: 360px; height: 360px; background: var(--sage-soft); bottom: -140px; left: -100px; }
+
+  .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(124,154,120,0.16); color: var(--sage-deep);
+    padding: 0.45rem 0.95rem; border-radius: 999px; font-weight: 800; font-size: 0.8rem;
+    letter-spacing: 0.04em; margin-bottom: 1.4rem;
+  }
+  .eyebrow svg { width: 15px; height: 15px; }
+
+  .hero h1 { font-size: clamp(2.6rem, 6.2vw, 4.6rem); font-weight: 600; margin: 0 0 1.2rem; color: var(--ink); }
+  .hero h1 .accent { color: var(--terracotta); position: relative; white-space: nowrap; }
+  .hero h1 .accent svg { position: absolute; left: 0; right: 0; bottom: -0.28em; width: 100%; height: 0.4em; }
+  .hero p.lede { font-size: clamp(1.06rem, 2.2vw, 1.28rem); color: var(--ink-soft); max-width: 36ch; margin: 0 0 2rem; font-weight: 500; }
+
+  .hero-cta-row { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 1.8rem; }
+
+  .hero-trust { display: flex; align-items: center; gap: 0.9rem; flex-wrap: wrap; }
+  .stars { display: inline-flex; gap: 2px; }
+  .stars svg { width: 18px; height: 18px; }
+  .hero-trust .rt { font-weight: 800; color: var(--ink); }
+  .hero-trust .rt span { color: var(--ink-soft); font-weight: 600; }
+  .hero-trust .divider { width: 1px; height: 22px; background: rgba(200,100,60,0.25); }
+  .hero-trust .lang { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; color: var(--sage-deep); font-size: 0.95rem; }
+  .hero-trust .lang svg { width: 17px; height: 17px; }
+
+  /* hero art / house */
+  .hero-art { position: relative; aspect-ratio: 1 / 1; max-width: 480px; margin-left: auto; width: 100%; }
+  .hero-art .house-card {
+    position: absolute; inset: 0; background: var(--white); border-radius: 36px;
+    box-shadow: var(--shadow-lift); overflow: hidden;
+    border: 1px solid rgba(200,100,60,0.08);
+  }
+  .hero-art .house-card .field {
+    position: absolute; inset: 0; background:
+      radial-gradient(80% 70% at 50% 30%, var(--sand) 0%, var(--sand-deep) 100%);
+  }
+  .hero-art svg.house { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+  .float-chip {
+    position: absolute; background: var(--white); border-radius: 16px; padding: 0.7rem 1rem;
+    box-shadow: var(--shadow-soft); display: flex; align-items: center; gap: 0.6rem;
+    font-weight: 800; font-size: 0.92rem; color: var(--ink);
+  }
+  .float-chip .ic { width: 34px; height: 34px; border-radius: 11px; display: grid; place-items: center; flex: none; }
+  .float-chip .ic svg { width: 18px; height: 18px; }
+  .float-chip small { display: block; font-weight: 600; font-size: 0.72rem; color: var(--ink-soft); }
+  .chip-a { top: 8%; left: -6%; }
+  .chip-a .ic { background: rgba(124,154,120,0.18); color: var(--sage-deep); }
+  .chip-b { bottom: 9%; right: -7%; }
+  .chip-b .ic { background: rgba(200,100,60,0.16); color: var(--terracotta-deep); }
+
+  /* ---------- SECTION SHELL ---------- */
+  section { position: relative; }
+  .section-pad { padding: clamp(3.5rem, 8vw, 7rem) 0; }
+  .section-head { max-width: 640px; margin-bottom: clamp(2rem, 4vw, 3.2rem); }
+  .section-head.center { margin-left: auto; margin-right: auto; text-align: center; }
+  .kicker {
+    display: inline-flex; align-items: center; gap: 0.5rem; color: var(--terracotta);
+    font-weight: 800; font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.9rem;
+  }
+  .kicker::before { content: ""; width: 26px; height: 2px; background: var(--terracotta); border-radius: 2px; }
+  .section-head.center .kicker::before { display: none; }
+  h2.section-title { font-size: clamp(1.95rem, 4.2vw, 3rem); color: var(--ink); margin: 0 0 0.9rem; }
+  .section-head p { font-size: clamp(1.02rem, 2vw, 1.15rem); color: var(--ink-soft); margin: 0; font-weight: 500; }
+
+  /* ---------- WELCOME / ENGLISH ---------- */
+  .welcome { background: linear-gradient(180deg, var(--cream), #FBF3E8); }
+  .welcome-grid { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+  .welcome-visual { position: relative; }
+  .welcome-card {
+    background: var(--white); border-radius: var(--radius); padding: clamp(1.6rem, 3vw, 2.4rem);
+    box-shadow: var(--shadow-soft); border: 1px solid rgba(200,100,60,0.07);
+  }
+  .welcome-card .nest-wrap { display: grid; place-items: center; margin-bottom: 1.2rem; }
+  .welcome-card .nest-wrap svg { width: 100%; max-width: 320px; height: auto; }
+  .welcome-quote { font-family: var(--font-display); font-weight: 500; font-size: clamp(1.2rem, 2.6vw, 1.55rem); color: var(--ink); line-height: 1.3; text-align: center; }
+  .welcome-quote .hl { color: var(--terracotta); }
+
+  .welcome-points { list-style: none; padding: 0; margin: 1.8rem 0 0; display: grid; gap: 1rem; }
+  .welcome-points li { display: flex; gap: 0.9rem; align-items: flex-start; }
+  .welcome-points .tick {
+    flex: none; width: 32px; height: 32px; border-radius: 10px; background: rgba(124,154,120,0.16);
+    color: var(--sage-deep); display: grid; place-items: center;
+  }
+  .welcome-points .tick svg { width: 18px; height: 18px; }
+  .welcome-points strong { display: block; font-family: var(--font-display); font-weight: 500; font-size: 1.08rem; color: var(--ink); }
+  .welcome-points span { color: var(--ink-soft); font-weight: 500; font-size: 0.97rem; }
+
+  /* ---------- SERVICES ---------- */
+  .services { background: var(--cream); }
+  .svc-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.2rem; }
+  .svc-card {
+    background: var(--white); border-radius: var(--radius); padding: clamp(1.5rem, 3vw, 2.1rem);
+    border: 1px solid rgba(200,100,60,0.08); box-shadow: 0 6px 22px -16px rgba(120,70,40,0.45);
+    transition: transform 0.4s var(--ease-home), box-shadow 0.4s var(--ease-home);
+    position: relative; overflow: hidden;
+  }
+  .svc-card::after {
+    content: ""; position: absolute; right: -40px; top: -40px; width: 130px; height: 130px;
+    background: radial-gradient(circle, rgba(200,100,60,0.07), transparent 70%); border-radius: 50%;
+    transition: transform 0.5s var(--ease-home);
+  }
+  .svc-card:hover { transform: translateY(-7px); box-shadow: var(--shadow-lift); }
+  .svc-card:hover::after { transform: scale(1.4); }
+  .svc-icon {
+    width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; margin-bottom: 1.1rem;
+    background: var(--sand); color: var(--terracotta-deep); transition: transform 0.4s var(--ease-home), background 0.4s var(--ease-home);
+  }
+  .svc-card:hover .svc-icon { transform: rotate(-6deg) scale(1.06); background: var(--sand-warm); }
+  .svc-icon svg { width: 28px; height: 28px; }
+  .svc-card h3 { font-size: 1.3rem; font-weight: 500; margin: 0 0 0.5rem; color: var(--ink); }
+  .svc-card p { margin: 0; color: var(--ink-soft); font-weight: 500; font-size: 0.98rem; }
+
+  .svc-card.feature {
+    grid-column: span 6; background: linear-gradient(135deg, var(--terracotta), var(--terracotta-deep)); color: var(--white);
+    border: none;
+  }
+  .svc-card.feature h3, .svc-card.feature p { color: var(--white); }
+  .svc-card.feature p { opacity: 0.92; }
+  .svc-card.feature .svc-icon { background: rgba(255,255,255,0.18); color: var(--white); }
+  .svc-card.feature .feat-list { list-style: none; padding: 0; margin: 1.2rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .svc-card.feature .feat-list li { background: rgba(255,255,255,0.16); padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.85rem; font-weight: 700; }
+  .svc-card.span6 { grid-column: span 6; }
+  .svc-card.span4 { grid-column: span 4; }
+
+  .svc-note { margin-top: 1.6rem; text-align: center; color: var(--ink-soft); font-weight: 600; font-size: 0.98rem; }
+  .svc-note a { color: var(--terracotta-deep); text-decoration: underline; text-underline-offset: 3px; font-weight: 800; }
+
+  /* ---------- VISITING / LOCATION ---------- */
+  .visiting { background: linear-gradient(180deg, #FBF3E8, var(--cream)); }
+  .visit-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2rem, 5vw, 3.5rem); align-items: stretch; }
+  .map-panel {
+    position: relative; border-radius: var(--radius); overflow: hidden; min-height: 380px;
+    box-shadow: var(--shadow-soft); background: #EAF0E6; border: 1px solid rgba(124,154,120,0.18);
+  }
+  .map-panel svg.map { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .map-pin {
+    position: absolute; left: 50%; top: 46%; transform: translate(-50%, -100%);
+    background: var(--white); border-radius: 16px; padding: 0.7rem 1rem 0.7rem 0.7rem; display: flex; align-items: center; gap: 0.65rem;
+    box-shadow: var(--shadow-lift); font-weight: 800; color: var(--ink);
+  }
+  .map-pin .dot { width: 38px; height: 38px; border-radius: 12px; background: var(--terracotta); color: var(--white); display: grid; place-items: center; flex: none; }
+  .map-pin .dot svg { width: 20px; height: 20px; }
+  .map-pin small { display: block; font-weight: 600; font-size: 0.74rem; color: var(--ink-soft); }
+  .map-pulse { position: absolute; left: 50%; top: 46%; transform: translate(-50%, -50%); width: 26px; height: 26px; border-radius: 50%; background: rgba(200,100,60,0.35); }
+
+  .visit-info { display: flex; flex-direction: column; gap: 1.1rem; }
+  .info-card {
+    background: var(--white); border-radius: var(--radius-sm); padding: 1.3rem 1.4rem; border: 1px solid rgba(200,100,60,0.08);
+    box-shadow: 0 6px 22px -18px rgba(120,70,40,0.45); display: flex; gap: 1rem; align-items: flex-start;
+    transition: transform 0.35s var(--ease-home), box-shadow 0.35s var(--ease-home);
+  }
+  .info-card:hover { transform: translateX(4px); box-shadow: var(--shadow-soft); }
+  .info-card .ic { flex: none; width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center; background: var(--sand); color: var(--terracotta-deep); }
+  .info-card .ic svg { width: 23px; height: 23px; }
+  .info-card h3 { margin: 0 0 0.2rem; font-size: 1.12rem; font-weight: 500; color: var(--ink); }
+  .info-card p { margin: 0; color: var(--ink-soft); font-weight: 600; font-size: 0.96rem; }
+  .info-card p a { color: var(--terracotta-deep); font-weight: 800; }
+
+  .hours-list { list-style: none; padding: 0; margin: 0.4rem 0 0; display: grid; gap: 0.25rem; }
+  .hours-list li { display: flex; justify-content: space-between; font-size: 0.93rem; color: var(--ink-soft); font-weight: 600; }
+  .hours-list li b { color: var(--ink); font-weight: 800; }
+  .hours-list li.today { color: var(--sage-deep); }
+  .hours-list li.today b { color: var(--sage-deep); }
+  .badge-open { display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(124,154,120,0.18); color: var(--sage-deep); font-weight: 800; font-size: 0.78rem; padding: 0.25rem 0.7rem; border-radius: 999px; margin-left: 0.5rem; }
+  .badge-open .dt { width: 8px; height: 8px; border-radius: 50%; background: var(--sage); }
+
+  /* ---------- TRUST ---------- */
+  .trust { background: var(--cream); }
+  .trust-band {
+    background: linear-gradient(135deg, #FBF3E8 0%, var(--sand) 100%);
+    border-radius: 32px; padding: clamp(2.2rem, 5vw, 3.8rem); box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(200,100,60,0.08); position: relative; overflow: hidden;
+  }
+  .trust-top { display: grid; grid-template-columns: auto 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
+  .trust-score { text-align: center; }
+  .trust-score .num { font-family: var(--font-display); font-weight: 600; font-size: clamp(3.4rem, 8vw, 5rem); color: var(--terracotta); line-height: 1; }
+  .trust-score .stars { justify-content: center; margin: 0.4rem 0; }
+  .trust-score .meta { font-weight: 700; color: var(--ink-soft); font-size: 0.92rem; }
+  .trust-score .meta b { color: var(--ink); }
+  .trust-copy h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); color: var(--ink); margin: 0 0 0.6rem; }
+  .trust-copy p { margin: 0; color: var(--ink-soft); font-weight: 500; font-size: 1.05rem; }
+
+  .trust-pills { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 2rem; }
+  .trust-pill { background: var(--white); border-radius: 999px; padding: 0.6rem 1.15rem; font-weight: 800; font-size: 0.9rem; color: var(--ink); display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 6px 18px -14px rgba(120,70,40,0.5); }
+  .trust-pill svg { width: 17px; height: 17px; color: var(--sage-deep); }
+
+  /* ---------- CONTACT ---------- */
+  .contact { background: linear-gradient(180deg, var(--cream), #FBF3E8); }
+  .contact-card {
+    background: var(--white); border-radius: 32px; box-shadow: var(--shadow-lift);
+    border: 1px solid rgba(200,100,60,0.08); overflow: hidden;
+    display: grid; grid-template-columns: 1.15fr 0.85fr;
+  }
+  .contact-left { padding: clamp(2rem, 5vw, 3.4rem); }
+  .contact-left h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); color: var(--ink); margin: 0 0 0.8rem; }
+  .contact-left > p { color: var(--ink-soft); font-weight: 500; font-size: 1.08rem; margin: 0 0 2rem; max-width: 42ch; }
+  .contact-actions { display: grid; gap: 0.85rem; max-width: 420px; }
+  .contact-actions .btn { width: 100%; justify-content: flex-start; padding: 1.05rem 1.4rem; font-size: 1.02rem; }
+  .contact-actions .btn .sub { font-weight: 600; font-size: 0.8rem; opacity: 0.85; margin-left: auto; }
+
+  .contact-right {
+    background: linear-gradient(160deg, var(--sage-deep), #4A6446); color: var(--white);
+    padding: clamp(2rem, 5vw, 3.4rem); position: relative; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  .contact-right h3 { color: var(--white); font-size: 1.5rem; font-weight: 500; margin: 0 0 1.3rem; }
+  .cr-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.1rem; }
+  .cr-list li { display: flex; gap: 0.85rem; align-items: flex-start; }
+  .cr-list .ic { flex: none; width: 40px; height: 40px; border-radius: 12px; background: rgba(255,255,255,0.16); display: grid; place-items: center; }
+  .cr-list .ic svg { width: 20px; height: 20px; }
+  .cr-list b { display: block; font-family: var(--font-display); font-weight: 500; font-size: 1.02rem; }
+  .cr-list span { color: rgba(255,255,255,0.85); font-weight: 600; font-size: 0.92rem; line-height: 1.4; }
+  .cr-list a { color: var(--white); text-decoration: underline; text-underline-offset: 2px; }
+  .cr-house { position: absolute; right: -30px; bottom: -30px; width: 180px; height: 180px; opacity: 0.12; }
+  .cr-house svg { width: 100%; height: 100%; }
+
+  /* ---------- FOOTER ---------- */
+  footer { background: var(--ink); color: rgba(255,255,255,0.78); padding: clamp(3rem, 6vw, 4.5rem) 0 2rem; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; margin-bottom: 2.5rem; }
+  .foot-brand { display: flex; align-items: center; gap: 0.6rem; font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--white); margin-bottom: 1rem; }
+  .foot-brand .mark { width: 42px; height: 42px; flex: none; }
+  .foot-brand b { color: var(--terracotta-soft); font-weight: 600; }
+  .foot-about { font-weight: 500; font-size: 0.96rem; max-width: 34ch; color: rgba(255,255,255,0.7); }
+  .foot-col h4 { font-family: var(--font-display); font-weight: 500; color: var(--white); font-size: 1.05rem; margin: 0 0 1rem; }
+  .foot-col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; }
+  .foot-col a, .foot-col p { color: rgba(255,255,255,0.72); font-weight: 600; font-size: 0.94rem; margin: 0; transition: color 0.2s var(--ease-home); }
+  .foot-col a:hover { color: var(--terracotta-soft); }
+  .foot-social { display: flex; gap: 0.6rem; margin-top: 1.2rem; }
+  .foot-social a { width: 44px; height: 44px; border-radius: 13px; background: rgba(255,255,255,0.08); display: grid; place-items: center; color: var(--white); transition: transform 0.25s var(--ease-home), background 0.25s var(--ease-home); }
+  .foot-social a:hover { transform: translateY(-3px); background: rgba(255,255,255,0.16); }
+  .foot-social svg { width: 21px; height: 21px; }
+
+  .foot-bottom { border-top: 1px solid rgba(255,255,255,0.12); padding-top: 1.6rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.8rem; align-items: center; font-size: 0.88rem; color: rgba(255,255,255,0.6); font-weight: 600; }
+  .foot-credit a { color: var(--terracotta-soft); font-weight: 800; text-decoration: none; transition: color 0.2s var(--ease-home); }
+  .foot-credit a:hover { color: var(--white); }
+
+  /* ---------- REVEAL ANIMATIONS ---------- */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s var(--ease-home), transform 0.8s var(--ease-home); }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal.d1 { transition-delay: 0.08s; }
+  .reveal.d2 { transition-delay: 0.16s; }
+  .reveal.d3 { transition-delay: 0.24s; }
+  .reveal.d4 { transition-delay: 0.32s; }
+  .reveal.d5 { transition-delay: 0.40s; }
+
+  /* hero entrance settle */
+  .settle { opacity: 0; transform: translateY(22px) scale(0.985); animation: settleIn 1s var(--ease-home) forwards; }
+  .settle.s1 { animation-delay: 0.15s; }
+  .settle.s2 { animation-delay: 0.30s; }
+  .settle.s3 { animation-delay: 0.45s; }
+  .settle.s4 { animation-delay: 0.60s; }
+  @keyframes settleIn { to { opacity: 1; transform: none; } }
+
+  .hero-art { animation: floatHome 7s var(--ease-home) infinite; }
+  @keyframes floatHome { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+  .float-chip { animation: chipFloat 5s var(--ease-home) infinite; }
+  .chip-b { animation-delay: 1.4s; }
+  @keyframes chipFloat { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+  .map-pulse { animation: pulse 2.6s ease-out infinite; }
+  @keyframes pulse { 0% { transform: translate(-50%,-50%) scale(0.6); opacity: 0.7; } 80%,100% { transform: translate(-50%,-50%) scale(3.4); opacity: 0; } }
+
+  /* self-drawing strokes */
+  .draw-path { stroke-dasharray: var(--len, 400); stroke-dashoffset: var(--len, 400); }
+  .draw-on .draw-path { animation: drawIn 1.6s var(--ease-home) forwards; }
+  .draw-on .draw-path.dp2 { animation-delay: 0.5s; }
+  .draw-on .draw-path.dp3 { animation-delay: 0.9s; }
+  .draw-on .draw-path.dp4 { animation-delay: 1.2s; }
+  @keyframes drawIn { to { stroke-dashoffset: 0; } }
+  .fade-fill { opacity: 0; }
+  .draw-on .fade-fill { animation: fadeFill 0.8s var(--ease-home) forwards; animation-delay: 1.5s; }
+  @keyframes fadeFill { to { opacity: 1; } }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 940px) {
+    .hero-grid, .welcome-grid, .visit-grid, .contact-card { grid-template-columns: 1fr; }
+    .hero-art { margin: 0 auto; max-width: 400px; }
+    .contact-right { order: -1; }
+    .svc-card.feature, .svc-card.span6, .svc-card.span4 { grid-column: span 12; }
+    .trust-top { grid-template-columns: 1fr; text-align: center; }
+    .trust-score .stars { justify-content: center; }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+    .foot-brand-col { grid-column: span 2; }
+  }
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: inline-flex; }
+    .nav.open .nav-links {
+      display: flex; flex-direction: column; align-items: stretch; gap: 0.3rem;
+      position: absolute; top: 74px; left: 0; right: 0; background: var(--cream);
+      padding: 1rem 1.2rem 1.4rem; box-shadow: var(--shadow-soft); border-bottom: 1px solid rgba(200,100,60,0.1);
+    }
+    .nav.open .nav-links a.navlink { padding: 0.8rem 1rem; }
+    .nav.open .nav-cta { margin-left: 0; justify-content: center; }
+    .float-chip { display: none; }
+    .foot-grid { grid-template-columns: 1fr; }
+    .foot-brand-col { grid-column: span 1; }
+    .hero-trust { gap: 0.6rem; }
+    .hero-trust .divider { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+    .reveal { opacity: 1 !important; transform: none !important; }
+    .settle, .fade-fill { opacity: 1 !important; transform: none !important; }
+    .draw-path { stroke-dashoffset: 0 !important; }
+    .hero-art, .float-chip, .map-pulse { animation: none !important; }
+  }
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#c8643c;--bk-accent-ink:#ffffff;--bk-ink:#3a2e26;--bk-panel:#fdfaf4;--bk-muted:rgba(58,46,38,0.6);--bk-line:rgba(58,46,38,0.14);--bk-serif:Georgia, "Times New Roman", serif;--bk-sans:"Fredoka", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Habito Dental Clinic — home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none">
+          <rect width="48" height="48" rx="13" fill="#C8643C"/>
+          <path d="M11 25 L24 13 L37 25" stroke="#F7EFE2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M15 24 V36 H33 V24" stroke="#F7EFE2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="21" y="29" width="6" height="7" rx="1.4" fill="#F7EFE2"/>
+        </svg>
+      </span>
+      <span>Habito<b>.</b><span class="sub">Dental &middot; On Nut</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a class="navlink" href="#welcome">English Care</a>
+      <a class="navlink" href="#services">Treatments</a>
+      <a class="navlink" href="#visiting">Visiting</a>
+      <a class="navlink" href="#reviews">Reviews</a>
+      <a class="navlink" href="#contact">Contact</a>
+      <a class="nav-cta" href="tel:+66955283666">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Us
+      </a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-blob blob-1" aria-hidden="true"></div>
+  <div class="hero-blob blob-2" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow settle s1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+        English-speaking &middot; On Nut / Phra Khanong
+      </span>
+      <h1 id="hero-title" class="settle s1">
+        Find your dental<br>
+        <span class="accent">home
+          <svg viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M4 14 Q60 4 100 11 T196 8" fill="none" stroke="#E2916E" stroke-width="6" stroke-linecap="round"/></svg>
+        </span> in Bangkok
+      </h1>
+      <p class="lede settle s2">Warm, gentle, English-speaking dentistry in the heart of On Nut &mdash; no worries about language barriers. Welcome to Habito.</p>
+      <div class="hero-cta-row settle s3">
+        <a class="btn btn-primary" href="tel:+66955283666">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call +66 95 528 3666
+        </a>
+        <!-- LINE placeholder: replace href="#" with the clinic's official LINE add-friend URL, e.g. https://line.me/ti/p/@habitodental -->
+        <a class="btn btn-line" href="#" aria-label="Chat with Habito Dental on LINE">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.07 3.58 7.48 8.41 8.13.33.07.78.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.86-3.45 7.99-5.9C21.57 13.6 22 11.97 22 10.23 22 5.69 17.52 2 12 2zM8.13 12.62H6.18c-.28 0-.51-.23-.51-.51V8.21c0-.28.23-.51.51-.51s.51.23.51.51v3.39h1.43c.28 0 .51.23.51.51s-.22.51-.5.51zm2-.51c0 .28-.23.51-.51.51s-.51-.23-.51-.51V8.21c0-.28.23-.51.51-.51s.51.23.51.51v3.9zm4.65 0c0 .22-.14.41-.35.48-.05.02-.11.03-.16.03-.16 0-.31-.08-.41-.21l-2-2.72v2.42c0 .28-.23.51-.51.51s-.51-.23-.51-.51V8.21c0-.22.14-.41.35-.48.05-.02.11-.03.16-.03.16 0 .31.08.41.21l2 2.72V8.21c0-.28.23-.51.51-.51s.51.23.51.51v3.9zm3.5-2.46c.28 0 .51.23.51.51s-.23.51-.51.51h-1.43v.93h1.43c.28 0 .51.23.51.51s-.23.51-.51.51h-1.94c-.28 0-.51-.23-.51-.51V8.21c0-.28.23-.51.51-.51h1.94c.28 0 .51.23.51.51s-.23.51-.51.51h-1.43v.93h1.43z"/></svg>
+          Chat on LINE
+        </a>
+      </div>
+      <div class="hero-trust settle s4">
+        <span class="stars" role="img" aria-label="Rated 4.8 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="#E8A427"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E8A427"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E8A427"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E8A427"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#E8A427"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+        </span>
+        <span class="rt">4.8 <span>&middot; 156 Google reviews</span></span>
+        <span class="divider" aria-hidden="true"></span>
+        <span class="lang">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          We speak English
+        </span>
+      </div>
+    </div>
+
+    <!-- HERO ART: self-drawing home -->
+    <div class="hero-art settle s2" aria-hidden="true">
+      <div class="house-card">
+        <div class="field"></div>
+        <svg class="house draw-on" id="heroHouse" viewBox="0 0 400 400" fill="none">
+          <path class="draw-path dp4" style="--len:360" d="M40 312 H360" stroke="#7C9A78" stroke-width="3" stroke-linecap="round"/>
+          <circle class="fade-fill" cx="310" cy="92" r="34" fill="#F0DEC4"/>
+          <rect class="fade-fill" x="118" y="172" width="164" height="140" rx="6" fill="#FCFAF4"/>
+          <path class="draw-path dp3" style="--len:560" d="M118 312 V172 H282 V312" stroke="#C8643C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="draw-path dp2" style="--len:300" d="M96 184 L200 96 L304 184" stroke="#C8643C" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="draw-path dp2" style="--len:90" d="M250 138 V108 H268 V158" stroke="#A24A28" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect class="fade-fill" x="178" y="240" width="44" height="72" rx="6" fill="#E2916E"/>
+          <path class="draw-path dp3" style="--len:200" d="M178 312 V246 Q178 240 184 240 H216 Q222 240 222 246 V312" stroke="#A24A28" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle class="fade-fill" cx="213" cy="278" r="3.4" fill="#FCFAF4"/>
+          <rect class="fade-fill" x="138" y="206" width="34" height="34" rx="5" fill="#F0DEC4"/>
+          <path class="draw-path dp3" style="--len:150" d="M138 211 Q138 206 143 206 H167 Q172 206 172 211 V235 Q172 240 167 240 H143 Q138 240 138 235 Z" stroke="#7C9A78" stroke-width="2.6"/>
+          <path class="draw-path dp4" style="--len:60" d="M155 232 c-6 -5 -10 -8 -10 -13 a4 4 0 0 1 8 -1.5 a4 4 0 0 1 8 1.5 c0 5 -4 8 -6 13" stroke="#C8643C" stroke-width="2.4" stroke-linecap="round" fill="none"/>
+          <path class="draw-path dp4" style="--len:80" d="M236 304 q14 -10 30 -4 M240 308 q14 -8 28 -2" stroke="#7C9A78" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="float-chip chip-a">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+        <span>Gentle care<small>Relaxed &amp; unrushed</small></span>
+      </div>
+      <div class="float-chip chip-b">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <span>Inside Habito Mall<small>On Nut, Bangkok</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WELCOME / ENGLISH CARE ============ -->
+<section class="welcome section-pad" id="welcome" aria-labelledby="welcome-title">
+  <div class="wrap welcome-grid">
+    <div class="welcome-visual reveal">
+      <div class="welcome-card">
+        <div class="nest-wrap">
+          <svg viewBox="0 0 320 200" fill="none" class="draw-on" id="nestSvg" aria-hidden="true">
+            <path class="draw-path dp2" style="--len:380" d="M40 132 Q60 96 160 96 Q260 96 280 132 Q300 168 160 168 Q20 168 40 132 Z" stroke="#C8643C" stroke-width="3.5" stroke-linecap="round" fill="#F7EFE2"/>
+            <path class="draw-path dp3" style="--len:260" d="M52 138 Q160 118 268 138" stroke="#E2916E" stroke-width="2.4" stroke-linecap="round"/>
+            <path class="draw-path dp3" style="--len:260" d="M58 150 Q160 132 262 150" stroke="#7C9A78" stroke-width="2.2" stroke-linecap="round"/>
+            <path class="draw-path dp4" style="--len:200" d="M72 158 Q160 146 248 158" stroke="#A24A28" stroke-width="2" stroke-linecap="round"/>
+            <ellipse class="fade-fill" cx="132" cy="128" rx="17" ry="21" fill="#FCFAF4"/>
+            <ellipse class="fade-fill" cx="162" cy="122" rx="18" ry="22" fill="#F0DEC4"/>
+            <ellipse class="fade-fill" cx="192" cy="129" rx="16" ry="20" fill="#FCFAF4"/>
+            <path class="draw-path dp2" style="--len:200" d="M118 86 L160 54 L202 86" stroke="#7C9A78" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="welcome-quote">&ldquo;No worries about language barriers &mdash; <span class="hl">we welcome you in English</span>, just like home.&rdquo;</p>
+      </div>
+    </div>
+    <div class="welcome-copy">
+      <span class="kicker reveal">A warm welcome</span>
+      <h2 class="section-title reveal d1" id="welcome-title">English-speaking care, the moment you walk in</h2>
+      <p class="reveal d2" style="color:var(--ink-soft); font-weight:500; font-size:1.1rem;">&ldquo;Habito&rdquo; means home &mdash; and for international patients in On Nut, that&rsquo;s exactly how it should feel. From your first hello to your check-up, our team looks after you in clear, friendly English so nothing gets lost in translation.</p>
+      <ul class="welcome-points">
+        <li class="reveal d2">
+          <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><strong>Welcomed in English</strong><span>Explanations, options and aftercare &mdash; all clearly explained, no translation app needed.</span></div>
+        </li>
+        <li class="reveal d3">
+          <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><strong>A friendly neighbourhood hub</strong><span>Right inside Habito Mall &mdash; easy to find, easy to reach, part of the community.</span></div>
+        </li>
+        <li class="reveal d4">
+          <span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+          <div><strong>For expats &amp; visitors alike</strong><span>Whether you&rsquo;ve just landed or lived here for years, you&rsquo;ll feel at home in our chair.</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services section-pad" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">What we do</span>
+      <h2 class="section-title" id="services-title">Everyday dentistry, done with care</h2>
+      <p>General dentistry for the whole neighbourhood &mdash; the steady, reassuring care that keeps your smile healthy, comfortable and at home.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc-card feature reveal">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10 3 6.5 3 4.8 5c-1.7 2-1.4 5 0 8.5C6 16 7 19 8 21c.6 1.2 2 1 2.3-.4.4-2 .7-4 1.7-4s1.3 2 1.7 4c.3 1.4 1.7 1.6 2.3.4 1-2 2-5 3.2-7.5 1.4-3.5 1.7-6.5 0-8.5C17.5 3 14 3 12 5.5z"/></svg></div>
+        <h3>General &amp; family dentistry</h3>
+        <p>Your home base for healthy teeth &mdash; routine care delivered gently, clearly explained in English, for adults and kids alike.</p>
+        <ul class="feat-list">
+          <li>Check-ups</li><li>Cleaning &amp; scaling</li><li>Fillings</li><li>Tooth pain</li><li>Advice &amp; prevention</li>
+        </ul>
+      </article>
+
+      <article class="svc-card span6 reveal d1">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <h3>Routine check-ups</h3>
+        <p>A friendly, thorough look at your teeth and gums to catch the small things early &mdash; and keep peace of mind between visits.</p>
+      </article>
+
+      <article class="svc-card span4 reveal d1">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c2-1 4-1 6 0M3 17c2-1 4-1 6 0M3 7c2-1 4-1 6 0"/><path d="M14 4l6 6-9 9-6-1-1-6 9-8z"/></svg></div>
+        <h3>Cleaning &amp; scaling</h3>
+        <p>Fresh, polished and plaque-free &mdash; professional cleaning that leaves your smile feeling brand new.</p>
+      </article>
+
+      <article class="svc-card span4 reveal d2">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L4 7v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V7l-8-5z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Comfortable fillings</h3>
+        <p>Tooth-coloured fillings that restore and protect &mdash; done calmly, with your comfort front of mind.</p>
+      </article>
+
+      <article class="svc-card span4 reveal d3">
+        <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>Toothache &amp; relief</h3>
+        <p>Sudden pain or sensitivity? Give us a call &mdash; we&rsquo;ll see you, settle the worry and help you feel better.</p>
+      </article>
+    </div>
+    <p class="svc-note reveal">Not sure what you need? <a href="tel:+66955283666">Call us</a> and we&rsquo;ll talk it through &mdash; in plain, friendly English.</p>
+  </div>
+</section>
+
+<!-- ============ VISITING / LOCATION ============ -->
+<section class="visiting section-pad" id="visiting" aria-labelledby="visiting-title">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">Finding us</span>
+      <h2 class="section-title" id="visiting-title">Right in the heart of On Nut</h2>
+      <p>You&rsquo;ll find us tucked inside Habito Mall &mdash; a relaxed neighbourhood hub in the On Nut / Phra Khanong area. Easy to drop by before dinner or on the weekend.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="map-panel reveal" role="img" aria-label="Stylised map showing Habito Dental Clinic inside Habito Mall in the On Nut / Phra Khanong area of Bangkok">
+        <svg class="map" viewBox="0 0 600 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="600" height="480" fill="#EAF0E6"/>
+          <rect x="20" y="24" width="150" height="120" rx="16" fill="#DCE7D4"/>
+          <rect x="430" y="330" width="160" height="130" rx="16" fill="#DCE7D4"/>
+          <circle cx="500" cy="80" r="46" fill="#DCE7D4"/>
+          <path d="M0 420 Q150 400 300 430 T600 410 V480 H0 Z" fill="#CFE0E6"/>
+          <path d="M-20 250 H620" stroke="#FCFAF4" stroke-width="30" stroke-linecap="round"/>
+          <path d="M300 -20 V500" stroke="#FCFAF4" stroke-width="24" stroke-linecap="round"/>
+          <path d="M-20 130 Q300 160 620 120" stroke="#FCFAF4" stroke-width="16" stroke-linecap="round" fill="none"/>
+          <path d="M120 -20 Q150 240 90 500" stroke="#FCFAF4" stroke-width="14" stroke-linecap="round" fill="none"/>
+          <path d="M470 -20 Q440 250 500 500" stroke="#FCFAF4" stroke-width="14" stroke-linecap="round" fill="none"/>
+          <path d="M-20 250 H620" stroke="#C8643C" stroke-width="4" stroke-dasharray="2 14" stroke-linecap="round" opacity="0.55"/>
+          <rect x="210" y="290" width="70" height="58" rx="9" fill="#E4D9C6"/>
+          <rect x="330" y="288" width="80" height="62" rx="9" fill="#E4D9C6"/>
+          <rect x="210" y="170" width="64" height="58" rx="9" fill="#E4D9C6"/>
+          <rect x="350" y="166" width="70" height="60" rx="9" fill="#E4D9C6"/>
+          <rect x="262" y="200" width="78" height="74" rx="12" fill="#F0DEC4" stroke="#C8643C" stroke-width="2.5"/>
+        </svg>
+        <span class="map-pulse" aria-hidden="true"></span>
+        <div class="map-pin">
+          <span class="dot" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span>Habito Mall<small>On Nut / Phra Khanong</small></span>
+        </div>
+      </div>
+
+      <div class="visit-info">
+        <div class="info-card reveal d1">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div>
+            <h3>Where to find us</h3>
+            <p>Inside <b>Habito Mall</b>, On Nut / Phra Khanong, Bangkok &mdash; a friendly neighbourhood hub.</p>
+          </div>
+        </div>
+        <div class="info-card reveal d2">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+          <div>
+            <h3>Opening hours <span class="badge-open"><span class="dt" aria-hidden="true"></span>Open today</span></h3>
+            <ul class="hours-list">
+              <li><span>Monday &ndash; Friday</span><b>until 8:00 pm</b></li>
+              <li class="today"><span>Saturday &ndash; Sunday</span><b>open weekends</b></li>
+            </ul>
+            <p style="margin-top:0.5rem; font-size:0.88rem;">We close at 8 pm and welcome weekend visits &mdash; handy after work or on your day off.</p>
+          </div>
+        </div>
+        <div class="info-card reveal d3">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div>
+            <h3>Drop us a line</h3>
+            <p>Call <a href="tel:+66955283666">+66 95 528 3666</a> &mdash; or message us on Facebook or LINE to ask a question or arrange a visit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST / REVIEWS ============ -->
+
+
+<!-- ============ CONTACT ============ -->
+<section class="contact section-pad" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <div class="contact-left">
+        <span class="kicker">Come on home</span>
+        <h2 id="contact-title">Ready when you are</h2>
+        <p>The easiest way to reach us is a quick call or a message on Facebook or LINE &mdash; Thailand&rsquo;s favourite ways to chat. We&rsquo;ll happily help in English.</p>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="tel:+66955283666">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call us<span class="sub">+66 95 528 3666</span>
+          </a>
+          <!-- FACEBOOK placeholder: replace href="#" with the clinic's official Facebook page URL, e.g. https://www.facebook.com/HabitoDental -->
+          <a class="btn btn-fb" href="#" aria-label="Message Habito Dental on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+            Message on Facebook<span class="sub">Chat with us</span>
+          </a>
+          <!-- LINE placeholder: replace href="#" with the clinic's official LINE add-friend URL, e.g. https://line.me/ti/p/@habitodental -->
+          <a class="btn btn-line" href="#" aria-label="Add Habito Dental on LINE">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.07 3.58 7.48 8.41 8.13.33.07.78.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.86-3.45 7.99-5.9C21.57 13.6 22 11.97 22 10.23 22 5.69 17.52 2 12 2zM8.13 12.62H6.18c-.28 0-.51-.23-.51-.51V8.21c0-.28.23-.51.51-.51s.51.23.51.51v3.39h1.43c.28 0 .51.23.51.51s-.22.51-.5.51zm2-.51c0 .28-.23.51-.51.51s-.51-.23-.51-.51V8.21c0-.28.23-.51.51-.51s.51.23.51.51v3.9zm4.65 0c0 .22-.14.41-.35.48-.05.02-.11.03-.16.03-.16 0-.31-.08-.41-.21l-2-2.72v2.42c0 .28-.23.51-.51.51s-.51-.23-.51-.51V8.21c0-.22.14-.41.35-.48.05-.02.11-.03.16-.03.16 0 .31.08.41.21l2 2.72V8.21c0-.28.23-.51.51-.51s.51.23.51.51v3.9zm3.5-2.46c.28 0 .51.23.51.51s-.23.51-.51.51h-1.43v.93h1.43c.28 0 .51.23.51.51s-.23.51-.51.51h-1.94c-.28 0-.51-.23-.51-.51V8.21c0-.28.23-.51.51-.51h1.94c.28 0 .51.23.51.51s-.23.51-.51.51h-1.43v.93h1.43z"/></svg>
+            Add us on LINE<span class="sub">Quick chat</span>
+          </a>
+        </div>
+      </div>
+      <div class="contact-right">
+        <div class="cr-house" aria-hidden="true">
+          <svg viewBox="0 0 200 200" fill="none"><path d="M30 110 L100 50 L170 110" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M48 100 V160 H152 V100" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><rect x="86" y="120" width="28" height="40" rx="4" stroke="#fff" stroke-width="6"/></svg>
+        </div>
+        <h3>Visit Habito</h3>
+        <ul class="cr-list">
+          <li>
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><b>Location</b><span>Inside Habito Mall, On Nut / Phra Khanong, Bangkok</span></div>
+          </li>
+          <li>
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div><b>Phone</b><span><a href="tel:+66955283666">+66 95 528 3666</a></span></div>
+          </li>
+          <li>
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></span>
+            <div><b>Hours</b><span>Open until 8 pm &middot; weekends too</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer aria-labelledby="footer-title">
+  <h2 id="footer-title" class="sr-only">Habito Dental Clinic footer</h2>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col foot-brand-col">
+        <div class="foot-brand">
+          <span class="mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none">
+              <rect width="48" height="48" rx="13" fill="#C8643C"/>
+              <path d="M11 25 L24 13 L37 25" stroke="#F7EFE2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15 24 V36 H33 V24" stroke="#F7EFE2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="21" y="29" width="6" height="7" rx="1.4" fill="#F7EFE2"/>
+            </svg>
+          </span>
+          <span>Habito<b>.</b></span>
+        </div>
+        <p class="foot-about">Your dental home in On Nut &mdash; warm, gentle, English-speaking care inside Habito Mall, Bangkok.</p>
+        <div class="foot-social">
+          <!-- FACEBOOK placeholder: replace href="#" with the clinic's official Facebook page URL -->
+          <a href="#" aria-label="Habito Dental on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+          </a>
+          <!-- LINE placeholder: replace href="#" with the clinic's official LINE add-friend URL -->
+          <a href="#" aria-label="Habito Dental on LINE">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 5.69 2 10.23c0 4.07 3.58 7.48 8.41 8.13.33.07.78.22.89.5.1.26.07.66.03.92l-.14.86c-.04.26-.2 1.01.89.55 1.09-.46 5.86-3.45 7.99-5.9C21.57 13.6 22 11.97 22 10.23 22 5.69 17.52 2 12 2zM8.13 12.62H6.18c-.28 0-.51-.23-.51-.51V8.21c0-.28.23-.51.51-.51s.51.23.51.51v3.39h1.43c.28 0 .51.23.51.51s-.22.51-.5.51zm2-.51c0 .28-.23.51-.51.51s-.51-.23-.51-.51V8.21c0-.28.23-.51.51-.51s.51.23.51.51v3.9zm4.65 0c0 .22-.14.41-.35.48-.05.02-.11.03-.16.03-.16 0-.31-.08-.41-.21l-2-2.72v2.42c0 .28-.23.51-.51.51s-.51-.23-.51-.51V8.21c0-.22.14-.41.35-.48.05-.02.11-.03.16-.03.16 0 .31.08.41.21l2 2.72V8.21c0-.28.23-.51.51-.51s.51.23.51.51v3.9zm3.5-2.46c.28 0 .51.23.51.51s-.23.51-.51.51h-1.43v.93h1.43c.28 0 .51.23.51.51s-.23.51-.51.51h-1.94c-.28 0-.51-.23-.51-.51V8.21c0-.28.23-.51.51-.51h1.94c.28 0 .51.23.51.51s-.23.51-.51.51h-1.43v.93h1.43z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#welcome">English care</a></li>
+          <li><a href="#services">Treatments</a></li>
+          <li><a href="#visiting">Visiting &amp; hours</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+66955283666">+66 95 528 3666</a></li>
+          <li><p>Inside Habito Mall</p></li>
+          <li><p>On Nut / Phra Khanong, Bangkok</p></li>
+          <li><p>Open until 8 pm &middot; weekends too</p></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year">2026</span> Habito Dental Clinic &middot; On Nut, Bangkok. All rights reserved.</span>
+      <span class="foot-credit">Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener">Stellar Haus Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  var nav = document.getElementById('nav');
+  function onScroll() {
+    if (window.scrollY > 12) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  var toggle = document.getElementById('navToggle');
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      var open = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    nav.querySelectorAll('.nav-links a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+      });
+    });
+  }
+
+  function prepDraw(svg) {
+    if (!svg) return;
+    svg.querySelectorAll('.draw-path').forEach(function (p) {
+      try {
+        var len = p.getTotalLength();
+        if (len && isFinite(len)) {
+          p.style.setProperty('--len', Math.ceil(len));
+          p.style.strokeDasharray = Math.ceil(len);
+          if (!reduce) p.style.strokeDashoffset = Math.ceil(len);
+        }
+      } catch (e) {}
+    });
+  }
+  var heroHouse = document.getElementById('heroHouse');
+  var nestSvg = document.getElementById('nestSvg');
+  prepDraw(heroHouse);
+  prepDraw(nestSvg);
+
+  if (reduce) {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+    if (heroHouse) heroHouse.classList.add('draw-on');
+    if (nestSvg) nestSvg.classList.add('draw-on');
+    return;
+  }
+
+  window.requestAnimationFrame(function () {
+    setTimeout(function () { if (heroHouse) heroHouse.classList.add('draw-on'); }, 350);
+  });
+
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+    if (nestSvg) {
+      var io2 = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { nestSvg.classList.add('draw-on'); io2.unobserve(e.target); }
+        });
+      }, { threshold: 0.3 });
+      io2.observe(nestSvg);
+    }
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+    if (nestSvg) nestSvg.classList.add('draw-on');
+  }
+})();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+66955283666", CHAN="", CHANLABEL="";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>

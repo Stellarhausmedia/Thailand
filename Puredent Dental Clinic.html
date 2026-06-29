@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puredent Dental Clinic — English-Speaking Dentist by the Chao Phraya, Bangkok</title>
+<meta name="description" content="Puredent Dental Clinic on the Charoen Nakhon riverside in Bangkok. Orthodontics, implants, general dentistry and whitening. Rated 5.0 from 792 reviews. International patients welcomed in English, open every day.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2326C6DA'/%3E%3Cstop offset='1' stop-color='%233E8FD0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='%23F4FCFE'/%3E%3Ccircle cx='16' cy='16' r='4.5' fill='none' stroke='url(%23g)' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='url(%23g)' stroke-width='1.2' opacity='0.6'/%3E%3Ccircle cx='16' cy='16' r='11.5' fill='none' stroke='url(%23g)' stroke-width='0.9' opacity='0.3'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --white:#ffffff;
+    --paper:#f4fcfe;
+    --mist:#eaf7fb;
+    --aqua-50:#e3f6fb;
+    --aqua-100:#c4ecf4;
+    --aqua-200:#94dded;
+    --aqua:#26c6da;
+    --aqua-deep:#129cb3;
+    --blue:#3e8fd0;
+    --blue-soft:#dfeefb;
+    --blue-deep:#1f5f93;
+    --ink:#0e2a35;
+    --ink-soft:#3c5560;
+    --ink-mute:#6a818b;
+    --line:rgba(18,108,131,0.14);
+    --line-strong:rgba(18,108,131,0.26);
+    --glass:rgba(255,255,255,0.66);
+    --shadow-sm:0 2px 14px rgba(20,90,110,0.07);
+    --shadow:0 18px 50px -22px rgba(18,108,131,0.34);
+    --shadow-lg:0 30px 80px -34px rgba(18,108,131,0.46);
+    --r-sm:14px;
+    --r:22px;
+    --r-lg:32px;
+    --ease:cubic-bezier(.22,1,.36,1);
+    --maxw:1180px;
+    --line-green:#129cb3;
+    --line-fb:#1877f2;
+    --line-app:#06c755;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    font-family:'Outfit',system-ui,-apple-system,'Segoe UI',sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.65;
+    font-weight:400;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  ::selection{background:var(--aqua-200);color:var(--ink)}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:500;line-height:1.06;letter-spacing:-.012em;color:var(--ink)}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.15rem,4vw,2.6rem)}
+  .eyebrow{
+    font-family:'Outfit',sans-serif;font-weight:600;font-size:.72rem;
+    letter-spacing:.26em;text-transform:uppercase;color:var(--aqua-deep);
+    display:inline-flex;align-items:center;gap:.7rem;
+  }
+  .eyebrow::before{content:"";width:26px;height:1px;background:linear-gradient(90deg,transparent,var(--aqua))}
+  .eyebrow.center::before{display:none}
+
+  :focus-visible{outline:3px solid var(--aqua-deep);outline-offset:3px;border-radius:6px}
+  .skip{
+    position:absolute;left:50%;top:-100px;transform:translateX(-50%);
+    background:var(--ink);color:#fff;padding:.7rem 1.3rem;border-radius:0 0 14px 14px;
+    z-index:1000;font-weight:600;font-size:.9rem;transition:top .25s var(--ease);
+  }
+  .skip:focus{top:0}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+  /* NAV */
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:90;
+    transition:background .4s var(--ease),box-shadow .4s var(--ease),backdrop-filter .4s var(--ease);
+  }
+  header.nav.scrolled{
+    background:rgba(244,252,254,0.82);
+    backdrop-filter:blur(18px) saturate(140%);
+    -webkit-backdrop-filter:blur(18px) saturate(140%);
+    box-shadow:0 1px 0 var(--line),0 10px 30px -24px rgba(18,108,131,0.5);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .brand{display:flex;align-items:center;gap:.7rem;font-weight:700;font-size:1.16rem;letter-spacing:-.01em;color:var(--ink)}
+  .brand .glyph{width:38px;height:38px;flex:none;display:block}
+  .brand b{font-weight:700}
+  .brand span{color:var(--aqua-deep);font-weight:500}
+  .nav-links{display:flex;align-items:center;gap:2.1rem;list-style:none}
+  .nav-links a{
+    font-size:.92rem;font-weight:500;color:var(--ink-soft);position:relative;padding:.3rem 0;
+    transition:color .25s var(--ease);
+  }
+  .nav-links a::after{
+    content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1.5px;
+    background:linear-gradient(90deg,var(--aqua),var(--blue));
+    transform:scaleX(0);transform-origin:left;transition:transform .35s var(--ease);
+  }
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a:hover::after{transform:scaleX(1)}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:linear-gradient(120deg,var(--aqua),var(--blue));
+    color:#fff;font-weight:600;font-size:.9rem;padding:.66rem 1.25rem;border-radius:100px;
+    box-shadow:0 10px 24px -10px rgba(38,158,180,0.7);
+    transition:transform .3s var(--ease),box-shadow .3s var(--ease);
+  }
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 16px 30px -10px rgba(38,158,180,0.8)}
+  .nav-cta svg{width:16px;height:16px}
+  .burger{display:none;background:none;border:none;cursor:pointer;width:46px;height:46px;border-radius:12px;padding:11px;color:var(--ink)}
+  .burger span{display:block;height:2px;width:100%;background:currentColor;border-radius:2px;transition:transform .35s var(--ease),opacity .25s var(--ease)}
+  .burger span+span{margin-top:5px}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  .mobile-menu{
+    position:fixed;inset:0;z-index:80;background:rgba(244,252,254,0.97);
+    backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+    display:flex;flex-direction:column;justify-content:center;gap:.4rem;padding:2rem;
+    transform:translateY(-100%);transition:transform .5s var(--ease);visibility:hidden;
+  }
+  .mobile-menu.open{transform:translateY(0);visibility:visible}
+  .mobile-menu a{font-family:'Fraunces',serif;font-size:2rem;color:var(--ink);padding:.5rem 0;border-bottom:1px solid var(--line)}
+  .mobile-menu .m-cta{
+    margin-top:1.4rem;font-family:'Outfit',sans-serif;font-size:1.05rem;font-weight:600;text-align:center;
+    background:linear-gradient(120deg,var(--aqua),var(--blue));color:#fff;border:none;border-radius:100px;padding:.95rem;
+  }
+
+  /* HERO */
+  .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:7rem 0 4rem}
+  .hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:
+      radial-gradient(120% 90% at 78% 8%, #ffffff 0%, var(--paper) 40%, var(--mist) 100%)}
+  .hero-bg svg{position:absolute;width:100%;height:100%;display:block}
+  .caustic{position:absolute;inset:-12%;z-index:0;opacity:.5;mix-blend-mode:soft-light;
+    background:
+      radial-gradient(40% 28% at 20% 30%, rgba(38,198,218,0.5), transparent 60%),
+      radial-gradient(36% 26% at 80% 24%, rgba(62,143,208,0.42), transparent 62%),
+      radial-gradient(30% 22% at 60% 78%, rgba(148,221,237,0.5), transparent 60%);
+    filter:blur(8px);
+    animation:causticDrift 22s ease-in-out infinite alternate;
+  }
+  @keyframes causticDrift{
+    0%{transform:translate3d(0,0,0) scale(1)}
+    50%{transform:translate3d(-2.4%,1.6%,0) scale(1.06)}
+    100%{transform:translate3d(2.2%,-1.4%,0) scale(1.03)}
+  }
+  .ripple-field{position:absolute;z-index:0;top:24%;left:74%;transform:translate(-50%,-50%);pointer-events:none}
+  .ripple-field span{
+    position:absolute;left:50%;top:50%;border:1.5px solid rgba(38,158,180,0.32);border-radius:50%;
+    transform:translate(-50%,-50%) scale(0);
+    animation:ripple 7s ease-out infinite;
+  }
+  .ripple-field span:nth-child(2){animation-delay:1.75s;border-color:rgba(62,143,208,0.3)}
+  .ripple-field span:nth-child(3){animation-delay:3.5s;border-color:rgba(38,198,218,0.34)}
+  .ripple-field span:nth-child(4){animation-delay:5.25s;border-color:rgba(148,221,237,0.4)}
+  @keyframes ripple{
+    0%{width:30px;height:30px;opacity:0}
+    8%{opacity:.9}
+    100%{width:680px;height:680px;opacity:0}
+  }
+  .hero-inner{position:relative;z-index:3;display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center;width:100%}
+  .hero-copy{max-width:640px}
+  .hero h1{
+    font-size:clamp(2.7rem,6.3vw,4.9rem);margin:1.3rem 0 0;
+    font-weight:500;letter-spacing:-.022em;
+  }
+  .hero h1 .clear{
+    font-style:italic;font-weight:400;position:relative;
+    background:linear-gradient(100deg,var(--aqua-deep),var(--blue));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p.lead{
+    font-size:clamp(1.06rem,1.7vw,1.28rem);color:var(--ink-soft);margin-top:1.5rem;max-width:30em;line-height:1.6;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:.85rem;margin-top:2.2rem}
+  .btn{
+    display:inline-flex;align-items:center;gap:.6rem;font-weight:600;font-size:.98rem;
+    padding:.95rem 1.6rem;border-radius:100px;border:1.5px solid transparent;cursor:pointer;
+    transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s var(--ease),border-color .3s var(--ease);
+    white-space:nowrap;
+  }
+  .btn svg{width:19px;height:19px;flex:none}
+  .btn-primary{background:linear-gradient(120deg,var(--aqua),var(--blue));color:#fff;box-shadow:0 16px 34px -14px rgba(38,158,180,0.85)}
+  .btn-primary:hover{transform:translateY(-3px);box-shadow:0 22px 42px -14px rgba(38,158,180,0.95)}
+  .btn-ghost{background:var(--glass);color:var(--ink);border-color:var(--line-strong);backdrop-filter:blur(6px)}
+  .btn-ghost:hover{transform:translateY(-3px);border-color:var(--aqua);background:#fff}
+  .hero-trust{display:flex;align-items:center;gap:1.1rem;margin-top:2.4rem;flex-wrap:wrap}
+  .stars{display:inline-flex;gap:3px;color:var(--aqua-deep)}
+  .stars svg{width:19px;height:19px}
+  .hero-trust .tt{font-size:.93rem;color:var(--ink-soft)}
+  .hero-trust .tt b{color:var(--ink);font-weight:600}
+  .hero-trust .div{width:1px;height:30px;background:var(--line-strong)}
+
+  .hero-card{
+    position:relative;border-radius:var(--r-lg);overflow:hidden;
+    background:linear-gradient(160deg,#ffffff,var(--mist));
+    border:1px solid var(--line);box-shadow:var(--shadow-lg);
+    aspect-ratio:1/1.08;display:flex;align-items:center;justify-content:center;
+  }
+  .hero-card .glass-tile{position:absolute;inset:0;z-index:0}
+  .hero-card .center-mark{position:relative;z-index:2;text-align:center;color:var(--ink);padding:1.5rem}
+  .hero-card .center-mark .big{font-family:'Fraunces',serif;font-size:clamp(3.4rem,7vw,5.2rem);font-weight:500;line-height:1;background:linear-gradient(120deg,var(--aqua-deep),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero-card .center-mark .lbl{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-mute);font-weight:600;margin-top:.6rem}
+  .hero-card .badge-float{
+    position:absolute;z-index:3;background:rgba(255,255,255,0.86);backdrop-filter:blur(10px);
+    border:1px solid var(--line);border-radius:16px;padding:.7rem .95rem;box-shadow:var(--shadow-sm);
+    display:flex;align-items:center;gap:.6rem;font-size:.84rem;font-weight:500;color:var(--ink);
+  }
+  .hero-card .badge-float svg{width:24px;height:24px;flex:none;color:var(--aqua-deep)}
+  .hero-card .bf1{top:8%;left:-4%;animation:floaty 6s ease-in-out infinite}
+  .hero-card .bf2{bottom:11%;right:-5%;animation:floaty 7s ease-in-out infinite .8s}
+  .hero-card .bf3{bottom:32%;left:-7%;animation:floaty 6.5s ease-in-out infinite 1.4s}
+  @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+  .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:4;display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--ink-mute);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+  .scroll-hint .mouse{width:22px;height:34px;border:1.5px solid var(--line-strong);border-radius:12px;position:relative}
+  .scroll-hint .mouse::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:7px;background:var(--aqua-deep);border-radius:2px;transform:translateX(-50%);animation:wheel 1.8s ease-in-out infinite}
+  @keyframes wheel{0%{opacity:0;transform:translate(-50%,-3px)}40%{opacity:1}80%{opacity:0;transform:translate(-50%,8px)}}
+
+  /* marquee */
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white);overflow:hidden;padding:1.05rem 0}
+  .marquee-track{display:flex;gap:3.4rem;white-space:nowrap;width:max-content;animation:scrollx 32s linear infinite}
+  .marquee-track span{font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;color:var(--ink-soft);display:inline-flex;align-items:center;gap:3.4rem}
+  .marquee-track span::after{content:"";width:7px;height:7px;border-radius:50%;background:var(--aqua)}
+  @keyframes scrollx{to{transform:translateX(-50%)}}
+
+  section{position:relative}
+  .section-pad{padding:clamp(4.5rem,9vw,8rem) 0}
+  .head-block{max-width:680px}
+  .head-block.center{margin:0 auto;text-align:center}
+  .head-block h2{font-size:clamp(2.1rem,4.4vw,3.3rem);margin-top:1.1rem;font-weight:500}
+  .head-block p{color:var(--ink-soft);font-size:clamp(1.02rem,1.5vw,1.16rem);margin-top:1.1rem;line-height:1.62}
+
+  /* WELCOME */
+  .welcome{background:linear-gradient(180deg,var(--white),var(--paper))}
+  .welcome-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2.2rem,5vw,4.5rem);align-items:center;margin-top:1rem}
+  .welcome-copy .lead-xl{font-family:'Fraunces',serif;font-size:clamp(1.5rem,2.7vw,2.05rem);line-height:1.32;font-weight:400;color:var(--ink);letter-spacing:-.01em}
+  .welcome-copy .lead-xl em{font-style:italic;color:var(--aqua-deep)}
+  .welcome-copy p{color:var(--ink-soft);margin-top:1.3rem;font-size:1.04rem}
+  .welcome-points{list-style:none;margin-top:1.9rem;display:grid;gap:1rem}
+  .welcome-points li{display:flex;gap:.95rem;align-items:flex-start}
+  .welcome-points .ic{flex:none;width:40px;height:40px;border-radius:12px;background:var(--aqua-50);display:flex;align-items:center;justify-content:center;color:var(--aqua-deep)}
+  .welcome-points .ic svg{width:21px;height:21px}
+  .welcome-points h4{font-family:'Outfit',sans-serif;font-weight:600;font-size:1.02rem;color:var(--ink)}
+  .welcome-points p{margin-top:.15rem;font-size:.94rem;color:var(--ink-mute)}
+
+  .welcome-visual{position:relative;aspect-ratio:4/5;border-radius:var(--r-lg);overflow:hidden;background:linear-gradient(165deg,var(--mist),#fff);border:1px solid var(--line);box-shadow:var(--shadow)}
+  .welcome-visual svg{position:absolute;inset:0;width:100%;height:100%}
+  .welcome-visual .quote-chip{position:absolute;left:1.4rem;right:1.4rem;bottom:1.4rem;z-index:3;background:rgba(255,255,255,0.9);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:18px;padding:1.15rem 1.25rem;box-shadow:var(--shadow-sm)}
+  .welcome-visual .quote-chip p{font-family:'Fraunces',serif;font-style:italic;font-size:1rem;color:var(--ink);line-height:1.45;margin:0}
+  .welcome-visual .quote-chip .src{display:block;margin-top:.6rem;font-family:'Outfit',sans-serif;font-style:normal;font-size:.76rem;letter-spacing:.04em;color:var(--ink-mute);font-weight:500}
+
+  /* SERVICES */
+  .services{background:var(--white)}
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;margin-top:3rem}
+  .svc-card{
+    position:relative;border:1px solid var(--line);border-radius:var(--r);padding:2.1rem 2rem 2rem;
+    background:linear-gradient(180deg,#fff, var(--paper));overflow:hidden;
+    transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .45s var(--ease);
+  }
+  .svc-card::before{
+    content:"";position:absolute;inset:0;z-index:0;opacity:0;
+    background:radial-gradient(120% 80% at 100% 0%, rgba(38,198,218,0.12), transparent 55%);
+    transition:opacity .5s var(--ease);
+  }
+  .svc-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:var(--aqua-200)}
+  .svc-card:hover::before{opacity:1}
+  .svc-card>*{position:relative;z-index:1}
+  .svc-ic{width:58px;height:58px;border-radius:16px;background:linear-gradient(150deg,var(--aqua-50),var(--blue-soft));display:flex;align-items:center;justify-content:center;color:var(--aqua-deep);margin-bottom:1.3rem;transition:transform .5s var(--ease)}
+  .svc-card:hover .svc-ic{transform:scale(1.06) rotate(-4deg)}
+  .svc-ic svg{width:28px;height:28px}
+  .svc-card h3{font-size:1.42rem;font-weight:500;margin-bottom:.55rem}
+  .svc-card p{color:var(--ink-soft);font-size:.98rem;line-height:1.6}
+  .svc-card .svc-tag{display:inline-block;margin-top:1.1rem;font-size:.76rem;font-weight:600;letter-spacing:.04em;color:var(--aqua-deep);background:var(--aqua-50);padding:.32rem .8rem;border-radius:100px}
+  .svc-num{position:absolute;top:1.4rem;right:1.7rem;font-family:'Fraunces',serif;font-size:1.05rem;color:var(--line-strong);z-index:1}
+
+  /* VISIT */
+  .visit{background:linear-gradient(180deg,var(--paper),var(--white))}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,4.5vw,3.4rem);margin-top:3rem;align-items:stretch}
+  .map-card{position:relative;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);min-height:420px;background:linear-gradient(160deg,var(--mist),#fff)}
+  .map-card svg{position:absolute;inset:0;width:100%;height:100%}
+  .map-pin{position:absolute;z-index:3;left:50%;top:46%;transform:translate(-50%,-50%);text-align:center}
+  .map-pin .dot{width:20px;height:20px;border-radius:50%;background:linear-gradient(120deg,var(--aqua),var(--blue));margin:0 auto;box-shadow:0 0 0 6px rgba(38,158,180,0.18);position:relative;z-index:2}
+  .map-pin .pulse{position:absolute;left:50%;top:10px;width:20px;height:20px;border-radius:50%;background:var(--aqua);transform:translate(-50%,-50%);animation:pinpulse 2.6s ease-out infinite;z-index:1}
+  @keyframes pinpulse{0%{transform:translate(-50%,-50%) scale(1);opacity:.5}100%{transform:translate(-50%,-50%) scale(5.5);opacity:0}}
+  .map-pin .lab{margin-top:.7rem;background:rgba(255,255,255,0.92);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:100px;padding:.4rem 1rem;font-size:.84rem;font-weight:600;color:var(--ink);box-shadow:var(--shadow-sm)}
+  .map-river-label{position:absolute;z-index:3;left:1.3rem;bottom:1.2rem;font-family:'Fraunces',serif;font-style:italic;font-size:1rem;color:var(--blue-deep);opacity:.8}
+
+  .hours-stack{display:flex;flex-direction:column;gap:1.4rem}
+  .info-card{border:1px solid var(--line);border-radius:var(--r);padding:1.8rem 1.9rem;background:#fff;box-shadow:var(--shadow-sm)}
+  .info-card h3{font-size:1.3rem;font-weight:500;display:flex;align-items:center;gap:.65rem;margin-bottom:1.1rem}
+  .info-card h3 svg{width:23px;height:23px;color:var(--aqua-deep);flex:none}
+  .hours-row{display:flex;justify-content:space-between;align-items:center;padding:.62rem 0;border-bottom:1px dashed var(--line);font-size:.97rem}
+  .hours-row:last-child{border-bottom:none}
+  .hours-row .day{color:var(--ink-soft);font-weight:500}
+  .hours-row .time{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+  .open-flag{display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;font-size:.86rem;font-weight:600;color:var(--line-app);background:rgba(6,199,85,0.1);padding:.45rem .9rem;border-radius:100px}
+  .open-flag .live{width:8px;height:8px;border-radius:50%;background:var(--line-app);box-shadow:0 0 0 0 rgba(6,199,85,0.5);animation:livepulse 2s ease-out infinite}
+  @keyframes livepulse{0%{box-shadow:0 0 0 0 rgba(6,199,85,0.5)}100%{box-shadow:0 0 0 9px rgba(6,199,85,0)}}
+  .addr-line{display:flex;gap:.8rem;align-items:flex-start;font-size:.97rem;color:var(--ink-soft);line-height:1.55}
+  .addr-line svg{width:20px;height:20px;color:var(--aqua-deep);flex:none;margin-top:2px}
+  .addr-line b{color:var(--ink);font-weight:600}
+  .info-card .mini-actions{display:flex;gap:.7rem;margin-top:1.4rem;flex-wrap:wrap}
+  .mini-btn{display:inline-flex;align-items:center;gap:.45rem;font-size:.88rem;font-weight:600;padding:.6rem 1.05rem;border-radius:100px;border:1.5px solid var(--line-strong);color:var(--ink);transition:all .3s var(--ease)}
+  .mini-btn svg{width:17px;height:17px}
+  .mini-btn:hover{border-color:var(--aqua);background:var(--aqua-50);transform:translateY(-2px)}
+
+  /* TRUST */
+  .trust{background:linear-gradient(180deg,var(--white),var(--mist));position:relative;overflow:hidden}
+  .trust .ripple-soft{position:absolute;inset:0;z-index:0;pointer-events:none;opacity:.45}
+  .trust-inner{position:relative;z-index:2}
+  .trust-head{text-align:center;max-width:720px;margin:0 auto}
+  .big-rating{display:flex;flex-direction:column;align-items:center;margin-top:2.6rem}
+  .big-rating .num{font-family:'Fraunces',serif;font-size:clamp(4.5rem,12vw,7.5rem);font-weight:500;line-height:.9;background:linear-gradient(120deg,var(--aqua-deep),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.02em}
+  .big-rating .stars-lg{display:inline-flex;gap:6px;color:var(--aqua-deep);margin-top:1rem}
+  .big-rating .stars-lg svg{width:32px;height:32px}
+  .big-rating .meta{margin-top:1rem;font-size:1.05rem;color:var(--ink-soft)}
+  .big-rating .meta b{color:var(--ink);font-weight:600}
+  .trust-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-top:2.6rem}
+  .tb{display:inline-flex;align-items:center;gap:.7rem;background:rgba(255,255,255,0.8);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:100px;padding:.7rem 1.3rem;font-size:.9rem;font-weight:500;color:var(--ink);box-shadow:var(--shadow-sm)}
+  .tb svg{width:20px;height:20px;color:var(--aqua-deep)}
+  .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem;margin-top:3.4rem}
+  .rev-card{background:rgba(255,255,255,0.9);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:var(--r);padding:1.7rem 1.6rem;box-shadow:var(--shadow-sm);transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+  .rev-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .rev-card .rstars{display:inline-flex;gap:2px;color:var(--aqua-deep);margin-bottom:.9rem}
+  .rev-card .rstars svg{width:16px;height:16px}
+  .rev-card p{font-size:.98rem;color:var(--ink-soft);line-height:1.6;font-family:'Fraunces',serif;font-style:italic}
+  .rev-card .rsrc{display:block;margin-top:1.1rem;font-family:'Outfit',sans-serif;font-style:normal;font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-mute);font-weight:600}
+
+  /* CONTACT */
+  .contact{background:linear-gradient(165deg,var(--ink) 0%, #0a3340 55%, #0c4456 100%);color:#fff;position:relative;overflow:hidden}
+  .contact .ripple-dark{position:absolute;inset:0;z-index:0;opacity:.5}
+  .contact .ripple-dark span{position:absolute;left:78%;top:30%;border:1px solid rgba(148,221,237,0.3);border-radius:50%;transform:translate(-50%,-50%) scale(0);animation:ripple 8s ease-out infinite}
+  .contact .ripple-dark span:nth-child(2){animation-delay:2.6s}
+  .contact .ripple-dark span:nth-child(3){animation-delay:5.2s;left:18%;top:70%}
+  .contact-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.4rem,5vw,4.5rem);align-items:center}
+  .contact .eyebrow{color:var(--aqua-200)}
+  .contact .eyebrow::before{background:linear-gradient(90deg,transparent,var(--aqua-200))}
+  .contact h2{color:#fff;font-size:clamp(2.2rem,4.6vw,3.5rem)}
+  .contact h2 em{font-style:italic;color:var(--aqua-200)}
+  .contact .sub{color:rgba(233,247,251,0.78);font-size:1.1rem;margin-top:1.2rem;line-height:1.6;max-width:30em}
+  .contact-phone{display:inline-flex;align-items:center;gap:.8rem;margin-top:2rem;font-family:'Fraunces',serif;font-size:clamp(1.7rem,3.4vw,2.5rem);color:#fff;font-weight:500;transition:color .3s var(--ease)}
+  .contact-phone svg{width:30px;height:30px;color:var(--aqua-200)}
+  .contact-phone:hover{color:var(--aqua-200)}
+  .contact-card{background:rgba(255,255,255,0.06);backdrop-filter:blur(14px);border:1px solid rgba(148,221,237,0.22);border-radius:var(--r-lg);padding:2.3rem 2.1rem}
+  .contact-card h3{color:#fff;font-size:1.35rem;font-weight:500;margin-bottom:.4rem}
+  .contact-card .cc-sub{color:rgba(233,247,251,0.7);font-size:.95rem;margin-bottom:1.6rem}
+  .channel-list{display:flex;flex-direction:column;gap:.8rem}
+  .channel{
+    display:flex;align-items:center;gap:1rem;padding:1rem 1.15rem;border-radius:18px;
+    background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);
+    transition:transform .3s var(--ease),background .3s var(--ease),border-color .3s var(--ease);
+  }
+  .channel:hover{transform:translateX(5px);background:rgba(255,255,255,0.13);border-color:rgba(148,221,237,0.4)}
+  .channel .ch-ic{width:44px;height:44px;border-radius:12px;flex:none;display:flex;align-items:center;justify-content:center}
+  .channel .ch-ic svg{width:24px;height:24px}
+  .ch-call .ch-ic{background:linear-gradient(135deg,var(--aqua),var(--blue))}
+  .ch-fb .ch-ic{background:var(--line-fb)}
+  .ch-line .ch-ic{background:var(--line-app)}
+  .channel .ch-tx{flex:1;min-width:0}
+  .channel .ch-tx b{display:block;color:#fff;font-weight:600;font-size:1rem}
+  .channel .ch-tx span{display:block;color:rgba(233,247,251,0.65);font-size:.84rem}
+  .channel .ch-arrow{color:rgba(233,247,251,0.5);flex:none}
+  .channel .ch-arrow svg{width:20px;height:20px;transition:transform .3s var(--ease)}
+  .channel:hover .ch-arrow svg{transform:translateX(4px);color:var(--aqua-200)}
+  .contact-card .note{margin-top:1.5rem;font-size:.84rem;color:rgba(233,247,251,0.6);display:flex;gap:.55rem;align-items:flex-start;line-height:1.5}
+  .contact-card .note svg{width:17px;height:17px;flex:none;margin-top:2px;color:var(--aqua-200)}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:rgba(233,247,251,0.72);padding:4rem 0 2.2rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(148,221,237,0.16)}
+  .foot-brand .brand{color:#fff;margin-bottom:1rem}
+  .foot-brand p{font-size:.94rem;max-width:30em;line-height:1.6}
+  .foot-col h5{color:#fff;font-family:'Outfit',sans-serif;font-weight:600;font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1.1rem}
+  .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+  .foot-col a{font-size:.94rem;color:rgba(233,247,251,0.72);transition:color .25s var(--ease);display:inline-flex;align-items:center;gap:.5rem}
+  .foot-col a:hover{color:var(--aqua-200)}
+  .foot-col a svg{width:16px;height:16px;opacity:.8}
+  .foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding-top:2rem;font-size:.86rem}
+  .foot-bottom .credit{color:rgba(233,247,251,0.6)}
+  .foot-bottom .credit a{color:var(--aqua-200);font-weight:600;border-bottom:1px solid transparent;transition:border-color .25s var(--ease)}
+  .foot-bottom .credit a:hover{border-color:var(--aqua-200)}
+  .foot-social{display:flex;gap:.7rem}
+  .foot-social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(148,221,237,0.24);display:flex;align-items:center;justify-content:center;color:rgba(233,247,251,0.8);transition:all .3s var(--ease)}
+  .foot-social a:hover{background:rgba(148,221,237,0.14);border-color:var(--aqua-200);color:#fff;transform:translateY(-3px)}
+  .foot-social a svg{width:18px;height:18px}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(28px);filter:blur(7px);transition:opacity .9s var(--ease),transform .9s var(--ease),filter .9s var(--ease)}
+  .reveal.in{opacity:1;transform:none;filter:blur(0)}
+  .reveal.d1{transition-delay:.08s}
+  .reveal.d2{transition-delay:.16s}
+  .reveal.d3{transition-delay:.24s}
+  .reveal.d4{transition-delay:.32s}
+
+  @media (max-width:980px){
+    .hero-inner{grid-template-columns:1fr;gap:2.6rem}
+    .hero-card{max-width:440px;margin:0 auto;width:100%}
+    .welcome-grid,.visit-grid,.contact-inner{grid-template-columns:1fr}
+    .review-grid{grid-template-columns:1fr 1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .welcome-visual{max-width:460px;margin:0 auto;width:100%}
+  }
+  @media (max-width:760px){
+    .nav-links,.nav-cta.desktop{display:none}
+    .burger{display:block}
+    .svc-grid{grid-template-columns:1fr}
+    .scroll-hint{display:none}
+    .hero{min-height:auto;padding:6.5rem 0 3.5rem}
+  }
+  @media (max-width:560px){
+    .review-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr;gap:2rem}
+    .hero-trust .div{display:none}
+    .hero-card .badge-float{font-size:.78rem;padding:.55rem .8rem}
+    .hero-card .bf1{left:0}.hero-card .bf2{right:0}.hero-card .bf3{left:0}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition-duration:.001ms!important}
+    .reveal{opacity:1;transform:none;filter:none}
+    .caustic{opacity:.32}
+    .ripple-field,.map-pin .pulse,.contact .ripple-dark,.trust .ripple-soft .rs{display:none}
+    .scroll-hint .mouse::after{animation:none;opacity:.6;top:9px}
+  }
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#3e8fd0;--bk-accent-ink:#ffffff;--bk-ink:#0e2a35;--bk-panel:#f4fcfe;--bk-muted:rgba(14,42,53,0.6);--bk-line:rgba(14,42,53,0.14);--bk-serif:"Fraunces", Georgia, serif;--bk-sans:"Outfit", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="Puredent Dental Clinic, home">
+      <svg class="glyph" viewBox="0 0 40 40" aria-hidden="true">
+        <defs><linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#26c6da"/><stop offset="1" stop-color="#3e8fd0"/>
+        </linearGradient></defs>
+        <circle cx="20" cy="20" r="5" fill="none" stroke="url(#bg1)" stroke-width="2"/>
+        <circle cx="20" cy="20" r="9.5" fill="none" stroke="url(#bg1)" stroke-width="1.5" opacity="0.6"/>
+        <circle cx="20" cy="20" r="14" fill="none" stroke="url(#bg1)" stroke-width="1" opacity="0.3"/>
+      </svg>
+      <span><b>Puredent</b> <span>Dental</span></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#welcome">Welcome</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta desktop" href="tel:+66922766861">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Clinic
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <a href="#welcome">Welcome</a>
+  <a href="#services">Services</a>
+  <a href="#visit">Visit Us</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a class="m-cta" href="tel:+66922766861">Call +66 92 276 6861</a>
+</div>
+
+<main id="main">
+<span id="top"></span>
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-bg" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="riverG" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#c4ecf4" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#dfeefb" stop-opacity="0.35"/>
+        </linearGradient>
+        <linearGradient id="lineG" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#26c6da" stop-opacity="0"/>
+          <stop offset="0.5" stop-color="#26c6da" stop-opacity="0.5"/>
+          <stop offset="1" stop-color="#3e8fd0" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path d="M-50,640 C300,560 520,720 760,640 C1020,555 1240,700 1500,610 L1500,950 L-50,950 Z" fill="url(#riverG)"/>
+      <path class="flowline" d="M-50,650 C300,575 520,730 760,650 C1020,565 1240,710 1500,620" fill="none" stroke="url(#lineG)" stroke-width="2"/>
+      <path class="flowline" d="M-50,700 C320,640 540,760 800,700 C1060,640 1260,740 1500,690" fill="none" stroke="url(#lineG)" stroke-width="1.5" opacity="0.6"/>
+    </svg>
+  </div>
+  <div class="caustic" aria-hidden="true"></div>
+  <div class="ripple-field" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow reveal">Charoen Nakhon &middot; Chao Phraya Riverside &middot; Bangkok</p>
+      <h1 id="hero-title" class="reveal d1">Dental care as<br><span class="clear">clear &amp; calm</span> as the river.</h1>
+      <p class="lead reveal d2">A bright, modern dental clinic on the Chao Phraya riverside &mdash; where international patients are welcomed and treated entirely in English. Pure, gentle, unhurried care for your smile.</p>
+      <div class="hero-actions reveal d3">
+        <a class="btn btn-primary" href="tel:+66922766861">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call +66 92 276 6861
+        </a>
+        <a class="btn btn-ghost" href="#contact">
+          Message Us
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="hero-trust reveal d4">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.8.7-5 4.6 1.4 6.7L12 17.8 5.9 20.2l1.4-6.7-5-4.6 6.8-.7z"/></svg>
+        </span>
+        <span class="tt"><b>5.0</b> from <b>792</b> Google reviews</span>
+        <span class="div" aria-hidden="true"></span>
+        <span class="tt">Open <b>every day</b></span>
+      </div>
+    </div>
+
+    <div class="hero-card reveal d2" aria-hidden="true">
+      <svg class="glass-tile" viewBox="0 0 400 432" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <radialGradient id="tileGlow" cx="50%" cy="38%" r="60%">
+            <stop offset="0" stop-color="#ffffff"/>
+            <stop offset="0.6" stop-color="#eaf7fb"/>
+            <stop offset="1" stop-color="#dfeefb"/>
+          </radialGradient>
+        </defs>
+        <rect width="400" height="432" fill="url(#tileGlow)"/>
+        <g fill="none" stroke="#26c6da" stroke-opacity="0.22">
+          <circle cx="200" cy="164" r="40"/>
+          <circle cx="200" cy="164" r="74"/>
+          <circle cx="200" cy="164" r="108"/>
+          <circle cx="200" cy="164" r="142"/>
+          <circle cx="200" cy="164" r="176"/>
+        </g>
+        <path d="M0,330 C90,300 150,360 220,330 C290,300 340,350 400,322 L400,432 L0,432 Z" fill="#94dded" fill-opacity="0.3"/>
+        <path d="M0,360 C100,335 160,385 240,358 C300,338 350,372 400,352" fill="none" stroke="#3e8fd0" stroke-opacity="0.35" stroke-width="2"/>
+      </svg>
+      <div class="center-mark">
+        <span class="big">100%</span>
+        <span class="lbl">English-Speaking Care</span>
+      </div>
+      <div class="badge-float bf1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        Implants &amp; Ortho
+      </div>
+      <div class="badge-float bf2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l2.5 2.5M16.5 16.5L19 19M19 5l-2.5 2.5M7.5 16.5L5 19"/></svg>
+        Bright Whitening
+      </div>
+      <div class="badge-float bf3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12c3-3 6-3 9 0s6 3 9 0"/><path d="M3 17c3-3 6-3 9 0s6 3 9 0"/></svg>
+        By the river
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true">
+    <span class="mouse"></span>
+    Scroll
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Welcomed in English</span><span>Orthodontics</span><span>Dental Implants</span><span>Whitening</span><span>General Dentistry</span><span>Open Every Day</span><span>Riverside Bangkok</span>
+    <span>Welcomed in English</span><span>Orthodontics</span><span>Dental Implants</span><span>Whitening</span><span>General Dentistry</span><span>Open Every Day</span><span>Riverside Bangkok</span>
+  </div>
+</div>
+
+<section class="welcome section-pad" id="welcome" aria-labelledby="welcome-title">
+  <div class="wrap">
+    <div class="welcome-grid">
+      <div class="welcome-copy">
+        <p class="eyebrow reveal">A Welcome in English</p>
+        <h2 id="welcome-title" class="sr-only">A welcome in English</h2>
+        <p class="lead-xl reveal d1">New to Bangkok, or simply visiting? At Puredent you'll be <em>understood from the first hello</em> &mdash; every consultation, treatment plan and question handled clearly in English.</p>
+        <p class="reveal d2">We know how reassuring it is to discuss your health in your own language. Our team explains every step, every option and every cost in plain English before anything begins &mdash; so you always feel calm, informed and in control of your care.</p>
+        <ul class="welcome-points">
+          <li class="reveal d2">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <div><h4>Clear English consultations</h4><p>No translation gaps &mdash; your diagnosis and treatment explained simply and fully.</p></div>
+          </li>
+          <li class="reveal d3">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <div><h4>Trusted by 792 patients</h4><p>A perfect 5.0 rating on Google, including warm reviews from English-speaking patients.</p></div>
+          </li>
+          <li class="reveal d4">
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <div><h4>Open every day</h4><p>Evening and weekend hours that fit travel plans and busy expat schedules.</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="welcome-visual reveal d2">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <radialGradient id="wv" cx="50%" cy="35%" r="70%">
+              <stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#dfeefb"/>
+            </radialGradient>
+          </defs>
+          <rect width="400" height="500" fill="url(#wv)"/>
+          <g fill="none" stroke="#3e8fd0" stroke-opacity="0.18">
+            <circle cx="200" cy="200" r="50"/><circle cx="200" cy="200" r="95"/>
+            <circle cx="200" cy="200" r="140"/><circle cx="200" cy="200" r="185"/>
+            <circle cx="200" cy="200" r="230"/>
+          </g>
+          <g opacity="0.9">
+            <circle cx="200" cy="200" r="34" fill="#ffffff" stroke="#26c6da" stroke-width="1.5"/>
+            <path d="M188 200c0-7 5-12 12-12s12 5 12 12c0 9-7 14-12 22-5-8-12-13-12-22z" fill="none" stroke="#129cb3" stroke-width="2" stroke-linejoin="round"/>
+          </g>
+          <path d="M0,400 C90,375 150,425 220,400 C290,375 340,415 400,392 L400,500 L0,500 Z" fill="#94dded" fill-opacity="0.32"/>
+          <path d="M0,430 C100,408 160,455 240,430 C300,412 350,445 400,425" fill="none" stroke="#26c6da" stroke-opacity="0.4" stroke-width="2"/>
+        </svg>
+        <div class="quote-chip">
+          <p>"Everything was explained in clear English &mdash; I finally understood my whole treatment plan."</p>
+          <span class="src">Reflecting our 5.0&#9733; Google reviews</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services section-pad" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="head-block reveal">
+      <p class="eyebrow">What We Do</p>
+      <h2 id="services-title">Complete dental care, beautifully simple.</h2>
+      <p>From a routine check-up to a full smile transformation, every treatment is delivered with modern technique and a gentle, unhurried touch &mdash; explained to you in English at every step.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc-card reveal d1">
+        <span class="svc-num">01</span>
+        <span class="svc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-2 0-3 1.5-4 3-1 0-3 .5-3 4 0 5 2 11 3.5 11S11 18 12 18s2.5 6 3.5 6S19 15 19 10c0-3.5-2-4-3-4-1-1.5-2-3-4-3z"/><path d="M9 7c1-.5 2-.5 3 0"/></svg></span>
+        <h3>Orthodontics</h3>
+        <p>Gently straighten your smile with braces and clear aligner treatment, mapped out clearly so you know exactly what to expect and when.</p>
+        <span class="svc-tag">Braces &amp; Aligners</span>
+      </article>
+      <article class="svc-card reveal d2">
+        <span class="svc-num">02</span>
+        <span class="svc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8"/><path d="M9 5h6"/><path d="M8 10h8l-1 7c-.3 2-1.2 5-3 5s-2.7-3-3-5z"/></svg></span>
+        <h3>Dental Implants</h3>
+        <p>Replace missing teeth with secure, natural-looking implants &mdash; restoring confident bite and a complete smile that lasts for years.</p>
+        <span class="svc-tag">Restore &amp; Replace</span>
+      </article>
+      <article class="svc-card reveal d3">
+        <span class="svc-num">03</span>
+        <span class="svc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c-2.5 0-4 2-5 3.5C6 5.5 4 6 4 9.5 4 15 6.5 22 8.5 22S10.5 17 12 17s1.5 5 3.5 5S20 15 20 9.5C20 6 18 5.5 17 5.5 16 4 14.5 2 12 2z"/></svg></span>
+        <h3>General Dentistry</h3>
+        <p>Check-ups, professional cleaning, fillings and friendly preventive care &mdash; everything your teeth need to stay healthy, comfortable and bright.</p>
+        <span class="svc-tag">Check-ups &amp; Care</span>
+      </article>
+      <article class="svc-card reveal d4">
+        <span class="svc-num">04</span>
+        <span class="svc-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.6 3.4L17 8l-3.4 1.6L12 13l-1.6-3.4L7 8l3.4-1.6z"/><path d="M5 16l.8 1.7L7.5 18.5 5.8 19.3 5 21l-.8-1.7L2.5 18.5l1.7-.8z"/><path d="M18 14l.9 1.9 1.9.9-1.9.9-.9 1.9-.9-1.9-1.9-.9 1.9-.9z"/></svg></span>
+        <h3>Teeth Whitening</h3>
+        <p>Lift years of stains and brighten your smile with safe, professional whitening &mdash; a fresh, luminous result for that first impression.</p>
+        <span class="svc-tag">Bright &amp; Fresh</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="visit section-pad" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <div class="head-block reveal">
+      <p class="eyebrow">Visiting Us</p>
+      <h2 id="visit-title">Find us by the Chao Phraya.</h2>
+      <p>Set along the Charoen Nakhon riverside in Bangkok's Khlong San area &mdash; a calm, easy-to-reach spot on the river, open seven days a week.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="map-card reveal d1" role="img" aria-label="Stylised map showing Puredent on the Charoen Nakhon riverside along the Chao Phraya River, Bangkok.">
+        <svg viewBox="0 0 600 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f4fcfe"/><stop offset="1" stop-color="#eaf7fb"/>
+            </linearGradient>
+            <linearGradient id="water" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#c4ecf4"/><stop offset="1" stop-color="#94dded"/>
+            </linearGradient>
+          </defs>
+          <rect width="600" height="600" fill="url(#land)"/>
+          <path d="M-20,120 C140,180 200,360 360,420 C460,458 520,540 640,560 L640,640 L-20,640 Z" fill="url(#water)" fill-opacity="0.55"/>
+          <path d="M-20,140 C140,200 200,380 360,440 C460,478 520,560 640,580" fill="none" stroke="#3e8fd0" stroke-opacity="0.4" stroke-width="2"/>
+          <g stroke="#129cb3" stroke-opacity="0.16" stroke-width="1.5">
+            <line x1="0" y1="220" x2="280" y2="320"/>
+            <line x1="120" y1="60" x2="300" y2="500"/>
+            <line x1="320" y1="80" x2="470" y2="300"/>
+            <line x1="420" y1="40" x2="600" y2="220"/>
+          </g>
+          <g fill="#3e8fd0" fill-opacity="0.1">
+            <rect x="60" y="240" width="44" height="44" rx="6"/>
+            <rect x="130" y="180" width="40" height="56" rx="6"/>
+            <rect x="200" y="300" width="50" height="40" rx="6"/>
+            <rect x="380" y="160" width="46" height="46" rx="6"/>
+            <rect x="450" y="220" width="38" height="50" rx="6"/>
+          </g>
+        </svg>
+        <div class="map-pin">
+          <span class="pulse" aria-hidden="true"></span>
+          <span class="dot" aria-hidden="true"></span>
+          <span class="lab">Puredent Dental Clinic</span>
+        </div>
+        <span class="map-river-label" aria-hidden="true">Chao Phraya River</span>
+      </div>
+
+      <div class="hours-stack">
+        <div class="info-card reveal d2">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Opening Hours</h3>
+          <div class="hours-row"><span class="day">Monday &ndash; Friday</span><span class="time">11:00 &ndash; 20:00</span></div>
+          <div class="hours-row"><span class="day">Saturday</span><span class="time">10:00 &ndash; 20:00</span></div>
+          <div class="hours-row"><span class="day">Sunday</span><span class="time">10:00 &ndash; 20:00</span></div>
+          <span class="open-flag"><span class="live" aria-hidden="true"></span>Open every day of the week</span>
+        </div>
+        <div class="info-card reveal d3">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Location</h3>
+          <div class="addr-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span><b>Charoen Nakhon / Riverside</b><br>Khlong San, Bangkok &mdash; along the Chao Phraya River</span>
+          </div>
+          <div class="mini-actions">
+            <a class="mini-btn" href="tel:+66922766861">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Call us
+            </a>
+            <!-- Facebook URL not provided - replace href="#" with the clinic's Facebook page once available -->
+            <a class="mini-btn" href="#" aria-label="Find us on Facebook (link coming soon)">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+              Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="contact section-pad" id="contact" aria-labelledby="contact-title">
+  <div class="ripple-dark" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="wrap contact-inner">
+    <div class="contact-copy reveal">
+      <p class="eyebrow">Get In Touch</p>
+      <h2 id="contact-title">Let's talk about <em>your smile</em>.</h2>
+      <p class="sub">Have a question, or ready to plan a visit? Reach us directly by phone, Facebook or LINE &mdash; we're always happy to help in English, every day of the week.</p>
+      <a class="contact-phone" href="tel:+66922766861">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +66 92 276 6861
+      </a>
+    </div>
+    <div class="contact-card reveal d2">
+      <h3>Reach us your way</h3>
+      <p class="cc-sub">Choose whichever is easiest for you.</p>
+      <div class="channel-list">
+        <a class="channel ch-call" href="tel:+66922766861">
+          <span class="ch-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <span class="ch-tx"><b>Call the clinic</b><span>+66 92 276 6861 &middot; spoken English</span></span>
+          <span class="ch-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <!-- Facebook URL not provided - replace href="#" with the clinic's Facebook page once available -->
+        <a class="channel ch-fb" href="#" aria-label="Message us on Facebook (link coming soon)">
+          <span class="ch-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></span>
+          <span class="ch-tx"><b>Message on Facebook</b><span>Send us a message anytime</span></span>
+          <span class="ch-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+        <!-- LINE official account ID not provided - replace href="#" with https://line.me/R/ti/p/@<id> once available -->
+        <a class="channel ch-line" href="#" aria-label="Add us on LINE (link coming soon)">
+          <span class="ch-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 4 3.6 7.3 8.5 7.9.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6C21.5 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8zM8 13.5H6.2c-.3 0-.5-.2-.5-.5V9.5c0-.3.2-.5.5-.5s.5.2.5.5V12H8c.3 0 .5.2.5.5s-.2 1-.5 1zm2 0c0 .3-.2.5-.5.5S9 13.3 9 13V9.5c0-.3.2-.5.5-.5s.5.2.5.5V13zm5 0c0 .2-.1.4-.4.5h-.1c-.2 0-.3-.1-.4-.2l-1.8-2.4V13c0 .3-.2.5-.5.5s-.5-.2-.5-.5V9.5c0-.2.1-.4.4-.5.2-.1.4 0 .5.2l1.8 2.4V9.5c0-.3.2-.5.5-.5s.5.2.5.5V13zm3-2.5c.3 0 .5.2.5.5s-.2.5-.5.5h-1.2v.5H18c.3 0 .5.2.5.5s-.2.5-.5.5h-1.8c-.3 0-.5-.2-.5-.5V9.5c0-.3.2-.5.5-.5H18c.3 0 .5.2.5.5s-.2.5-.5.5h-1.2v.5H18z"/></svg></span>
+          <span class="ch-tx"><b>Add us on LINE</b><span>Quick chat for questions &amp; visits</span></span>
+          <span class="ch-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+      <p class="note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        We welcome international patients in English. Open Mon&ndash;Fri 11:00&ndash;20:00, Sat&ndash;Sun 10:00&ndash;20:00.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer aria-labelledby="foot-title">
+  <h2 id="foot-title" class="sr-only">Site footer</h2>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Puredent Dental Clinic, home">
+          <svg class="glyph" viewBox="0 0 40 40" aria-hidden="true">
+            <defs><linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#26c6da"/><stop offset="1" stop-color="#3e8fd0"/>
+            </linearGradient></defs>
+            <circle cx="20" cy="20" r="5" fill="none" stroke="url(#bg2)" stroke-width="2"/>
+            <circle cx="20" cy="20" r="9.5" fill="none" stroke="url(#bg2)" stroke-width="1.5" opacity="0.6"/>
+            <circle cx="20" cy="20" r="14" fill="none" stroke="url(#bg2)" stroke-width="1" opacity="0.3"/>
+          </svg>
+          <span style="color:#fff"><b>Puredent</b> Dental</span>
+        </a>
+        <p>A bright, calm dental clinic on the Charoen Nakhon riverside, Bangkok &mdash; caring for international and local smiles alike, entirely in English.</p>
+      </div>
+      <div class="foot-col">
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#welcome">Welcome</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#visit">Visit Us</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="tel:+66922766861">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +66 92 276 6861</a></li>
+          <!-- Facebook URL not provided - replace href="#" once available -->
+          <li><a href="#" aria-label="Facebook (link coming soon)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
+            Facebook</a></li>
+          <!-- LINE official account ID not provided - replace href="#" once available -->
+          <li><a href="#" aria-label="LINE (link coming soon)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 4 3.6 7.3 8.5 7.9.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6C21.5 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg>
+            LINE</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="yr">2026</span> Puredent Dental Clinic &middot; Charoen Nakhon Riverside, Bangkok</span>
+      <div class="foot-social">
+        <!-- Facebook URL not provided - replace href="#" once available -->
+        <a href="#" aria-label="Facebook (link coming soon)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg></a>
+        <!-- LINE ID not provided - replace href="#" once available -->
+        <a href="#" aria-label="LINE (link coming soon)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11c0 4 3.6 7.3 8.5 7.9.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6 1.1-.5 6-3.5 8.2-6C21.5 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8z"/></svg></a>
+        <a href="tel:+66922766861" aria-label="Call the clinic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+      </div>
+      <span class="credit">Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener">Stellar Haus Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var yr = document.getElementById('yr'); if(yr) yr.textContent = new Date().getFullYear();
+
+  var nav = document.getElementById('nav');
+  function onScroll(){ if(window.scrollY > 24){ nav.classList.add('scrolled'); } else { nav.classList.remove('scrolled'); } }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('mobileMenu');
+  function setMenu(open){
+    burger.setAttribute('aria-expanded', open ? 'true':'false');
+    burger.setAttribute('aria-label', open ? 'Close menu':'Open menu');
+    menu.setAttribute('aria-hidden', open ? 'false':'true');
+    menu.classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden':'';
+  }
+  burger.addEventListener('click', function(){ setMenu(!menu.classList.contains('open')); });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && menu.classList.contains('open')){ setMenu(false); burger.focus(); } });
+
+  var revealEls = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if(rm || !('IntersectionObserver' in window)){
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+66922766861", CHAN="", CHANLABEL="";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>

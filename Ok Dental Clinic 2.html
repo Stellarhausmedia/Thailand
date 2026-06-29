@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ok Dental Clinic 2 — English-Speaking Dentist in On Nut, Bangkok</title>
+<meta name="description" content="An English-speaking dental clinic in On Nut (Sukhumvit 77/1), Bangkok. Dentures, crowns and general dentistry for expats and visitors. Rated 4.9 stars. Open daily until 7:30pm." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23262421'/%3E%3Crect x='8' y='7' width='16' height='18' rx='1' fill='none' stroke='%23d8693a' stroke-width='2'/%3E%3Cline x1='16' y1='7' x2='16' y2='25' stroke='%23d8693a' stroke-width='1.5'/%3E%3Cline x1='8' y1='16' x2='24' y2='16' stroke='%23d8693a' stroke-width='1.5'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Archivo+Expanded:wght@600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --concrete-900:#1b1a18;
+    --concrete-800:#262421;
+    --concrete-700:#33302b;
+    --concrete-600:#4a4640;
+    --concrete-500:#6b665d;
+    --concrete-400:#928c80;
+    --concrete-300:#bcb6a8;
+    --paper:#ece7dd;
+    --paper-2:#e2dcd0;
+    --wood-900:#4a2f1c;
+    --wood-700:#7a4f2c;
+    --wood-500:#a06a3a;
+    --wood-300:#c79a66;
+    --wood-100:#e6cba6;
+    --accent:#d8693a;
+    --accent-bright:#f07a44;
+    --accent-deep:#a8481f;
+    --steel:#5c6873;
+    --ok:#1d9e75;
+    --ink:#1b1a18;
+    --maxw:1240px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+    --frame:1px solid rgba(146,140,128,.28);
+    --frame-strong:1px solid rgba(146,140,128,.5);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{
+    font-family:'Archivo',system-ui,sans-serif;
+    background:var(--concrete-800);
+    color:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .concrete-tex{position:relative}
+  .concrete-tex::before{
+    content:"";position:absolute;inset:0;pointer-events:none;z-index:0;
+    background-image:
+      radial-gradient(circle at 12% 18%, rgba(255,255,255,.025) 0 1px, transparent 1px),
+      radial-gradient(circle at 67% 42%, rgba(0,0,0,.05) 0 1.4px, transparent 1.4px),
+      radial-gradient(circle at 88% 78%, rgba(255,255,255,.02) 0 1px, transparent 1px),
+      radial-gradient(circle at 33% 88%, rgba(0,0,0,.045) 0 1.6px, transparent 1.6px);
+    background-size:7px 7px,11px 11px,9px 9px,13px 13px;
+    opacity:.9;
+    mix-blend-mode:overlay;
+  }
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block;max-width:100%}
+  ::selection{background:var(--accent);color:var(--concrete-900)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,64px);position:relative;z-index:2}
+  .eyebrow{
+    font-family:'Space Grotesk',monospace;
+    font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;display:inline-flex;align-items:center;gap:.7em;
+  }
+  .eyebrow::before{content:"";width:30px;height:1px;background:var(--accent);display:inline-block}
+  h1,h2,h3{font-family:'Archivo Expanded','Archivo',sans-serif;line-height:1.02;letter-spacing:-.01em}
+  .display{font-weight:800;text-transform:uppercase;font-size:clamp(2.6rem,9vw,7rem)}
+  .mono{font-family:'Space Grotesk',monospace}
+
+  .skip{position:absolute;left:-999px;top:8px;z-index:200;background:var(--accent);color:var(--concrete-900);
+    padding:.7em 1.2em;border-radius:2px;font-weight:700;font-family:'Space Grotesk',monospace}
+  .skip:focus{left:12px}
+
+  header.nav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    transition:background .4s var(--ease),border-color .4s var(--ease),backdrop-filter .4s var(--ease);
+    border-bottom:1px solid transparent;
+  }
+  header.nav.scrolled{
+    background:rgba(27,26,24,.82);
+    backdrop-filter:blur(14px) saturate(1.2);
+    border-bottom:var(--frame);
+  }
+  .nav-inner{
+    max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,64px);
+    height:72px;display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  }
+  .brand{display:flex;align-items:center;gap:.65rem;font-family:'Archivo Expanded',sans-serif;
+    font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:.98rem}
+  .brand .mark{flex:0 0 auto}
+  .brand b{color:var(--accent)}
+  .nav-links{display:flex;align-items:center;gap:2rem;list-style:none}
+  .nav-links a{
+    font-family:'Space Grotesk',monospace;font-size:.82rem;letter-spacing:.05em;
+    color:var(--paper-2);position:relative;padding:.4em 0;transition:color .25s;
+  }
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-2px;height:1px;width:0;background:var(--accent);transition:width .3s var(--ease)}
+  .nav-links a:hover{color:#fff}
+  .nav-links a:hover::after{width:100%}
+  .nav-cta{
+    font-family:'Space Grotesk',monospace;font-weight:600;font-size:.82rem;
+    border:1px solid var(--accent);color:var(--accent);
+    padding:.62em 1.15em;border-radius:2px;display:inline-flex;align-items:center;gap:.5em;
+    transition:background .25s,color .25s,transform .25s;
+  }
+  .nav-cta:hover{background:var(--accent);color:var(--concrete-900);transform:translateY(-1px)}
+  .nav-cta:focus-visible{outline:2px solid var(--accent-bright);outline-offset:3px}
+  .burger{display:none;background:none;border:var(--frame-strong);border-radius:2px;width:46px;height:42px;
+    cursor:pointer;flex-direction:column;gap:5px;align-items:center;justify-content:center}
+  .burger span{width:20px;height:2px;background:var(--paper);transition:.3s var(--ease)}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  @media (max-width:880px){
+    .nav-links{
+      position:fixed;inset:72px 0 auto 0;flex-direction:column;gap:0;
+      background:rgba(20,19,17,.97);backdrop-filter:blur(16px);
+      border-bottom:var(--frame-strong);padding:1rem clamp(20px,5vw,64px) 1.6rem;
+      transform:translateY(-120%);transition:transform .45s var(--ease);align-items:stretch;
+    }
+    .nav-links.open{transform:translateY(0)}
+    .nav-links li{border-bottom:var(--frame)}
+    .nav-links a{display:block;padding:1.05em .2em;font-size:1rem}
+    .nav-links .nav-cta{margin-top:1rem;justify-content:center;padding:.95em}
+    .burger{display:flex}
+  }
+
+  .hero{
+    position:relative;min-height:100svh;display:flex;align-items:flex-end;
+    padding-top:72px;overflow:hidden;
+    background:linear-gradient(180deg, var(--concrete-900) 0%, var(--concrete-800) 55%, var(--concrete-700) 100%);
+  }
+  .grid-lines{position:absolute;inset:0;z-index:1;pointer-events:none}
+  .grid-lines .v,.grid-lines .h{position:absolute;background:rgba(146,140,128,.13)}
+  .grid-lines .v{top:0;bottom:0;width:1px}
+  .grid-lines .h{left:0;right:0;height:1px}
+  .loft-window{
+    position:absolute;z-index:1;right:clamp(-40px,2vw,40px);top:clamp(80px,12vh,150px);
+    width:clamp(300px,42vw,620px);opacity:.92;
+  }
+  .hero-light{
+    position:absolute;z-index:1;inset:0;pointer-events:none;
+    background:radial-gradient(120% 90% at 78% 28%, rgba(240,122,68,.22) 0%, rgba(216,105,58,.07) 32%, transparent 60%);
+    opacity:0;
+  }
+  .hero-content{position:relative;z-index:3;width:100%;padding-bottom:clamp(48px,9vh,110px)}
+  .hero-grid{display:grid;grid-template-columns:1.5fr .9fr;gap:clamp(1.5rem,4vw,4rem);align-items:end}
+  @media (max-width:980px){.hero-grid{grid-template-columns:1fr}}
+  .hero h1{margin:1.1rem 0 0}
+  .hero h1 .ln{display:block;overflow:hidden}
+  .hero h1 .ln > span{display:block}
+  .hero h1 .accent{color:var(--accent)}
+  .hero h1 .outline{-webkit-text-stroke:1.5px var(--accent);color:transparent}
+  .hero-sub{
+    margin-top:1.6rem;max-width:38ch;font-size:clamp(1rem,1.5vw,1.18rem);
+    color:var(--concrete-300);font-weight:400;
+  }
+  .hero-sub b{color:var(--paper);font-weight:600}
+  .hero-side{display:flex;flex-direction:column;gap:1.1rem;align-items:flex-start}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+  .btn{
+    font-family:'Space Grotesk',monospace;font-weight:600;font-size:.92rem;letter-spacing:.02em;
+    padding:.95em 1.5em;border-radius:2px;display:inline-flex;align-items:center;gap:.6em;
+    cursor:pointer;border:1px solid transparent;transition:transform .25s var(--ease),background .25s,color .25s,box-shadow .25s;
+    position:relative;
+  }
+  .btn:focus-visible{outline:2px solid var(--accent-bright);outline-offset:3px}
+  .btn-primary{background:var(--accent);color:var(--concrete-900);border-color:var(--accent)}
+  .btn-primary:hover{background:var(--accent-bright);transform:translateY(-2px);box-shadow:0 10px 26px -10px rgba(240,122,68,.6)}
+  .btn-ghost{background:transparent;color:var(--paper);border-color:rgba(146,140,128,.5)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+  .btn .ico{width:18px;height:18px;flex:0 0 auto}
+
+  .spec{
+    border:var(--frame-strong);border-radius:3px;padding:1.1rem 1.2rem;width:100%;
+    background:linear-gradient(160deg,rgba(51,48,43,.5),rgba(38,36,33,.3));
+    backdrop-filter:blur(3px);
+  }
+  .spec .lbl{font-family:'Space Grotesk',monospace;font-size:.66rem;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--concrete-400)}
+  .spec .big{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:1.5rem;margin-top:.25rem;display:flex;align-items:center;gap:.5rem}
+  .spec .stars{color:var(--accent);letter-spacing:.05em;font-size:1.05rem;font-family:'Archivo',sans-serif}
+  .spec .meta{font-size:.82rem;color:var(--concrete-300);margin-top:.3rem}
+  .scroll-hint{
+    position:absolute;left:clamp(20px,5vw,64px);bottom:26px;z-index:3;
+    font-family:'Space Grotesk',monospace;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--concrete-400);display:flex;align-items:center;gap:.7rem;
+  }
+  .scroll-hint .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+  @media (max-width:980px){.scroll-hint{display:none}}
+
+  .strip{border-top:var(--frame);border-bottom:var(--frame);background:var(--concrete-900);overflow:hidden;position:relative}
+  .strip-track{display:flex;gap:0;white-space:nowrap;width:max-content;animation:marq 32s linear infinite}
+  .strip-track span{
+    font-family:'Archivo Expanded',sans-serif;font-weight:800;text-transform:uppercase;
+    font-size:clamp(.95rem,1.8vw,1.3rem);letter-spacing:.04em;color:var(--concrete-600);
+    padding:.95rem 1.6rem;display:flex;align-items:center;gap:1.6rem;
+  }
+  .strip-track span em{color:var(--accent);font-style:normal}
+  .strip-track .sep{color:var(--wood-500);font-size:.7em}
+  @keyframes marq{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.strip-track{animation:none;justify-content:center;flex-wrap:wrap;white-space:normal}}
+
+  section{position:relative}
+  .pad{padding:clamp(4.5rem,11vh,9rem) 0}
+  .sec-head{display:flex;flex-direction:column;gap:1.1rem;max-width:60ch}
+  .sec-head h2{font-weight:800;text-transform:uppercase;font-size:clamp(2rem,5vw,3.6rem)}
+  .sec-head p{color:var(--concrete-300);font-size:clamp(1rem,1.4vw,1.15rem);max-width:54ch}
+  .kicker-num{font-family:'Space Grotesk',monospace;color:var(--concrete-500);font-size:.8rem;letter-spacing:.2em}
+
+  .welcome{background:var(--concrete-800);border-top:var(--frame)}
+  .welcome-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+  @media (max-width:900px){.welcome-grid{grid-template-columns:1fr}}
+  .welcome-copy h2{margin:1.1rem 0 1.4rem}
+  .welcome-copy .lead{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.15rem,2vw,1.5rem);
+    color:var(--paper);line-height:1.45;font-weight:500;margin-bottom:1.3rem}
+  .welcome-copy .lead .hl{color:var(--accent);position:relative;white-space:nowrap}
+  .welcome-copy p{color:var(--concrete-300);margin-bottom:1.1rem;max-width:48ch}
+  .welcome-copy p b{color:var(--paper);font-weight:600}
+  .wood-panel{
+    position:relative;border-radius:4px;overflow:hidden;border:var(--frame-strong);
+    min-height:380px;background:
+      repeating-linear-gradient(180deg,
+        var(--wood-700) 0, var(--wood-700) 2px,
+        var(--wood-900) 2px, var(--wood-900) 3px,
+        var(--wood-500) 3px, var(--wood-500) 46px,
+        var(--wood-700) 46px, var(--wood-700) 49px);
+    box-shadow:inset 0 0 80px rgba(0,0,0,.45);
+  }
+  .wood-panel .glass{position:absolute;inset:0;display:grid;place-items:center;
+    background:linear-gradient(160deg,rgba(27,26,24,.15),rgba(27,26,24,.55))}
+  .wood-panel .badge-en{text-align:center;padding:2rem}
+  .wood-panel .badge-en .hello{
+    font-family:'Archivo Expanded',sans-serif;font-weight:900;text-transform:uppercase;
+    font-size:clamp(2.2rem,7vw,4.2rem);color:var(--paper);line-height:.95;letter-spacing:-.02em;
+    text-shadow:0 3px 24px rgba(0,0,0,.5);
+  }
+  .wood-panel .badge-en .hello em{color:var(--accent);font-style:normal;display:block}
+  .wood-panel .badge-en .quote{
+    margin-top:1.3rem;font-family:'Space Grotesk',monospace;font-size:.85rem;
+    color:var(--wood-100);letter-spacing:.04em;max-width:30ch;margin-inline:auto;line-height:1.5;
+  }
+  .feature-chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.7rem}
+  .chip{
+    font-family:'Space Grotesk',monospace;font-size:.75rem;letter-spacing:.04em;
+    border:var(--frame-strong);border-radius:2px;padding:.55em .9em;color:var(--paper-2);
+    display:inline-flex;align-items:center;gap:.5em;transition:border-color .25s,color .25s,background .25s;
+  }
+  .chip:hover{border-color:var(--accent);color:var(--accent)}
+  .chip .d{width:6px;height:6px;border-radius:50%;background:var(--ok)}
+
+  .services{background:var(--concrete-900);border-top:var(--frame)}
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:clamp(2.5rem,5vw,4rem);
+    border:var(--frame);border-radius:4px;overflow:hidden}
+  @media (max-width:880px){.svc-grid{grid-template-columns:1fr}}
+  .svc{
+    position:relative;padding:clamp(1.8rem,3vw,2.6rem);border-right:var(--frame);
+    background:var(--concrete-800);transition:background .4s var(--ease);overflow:hidden;
+    display:flex;flex-direction:column;gap:1.1rem;min-height:340px;
+  }
+  .svc:last-child{border-right:none}
+  @media (max-width:880px){.svc{border-right:none;border-bottom:var(--frame)}.svc:last-child{border-bottom:none}}
+  .svc::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--accent);transition:width .5s var(--ease)}
+  .svc:hover{background:var(--concrete-700)}
+  .svc:hover::after{width:100%}
+  .svc:hover .svc-art{transform:translateY(-6px) rotate(-1deg)}
+  .svc:hover .svc-no{color:var(--accent)}
+  .svc-no{font-family:'Space Grotesk',monospace;font-size:.8rem;letter-spacing:.2em;color:var(--concrete-500);transition:color .35s}
+  .svc-art{width:74px;height:74px;transition:transform .5s var(--ease)}
+  .svc h3{font-weight:800;text-transform:uppercase;font-size:1.45rem;letter-spacing:0}
+  .svc p{color:var(--concrete-300);font-size:.96rem;line-height:1.6}
+  .svc .tags{margin-top:auto;display:flex;flex-wrap:wrap;gap:.45rem;padding-top:.6rem}
+  .svc .tags span{font-family:'Space Grotesk',monospace;font-size:.68rem;letter-spacing:.05em;
+    color:var(--concrete-400);border:1px solid rgba(146,140,128,.3);border-radius:2px;padding:.35em .65em}
+
+  .visit{background:var(--concrete-800);border-top:var(--frame)}
+  .visit-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4.5rem);align-items:stretch}
+  @media (max-width:960px){.visit-grid{grid-template-columns:1fr}}
+  .hours-card{
+    border:var(--frame-strong);border-radius:4px;padding:clamp(1.6rem,3vw,2.4rem);
+    background:linear-gradient(165deg,var(--concrete-700),var(--concrete-800));
+    display:flex;flex-direction:column;gap:1.3rem;
+  }
+  .hours-card .top{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+  .status-pill{
+    display:inline-flex;align-items:center;gap:.55em;font-family:'Space Grotesk',monospace;
+    font-size:.78rem;letter-spacing:.05em;color:var(--ok);border:1px solid rgba(29,158,117,.45);
+    background:rgba(29,158,117,.1);border-radius:2px;padding:.45em .85em;font-weight:600;
+  }
+  .status-pill .pulse{width:8px;height:8px;border-radius:50%;background:var(--ok);position:relative}
+  .status-pill .pulse::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--ok);
+    animation:pulse 2s ease-out infinite}
+  @keyframes pulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(1.8);opacity:0}}
+  @media (prefers-reduced-motion:reduce){.status-pill .pulse::after{animation:none;opacity:0}}
+  .hours-list{list-style:none;display:flex;flex-direction:column}
+  .hours-list li{display:flex;justify-content:space-between;align-items:center;
+    padding:.85rem 0;border-bottom:var(--frame);font-size:.96rem}
+  .hours-list li:last-child{border-bottom:none}
+  .hours-list li .day{font-family:'Space Grotesk',monospace;color:var(--paper-2);letter-spacing:.03em}
+  .hours-list li .time{font-weight:600;color:var(--paper)}
+  .hours-list li.today{background:linear-gradient(90deg,rgba(216,105,58,.1),transparent);margin:0 -1rem;padding:.85rem 1rem;border-radius:2px;border-bottom:none}
+  .hours-list li.today .day{color:var(--accent)}
+  .addr{display:flex;flex-direction:column;gap:1.4rem}
+  .addr .row{display:flex;gap:1rem;align-items:flex-start}
+  .addr .row .ic{flex:0 0 auto;width:44px;height:44px;border:var(--frame-strong);border-radius:3px;
+    display:grid;place-items:center;color:var(--accent)}
+  .addr .row .ic svg{width:22px;height:22px}
+  .addr .row h4{font-family:'Archivo Expanded',sans-serif;font-weight:700;text-transform:uppercase;
+    font-size:.95rem;letter-spacing:.02em;margin-bottom:.25rem}
+  .addr .row p{color:var(--concrete-300);font-size:.94rem;line-height:1.55}
+  .addr .row a.lnk{color:var(--accent);font-family:'Space Grotesk',monospace;font-size:.9rem;
+    border-bottom:1px solid transparent;transition:border-color .25s}
+  .addr .row a.lnk:hover{border-color:var(--accent)}
+  .loft-map{
+    border:var(--frame-strong);border-radius:4px;overflow:hidden;min-height:300px;
+    background:linear-gradient(180deg,var(--concrete-900),var(--concrete-700));
+    position:relative;display:flex;
+  }
+
+  .trust{background:var(--concrete-900);border-top:var(--frame);overflow:hidden}
+  .trust-top{display:grid;grid-template-columns:auto 1fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+  @media (max-width:860px){.trust-top{grid-template-columns:1fr;gap:2.5rem}}
+  .rating-block{text-align:center}
+  .rating-block .num{font-family:'Archivo Expanded',sans-serif;font-weight:900;
+    font-size:clamp(5rem,16vw,9rem);line-height:.85;color:var(--paper);letter-spacing:-.03em}
+  .rating-block .num .of{color:var(--concrete-500);font-size:.32em;vertical-align:super}
+  .rating-block .stars{color:var(--accent);font-size:clamp(1.4rem,4vw,2rem);letter-spacing:.12em;margin-top:.6rem}
+  .rating-block .src{font-family:'Space Grotesk',monospace;font-size:.78rem;letter-spacing:.14em;
+    text-transform:uppercase;color:var(--concrete-400);margin-top:.8rem}
+  .rating-block .src b{color:var(--accent)}
+  .trust-statement{font-family:'Archivo Expanded',sans-serif;font-weight:700;text-transform:none;
+    font-size:clamp(1.3rem,3vw,2.1rem);line-height:1.2;letter-spacing:-.01em;color:var(--paper)}
+  .trust-statement .accent{color:var(--accent)}
+  .trust-statement .quote-mark{color:var(--wood-500);font-size:1.4em;line-height:0}
+  .trust-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-top:clamp(2.5rem,5vw,4rem)}
+  @media (max-width:780px){.trust-cards{grid-template-columns:1fr}}
+  .tcard{
+    border:var(--frame);border-radius:4px;padding:1.6rem;background:var(--concrete-800);
+    transition:transform .4s var(--ease),border-color .4s var(--ease);
+    display:flex;flex-direction:column;gap:.9rem;
+  }
+  .tcard:hover{transform:translateY(-4px);border-color:rgba(216,105,58,.4)}
+  .tcard .stars{color:var(--accent);letter-spacing:.1em;font-size:.95rem}
+  .tcard p{color:var(--paper-2);font-size:.97rem;line-height:1.6;font-style:italic}
+  .tcard .who{font-family:'Space Grotesk',monospace;font-size:.74rem;letter-spacing:.06em;
+    color:var(--concrete-400);text-transform:uppercase;margin-top:auto;display:flex;align-items:center;gap:.5em}
+  .tcard .who .d{width:24px;height:1px;background:var(--wood-500)}
+  .trust-note{font-family:'Space Grotesk',monospace;font-size:.74rem;color:var(--concrete-500);
+    letter-spacing:.04em;margin-top:1.6rem;text-align:center}
+
+  .contact{background:var(--concrete-800);border-top:var(--frame);position:relative}
+  .contact .grid-lines{z-index:0}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2.5rem,6vw,5rem);align-items:center}
+  @media (max-width:920px){.contact-grid{grid-template-columns:1fr}}
+  .contact-head h2{margin:1.1rem 0 1.3rem;font-size:clamp(2.4rem,6vw,4.4rem)}
+  .contact-head p{color:var(--concrete-300);font-size:clamp(1rem,1.5vw,1.18rem);max-width:42ch;margin-bottom:1.8rem}
+  .phone-hero{display:flex;align-items:center;gap:1rem;text-decoration:none;margin-bottom:1.6rem;
+    border:var(--frame-strong);border-radius:4px;padding:1.2rem 1.4rem;
+    background:linear-gradient(150deg,rgba(51,48,43,.5),rgba(38,36,33,.2));
+    transition:border-color .3s,transform .3s,background .3s}
+  .phone-hero:hover{border-color:var(--accent);transform:translateY(-2px);background:rgba(216,105,58,.08)}
+  .phone-hero:focus-visible{outline:2px solid var(--accent-bright);outline-offset:3px}
+  .phone-hero .pic{flex:0 0 auto;width:52px;height:52px;border-radius:3px;background:var(--accent);
+    color:var(--concrete-900);display:grid;place-items:center}
+  .phone-hero .pic svg{width:26px;height:26px}
+  .phone-hero .lbl{font-family:'Space Grotesk',monospace;font-size:.7rem;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--concrete-400)}
+  .phone-hero .no{font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:clamp(1.3rem,3vw,1.8rem);
+    color:var(--paper);margin-top:.15rem}
+
+  .contact-actions{display:flex;flex-direction:column;gap:.8rem}
+  .ca-row{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+  @media (max-width:480px){.ca-row{grid-template-columns:1fr}}
+  .ca{
+    display:flex;align-items:center;gap:.8rem;padding:.95rem 1.1rem;border-radius:3px;
+    font-family:'Space Grotesk',monospace;font-weight:600;font-size:.92rem;
+    border:1px solid transparent;cursor:pointer;transition:transform .25s var(--ease),filter .25s,box-shadow .25s;
+    color:#fff;
+  }
+  .ca:focus-visible{outline:2px solid var(--accent-bright);outline-offset:3px}
+  .ca:hover{transform:translateY(-2px)}
+  .ca .ci{flex:0 0 auto;width:24px;height:24px;display:grid;place-items:center}
+  .ca .ci svg{width:22px;height:22px}
+  .ca small{display:block;font-family:'Space Grotesk',sans-serif;font-weight:400;font-size:.7rem;opacity:.85;letter-spacing:.02em}
+  .ca-line{background:#06c755}
+  .ca-line:hover{box-shadow:0 10px 24px -10px rgba(6,199,85,.6)}
+  .ca-fb{background:#1877f2}
+  .ca-fb:hover{box-shadow:0 10px 24px -10px rgba(24,119,242,.6)}
+  .ca-wa{background:#25d366}
+  .ca-wa:hover{box-shadow:0 10px 24px -10px rgba(37,211,102,.6)}
+  .ca-ig{background:linear-gradient(135deg,#f9ce34,#ee2a7b 45%,#6228d7)}
+  .ca-ig:hover{box-shadow:0 10px 24px -10px rgba(238,42,123,.6)}
+  .ca-mail{background:var(--concrete-600);border-color:rgba(146,140,128,.5)}
+  .ca-mail:hover{background:var(--concrete-500)}
+  .ca-book{background:transparent;border:1.5px dashed var(--accent);color:var(--accent);
+    justify-content:center;position:relative;cursor:not-allowed}
+  .ca-book:hover{transform:none;background:rgba(216,105,58,.06)}
+  .ca-book .soon{font-family:'Space Grotesk',monospace;font-size:.62rem;letter-spacing:.12em;
+    text-transform:uppercase;border:1px solid var(--accent);border-radius:2px;padding:.2em .5em;margin-left:.3em;color:var(--accent)}
+
+  .contact-art{position:relative;border:var(--frame-strong);border-radius:4px;overflow:hidden;
+    min-height:420px;background:linear-gradient(175deg,var(--concrete-900),var(--concrete-700));
+    display:flex;align-items:flex-end}
+  .contact-art .ov{position:absolute;inset:0;padding:2rem;display:flex;flex-direction:column;
+    justify-content:flex-end;gap:.6rem;z-index:2}
+  .contact-art .ov .big{font-family:'Archivo Expanded',sans-serif;font-weight:900;text-transform:uppercase;
+    font-size:clamp(1.4rem,3.5vw,2.4rem);color:var(--paper);line-height:1}
+  .contact-art .ov .big em{color:var(--accent);font-style:normal}
+  .contact-art .ov p{font-family:'Space Grotesk',monospace;font-size:.82rem;color:var(--wood-100);letter-spacing:.03em}
+
+  footer{background:var(--concrete-900);border-top:var(--frame-strong);padding:clamp(3rem,7vh,5rem) 0 2rem}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(2rem,5vw,4rem);margin-bottom:3rem}
+  @media (max-width:780px){.foot-grid{grid-template-columns:1fr;gap:2.4rem}}
+  .foot-brand .brand{font-size:1.2rem;margin-bottom:1rem}
+  .foot-brand p{color:var(--concrete-400);font-size:.92rem;max-width:34ch;line-height:1.6}
+  .foot-col h5{font-family:'Space Grotesk',monospace;font-size:.72rem;letter-spacing:.2em;
+    text-transform:uppercase;color:var(--concrete-500);margin-bottom:1.1rem}
+  .foot-col ul{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+  .foot-col a,.foot-col span{color:var(--paper-2);font-size:.94rem;transition:color .25s;display:inline-flex;align-items:center;gap:.5em}
+  .foot-col a:hover{color:var(--accent)}
+  .foot-bottom{border-top:var(--frame);padding-top:1.8rem;display:flex;flex-wrap:wrap;gap:1rem;
+    justify-content:space-between;align-items:center}
+  .foot-bottom .area{font-family:'Space Grotesk',monospace;font-size:.78rem;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--concrete-400);display:flex;align-items:center;gap:.6em}
+  .foot-bottom .area .dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}
+  .credit{font-family:'Space Grotesk',monospace;font-size:.78rem;color:var(--concrete-500);letter-spacing:.02em}
+  .credit a{color:var(--concrete-300);border-bottom:1px solid rgba(146,140,128,.35);transition:color .25s,border-color .25s}
+  .credit a:hover{color:var(--accent);border-color:var(--accent)}
+
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal.d1{transition-delay:.08s}
+  .reveal.d2{transition-delay:.16s}
+  .reveal.d3{transition-delay:.24s}
+  .reveal.d4{transition-delay:.32s}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1!important;transform:none!important;transition:none!important}
+  }
+
+  .hero-anim .ln > span{transform:translateY(110%);opacity:0}
+  .hero-anim .eyebrow,.hero-anim .hero-sub,.hero-anim .hero-side,.hero-anim .hero-actions{opacity:0;transform:translateY(20px)}
+  @media (prefers-reduced-motion:reduce){
+    .hero-anim .ln > span,.hero-anim .eyebrow,.hero-anim .hero-sub,.hero-anim .hero-side,.hero-anim .hero-actions{opacity:1;transform:none}
+    .hero-light{opacity:1!important}
+    .loft-window .pane-light{opacity:.55!important}
+  }
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#f07a44;--bk-accent-ink:#ffffff;--bk-ink:#1b1a18;--bk-panel:#ece7dd;--bk-muted:rgba(27,26,24,0.6);--bk-line:rgba(27,26,24,0.14);--bk-serif:Georgia, "Times New Roman", serif;--bk-sans:"Archivo", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="nav-inner">
+    <a class="brand" href="#top" aria-label="Ok Dental Clinic 2 — home">
+      <svg class="mark" width="30" height="30" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="6" y="5" width="20" height="22" rx="1.5" fill="none" stroke="#d8693a" stroke-width="2"/>
+        <line x1="16" y1="5" x2="16" y2="27" stroke="#d8693a" stroke-width="1.4"/>
+        <line x1="6" y1="16" x2="26" y2="16" stroke="#d8693a" stroke-width="1.4"/>
+      </svg>
+      OK&nbsp;DENTAL<b>&middot;2</b>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="navmenu">
+        <li><a href="#welcome">Welcome</a></li>
+        <li><a href="#services">Care</a></li>
+        <li><a href="#visit">Visit</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a class="nav-cta" href="tel:+66863559997"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>Call now</a></li>
+      </ul>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navmenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero concrete-tex hero-anim" id="hero" aria-label="Introduction">
+  <div class="grid-lines" aria-hidden="true">
+    <div class="v" style="left:25%"></div>
+    <div class="v" style="left:50%"></div>
+    <div class="v" style="left:75%"></div>
+    <div class="h" style="top:33%"></div>
+    <div class="h" style="top:66%"></div>
+  </div>
+
+  <svg class="loft-window" viewBox="0 0 420 480" aria-hidden="true" id="loftWindow">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#f2a45c"/>
+        <stop offset="0.5" stop-color="#e07d44"/>
+        <stop offset="1" stop-color="#9a4a26"/>
+      </linearGradient>
+      <linearGradient id="glassSheen" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#fff" stop-opacity="0.28"/>
+        <stop offset="0.5" stop-color="#fff" stop-opacity="0.04"/>
+        <stop offset="1" stop-color="#fff" stop-opacity="0.14"/>
+      </linearGradient>
+    </defs>
+    <rect x="6" y="6" width="408" height="468" rx="3" fill="#1b1a18" stroke="#5c6873" stroke-width="3"/>
+    <g class="pane-light" style="opacity:.85">
+      <rect x="22" y="22" width="178" height="200" fill="url(#sky)"/>
+      <rect x="220" y="22" width="178" height="200" fill="url(#sky)"/>
+      <rect x="22" y="258" width="178" height="200" fill="url(#sky)"/>
+      <rect x="220" y="258" width="178" height="200" fill="url(#sky)"/>
+      <g fill="#7a3c20" opacity="0.55">
+        <rect x="40" y="150" width="22" height="72"/>
+        <rect x="70" y="120" width="30" height="102"/>
+        <rect x="110" y="160" width="18" height="62"/>
+        <rect x="150" y="135" width="34" height="87"/>
+        <rect x="240" y="145" width="26" height="77"/>
+        <rect x="280" y="115" width="22" height="107"/>
+        <rect x="312" y="158" width="30" height="64"/>
+        <rect x="356" y="138" width="24" height="84"/>
+      </g>
+      <circle cx="300" cy="95" r="34" fill="#ffd9a0" opacity="0.85"/>
+      <circle cx="300" cy="95" r="56" fill="#ffb870" opacity="0.3"/>
+    </g>
+    <rect x="22" y="22" width="376" height="436" fill="url(#glassSheen)"/>
+    <line x1="210" y1="14" x2="210" y2="466" stroke="#5c6873" stroke-width="6"/>
+    <line x1="14" y1="244" x2="406" y2="244" stroke="#5c6873" stroke-width="6"/>
+    <line x1="110" y1="22" x2="110" y2="222" stroke="#48535d" stroke-width="2"/>
+    <line x1="308" y1="22" x2="308" y2="222" stroke="#48535d" stroke-width="2"/>
+    <line x1="110" y1="258" x2="110" y2="458" stroke="#48535d" stroke-width="2"/>
+    <line x1="308" y1="258" x2="308" y2="458" stroke="#48535d" stroke-width="2"/>
+    <rect x="14" y="466" width="392" height="10" fill="#33302b"/>
+    <g transform="translate(60,430)">
+      <path d="M10 36 C0 20 4 6 10 0 C16 6 20 20 10 36 Z" fill="#3b6d4a"/>
+      <path d="M10 36 C-6 26 -8 14 -4 6 C6 12 12 24 10 36 Z" fill="#2f5a3c"/>
+      <path d="M10 36 C26 26 28 14 24 6 C14 12 8 24 10 36 Z" fill="#4a8159"/>
+      <rect x="2" y="34" width="16" height="14" rx="1" fill="#a06a3a"/>
+    </g>
+  </svg>
+
+  <div class="hero-light" id="heroLight" aria-hidden="true"></div>
+
+  <div class="wrap hero-content">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">On Nut &middot; Sukhumvit 77/1 &middot; Bangkok</span>
+        <h1>
+          <span class="ln"><span>English-spoken</span></span>
+          <span class="ln"><span class="accent">dentistry</span></span>
+          <span class="ln"><span class="outline">in the loft</span></span>
+        </h1>
+        <p class="hero-sub">
+          A calm, design-led dental clinic in On Nut, made for the people who work, wander and stay a while in Bangkok.
+          <b>We speak English here</b> &mdash; and we keep it simple.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tel:+66863559997">
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            +66 86 355 9997
+          </a>
+          <a class="btn btn-ghost" href="#visit">
+            Find the loft
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <aside class="hero-side" aria-label="Clinic rating">
+        <div class="spec">
+          <div class="lbl">Google rating</div>
+          <div class="big">4.9 <span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span></div>
+          <div class="meta">From 98 patient reviews &middot; Open daily till 7:30pm</div>
+        </div>
+        <div class="spec">
+          <div class="lbl">Care, kept simple</div>
+          <div class="big" style="font-size:1.05rem;line-height:1.4;display:block">Dentures &middot; Crowns &middot; General dentistry</div>
+          <div class="meta">Walk-in friendly &middot; International patients welcome</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="scroll-hint" aria-hidden="true"><span class="dot"></span>Scroll &middot; welcome below</div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="strip-track" id="strip">
+    <span>We speak English <em>&middot;</em> <span class="sep">&#9670;</span> On Nut local <span class="sep">&#9670;</span> Dentures &amp; crowns <span class="sep">&#9670;</span> Open daily <span class="sep">&#9670;</span> 4.9 on Google <span class="sep">&#9670;</span> Made for nomads <span class="sep">&#9670;</span> </span>
+    <span>We speak English <em>&middot;</em> <span class="sep">&#9670;</span> On Nut local <span class="sep">&#9670;</span> Dentures &amp; crowns <span class="sep">&#9670;</span> Open daily <span class="sep">&#9670;</span> 4.9 on Google <span class="sep">&#9670;</span> Made for nomads <span class="sep">&#9670;</span> </span>
+  </div>
+</div>
+
+<section class="welcome concrete-tex pad" id="welcome" aria-labelledby="welcome-h">
+  <div class="wrap welcome-grid">
+    <div class="welcome-copy">
+      <span class="eyebrow reveal">The English-speaking part</span>
+      <h2 id="welcome-h" class="reveal d1">No translating.<br>Just teeth.</h2>
+      <p class="lead reveal d1">
+        Visitors tell us the same thing on the way out &mdash; <span class="hl">&ldquo;they spoke English with me&rdquo;</span> &mdash; and a lot of them come back every Bangkok trip.
+      </p>
+      <p class="reveal d2">
+        Sitting in a dentist&rsquo;s chair is strange enough without a language gap. So here, you&rsquo;ll be <b>understood in plain English</b> from the moment you say hello &mdash; what&rsquo;s happening, what it costs, and what comes next, with nothing lost in translation.
+      </p>
+      <p class="reveal d2">
+        We&rsquo;re a small, On&nbsp;Nut clinic that&rsquo;s grown used to looking after travellers, remote workers and the caf&eacute;-and-laptop crowd around Sukhumvit&nbsp;77/1. Drop in for a check, a fix or a whole new smile &mdash; and pick up right where you left off next time you&rsquo;re in town.
+      </p>
+      <div class="feature-chips reveal d3">
+        <span class="chip"><span class="d"></span>English spoken, always</span>
+        <span class="chip"><span class="d"></span>Clear, upfront pricing</span>
+        <span class="chip"><span class="d"></span>Returning-traveller friendly</span>
+      </div>
+    </div>
+
+    <div class="wood-panel reveal d2" aria-hidden="true">
+      <div class="glass">
+        <div class="badge-en">
+          <div class="hello">Hello,<em>welcome in.</em></div>
+          <p class="quote">The clinic our patients describe as &ldquo;the one where they spoke English with me.&rdquo;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services concrete-tex pad" id="services" aria-labelledby="services-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow reveal">02 &middot; What we do</span>
+      <h2 id="services-h" class="reveal d1">Honest care,<br>built to last.</h2>
+      <p class="reveal d1">Three things, done properly. No upselling, no jargon &mdash; just the dentistry most people actually need, explained in a language you understand.</p>
+    </div>
+
+    <div class="svc-grid">
+      <article class="svc reveal d1">
+        <div class="svc-no">/ 01</div>
+        <svg class="svc-art" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M32 8c-10 0-18 6-18 17 0 10 4 13 6 24 1 5 3 8 5 8s3-4 4-9 2-7 3-7 2 2 3 7 2 9 4 9 4-3 5-8c2-11 6-14 6-24 0-11-8-17-18-17Z" stroke="#d8693a" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M22 22c2-3 6-5 10-5" stroke="#e6cba6" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h3>General dentistry</h3>
+        <p>Check-ups, cleanings, fillings and the everyday maintenance that keeps small problems small. The calm, no-surprises baseline for your time in Bangkok.</p>
+        <div class="tags"><span>Check-ups</span><span>Cleaning</span><span>Fillings</span></div>
+      </article>
+
+      <article class="svc reveal d2">
+        <div class="svc-no">/ 02</div>
+        <svg class="svc-art" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M20 26l4-12h16l4 12" stroke="#d8693a" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M16 26h32l-3 8H19l-3-8Z" stroke="#d8693a" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M22 34c-1 8 1 16 5 18 2 1 3-3 5-3s3 4 5 3c4-2 6-10 5-18" stroke="#d8693a" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M28 18h8" stroke="#e6cba6" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <h3>Crowns</h3>
+        <p>When a tooth needs more than a filling, a well-fitted crown brings back its strength and shape &mdash; colour-matched so it disappears into your smile.</p>
+        <div class="tags"><span>Restore</span><span>Colour-matched</span><span>Durable</span></div>
+      </article>
+
+      <article class="svc reveal d3">
+        <div class="svc-no">/ 03</div>
+        <svg class="svc-art" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M14 28c0-4 4-6 8-6 3 0 4 2 10 2s7-2 10-2c4 0 8 2 8 6 0 6-3 9-6 9-2 0-3-3-5-3s-3 4-7 4-5-4-7-4-3 3-5 3c-3 0-9-3-9-9Z" stroke="#d8693a" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M22 24v8M30 24v9M38 24v9M46 25v7" stroke="#e6cba6" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <h3>Dentures</h3>
+        <p>Comfortable, natural-looking dentures &mdash; full or partial &mdash; fitted with patience and care so eating, talking and smiling feel like yours again.</p>
+        <div class="tags"><span>Full &amp; partial</span><span>Natural look</span><span>Custom fit</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="visit concrete-tex pad" id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:clamp(2.5rem,5vw,4rem)">
+      <span class="eyebrow reveal">03 &middot; Visiting</span>
+      <h2 id="visit-h" class="reveal d1">Where &amp; when<br>to find us.</h2>
+      <p class="reveal d1">Tucked into the On Nut neighbourhood off Sukhumvit 77/1 &mdash; the same streets as the caf&eacute;s, co-working desks and long-stay apartments. Easy to reach, easy to fit around your day.</p>
+    </div>
+
+    <div class="visit-grid">
+      <div class="hours-card reveal d1">
+        <div class="top">
+          <div>
+            <div class="lbl" style="font-family:'Space Grotesk',monospace;font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--concrete-400)">Opening hours</div>
+            <div style="font-family:'Archivo Expanded',sans-serif;font-weight:800;font-size:1.4rem;margin-top:.3rem">Open every day</div>
+          </div>
+          <span class="status-pill"><span class="pulse"></span>Open until 7:30 pm</span>
+        </div>
+        <ul class="hours-list" id="hoursList">
+          <li data-day="1"><span class="day">Monday</span><span class="time">09:00 &mdash; 19:30</span></li>
+          <li data-day="2"><span class="day">Tuesday</span><span class="time">09:00 &mdash; 19:30</span></li>
+          <li data-day="3"><span class="day">Wednesday</span><span class="time">09:00 &mdash; 19:30</span></li>
+          <li data-day="4"><span class="day">Thursday</span><span class="time">09:00 &mdash; 19:30</span></li>
+          <li data-day="5"><span class="day">Friday</span><span class="time">09:00 &mdash; 19:30</span></li>
+          <li data-day="6"><span class="day">Saturday</span><span class="time">09:00 &mdash; 19:30</span></li>
+          <li data-day="0"><span class="day">Sunday</span><span class="time">09:00 &mdash; 19:30</span></li>
+        </ul>
+        <p style="font-family:'Space Grotesk',monospace;font-size:.74rem;color:var(--concrete-500);letter-spacing:.03em">Daily hours shown as a guide &mdash; a quick call confirms today.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:2rem">
+        <div class="loft-map reveal d2" aria-hidden="true">
+          <svg viewBox="0 0 480 320" width="100%" preserveAspectRatio="xMidYMid slice" style="display:block">
+            <defs>
+              <linearGradient id="mapsky" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#33302b"/>
+                <stop offset="1" stop-color="#1b1a18"/>
+              </linearGradient>
+            </defs>
+            <rect width="480" height="320" fill="url(#mapsky)"/>
+            <g stroke="#4a4640" stroke-width="10">
+              <line x1="0" y1="120" x2="480" y2="120"/>
+              <line x1="0" y1="230" x2="480" y2="230"/>
+              <line x1="150" y1="0" x2="150" y2="320"/>
+              <line x1="340" y1="0" x2="340" y2="320"/>
+            </g>
+            <g stroke="#6b665d" stroke-width="1" stroke-dasharray="6 8">
+              <line x1="0" y1="120" x2="480" y2="120"/>
+              <line x1="0" y1="230" x2="480" y2="230"/>
+              <line x1="150" y1="0" x2="150" y2="320"/>
+              <line x1="340" y1="0" x2="340" y2="320"/>
+            </g>
+            <g fill="#262421">
+              <rect x="20" y="20" width="110" height="80" rx="2"/>
+              <rect x="170" y="20" width="150" height="80" rx="2"/>
+              <rect x="360" y="20" width="100" height="80" rx="2"/>
+              <rect x="20" y="140" width="110" height="70" rx="2"/>
+              <rect x="360" y="140" width="100" height="70" rx="2"/>
+              <rect x="20" y="250" width="110" height="55" rx="2"/>
+              <rect x="170" y="250" width="150" height="55" rx="2"/>
+              <rect x="360" y="250" width="100" height="55" rx="2"/>
+            </g>
+            <rect x="170" y="140" width="150" height="70" rx="2" fill="#3a2418" stroke="#d8693a" stroke-width="1.5"/>
+            <g transform="translate(245,150)">
+              <path d="M0 44 C-14 24 -16 14 -16 6 A16 16 0 0 1 16 6 C16 14 14 24 0 44 Z" fill="#d8693a"/>
+              <circle cx="0" cy="7" r="6" fill="#1b1a18"/>
+            </g>
+            <text x="245" y="200" text-anchor="middle" fill="#e6cba6" font-family="'Space Grotesk',monospace" font-size="11" letter-spacing="2">SUKHUMVIT 77/1</text>
+          </svg>
+        </div>
+
+        <div class="addr reveal d3">
+          <div class="row">
+            <span class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div>
+              <h4>The neighbourhood</h4>
+              <p>Sukhumvit 77/1 (On Nut), Bangkok &mdash; among the caf&eacute;s, co-working spaces and long-stay apartments locals know well.</p>
+            </div>
+          </div>
+          <div class="row">
+            <span class="ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+            </span>
+            <div>
+              <h4>Call ahead</h4>
+              <p>Easiest way to check today&rsquo;s availability or ask a quick question before you head over.</p>
+              <a class="lnk" href="tel:+66863559997">+66 86 355 9997 &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust concrete-tex pad" id="reviews" aria-labelledby="trust-h">
+  <div class="wrap">
+    <div class="trust-top">
+      <div class="rating-block reveal">
+        <div class="num">4.9<span class="of">/5</span></div>
+        <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="src">From <b>98 reviews</b> on Google</div>
+      </div>
+      <div>
+        <span class="eyebrow reveal">04 &middot; The verdict</span>
+        <p class="trust-statement reveal d1" id="trust-h" style="margin-top:1.2rem">
+          <span class="quote-mark">&ldquo;</span>The friendly On&nbsp;Nut clinic where international patients are <span class="accent">looked after in English</span> &mdash; and keep coming back, trip after trip.<span class="quote-mark">&rdquo;</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="trust-cards">
+    </div>
+    <p class="trust-note reveal">&#9733; 4.9 average from 98 Google reviews. We let our patients&rsquo; words speak for themselves.</p>
+  </div>
+</section>
+
+<section class="contact concrete-tex pad" id="contact" aria-labelledby="contact-h">
+  <div class="grid-lines" aria-hidden="true">
+    <div class="v" style="left:50%"></div>
+    <div class="h" style="top:50%"></div>
+  </div>
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-head">
+        <span class="eyebrow reveal">05 &middot; Say hello</span>
+        <h2 id="contact-h" class="reveal d1">Drop us<br>a line.</h2>
+        <p class="reveal d1">Call, message or come by &mdash; whatever&rsquo;s easiest. We&rsquo;ll reply in English and help you sort a time that works around your stay.</p>
+
+        <a class="phone-hero reveal d1" href="tel:+66863559997">
+          <span class="pic" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          </span>
+          <span>
+            <span class="lbl">Call the clinic</span>
+            <span class="no">+66 86 355 9997</span>
+          </span>
+        </a>
+
+        <div class="contact-actions reveal d2">
+          <button class="ca ca-book" type="button" aria-disabled="true" disabled>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="width:20px;height:20px"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            Book online
+            <span class="soon">Coming soon</span>
+          </button>
+
+          <div class="ca-row">
+            <a class="ca ca-line" href="#" aria-label="Add Ok Dental Clinic 2 on LINE (link coming soon)">
+              <span class="ci" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.5 2 2 5.6 2 10c0 3.9 3.5 7.2 8.3 7.9.3.06.7.2.8.46.1.24.07.6.03.85l-.13.78c-.04.24-.18.93.82.5 1-.42 5.4-3.18 7.36-5.44C20.43 13.6 22 11.94 22 10c0-4.4-4.5-8-10-8Zm-3.4 10.6H6.5a.5.5 0 0 1-.5-.5V8.4a.5.5 0 0 1 1 0v3.2h1.6a.5.5 0 0 1 0 1Zm2-.5a.5.5 0 0 1-1 0V8.4a.5.5 0 0 1 1 0v3.7Zm4.6 0a.5.5 0 0 1-.34.47.5.5 0 0 1-.55-.17l-1.8-2.45v2.15a.5.5 0 0 1-1 0V8.4a.5.5 0 0 1 .9-.3l1.8 2.46V8.4a.5.5 0 0 1 1 0v3.7Zm3.2-2.35a.5.5 0 0 1 0 1h-1.1v.85h1.1a.5.5 0 0 1 0 1h-1.6a.5.5 0 0 1-.5-.5V8.4a.5.5 0 0 1 .5-.5h1.6a.5.5 0 0 1 0 1h-1.1v.85h1.1Z"/></svg>
+              </span>
+              <span>LINE<small>Add &amp; chat with us</small></span>
+            </a>
+            <a class="ca ca-fb" href="#" aria-label="Ok Dental Clinic 2 on Facebook (link coming soon)">
+              <span class="ci" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>
+              </span>
+              <span>Facebook<small>Follow the clinic</small></span>
+            </a>
+          </div>
+
+          <a class="ca ca-mail" href="https://www.google.com/maps/search/?api=1&query=Ok+Dental+Clinic+2+Sukhumvit+77%2F1+On+Nut+Bangkok" target="_blank" rel="noopener">
+            <span class="ci" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <span>Open in Maps<small>Get directions to On Nut</small></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-art reveal d2" aria-hidden="true">
+        <svg viewBox="0 0 440 460" preserveAspectRatio="xMidYMid slice" width="100%" style="position:absolute;inset:0;height:100%">
+          <defs>
+            <linearGradient id="csky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e98a4e"/>
+              <stop offset="0.55" stop-color="#b85e30"/>
+              <stop offset="1" stop-color="#5a3320"/>
+            </linearGradient>
+            <linearGradient id="cfloor" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#33302b"/>
+              <stop offset="1" stop-color="#1b1a18"/>
+            </linearGradient>
+          </defs>
+          <rect width="440" height="460" fill="url(#cfloor)"/>
+          <rect x="40" y="40" width="360" height="300" rx="3" fill="#1b1a18" stroke="#5c6873" stroke-width="4"/>
+          <rect x="52" y="52" width="336" height="276" fill="url(#csky)" opacity="0.9"/>
+          <g fill="#7a3c20" opacity="0.5">
+            <rect x="70" y="200" width="34" height="128"/>
+            <rect x="120" y="160" width="44" height="168"/>
+            <rect x="180" y="220" width="28" height="108"/>
+            <rect x="225" y="180" width="48" height="148"/>
+            <rect x="290" y="210" width="34" height="118"/>
+            <rect x="335" y="175" width="40" height="153"/>
+          </g>
+          <circle cx="300" cy="120" r="40" fill="#ffd9a0" opacity="0.8"/>
+          <circle cx="300" cy="120" r="68" fill="#ffb870" opacity="0.25"/>
+          <line x1="220" y1="46" x2="220" y2="334" stroke="#5c6873" stroke-width="6"/>
+          <line x1="46" y1="190" x2="394" y2="190" stroke="#5c6873" stroke-width="6"/>
+          <line x1="133" y1="52" x2="133" y2="328" stroke="#48535d" stroke-width="2"/>
+          <line x1="307" y1="52" x2="307" y2="328" stroke="#48535d" stroke-width="2"/>
+          <path d="M52 340 L388 340 L440 460 L0 460 Z" fill="#d8693a" opacity="0.07"/>
+          <g transform="translate(70,360)">
+            <rect x="0" y="0" width="60" height="8" rx="2" fill="#a06a3a"/>
+            <rect x="6" y="8" width="5" height="60" fill="#7a4f2c"/>
+            <rect x="49" y="8" width="5" height="60" fill="#7a4f2c"/>
+            <rect x="6" y="34" width="48" height="4" fill="#5c6873"/>
+          </g>
+        </svg>
+        <div class="ov">
+          <div class="big">Pull up a <em>stool.</em></div>
+          <p>On Nut &middot; Sukhumvit 77/1 &middot; Bangkok</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="concrete-tex" aria-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="#top" aria-label="Ok Dental Clinic 2 — home">
+          <svg class="mark" width="26" height="26" viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="6" y="5" width="20" height="22" rx="1.5" fill="none" stroke="#d8693a" stroke-width="2"/>
+            <line x1="16" y1="5" x2="16" y2="27" stroke="#d8693a" stroke-width="1.4"/>
+            <line x1="6" y1="16" x2="26" y2="16" stroke="#d8693a" stroke-width="1.4"/>
+          </svg>
+          OK&nbsp;DENTAL<b>&middot;2</b>
+        </a>
+        <p>A small, English-speaking dental clinic in the heart of On Nut &mdash; looking after Bangkok&rsquo;s visitors, expats and remote workers, one calm appointment at a time.</p>
+      </div>
+
+      <div class="foot-col">
+        <h5>Visit</h5>
+        <ul>
+          <li><span>Sukhumvit 77/1 (On Nut)</span></li>
+          <li><span>Bangkok, Thailand</span></li>
+          <li><span>Open daily &middot; until 7:30 pm</span></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=Ok+Dental+Clinic+2+Sukhumvit+77%2F1+On+Nut+Bangkok" target="_blank" rel="noopener">Open in Google Maps &rarr;</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="tel:+66863559997"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>+66 86 355 9997</a></li>
+          <li><a href="#" aria-label="Facebook (link coming soon)"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>Facebook</a></li>
+          <li><a href="#" aria-label="LINE (link coming soon)"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 5.6 2 10c0 3.9 3.5 7.2 8.3 7.9.3.06.7.2.8.46.1.24.07.6.03.85l-.13.78c-.04.24-.18.93.82.5 1-.42 5.4-3.18 7.36-5.44C20.43 13.6 22 11.94 22 10c0-4.4-4.5-8-10-8Z"/></svg>LINE</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <div class="area"><span class="dot"></span>On Nut &middot; Sukhumvit 77/1 &middot; Bangkok</div>
+      <div class="credit">Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener">Stellar Haus Media</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var nav = document.querySelector('header.nav');
+  var onScroll = function(){
+    if(window.scrollY > 24){ nav.classList.add('scrolled'); }
+    else{ nav.classList.remove('scrolled'); }
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  var burger = document.getElementById('burger');
+  var menu = document.getElementById('navmenu');
+  var setMenu = function(open){
+    menu.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open ? 'true':'false');
+    burger.setAttribute('aria-label', open ? 'Close menu':'Open menu');
+  };
+  burger.addEventListener('click', function(){
+    setMenu(!menu.classList.contains('open'));
+  });
+  menu.addEventListener('click', function(e){
+    if(e.target.tagName === 'A') setMenu(false);
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && menu.classList.contains('open')){ setMenu(false); burger.focus(); }
+  });
+
+  try{
+    var today = new Date().getDay();
+    var li = document.querySelector('#hoursList li[data-day="'+today+'"]');
+    if(li) li.classList.add('today');
+  }catch(e){}
+
+  var reveals = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    reveals.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    reveals.forEach(function(el){ io.observe(el); });
+  }
+
+  var hero = document.getElementById('hero');
+  if(reduce){
+    hero.classList.remove('hero-anim');
+    var hl = document.getElementById('heroLight'); if(hl) hl.style.opacity = '1';
+  } else {
+    window.requestAnimationFrame(function(){
+      window.requestAnimationFrame(function(){
+        var lines = hero.querySelectorAll('.ln > span');
+        lines.forEach(function(s, i){
+          s.style.transition = 'transform 1s cubic-bezier(.22,.61,.36,1) '+(i*0.12+0.15)+'s, opacity 1s ease '+(i*0.12+0.15)+'s';
+          s.style.transform = 'translateY(0)';
+          s.style.opacity = '1';
+        });
+        var fades = [
+          [hero.querySelector('.eyebrow'), 0.05],
+          [hero.querySelector('.hero-sub'), 0.55],
+          [hero.querySelector('.hero-side'), 0.65],
+          [hero.querySelector('.hero-actions'), 0.75]
+        ];
+        fades.forEach(function(pair){
+          if(!pair[0]) return;
+          pair[0].style.transition = 'transform .9s cubic-bezier(.22,.61,.36,1) '+pair[1]+'s, opacity .9s ease '+pair[1]+'s';
+          pair[0].style.transform = 'translateY(0)';
+          pair[0].style.opacity = '1';
+        });
+        var light = document.getElementById('heroLight');
+        if(light){
+          light.style.transition = 'opacity 1.8s ease 0.4s';
+          light.style.opacity = '1';
+        }
+      });
+    });
+  }
+
+  if(!reduce){
+    var win = document.getElementById('loftWindow');
+    var ticking = false;
+    window.addEventListener('scroll', function(){
+      if(ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function(){
+        var y = window.scrollY;
+        if(win && y < window.innerHeight){
+          win.style.transform = 'translateY('+(y*0.08)+'px)';
+        }
+        ticking = false;
+      });
+    }, {passive:true});
+  }
+})();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+66863559997", CHAN="", CHANLABEL="";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>

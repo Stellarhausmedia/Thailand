@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dental Hub Clinic Phuket — English-Speaking Dentist in Cherngtalay / Bang Tao</title>
+<meta name="description" content="A calm, modern dental clinic in Cherngtalay / Bang Tao, Phuket. English spoken by the whole team. General dentistry, braces, wisdom-tooth removal, cleaning and crowns. Open weekends, until 7pm. Call +66 94 770 5137." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e7c8b'/%3E%3Cpath d='M16 7c-3.6 0-5.8 2-5.8 5.2 0 2.1.7 3.4 1.5 6.2.6 2.1.7 5.4 2.2 5.4 1.2 0 1-2.6 2.1-2.6s.9 2.6 2.1 2.6c1.5 0 1.6-3.3 2.2-5.4.8-2.8 1.5-4.1 1.5-6.2C21.8 9 19.6 7 16 7z' fill='%23fff'/%3E%3Cpath d='M9 13c2 1.6 3.4 1.6 4.6.9' stroke='%237fdfe6' stroke-width='1.3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    /* Andaman Resort palette */
+    --sea-900: #053b46;
+    --sea-800: #0a5663;
+    --sea-700: #0e7c8b;
+    --sea-600: #18a0ad;
+    --sea-500: #34bccb;
+    --sea-400: #6fd6e0;
+    --sea-300: #a7e6ec;
+    --sea-200: #cdf1f3;
+    --foam:    #effbfb;
+
+    --sand-600: #b89169;
+    --sand-500: #d2ad84;
+    --sand-300: #ecd9c2;
+    --sand-200: #f6ebdc;
+    --sand-100: #fbf5ec;
+
+    --shell:   #ffffff;
+    --ink:     #0c2b31;
+    --ink-soft:#39565c;
+    --ink-mute:#5d787d;
+
+    --grad-deep: linear-gradient(180deg, #053b46 0%, #0a5663 46%, #0e7c8b 100%);
+
+    --maxw: 1180px;
+    --gut: clamp(1.25rem, 4vw, 3.25rem);
+
+    --r-lg: 28px;
+    --r-md: 18px;
+    --r-sm: 12px;
+
+    --shadow-soft: 0 22px 60px -28px rgba(5, 59, 70, .45);
+    --shadow-card: 0 18px 44px -26px rgba(5, 59, 70, .38);
+
+    --ease: cubic-bezier(.22, 1, .36, 1);
+
+    /* z-scale */
+    --z-waves: 0;
+    --z-content: 1;
+    --z-nav: 50;
+    --z-menu: 60;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  body {
+    margin: 0;
+    font-family: "Mulish", system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--foam);
+    font-weight: 400;
+    line-height: 1.65;
+    font-size: clamp(1rem, .96rem + .25vw, 1.075rem);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .display { font-family: "Marcellus", Georgia, serif; font-weight: 400; letter-spacing: .005em; }
+
+  a { color: inherit; }
+  img, svg { display: block; max-width: 100%; }
+
+  .wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--gut); }
+
+  /* skip link */
+  .skip {
+    position: absolute; left: -999px; top: 0; z-index: 200;
+    background: var(--sea-700); color: #fff; padding: .7rem 1.1rem; border-radius: 0 0 var(--r-sm) 0;
+    font-weight: 600;
+  }
+  .skip:focus { left: 0; }
+
+  :focus-visible {
+    outline: 3px solid var(--sea-700);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  /* ============ NAV ============ */
+  .nav {
+    position: fixed; inset: 0 0 auto 0; z-index: var(--z-nav);
+    transition: background .4s var(--ease), box-shadow .4s var(--ease), backdrop-filter .4s var(--ease);
+  }
+  .nav__inner {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding-block: clamp(.85rem, 1.6vw, 1.25rem);
+  }
+  .nav.is-stuck {
+    background: rgba(239, 251, 251, .82);
+    backdrop-filter: saturate(1.4) blur(14px);
+    -webkit-backdrop-filter: saturate(1.4) blur(14px);
+    box-shadow: 0 1px 0 rgba(14, 124, 139, .12), 0 14px 40px -34px rgba(5, 59, 70, .6);
+  }
+  .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; color: var(--shell); }
+  .nav.is-stuck .brand { color: var(--ink); }
+  .brand__mark { width: 38px; height: 38px; flex: none; }
+  .brand__name { display: flex; flex-direction: column; line-height: 1.05; }
+  .brand__name b { font-family: "Marcellus", serif; font-weight: 400; font-size: 1.16rem; letter-spacing: .02em; }
+  .brand__name span { font-size: .64rem; letter-spacing: .26em; text-transform: uppercase; opacity: .8; font-weight: 600; }
+
+  .nav__links { display: flex; align-items: center; gap: clamp(1rem, 2.2vw, 2rem); }
+  .nav__links a.navlink {
+    color: var(--shell); text-decoration: none; font-weight: 600; font-size: .95rem;
+    opacity: .92; position: relative; padding: .2rem 0;
+  }
+  .nav.is-stuck .nav__links a.navlink { color: var(--ink-soft); }
+  .navlink::after {
+    content: ""; position: absolute; left: 0; bottom: -2px; height: 2px; width: 0;
+    background: var(--sea-500); transition: width .35s var(--ease);
+  }
+  .navlink:hover::after, .navlink:focus-visible::after { width: 100%; }
+
+  .nav__cta {
+    display: inline-flex; align-items: center; gap: .5rem;
+    background: var(--shell); color: var(--sea-800);
+    padding: .62rem 1.15rem; border-radius: 999px; text-decoration: none; font-weight: 700;
+    box-shadow: 0 10px 26px -14px rgba(5,59,70,.6); transition: transform .3s var(--ease), box-shadow .3s var(--ease);
+    white-space: nowrap;
+  }
+  .nav.is-stuck .nav__cta { background: var(--sea-700); color: #fff; }
+  .nav__cta:hover { transform: translateY(-2px); box-shadow: 0 16px 30px -14px rgba(5,59,70,.7); }
+
+  .nav__toggle {
+    display: none; background: transparent; border: 0; cursor: pointer; padding: .4rem;
+    color: var(--shell); border-radius: 10px;
+  }
+  .nav.is-stuck .nav__toggle { color: var(--ink); }
+  .nav__toggle svg { width: 30px; height: 30px; }
+
+  @media (max-width: 880px) {
+    .nav__toggle { display: inline-flex; }
+    .nav__links {
+      position: fixed; inset: 0 0 0 auto; width: min(82vw, 360px); z-index: var(--z-menu);
+      background: var(--grad-deep); flex-direction: column; align-items: flex-start; justify-content: center;
+      gap: 1.6rem; padding: 2rem var(--gut); transform: translateX(105%);
+      transition: transform .5s var(--ease); box-shadow: -30px 0 80px -40px rgba(0,0,0,.6);
+    }
+    .nav__links.is-open { transform: translateX(0); }
+    .nav__links a.navlink, .nav.is-stuck .nav__links a.navlink { color: #eafafa; font-size: 1.4rem; font-family: "Marcellus", serif; font-weight: 400; }
+    .nav__links .nav__cta { font-size: 1.05rem; }
+    .menu-backdrop {
+      position: fixed; inset: 0; background: rgba(5,30,35,.45); z-index: 55; opacity: 0;
+      pointer-events: none; transition: opacity .4s ease; backdrop-filter: blur(2px);
+    }
+    .menu-backdrop.is-open { opacity: 1; pointer-events: auto; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .nav__links { transition: none; }
+  }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative; min-height: 100svh; display: flex; align-items: center;
+    background: var(--grad-deep); color: #eafafa; overflow: hidden; isolation: isolate;
+    padding-top: clamp(6rem, 12vh, 9rem); padding-bottom: clamp(9rem, 22vh, 15rem);
+  }
+  .hero__glow {
+    position: absolute; z-index: var(--z-waves); left: 50%; top: clamp(8%, 14vh, 22%);
+    width: min(620px, 96vw); aspect-ratio: 1; transform: translateX(-50%);
+    background: radial-gradient(circle at 50% 50%, rgba(255,238,200,.5) 0%, rgba(255,228,170,.28) 26%, rgba(111,214,224,.12) 48%, transparent 66%);
+    filter: blur(6px); pointer-events: none;
+    animation: sunBreath 11s ease-in-out infinite;
+  }
+  .hero__horizon {
+    position: absolute; left: 0; right: 0; top: clamp(34%, 40vh, 44%); height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,235,200,.5) 22%, rgba(255,235,200,.7) 50%, rgba(255,235,200,.5) 78%, transparent);
+    z-index: var(--z-waves); opacity: .8;
+  }
+  @keyframes sunBreath {
+    0%, 100% { transform: translateX(-50%) scale(1); opacity: .92; }
+    50% { transform: translateX(-50%) scale(1.07); opacity: 1; }
+  }
+
+  .hero__inner { position: relative; z-index: var(--z-content); width: 100%; }
+  .hero__eyebrow {
+    display: inline-flex; align-items: center; gap: .6rem;
+    font-weight: 600; font-size: .82rem; letter-spacing: .2em; text-transform: uppercase;
+    color: var(--sea-300); margin-bottom: 1.4rem;
+    border: 1px solid rgba(167,230,236,.34); padding: .5rem 1rem; border-radius: 999px;
+    background: rgba(167,230,236,.07);
+  }
+  .hero__eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--sea-400); box-shadow: 0 0 0 0 rgba(111,214,224,.6); animation: pulse 2.4s ease-out infinite; }
+  @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(111,214,224,.55);} 70%{ box-shadow: 0 0 0 10px rgba(111,214,224,0);} 100%{box-shadow:0 0 0 0 rgba(111,214,224,0);} }
+
+  .hero h1 {
+    font-size: clamp(2.7rem, 1.7rem + 5vw, 5.6rem);
+    line-height: 1.02; margin: 0 0 1.4rem; max-width: 16ch; letter-spacing: -.01em;
+    text-wrap: balance;
+  }
+  .hero h1 .em { color: var(--sea-300); font-style: italic; }
+  .hero__lead {
+    font-size: clamp(1.08rem, 1rem + .5vw, 1.32rem); max-width: 46ch; color: #d4eef1;
+    margin: 0 0 2.2rem; line-height: 1.6; text-wrap: pretty;
+  }
+  .hero__actions { display: flex; flex-wrap: wrap; gap: .9rem; align-items: center; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: .6rem; text-decoration: none;
+    font-weight: 700; border-radius: 999px; padding: .95rem 1.6rem; font-size: 1rem;
+    transition: transform .3s var(--ease), box-shadow .3s var(--ease), background .3s var(--ease), color .3s var(--ease);
+    border: 1.5px solid transparent; cursor: pointer; line-height: 1;
+  }
+  .btn svg { width: 19px; height: 19px; flex: none; }
+  .btn--primary { background: var(--shell); color: var(--sea-800); box-shadow: 0 16px 38px -16px rgba(0,0,0,.55); }
+  .btn--primary:hover { transform: translateY(-3px); box-shadow: 0 22px 46px -16px rgba(0,0,0,.6); }
+  .btn--ghost { color: #eafafa; border-color: rgba(207,241,243,.45); background: rgba(255,255,255,.04); }
+  .btn--ghost:hover { transform: translateY(-3px); background: rgba(255,255,255,.12); border-color: rgba(207,241,243,.8); }
+  .btn--fb { background: #1877f2; color: #fff; box-shadow: 0 16px 38px -18px rgba(24,119,242,.8); }
+  .btn--fb:hover { transform: translateY(-3px); box-shadow: 0 22px 44px -18px rgba(24,119,242,.85); }
+  .btn--line { background: #06c755; color: #fff; box-shadow: 0 16px 38px -18px rgba(6,199,85,.7); }
+  .btn--line:hover { transform: translateY(-3px); box-shadow: 0 22px 44px -18px rgba(6,199,85,.8); }
+  .btn--wa { background: #25d366; color: #06351b; }
+  .btn--wa:hover { transform: translateY(-3px); }
+  .btn--sea { background: var(--sea-700); color: #fff; box-shadow: 0 16px 38px -18px rgba(14,124,139,.7); }
+  .btn--sea:hover { transform: translateY(-3px); box-shadow: 0 22px 44px -18px rgba(14,124,139,.8); }
+  .btn--outline { color: var(--sea-800); border-color: var(--sea-600); background: transparent; }
+  .btn--outline:hover { transform: translateY(-3px); background: var(--sea-200); }
+
+  /* trust ribbon in hero */
+  .hero__trust {
+    display: flex; flex-wrap: wrap; gap: 1.4rem 2.4rem; align-items: center; margin-top: 2.8rem;
+    color: #cfeef1;
+  }
+  .hero__trust .stars { display: inline-flex; gap: 3px; }
+  .hero__trust .stars svg { width: 18px; height: 18px; }
+  .hero__trust b { color: #fff; font-weight: 700; }
+  .hero__trust .rt { display: flex; align-items: center; gap: .6rem; font-size: .96rem; }
+  .vline { width: 1px; height: 30px; background: rgba(207,241,243,.3); }
+
+  /* Animated waves */
+  .waves {
+    position: absolute; left: 0; right: 0; bottom: -2px; z-index: var(--z-waves);
+    width: 100%; height: clamp(120px, 22vh, 240px); pointer-events: none;
+  }
+  .waves svg { width: 100%; height: 100%; }
+  .wave-layer > use { animation: waveDrift linear infinite; }
+  .wave-layer use:nth-child(1) { animation-duration: 26s; opacity: .5; }
+  .wave-layer use:nth-child(2) { animation-duration: 20s; animation-direction: reverse; opacity: .65; }
+  .wave-layer use:nth-child(3) { animation-duration: 15s; opacity: .85; }
+  .wave-layer use:nth-child(4) { animation-duration: 10s; opacity: 1; }
+  @keyframes waveDrift {
+    from { transform: translateX(0); }
+    to { transform: translateX(-90px); }
+  }
+  .pin-halo { animation: haloPulse 3s ease-in-out infinite; }
+  @keyframes haloPulse {
+    0%, 100% { transform: scale(.82); opacity: .85; }
+    50% { transform: scale(1.12); opacity: .45; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .wave-layer > use { animation: none; }
+    .hero__glow, .hero__eyebrow .dot, .pin-halo { animation: none; }
+  }
+
+  /* float-up base reveal */
+  [data-reveal] {
+    opacity: 0; transform: translateY(28px);
+    transition: opacity .9s var(--ease), transform .9s var(--ease);
+    transition-delay: var(--d, 0ms);
+    will-change: opacity, transform;
+  }
+  [data-reveal].in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+  }
+
+  /* ============ SECTION SHELL ============ */
+  section { position: relative; }
+  .pad { padding-block: clamp(4.5rem, 9vw, 8rem); }
+  .kicker {
+    display: inline-flex; align-items: center; gap: .55rem; color: var(--sea-700);
+    font-weight: 700; font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 1.1rem;
+  }
+  .kicker .ic { width: 18px; height: 18px; }
+  .h-sec { font-size: clamp(2.05rem, 1.4rem + 2.6vw, 3.5rem); line-height: 1.06; margin: 0 0 1.1rem; letter-spacing: -.01em; text-wrap: balance; }
+  .sub { color: var(--ink-soft); max-width: 60ch; font-size: 1.08rem; line-height: 1.7; text-wrap: pretty; }
+
+  /* ============ ENGLISH WELCOME ============ */
+  .welcome { background: var(--foam); }
+  .welcome__grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(2rem, 5vw, 5rem); align-items: center; }
+  @media (max-width: 900px) { .welcome__grid { grid-template-columns: 1fr; } }
+
+  .welcome__copy p.big {
+    font-family: "Marcellus", serif; font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2.2rem);
+    line-height: 1.32; color: var(--ink); margin: 0 0 1.3rem; text-wrap: pretty;
+  }
+  .welcome__copy p.big em { color: var(--sea-700); font-style: italic; }
+  .welcome__copy .sub { margin-bottom: 1.7rem; }
+
+  .langchips { display: flex; flex-wrap: wrap; gap: .6rem; }
+  .langchip {
+    background: var(--shell); border: 1px solid var(--sea-200); color: var(--sea-800);
+    border-radius: 999px; padding: .5rem 1rem; font-weight: 600; font-size: .92rem;
+    display: inline-flex; align-items: center; gap: .45rem; box-shadow: var(--shadow-card);
+  }
+  .langchip svg { width: 16px; height: 16px; color: var(--sea-600); }
+
+  /* welcome visual — abstract passport/horizon card */
+  .welcome__visual {
+    position: relative; border-radius: var(--r-lg); overflow: hidden;
+    background: var(--grad-deep); color: #eafafa; padding: clamp(1.8rem, 3.5vw, 2.8rem);
+    box-shadow: var(--shadow-soft); min-height: 380px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .welcome__visual .wv-waves { position: absolute; inset: auto 0 0 0; height: 130px; opacity: .85; }
+  .welcome__visual .wv-sun {
+    position: absolute; right: -40px; top: -40px; width: 220px; height: 220px; border-radius: 50%;
+    background: radial-gradient(circle at 40% 40%, rgba(255,234,190,.55), rgba(255,210,150,.18) 55%, transparent 72%);
+  }
+  .wv-quote { position: relative; z-index: 2; }
+  .wv-quote .mark { font-family: "Marcellus", serif; font-size: 4.5rem; line-height: .6; color: var(--sea-400); opacity: .55; }
+  .wv-quote p { font-family: "Marcellus", serif; font-size: clamp(1.25rem, 1rem + 1.1vw, 1.7rem); line-height: 1.4; margin: .3rem 0 0; }
+  .wv-meta { position: relative; z-index: 2; display: flex; align-items: center; gap: .8rem; }
+  .wv-meta .stars { display: inline-flex; gap: 2px; }
+  .wv-meta .stars svg { width: 17px; height: 17px; }
+  .wv-meta small { color: #bfe7eb; font-size: .9rem; }
+
+  /* ============ SERVICES ============ */
+  .services { background: linear-gradient(180deg, var(--foam) 0%, var(--shell) 30%, var(--shell) 100%); }
+  .services__head { max-width: 760px; }
+  .svc-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(255px, 1fr)); gap: clamp(1rem, 1.8vw, 1.5rem);
+    margin-top: clamp(2.4rem, 4vw, 3.6rem);
+  }
+  .svc {
+    position: relative; border-radius: var(--r-md); padding: 1.8rem 1.7rem 1.9rem;
+    background: var(--shell); border: 1px solid #e4f1f2; overflow: hidden;
+    transition: transform .45s var(--ease), box-shadow .45s var(--ease), border-color .45s var(--ease);
+    box-shadow: 0 10px 30px -24px rgba(5,59,70,.5);
+  }
+  .svc::before {
+    content: ""; position: absolute; inset: auto -30% -55% auto; width: 200px; height: 200px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(111,214,224,.22), transparent 70%);
+    opacity: 0; transition: opacity .5s var(--ease); pointer-events: none;
+  }
+  .svc:hover { transform: translateY(-7px); box-shadow: var(--shadow-card); border-color: var(--sea-200); }
+  .svc:hover::before { opacity: 1; }
+  .svc__icon {
+    width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; margin-bottom: 1.2rem;
+    background: var(--sea-200); color: var(--sea-800);
+    transition: transform .5s var(--ease), background .5s var(--ease);
+  }
+  .svc:hover .svc__icon { transform: translateY(-3px) rotate(-4deg); background: var(--sea-300); }
+  .svc__icon svg { width: 30px; height: 30px; }
+  .svc h3 { font-size: 1.4rem; margin: 0 0 .5rem; }
+  .svc p { margin: 0; color: var(--ink-soft); font-size: .98rem; line-height: 1.6; }
+  .svc__tag {
+    position: absolute; top: 1.2rem; right: 1.2rem; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase;
+    font-weight: 700; color: var(--sea-600); opacity: .55;
+  }
+
+  /* ============ VISIT / LOCATION ============ */
+  .visit { background: var(--sand-100); }
+  .visit__grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(2rem, 4vw, 4rem); align-items: stretch; }
+  @media (max-width: 920px) { .visit__grid { grid-template-columns: 1fr; } }
+
+  .infocard {
+    background: var(--shell); border-radius: var(--r-md); padding: clamp(1.6rem, 3vw, 2.4rem);
+    box-shadow: var(--shadow-card); border: 1px solid #f0e6d6; height: 100%;
+  }
+  .info-row { display: flex; gap: 1rem; padding: 1.1rem 0; border-bottom: 1px solid #f1e7d8; }
+  .info-row:last-child { border-bottom: 0; padding-bottom: 0; }
+  .info-row:first-child { padding-top: 0; }
+  .info-row .ic {
+    width: 46px; height: 46px; flex: none; border-radius: 13px; display: grid; place-items: center;
+    background: var(--sea-200); color: var(--sea-800);
+  }
+  .info-row .ic svg { width: 24px; height: 24px; }
+  .info-row h4 { margin: 0 0 .25rem; font-family: "Mulish", sans-serif; font-weight: 700; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: var(--sea-700); }
+  .info-row p { margin: 0; color: var(--ink); font-size: 1.06rem; line-height: 1.5; }
+  .info-row p a { color: var(--sea-800); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--sea-300); }
+  .info-row p a:hover { border-color: var(--sea-600); }
+  .info-row .muted { color: var(--ink-mute); font-size: .92rem; }
+
+  /* hours block */
+  .hours { margin-top: .4rem; }
+  .hours .day { display: flex; justify-content: space-between; gap: 1rem; padding: .34rem 0; font-size: 1rem; }
+  .hours .day span:first-child { color: var(--ink-soft); }
+  .hours .day span:last-child { font-weight: 600; color: var(--ink); }
+  .hours .day.today {
+    background: var(--sea-200); margin-inline: -.7rem; padding-inline: .7rem; border-radius: 10px; color: var(--sea-900);
+  }
+  .hours .day.today span { color: var(--sea-900); }
+  .open-pill {
+    display: inline-flex; align-items: center; gap: .5rem; background: #e6f8ec; color: #14702f;
+    font-weight: 700; font-size: .9rem; padding: .45rem .9rem; border-radius: 999px; margin-bottom: 1rem;
+  }
+  .open-pill .live { width: 9px; height: 9px; border-radius: 50%; background: #1faa4a; box-shadow: 0 0 0 0 rgba(31,170,74,.6); animation: pulse2 2.2s infinite; }
+  @keyframes pulse2 { 0%{box-shadow:0 0 0 0 rgba(31,170,74,.5);}70%{box-shadow:0 0 0 8px rgba(31,170,74,0);}100%{box-shadow:0 0 0 0 rgba(31,170,74,0);} }
+  @media (prefers-reduced-motion: reduce){ .open-pill .live{ animation:none; } }
+
+  /* abstract map / locale panel */
+  .locale {
+    position: relative; border-radius: var(--r-md); overflow: hidden; min-height: 420px;
+    background: linear-gradient(165deg, #0a5663, #0e7c8b 60%, #18a0ad); color: #eafafa;
+    box-shadow: var(--shadow-soft); display: flex; flex-direction: column; justify-content: flex-end;
+    padding: clamp(1.6rem, 3vw, 2.4rem);
+  }
+  .locale__map { position: absolute; inset: 0; z-index: 1; opacity: .9; }
+  .locale__label { position: relative; z-index: 3; }
+  .locale__label .pin {
+    display: inline-flex; align-items: center; gap: .5rem; background: rgba(255,255,255,.14);
+    border: 1px solid rgba(255,255,255,.25); padding: .45rem .9rem; border-radius: 999px;
+    font-weight: 600; font-size: .85rem; margin-bottom: .9rem; backdrop-filter: blur(6px);
+  }
+  .locale__label h3 { font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.3rem); margin: 0 0 .4rem; }
+  .locale__label p { margin: 0; color: #cfeef1; max-width: 34ch; }
+
+  /* ============ TRUST / REVIEWS ============ */
+  .trust { background: var(--grad-deep); color: #eafafa; overflow: hidden; }
+  .trust__top { display: grid; grid-template-columns: auto 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; margin-bottom: clamp(2.6rem, 4vw, 3.6rem); }
+  @media (max-width: 760px){ .trust__top { grid-template-columns: 1fr; gap: 1.4rem; } }
+  .ratingbox { text-align: center; }
+  .ratingbox .num { font-family: "Marcellus", serif; font-size: clamp(3.6rem, 2.5rem + 4vw, 6rem); line-height: .9; color: #fff; }
+  .ratingbox .stars { display: inline-flex; gap: 4px; margin: .5rem 0 .4rem; }
+  .ratingbox .stars svg { width: 24px; height: 24px; }
+  .ratingbox .cnt { color: #bfe7eb; font-size: .98rem; letter-spacing: .02em; }
+  .trust__lead h2 { font-size: clamp(1.8rem, 1.3rem + 2vw, 3rem); margin: 0 0 .8rem; line-height: 1.1; text-wrap: balance; }
+  .trust__lead p { color: #cfeef1; max-width: 50ch; margin: 0; font-size: 1.08rem; }
+
+  .reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.2rem; }
+  .review {
+    background: rgba(255,255,255,.06); border: 1px solid rgba(167,230,236,.18);
+    border-radius: var(--r-md); padding: 1.6rem 1.6rem 1.7rem; backdrop-filter: blur(4px);
+    transition: transform .4s var(--ease), background .4s var(--ease), border-color .4s var(--ease);
+  }
+  .review:hover { transform: translateY(-5px); background: rgba(255,255,255,.1); border-color: rgba(167,230,236,.4); }
+  .review .stars { display: inline-flex; gap: 2px; margin-bottom: .9rem; }
+  .review .stars svg { width: 16px; height: 16px; }
+  .review p { margin: 0 0 1.2rem; line-height: 1.6; color: #eafafa; font-size: 1.02rem; }
+  .review .by { display: flex; align-items: center; gap: .7rem; }
+  .review .by .av {
+    width: 40px; height: 40px; border-radius: 50%; flex: none; display: grid; place-items: center;
+    font-weight: 700; color: var(--sea-900); background: var(--sea-300); font-size: .95rem;
+    font-family: "Marcellus", serif;
+  }
+  .review .by b { font-weight: 700; font-size: .95rem; display: block; }
+  .review .by small { color: #a9dde3; font-size: .82rem; }
+  .review__note {
+    text-align: center; margin-top: 2rem; color: #9fd4db; font-size: .86rem; letter-spacing: .02em;
+  }
+
+  /* ============ CONTACT ============ */
+  .contact { background: var(--foam); }
+  .contact__shell {
+    background: var(--shell); border-radius: var(--r-lg); box-shadow: var(--shadow-soft);
+    border: 1px solid #e4f1f2; overflow: hidden; display: grid; grid-template-columns: 1.05fr .95fr;
+  }
+  @media (max-width: 900px){ .contact__shell { grid-template-columns: 1fr; } }
+  .contact__left { padding: clamp(2rem, 4vw, 3.4rem); }
+  .contact__left .h-sec { margin-bottom: .9rem; }
+  .contact__left .sub { margin-bottom: 1.9rem; }
+  .contact__actions { display: flex; flex-direction: column; gap: .8rem; max-width: 380px; }
+  .contact__actions .btn { justify-content: flex-start; width: 100%; padding: 1.05rem 1.4rem; }
+  .contact__note { margin-top: 1.5rem; font-size: .92rem; color: var(--ink-mute); display: flex; gap: .5rem; align-items: flex-start; }
+  .contact__note svg { width: 18px; height: 18px; color: var(--sea-600); flex: none; margin-top: 2px; }
+
+  .contact__right {
+    background: var(--grad-deep); color: #eafafa; padding: clamp(2rem, 4vw, 3.4rem);
+    position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center;
+  }
+  .contact__right .cr-waves { position: absolute; inset: auto 0 0 0; height: 120px; opacity: .7; }
+  .contact__right h3 { font-size: clamp(1.5rem, 1.2rem + 1.3vw, 2rem); margin: 0 0 1.4rem; position: relative; z-index: 2; }
+  .crlist { list-style: none; margin: 0; padding: 0; position: relative; z-index: 2; }
+  .crlist li { display: flex; gap: .9rem; padding: .85rem 0; border-bottom: 1px solid rgba(167,230,236,.16); align-items: flex-start; }
+  .crlist li:last-child { border-bottom: 0; }
+  .crlist .ic { width: 40px; height: 40px; flex: none; border-radius: 11px; background: rgba(167,230,236,.14); display: grid; place-items: center; }
+  .crlist .ic svg { width: 21px; height: 21px; }
+  .crlist b { display: block; font-weight: 700; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--sea-300); margin-bottom: .15rem; }
+  .crlist a, .crlist span { color: #eafafa; text-decoration: none; font-size: 1.04rem; }
+  .crlist a:hover { text-decoration: underline; }
+
+  /* ============ FOOTER ============ */
+  footer { background: var(--sea-900); color: #cfe9ec; }
+  .foot { padding-block: clamp(3rem, 5vw, 4.5rem); }
+  .foot__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2.5rem; }
+  @media (max-width: 760px){ .foot__grid { grid-template-columns: 1fr 1fr; gap: 2rem; } .foot__brand { grid-column: 1 / -1; } }
+  .foot__brand .brand { color: #eafafa; margin-bottom: 1rem; }
+  .foot__brand p { color: #92c2c8; max-width: 38ch; font-size: .98rem; line-height: 1.65; }
+  .foot h5 { font-family: "Mulish", sans-serif; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; font-size: .76rem; color: var(--sea-300); margin: 0 0 1rem; }
+  .foot ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .65rem; }
+  .foot ul a { color: #b9dde1; text-decoration: none; font-size: .98rem; transition: color .25s; }
+  .foot ul a:hover { color: #fff; }
+  .foot__social { display: flex; gap: .65rem; margin-top: .3rem; }
+  .foot__social a {
+    width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center;
+    background: rgba(167,230,236,.1); color: #d3edf0; transition: background .3s var(--ease), transform .3s var(--ease), color .3s var(--ease);
+  }
+  .foot__social a:hover { background: var(--sea-700); color: #fff; transform: translateY(-3px); }
+  .foot__social a svg { width: 21px; height: 21px; }
+  .foot__bar {
+    border-top: 1px solid rgba(167,230,236,.14); padding-block: 1.5rem;
+    display: flex; flex-wrap: wrap; gap: .8rem 1.4rem; align-items: center; justify-content: space-between;
+    font-size: .86rem; color: #7fb4bb;
+  }
+  .foot__bar a.credit { color: #bfe7eb; text-decoration: none; font-weight: 600; border-bottom: 1px dotted rgba(191,231,235,.5); }
+  .foot__bar a.credit:hover { color: #fff; }
+  .foot__area { display: inline-flex; align-items: center; gap: .45rem; }
+  .foot__area svg { width: 15px; height: 15px; }
+
+  /* small helpers */
+  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#34bccb;--bk-accent-ink:#ffffff;--bk-ink:#0c2b31;--bk-panel:#ffffff;--bk-muted:rgba(12,43,49,0.6);--bk-line:rgba(12,43,49,0.14);--bk-serif:"Marcellus", Georgia, serif;--bk-sans:"Mulish", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="#top" aria-label="Dental Hub Clinic Phuket — home">
+      <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+        <rect width="40" height="40" rx="11" fill="#0e7c8b"/>
+        <path d="M20 9c-4.4 0-7.1 2.5-7.1 6.4 0 2.6.9 4.2 1.9 7.6.7 2.6.9 6.6 2.7 6.6 1.5 0 1.2-3.2 2.5-3.2s1 3.2 2.5 3.2c1.8 0 2-4 2.7-6.6 1-3.4 1.9-5 1.9-7.6C27.1 11.5 24.4 9 20 9z" fill="#fff"/>
+        <path d="M11.5 16.2c2.4 1.9 4.1 1.9 5.6 1.1" stroke="#7fdfe6" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      </svg>
+      <span class="brand__name"><b>Dental Hub</b><span>Clinic Phuket</span></span>
+    </a>
+
+    <nav class="nav__links" id="navlinks" aria-label="Primary">
+      <a class="navlink" href="#welcome">English Welcome</a>
+      <a class="navlink" href="#services">Treatments</a>
+      <a class="navlink" href="#visit">Visit Us</a>
+      <a class="navlink" href="#reviews">Reviews</a>
+      <a class="nav__cta" href="tel:+66947705137">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call now
+      </a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+<div class="menu-backdrop" id="menuBackdrop" hidden></div>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="hero__horizon" aria-hidden="true"></div>
+
+  <div class="wrap hero__inner">
+    <p class="hero__eyebrow" data-reveal><span class="dot"></span>Cherngtalay &middot; Bang Tao, Phuket</p>
+    <h1 id="hero-title" data-reveal style="--d:80ms">A dentist by the Andaman, where the whole team speaks <span class="em">your language</span>.</h1>
+    <p class="hero__lead" data-reveal style="--d:160ms">Calm, modern dental care a few minutes from Bang Tao Beach. Expat or on holiday, you are welcomed in clear, comfortable English from hello to goodbye.</p>
+
+    <div class="hero__actions" data-reveal style="--d:240ms">
+      <a class="btn btn--primary" href="tel:+66947705137">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +66 94 770 5137
+      </a>
+      <!-- Facebook page URL not yet known: replace href="#" with the clinic's real facebook.com/<page> link -->
+      <a class="btn btn--fb" href="#" aria-label="Message us on Facebook (link coming soon)">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+        Message on Facebook
+      </a>
+    </div>
+
+    <div class="hero__trust" data-reveal style="--d:320ms" aria-label="Rated 4.8 out of 5 from 187 Google reviews">
+      <div class="rt">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#ffd479"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#ffd479"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#ffd479"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#ffd479"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#ffd479"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        </span>
+        <span><b>4.8</b> on Google &middot; 187 reviews</span>
+      </div>
+      <span class="vline" aria-hidden="true"></span>
+      <div class="rt">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#7fdfe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span>Care in plain English</span>
+      </div>
+      <span class="vline" aria-hidden="true"></span>
+      <div class="rt">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#7fdfe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <span>Open weekends, until 7pm</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Animated layered waves -->
+  <div class="waves" aria-hidden="true">
+    <svg viewBox="0 24 150 28" preserveAspectRatio="none">
+      <defs>
+        <path id="wv" d="M-160 44c30 0 58-12 88-12s58 12 88 12 58-12 88-12 58 12 88 12v44h-352z"/>
+      </defs>
+      <g class="wave-layer">
+        <use href="#wv" x="48" y="0" fill="rgba(167,230,236,.28)"/>
+        <use href="#wv" x="48" y="3" fill="rgba(111,214,224,.34)"/>
+        <use href="#wv" x="48" y="5" fill="rgba(52,188,203,.5)"/>
+        <use href="#wv" x="48" y="7" fill="#effbfb"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- ============ ENGLISH WELCOME ============ -->
+<section class="welcome pad" id="welcome" aria-labelledby="welcome-title">
+  <div class="wrap welcome__grid">
+    <div class="welcome__copy">
+      <span class="kicker" data-reveal>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Understood, every step
+      </span>
+      <h2 class="h-sec" id="welcome-title" data-reveal style="--d:60ms">No translating. No guessing. Just clear conversation.</h2>
+      <p class="big" data-reveal style="--d:120ms">Patients tell us the same thing again and again &mdash; the <em>communication is perfect in English</em>, from the front desk to the dentist's chair.</p>
+      <p class="sub" data-reveal style="--d:180ms">Far from home, dental care shouldn't feel like a leap of faith. Here, your treatment is explained in plain English before anything begins: what we see, your options, the cost, the timing. You leave knowing exactly what happened in your mouth and what comes next.</p>
+      <div class="langchips" data-reveal style="--d:240ms">
+        <span class="langchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>English spoken by the whole team</span>
+        <span class="langchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Costs explained up front</span>
+        <span class="langchip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>Expat &amp; holiday patients welcome</span>
+      </div>
+    </div>
+
+    <aside class="welcome__visual" data-reveal style="--d:160ms" aria-label="What patients say">
+      <div class="wv-sun" aria-hidden="true"></div>
+      <div class="wv-quote">
+        <div class="mark" aria-hidden="true">&ldquo;</div>
+        <p>Everyone here speaks beautiful English &mdash; I understood every word, and that made all the difference.</p>
+      </div>
+      <div class="wv-meta">
+        <span class="stars" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#ffd479"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#ffd479"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#ffd479"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#ffd479"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#ffd479"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+        </span>
+        <small>A recurring theme across our 4.8&#9733; Google reviews</small>
+      </div>
+      <svg class="wv-waves" viewBox="0 0 400 130" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 70c50 0 70-22 110-22s70 22 110 22 70-22 110-22 70 22 110 22v60H0z" fill="rgba(167,230,236,.18)"/>
+        <path d="M0 84c50 0 70-18 110-18s70 18 110 18 70-18 110-18 70 18 110 18 70-18 110-18v46H0z" fill="rgba(111,214,224,.28)"/>
+      </svg>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services pad" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="services__head">
+      <span class="kicker" data-reveal>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 5.4L20 8l-4 4 1 6-5-3-5 3 1-6-4-4 5.6-.6z"/></svg>
+        Treatments under one roof
+      </span>
+      <h2 class="h-sec" id="services-title" data-reveal style="--d:60ms">Everyday dentistry to bigger work &mdash; handled here, calmly.</h2>
+      <p class="sub" data-reveal style="--d:120ms">From a routine clean before you fly home to braces, a stubborn wisdom tooth or a new crown, our team looks after it in one welcoming place near Bang Tao.</p>
+    </div>
+
+    <div class="svc-grid">
+      <article class="svc" data-reveal>
+        <span class="svc__tag" aria-hidden="true">01</span>
+        <div class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5c-3.3 0-5.3 1.9-5.3 4.8 0 2 .7 3.2 1.5 5.9.6 2 .7 5 2.1 5 1.1 0 .9-2.6 1.7-2.6s.6 2.6 1.7 2.6c1.4 0 1.5-3 2.1-5 .8-2.7 1.5-3.9 1.5-5.9 0-2.9-2-4.8-5.3-4.8z"/><path d="M7 9.5c2 1.5 3.3 1.5 4.6.8"/></svg>
+        </div>
+        <h3>General dentistry</h3>
+        <p>Check-ups, fillings and honest advice for the whole family &mdash; the careful, unhurried care that keeps small problems small.</p>
+      </article>
+
+      <article class="svc" data-reveal style="--d:90ms">
+        <span class="svc__tag" aria-hidden="true">02</span>
+        <div class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"/><path d="M4 14h16"/><circle cx="8" cy="8" r="1.4"/><circle cx="14" cy="8" r="1.4"/><circle cx="11" cy="14" r="1.4"/><circle cx="17" cy="14" r="1.4"/></svg>
+        </div>
+        <h3>Braces &amp; alignment</h3>
+        <p>A straighter, more confident smile with a clear plan and gentle adjustments &mdash; ideal whether you're settled here or visiting often.</p>
+      </article>
+
+      <article class="svc" data-reveal style="--d:180ms">
+        <span class="svc__tag" aria-hidden="true">03</span>
+        <div class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.5c-2.5 0-4 1.6-4 4 0 1.7.6 2.7 1.2 4.9.5 1.8.6 4.6 1.8 4.6.9 0 .7-2.3 1.4-2.3"/><path d="M15 3.5c2.5 0 4 1.6 4 4 0 1.7-.6 2.7-1.2 4.9-.5 1.8-.6 4.6-1.8 4.6-.9 0-.7-2.3-1.4-2.3"/><path d="M10.4 13.3l1.6 1.6 1.6-1.6"/></svg>
+        </div>
+        <h3>Wisdom-tooth removal</h3>
+        <p>Sore, impacted or crowding the rest? Safe, comfortable extractions with clear aftercare so you can get back to your trip or your routine.</p>
+      </article>
+
+      <article class="svc" data-reveal style="--d:90ms">
+        <span class="svc__tag" aria-hidden="true">04</span>
+        <div class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4c-2.8 0-4.6 1.7-4.6 4.3 0 1.8.6 2.9 1.3 5.3.5 1.9.6 4.5 1.9 4.5 1 0 .8-2.4 1.4-2.4s.4 2.4 1.4 2.4c1.3 0 1.4-2.6 1.9-4.5.7-2.4 1.3-3.5 1.3-5.3C16.6 5.7 14.8 4 12 4z"/><path d="M9.3 9.6c1.7 1.1 3.7 1.1 5.4 0" stroke-dasharray="1.5 1.5"/><circle cx="18.5" cy="6" r="2.2"/></svg>
+        </div>
+        <h3>Cleaning &amp; hygiene</h3>
+        <p>A thorough scale and polish that lifts stains and leaves everything fresh &mdash; the easiest visit to fit between beach days.</p>
+      </article>
+
+      <article class="svc" data-reveal style="--d:180ms">
+        <span class="svc__tag" aria-hidden="true">05</span>
+        <div class="svc__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9l1.5-3.5h11L19 9"/><path d="M5 9c0 5 1.8 8 3.4 8 1 0 1-2 1.8-2"/><path d="M19 9c0 5-1.8 8-3.4 8-1 0-1-2-1.8-2"/><path d="M9.6 9h4.8"/></svg>
+        </div>
+        <h3>Crowns &amp; restoration</h3>
+        <p>Natural-looking crowns that rebuild a worn or broken tooth, colour-matched to blend in &mdash; strength and a smile that looks like yours.</p>
+      </article>
+
+      <article class="svc svc--cta" data-reveal style="--d:270ms; background:linear-gradient(160deg,#0a5663,#0e7c8b); border-color:transparent; color:#eafafa;">
+        <div class="svc__icon" aria-hidden="true" style="background:rgba(167,230,236,.16);color:#d3edf0;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3 style="color:#fff;">Not sure what you need?</h3>
+        <p style="color:#cfeef1;">Tell us what's bothering you and we'll talk it through in plain English. A quick call is the easiest place to start.</p>
+        <a class="btn btn--primary" href="tel:+66947705137" style="margin-top:1.2rem;padding:.8rem 1.3rem;font-size:.95rem;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call the clinic
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VISIT / LOCATION ============ -->
+<section class="visit pad" id="visit" aria-labelledby="visit-title">
+  <div class="wrap">
+    <div style="max-width:720px;margin-bottom:clamp(2.2rem,4vw,3.2rem);">
+      <span class="kicker" data-reveal>
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Finding us &amp; opening hours
+      </span>
+      <h2 class="h-sec" id="visit-title" data-reveal style="--d:60ms">In the heart of Cherngtalay, minutes from Bang Tao.</h2>
+      <p class="sub" data-reveal style="--d:120ms">We're right in Phuket's friendliest resort neighbourhood &mdash; easy to reach from the villas, the beach clubs and the hotels along the northwest coast.</p>
+    </div>
+
+    <div class="visit__grid">
+      <div class="infocard" data-reveal>
+        <div class="info-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div>
+            <h4>Area</h4>
+            <p>Cherngtalay / Bang Tao, Thalang, Phuket</p>
+            <p class="muted">Phuket's most international neighbourhood &mdash; home to a large expat and holiday community.</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <div>
+            <h4>Phone</h4>
+            <p><a href="tel:+66947705137">+66 94 770 5137</a></p>
+            <p class="muted">Call to ask a question, check times, or let us know you're on your way.</p>
+          </div>
+        </div>
+        <div class="info-row">
+          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+          <div style="width:100%;">
+            <h4>Opening hours</h4>
+            <div class="open-pill" id="openPill"><span class="live" aria-hidden="true"></span><span id="openText">Open today &middot; until 7:00 PM</span></div>
+            <div class="hours" id="hoursList" aria-label="Weekly opening hours"></div>
+            <p class="muted" style="margin-top:.8rem;">Open every day including weekends, closing at 7:00 PM.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="locale" data-reveal style="--d:140ms" aria-label="Stylised map of the Cherngtalay and Bang Tao coast">
+        <!-- Decorative abstract coastline map -->
+        <svg class="locale__map" viewBox="0 0 400 440" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="land" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#0b6271"/>
+              <stop offset="1" stop-color="#0e7c8b"/>
+            </linearGradient>
+          </defs>
+          <rect width="400" height="440" fill="#0a5b69"/>
+          <!-- sea texture: gentle contour lines -->
+          <g fill="none" stroke="rgba(167,230,236,.16)" stroke-width="1.4">
+            <path d="M-20 110c60 14 90-14 150 0s90 14 150 0 90-14 150 0"/>
+            <path d="M-20 150c60 14 90-14 150 0s90 14 150 0 90-14 150 0"/>
+            <path d="M-20 190c60 14 90-14 150 0s90 14 150 0 90-14 150 0"/>
+            <path d="M-20 360c60 14 90-14 150 0s90 14 150 0 90-14 150 0"/>
+            <path d="M-20 400c60 14 90-14 150 0s90 14 150 0 90-14 150 0"/>
+          </g>
+          <!-- landmass on the right (the coast curving to Bang Tao bay) -->
+          <path d="M250 -10c-40 60-70 70-58 130 10 50 60 60 58 120-2 70 30 90 70 120V-10z" fill="url(#land)"/>
+          <path d="M250 -10c-40 60-70 70-58 130 10 50 60 60 58 120-2 70 30 90 70 120" fill="none" stroke="rgba(255,235,200,.35)" stroke-width="2"/>
+          <!-- beach strip -->
+          <path d="M192 110c-3 30 8 55 6 100" fill="none" stroke="rgba(236,217,194,.5)" stroke-width="6" stroke-linecap="round"/>
+          <!-- roads -->
+          <g stroke="rgba(207,241,243,.32)" stroke-width="2" fill="none" stroke-linecap="round">
+            <path d="M40 230h150"/>
+            <path d="M120 120v240"/>
+            <path d="M70 320c50-10 90-10 130 5"/>
+          </g>
+        </svg>
+        <!-- map pin marker -->
+        <svg viewBox="0 0 60 60" width="58" height="58" style="position:absolute;left:32%;top:46%;z-index:3;filter:drop-shadow(0 8px 14px rgba(0,0,0,.4));" aria-hidden="true">
+          <circle class="pin-halo" cx="30" cy="30" r="24" fill="rgba(255,255,255,.16)" style="transform-box:fill-box;transform-origin:center;"/>
+          <path d="M30 14c-7 0-12 5-12 12 0 8 12 18 12 18s12-10 12-18c0-7-5-12-12-12z" fill="#fff"/>
+          <circle cx="30" cy="26" r="5" fill="#0e7c8b"/>
+        </svg>
+        <div class="locale__label">
+          <span class="pin">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Northwest Phuket coast
+          </span>
+          <h3>Cherngtalay &amp; Bang Tao</h3>
+          <p>A relaxed resort area wrapped around one of the island's longest, calmest beaches.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST / REVIEWS ============ -->
+
+
+<!-- ============ CONTACT ============ -->
+<section class="contact pad" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <div class="contact__shell" data-reveal>
+      <div class="contact__left">
+        <span class="kicker">
+          <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Say hello in English
+        </span>
+        <h2 class="h-sec" id="contact-title">Ready when you are.</h2>
+        <p class="sub">The easiest way to start is a quick call &mdash; or send us a message on Facebook or WhatsApp. Tell us what's going on and we'll take it from there, all in clear English.</p>
+
+        <div class="contact__actions">
+          <a class="btn btn--sea" href="tel:+66947705137">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call +66 94 770 5137
+          </a>
+          <!-- Facebook page URL not yet known: replace href="#" with the clinic's real facebook.com/<page> link -->
+          <a class="btn btn--fb" href="#" aria-label="Message us on Facebook (link coming soon)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+            Message us on Facebook
+          </a>
+          <a class="btn btn--wa" href="https://wa.me/66947705137" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.05 24l1.7-6.2A11.9 11.9 0 0 1 .14 11.9C.14 5.34 5.48 0 12.05 0a11.8 11.8 0 0 1 8.4 3.49 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.05 24zM6.6 20.13c1.68 1 3.28 1.6 5.44 1.6 5.45 0 9.89-4.43 9.89-9.88a9.84 9.84 0 0 0-9.88-9.88A9.88 9.88 0 0 0 2.17 11.9c0 2.27.66 3.97 1.77 5.75l-1.01 3.68 3.67-1.2zM18.02 14.7c-.07-.12-.27-.2-.56-.34-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.47s1.06 2.87 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.69.63.71.23 1.36.19 1.87.12.57-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.42z"/></svg>
+            WhatsApp us
+          </a>
+        </div>
+
+        <p class="contact__note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          We don't take online bookings &mdash; a quick call or message is the fastest way to be seen, and we'll find a time that suits your stay.
+        </p>
+      </div>
+
+      <aside class="contact__right" aria-label="Clinic details at a glance">
+        <h3>At a glance</h3>
+        <ul class="crlist">
+          <li>
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><b>Where</b><span>Cherngtalay / Bang Tao, Phuket</span></div>
+          </li>
+          <li>
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div><b>Phone</b><a href="tel:+66947705137">+66 94 770 5137</a></div>
+          </li>
+          <li>
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <div><b>Hours</b><span>Every day &middot; closes 7:00 PM</span></div>
+          </li>
+          <li>
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+            <div><b>Language</b><span>English &mdash; the whole team</span></div>
+          </li>
+        </ul>
+        <svg class="cr-waves" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 60c50 0 70-20 110-20s70 20 110 20 70-20 110-20 70 20 110 20v60H0z" fill="rgba(167,230,236,.16)"/>
+          <path d="M0 76c50 0 70-16 110-16s70 16 110 16 70-16 110-16 70 16 110 16v44H0z" fill="rgba(111,214,224,.24)"/>
+        </svg>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot">
+    <div class="foot__grid">
+      <div class="foot__brand">
+        <a class="brand" href="#top" aria-label="Dental Hub Clinic Phuket — home">
+          <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="11" fill="#0e7c8b"/>
+            <path d="M20 9c-4.4 0-7.1 2.5-7.1 6.4 0 2.6.9 4.2 1.9 7.6.7 2.6.9 6.6 2.7 6.6 1.5 0 1.2-3.2 2.5-3.2s1 3.2 2.5 3.2c1.8 0 2-4 2.7-6.6 1-3.4 1.9-5 1.9-7.6C27.1 11.5 24.4 9 20 9z" fill="#fff"/>
+            <path d="M11.5 16.2c2.4 1.9 4.1 1.9 5.6 1.1" stroke="#7fdfe6" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+          <span class="brand__name"><b>Dental Hub</b><span>Clinic Phuket</span></span>
+        </a>
+        <p>Calm, modern dental care for the international community of Cherngtalay and Bang Tao &mdash; with the whole team speaking comfortable, everyday English.</p>
+        <div class="foot__social">
+          <!-- Facebook page URL not yet known: replace href="#" with the clinic's real facebook.com/<page> link -->
+          <a href="#" aria-label="Dental Hub Clinic Phuket on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+          </a>
+          <a href="https://wa.me/66947705137" target="_blank" rel="noopener" aria-label="Message Dental Hub Clinic Phuket on WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.05 24l1.7-6.2A11.9 11.9 0 0 1 .14 11.9C.14 5.34 5.48 0 12.05 0a11.8 11.8 0 0 1 8.4 3.49 11.8 11.8 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.7-1.45L.05 24zM6.6 20.13c1.68 1 3.28 1.6 5.44 1.6 5.45 0 9.89-4.43 9.89-9.88a9.84 9.84 0 0 0-9.88-9.88A9.88 9.88 0 0 0 2.17 11.9c0 2.27.66 3.97 1.77 5.75l-1.01 3.68 3.67-1.2z"/></svg>
+          </a>
+          <a href="tel:+66947705137" aria-label="Call Dental Hub Clinic Phuket">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#welcome">English Welcome</a></li>
+          <li><a href="#services">Treatments</a></li>
+          <li><a href="#visit">Visit &amp; Hours</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Treatments</h5>
+        <ul>
+          <li><a href="#services">General dentistry</a></li>
+          <li><a href="#services">Braces</a></li>
+          <li><a href="#services">Wisdom-tooth removal</a></li>
+          <li><a href="#services">Cleaning &amp; hygiene</a></li>
+          <li><a href="#services">Crowns</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot__bar">
+      <span class="foot__area">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Cherngtalay / Bang Tao, Phuket, Thailand &middot; &copy; <span id="yr">2026</span> Dental Hub Clinic Phuket
+      </span>
+      <span>Designed by <a class="credit" href="https://stellarhausmedia.com" target="_blank" rel="noopener">Stellar Haus Media</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- year ---- */
+  var yr = document.getElementById("yr");
+  if (yr) yr.textContent = new Date().getFullYear();
+
+  /* ---- sticky nav ---- */
+  var nav = document.getElementById("nav");
+  function onScroll() {
+    if (window.scrollY > 24) nav.classList.add("is-stuck");
+    else nav.classList.remove("is-stuck");
+  }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  /* ---- mobile menu ---- */
+  var toggle = document.getElementById("navToggle");
+  var links = document.getElementById("navlinks");
+  var backdrop = document.getElementById("menuBackdrop");
+  function openMenu() {
+    links.classList.add("is-open");
+    backdrop.hidden = false;
+    requestAnimationFrame(function () { backdrop.classList.add("is-open"); });
+    toggle.setAttribute("aria-expanded", "true");
+    toggle.setAttribute("aria-label", "Close menu");
+    document.body.style.overflow = "hidden";
+  }
+  function closeMenu() {
+    links.classList.remove("is-open");
+    backdrop.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open menu");
+    document.body.style.overflow = "";
+    setTimeout(function () { if (!links.classList.contains("is-open")) backdrop.hidden = true; }, 450);
+  }
+  toggle.addEventListener("click", function () {
+    if (links.classList.contains("is-open")) closeMenu(); else openMenu();
+  });
+  backdrop.addEventListener("click", closeMenu);
+  links.addEventListener("click", function (e) {
+    if (e.target.closest("a")) closeMenu();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && links.classList.contains("is-open")) { closeMenu(); toggle.focus(); }
+  });
+
+  /* ---- reveal on scroll ---- */
+  var revs = Array.prototype.slice.call(document.querySelectorAll("[data-reveal]"));
+  if (reduce || !("IntersectionObserver" in window)) {
+    revs.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+      });
+    }, { threshold: 0.14, rootMargin: "0px 0px -8% 0px" });
+    revs.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---- opening hours (every day, 9am-7pm) + live open state ---- */
+  var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var openHour = 9, closeHour = 19; // 9:00 AM - 7:00 PM, all week
+  var now = new Date();
+  var todayIdx = now.getDay();
+  var hoursList = document.getElementById("hoursList");
+  if (hoursList) {
+    var html = "";
+    for (var i = 1; i <= 7; i++) {
+      var d = i % 7; // start the week on Monday
+      var isToday = d === todayIdx;
+      html += '<div class="day' + (isToday ? " today" : "") + '">' +
+              "<span>" + days[d] + (isToday ? " &middot; Today" : "") + "</span>" +
+              "<span>9:00 AM &ndash; 7:00 PM</span></div>";
+    }
+    hoursList.innerHTML = html;
+  }
+
+  /* live "open now" text */
+  var openText = document.getElementById("openText");
+  var openPill = document.getElementById("openPill");
+  if (openText) {
+    var h = now.getHours() + now.getMinutes() / 60;
+    if (h >= openHour && h < closeHour) {
+      openText.innerHTML = "Open now &middot; until 7:00 PM";
+    } else if (h < openHour) {
+      openText.innerHTML = "Opens today at 9:00 AM";
+    } else {
+      openText.innerHTML = "Opens tomorrow at 9:00 AM";
+      if (openPill) {
+        openPill.style.background = "#fdeedd";
+      }
+    }
+  }
+})();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text or WhatsApp.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+66947705137", CHAN="https://wa.me/66947705137", CHANLABEL="Message us on WhatsApp";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>

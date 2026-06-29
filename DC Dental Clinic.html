@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DC Dental Clinic — English-Friendly Dentistry in Nimman, Chiang Mai</title>
+<meta name="description" content="Clear, English-friendly dental care in Nimman, Chiang Mai. Orthodontics, implants, veneers, whitening and general dentistry. Rated 4.9 stars. Open every day until 7pm." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23bfe9ff'/%3E%3Cstop offset='1' stop-color='%23ffffff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M16 3 L27 11 L23 27 L9 27 L5 11 Z' fill='url(%23g)' stroke='%2360b8e8' stroke-width='1.4'/%3E%3Cpath d='M16 3 L16 27 M5 11 L27 11' stroke='%2360b8e8' stroke-width='0.8' opacity='0.7'/%3E%3C/svg%3E" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --ink:#0e2233;
+    --ink-soft:#3a5266;
+    --ink-faint:#6f8597;
+    --ice-50:#f3fbff;
+    --ice-100:#e3f4ff;
+    --ice-200:#cdeafd;
+    --ice-300:#a9d9f5;
+    --ice-400:#74bee8;
+    --ice-500:#3f9fd6;
+    --ice-600:#2a7fb5;
+    --white:#ffffff;
+    --paper:#fbfeff;
+    --glass:rgba(255,255,255,0.55);
+    --glass-line:rgba(120,185,225,0.32);
+    --refract-1:#bfe9ff;
+    --refract-2:#d9c9ff;
+    --refract-3:#c9fff0;
+    --refract-4:#ffe7f6;
+    --shadow-ice:0 18px 50px -22px rgba(33,110,160,0.45);
+    --shadow-soft:0 10px 30px -16px rgba(24,80,120,0.35);
+    --radius:18px;
+    --radius-lg:26px;
+    --maxw:1180px;
+    --ease:cubic-bezier(.22,.61,.36,1);
+    --sans:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+    --display:'Sora',var(--sans);
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+  body{
+    margin:0;
+    font-family:var(--sans);
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+
+  body::before{
+    content:"";
+    position:fixed;inset:0;z-index:-2;
+    background:
+      radial-gradient(1100px 720px at 78% -8%, var(--ice-100) 0%, rgba(227,244,255,0) 60%),
+      radial-gradient(900px 680px at 8% 12%, #f1f3ff 0%, rgba(241,243,255,0) 55%),
+      radial-gradient(1000px 800px at 50% 120%, var(--ice-50) 0%, rgba(243,251,255,0) 60%),
+      linear-gradient(180deg,#ffffff 0%, var(--paper) 100%);
+  }
+  body::after{
+    content:"";
+    position:fixed;inset:0;z-index:-1;pointer-events:none;
+    opacity:.5;
+    background-image:
+      linear-gradient(115deg, rgba(191,233,255,0.0) 0%, rgba(217,201,255,0.10) 35%, rgba(201,255,240,0.0) 55%, rgba(255,231,246,0.10) 80%, rgba(191,233,255,0.0) 100%);
+    background-size:200% 200%;
+    animation:drift 22s linear infinite;
+  }
+  @keyframes drift{0%{background-position:0% 0%}100%{background-position:200% 200%}}
+  @media (prefers-reduced-motion:reduce){body::after{animation:none}}
+
+  a{color:inherit;text-decoration:none}
+  img,svg{display:block}
+  h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;letter-spacing:-0.02em;margin:0}
+  p{margin:0}
+  ::selection{background:var(--ice-200);color:var(--ink)}
+
+  .wrap{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(20px,5vw,48px)}
+  .eyebrow{
+    font-family:var(--sans);font-weight:700;font-size:.72rem;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--ice-600);
+    display:inline-flex;align-items:center;gap:.6em;
+  }
+  .eyebrow::before{
+    content:"";width:26px;height:1px;background:linear-gradient(90deg,var(--ice-400),transparent);
+  }
+
+  a:focus-visible,button:focus-visible{
+    outline:2.5px solid var(--ice-500);
+    outline-offset:3px;
+    border-radius:8px;
+  }
+  .skip{
+    position:absolute;left:14px;top:-60px;z-index:200;
+    background:var(--ink);color:#fff;padding:10px 16px;border-radius:10px;
+    font-weight:600;font-size:.9rem;transition:top .2s var(--ease);
+  }
+  .skip:focus-visible{top:14px}
+  .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+  header{position:sticky;top:0;z-index:100}
+  .nav{
+    margin:14px auto 0;
+    max-width:var(--maxw);
+    width:calc(100% - clamp(24px,6vw,64px));
+    display:flex;align-items:center;justify-content:space-between;gap:18px;
+    padding:12px clamp(14px,3vw,22px);
+    background:rgba(255,255,255,0.62);
+    backdrop-filter:blur(18px) saturate(1.4);
+    -webkit-backdrop-filter:blur(18px) saturate(1.4);
+    border:1px solid rgba(255,255,255,0.85);
+    box-shadow:0 1px 0 rgba(120,185,225,0.18) inset, var(--shadow-soft);
+    border-radius:20px;
+    transition:box-shadow .4s var(--ease), background .4s var(--ease), transform .4s var(--ease);
+  }
+  .nav.scrolled{
+    background:rgba(255,255,255,0.82);
+    box-shadow:0 1px 0 rgba(120,185,225,0.3) inset, 0 14px 34px -18px rgba(24,80,120,0.4);
+  }
+  .brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:700;font-size:1.04rem;letter-spacing:-.02em;color:var(--ink)}
+  .brand .gem{width:34px;height:34px;flex:none}
+  .brand small{display:block;font-family:var(--sans);font-weight:600;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ice-600);line-height:1}
+  .nav-links{display:flex;align-items:center;gap:6px}
+  .nav-links a{
+    font-weight:600;font-size:.86rem;color:var(--ink-soft);
+    padding:9px 14px;border-radius:11px;transition:color .25s var(--ease),background .25s var(--ease);
+    position:relative;
+  }
+  .nav-links a:hover{color:var(--ink);background:var(--ice-100)}
+  .nav-cta{
+    display:inline-flex;align-items:center;gap:8px;
+    font-weight:700;font-size:.86rem;color:#fff !important;
+    padding:10px 18px;border-radius:12px;
+    background:linear-gradient(135deg,var(--ice-500),var(--ice-600));
+    box-shadow:0 8px 20px -8px rgba(42,127,181,0.7);
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease);
+  }
+  .nav-cta:hover{transform:translateY(-2px);box-shadow:0 14px 26px -10px rgba(42,127,181,0.8)}
+  .nav-cta::after{content:none}
+
+  .burger{display:none;width:46px;height:46px;border:1px solid var(--glass-line);background:rgba(255,255,255,0.6);border-radius:13px;cursor:pointer;align-items:center;justify-content:center;padding:0}
+  .burger span{display:block;width:20px;height:2px;background:var(--ink);border-radius:2px;position:relative;transition:.3s var(--ease)}
+  .burger span::before,.burger span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink);border-radius:2px;transition:.3s var(--ease)}
+  .burger span::before{top:-6px}.burger span::after{top:6px}
+  .burger[aria-expanded="true"] span{background:transparent}
+  .burger[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+  .burger[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+
+  .hero{position:relative;padding:clamp(48px,9vh,96px) 0 clamp(60px,10vh,110px);overflow:hidden}
+  .hero-grid{
+    display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(28px,5vw,64px);align-items:center;
+  }
+  .hero-copy{max-width:600px;position:relative;z-index:3}
+  .hero h1{
+    font-size:clamp(2.5rem,6.2vw,4.5rem);
+    letter-spacing:-.035em;margin:20px 0 0;
+  }
+  .hero h1 .shine{
+    background:linear-gradient(100deg,var(--ice-600) 0%, var(--ice-400) 30%, #b9a8ff 48%, var(--ice-500) 66%, var(--ice-600) 100%);
+    background-size:220% 100%;
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    animation:sheen 7s ease-in-out infinite;
+  }
+  @keyframes sheen{0%,100%{background-position:0% 0}50%{background-position:120% 0}}
+  @media (prefers-reduced-motion:reduce){.hero h1 .shine{animation:none}}
+  .hero-sub{font-size:clamp(1.04rem,1.6vw,1.22rem);color:var(--ink-soft);margin-top:22px;max-width:46ch}
+  .hero-sub b{color:var(--ink);font-weight:700}
+
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+  .btn{
+    --bg:linear-gradient(135deg,var(--ice-500),var(--ice-600));
+    display:inline-flex;align-items:center;gap:9px;
+    font-weight:700;font-size:.95rem;color:#fff;
+    padding:14px 24px;border-radius:14px;border:none;cursor:pointer;
+    background:var(--bg);
+    box-shadow:0 12px 26px -10px rgba(42,127,181,0.7);
+    transition:transform .25s var(--ease),box-shadow .25s var(--ease),filter .25s var(--ease);
+    position:relative;overflow:hidden;
+  }
+  .btn::after{
+    content:"";position:absolute;inset:0;border-radius:inherit;
+    background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.5) 48%,transparent 60%);
+    transform:translateX(-130%);transition:transform .7s var(--ease);
+  }
+  .btn:hover{transform:translateY(-3px);box-shadow:0 18px 34px -12px rgba(42,127,181,0.85)}
+  .btn:hover::after{transform:translateX(130%)}
+  @media (prefers-reduced-motion:reduce){.btn:hover{transform:none}.btn::after{display:none}}
+  .btn.ghost{
+    color:var(--ice-600);background:rgba(255,255,255,0.7);
+    border:1.5px solid var(--glass-line);
+    box-shadow:var(--shadow-soft);backdrop-filter:blur(10px);
+  }
+  .btn.ghost:hover{color:var(--ice-600);background:#fff;border-color:var(--ice-300)}
+
+  .hero-trust{display:flex;align-items:center;gap:16px;margin-top:30px;flex-wrap:wrap}
+  .stars{display:inline-flex;gap:3px}
+  .stars svg{width:18px;height:18px}
+  .hero-trust .meta{font-size:.9rem;color:var(--ink-soft)}
+  .hero-trust .meta b{color:var(--ink);font-weight:800}
+  .pip{width:5px;height:5px;border-radius:50%;background:var(--ice-300)}
+
+  .hero-stage{position:relative;z-index:2;min-height:440px;display:flex;align-items:center;justify-content:center}
+  .crystal-wrap{position:relative;width:min(100%,460px);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+  .crystal-svg{width:100%;height:auto;overflow:visible;filter:drop-shadow(0 30px 50px rgba(42,127,181,0.28))}
+  .crystal-spin{transform-origin:50% 50%;animation:spin 26s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion:reduce){.crystal-spin{animation:none}}
+  .facet{transition:opacity .4s var(--ease)}
+  .glint{animation:glint 5s ease-in-out infinite}
+  @keyframes glint{0%,100%{opacity:.0}48%{opacity:.0}54%{opacity:.9}60%{opacity:.0}}
+  @media (prefers-reduced-motion:reduce){.glint{opacity:.4;animation:none}}
+
+  .orbit{position:absolute;border-radius:50%;border:1px dashed rgba(116,190,232,0.4);inset:6%;animation:spin 40s linear infinite reverse}
+  .orbit.b{inset:-4%;border-color:rgba(185,168,255,0.32);animation-duration:60s}
+  @media (prefers-reduced-motion:reduce){.orbit{animation:none}}
+  .spark{
+    position:absolute;width:10px;height:10px;border-radius:50%;
+    background:radial-gradient(circle,#fff 0%,var(--refract-1) 60%,transparent 70%);
+    top:8%;left:50%;transform:translateX(-50%);
+    box-shadow:0 0 14px 3px rgba(191,233,255,0.8);
+    animation:twinkle 3.4s ease-in-out infinite;
+  }
+  .spark.s2{top:auto;bottom:14%;left:18%;background:radial-gradient(circle,#fff 0%,var(--refract-2) 60%,transparent 70%);animation-delay:1.1s}
+  .spark.s3{top:30%;left:6%;width:7px;height:7px;background:radial-gradient(circle,#fff 0%,var(--refract-3) 60%,transparent 70%);animation-delay:2s}
+  @keyframes twinkle{0%,100%{opacity:.2;transform:translateX(-50%) scale(.7)}50%{opacity:1;transform:translateX(-50%) scale(1.15)}}
+  @media (prefers-reduced-motion:reduce){.spark{animation:none;opacity:.7}}
+
+  .floatcard{
+    position:absolute;background:rgba(255,255,255,0.72);
+    backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);
+    border:1px solid rgba(255,255,255,0.9);
+    box-shadow:var(--shadow-ice);border-radius:16px;padding:13px 16px;
+    display:flex;align-items:center;gap:11px;font-size:.84rem;font-weight:600;color:var(--ink);
+  }
+  .floatcard .ic{width:34px;height:34px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--ice-100),var(--ice-200));color:var(--ice-600);flex:none}
+  .floatcard .ic svg{width:18px;height:18px}
+  .floatcard small{display:block;font-weight:500;font-size:.72rem;color:var(--ink-faint)}
+  .fc-1{top:8%;right:-2%;animation:bob 6s ease-in-out infinite}
+  .fc-2{bottom:6%;left:-6%;animation:bob 7s ease-in-out infinite .8s}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  @media (prefers-reduced-motion:reduce){.fc-1,.fc-2{animation:none}}
+
+  .strip{border-block:1px solid var(--glass-line);background:rgba(255,255,255,0.45);backdrop-filter:blur(6px);overflow:hidden}
+  .marquee{display:flex;gap:0;white-space:nowrap;animation:slide 30s linear infinite}
+  @keyframes slide{to{transform:translateX(-50%)}}
+  @media (prefers-reduced-motion:reduce){.marquee{animation:none;flex-wrap:wrap;justify-content:center}}
+  .marquee span{
+    display:inline-flex;align-items:center;gap:14px;padding:16px 30px;
+    font-family:var(--display);font-weight:600;font-size:1.02rem;letter-spacing:-.01em;color:var(--ink-soft);
+  }
+  .marquee span::after{content:"";width:7px;height:7px;border-radius:2px;transform:rotate(45deg);background:linear-gradient(135deg,var(--ice-400),var(--refract-2))}
+
+  section{position:relative}
+  .sec{padding:clamp(64px,11vh,120px) 0}
+  .sec-head{max-width:680px;margin-bottom:clamp(36px,5vw,60px)}
+  .sec-head.center{margin-inline:auto;text-align:center}
+  .sec-head h2{font-size:clamp(2rem,4.6vw,3.1rem);margin-top:16px;letter-spacing:-.03em}
+  .sec-head p{font-size:clamp(1.02rem,1.5vw,1.16rem);color:var(--ink-soft);margin-top:18px}
+
+  .welcome{position:relative}
+  .welcome-card{
+    position:relative;
+    background:
+      linear-gradient(160deg, rgba(255,255,255,0.85), rgba(227,244,255,0.55));
+    border:1px solid rgba(255,255,255,0.9);
+    box-shadow:var(--shadow-ice);
+    border-radius:var(--radius-lg);
+    padding:clamp(34px,5vw,68px);
+    overflow:hidden;
+  }
+  .welcome-card::before{
+    content:"";position:absolute;inset:0;pointer-events:none;opacity:.6;
+    background:
+      conic-gradient(from 200deg at 88% 8%, rgba(217,201,255,0.0), rgba(217,201,255,0.5), rgba(191,233,255,0.0) 40%),
+      conic-gradient(from 20deg at 6% 92%, rgba(201,255,240,0.0), rgba(201,255,240,0.5), rgba(255,231,246,0.0) 45%);
+    mix-blend-mode:screen;
+  }
+  .welcome-inner{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,56px);align-items:center}
+  .welcome-inner h2{font-size:clamp(1.9rem,4.2vw,2.9rem);letter-spacing:-.03em}
+  .welcome-inner p{color:var(--ink-soft);font-size:clamp(1.02rem,1.5vw,1.15rem);margin-top:20px}
+  .welcome-inner p strong{color:var(--ink);font-weight:700}
+  .lang-badge{
+    display:inline-flex;align-items:center;gap:9px;margin-top:26px;
+    background:rgba(255,255,255,0.85);border:1px solid var(--glass-line);
+    padding:11px 18px;border-radius:30px;font-weight:700;font-size:.92rem;color:var(--ice-600);
+    box-shadow:var(--shadow-soft);
+  }
+  .lang-badge svg{width:20px;height:20px}
+  .pane-stack{position:relative;height:300px;display:flex;align-items:center;justify-content:center}
+  .pane{
+    position:absolute;width:178px;height:228px;border-radius:24px;
+    border:1.5px solid rgba(116,190,232,0.55);
+    background:linear-gradient(150deg,rgba(255,255,255,0.5),rgba(191,233,255,0.22));
+    box-shadow:0 14px 34px -18px rgba(42,127,181,0.5), inset 0 1px 0 rgba(255,255,255,0.9);
+    backdrop-filter:blur(3px);
+  }
+  .pane.p1{transform:rotate(-12deg) translate(-30px,8px)}
+  .pane.p2{transform:rotate(0deg);border-color:rgba(185,168,255,0.5);background:linear-gradient(150deg,rgba(255,255,255,0.6),rgba(217,201,255,0.2))}
+  .pane.p3{transform:rotate(12deg) translate(30px,8px);border-color:rgba(201,255,240,0.7);background:linear-gradient(150deg,rgba(255,255,255,0.5),rgba(201,255,240,0.25))}
+  .pane-glow{position:absolute;width:64px;height:64px;border-radius:50%;background:radial-gradient(circle,#fff,transparent 70%);filter:blur(2px);animation:twinkle 4s ease-in-out infinite}
+
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .svc{
+    position:relative;
+    background:rgba(255,255,255,0.7);
+    border:1px solid rgba(255,255,255,0.85);
+    box-shadow:var(--shadow-soft);
+    border-radius:var(--radius);
+    padding:30px 26px 28px;
+    overflow:hidden;
+    transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease);
+  }
+  .svc::before{
+    content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    background:linear-gradient(140deg,transparent 55%,var(--g1,rgba(191,233,255,.4)) 100%);
+    opacity:.0;transition:opacity .45s var(--ease);
+  }
+  .svc:hover{transform:translateY(-7px);box-shadow:var(--shadow-ice);border-color:var(--ice-200)}
+  .svc:hover::before{opacity:.7}
+  .svc:hover .svc-ic{transform:rotate(-6deg) scale(1.06)}
+  .svc-ic{
+    width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,var(--ice-100),var(--ice-200));
+    color:var(--ice-600);margin-bottom:20px;position:relative;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.9);
+    transition:transform .4s var(--ease);
+  }
+  .svc-ic svg{width:30px;height:30px}
+  .svc h3{font-size:1.28rem;letter-spacing:-.02em}
+  .svc p{color:var(--ink-soft);font-size:.96rem;margin-top:11px;position:relative}
+  .svc .tag{position:absolute;top:24px;right:24px;font-size:.66rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ice-500);opacity:.7}
+
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+  .glass-panel{
+    background:rgba(255,255,255,0.7);border:1px solid rgba(255,255,255,0.85);
+    box-shadow:var(--shadow-soft);border-radius:var(--radius-lg);padding:clamp(28px,4vw,44px);position:relative;overflow:hidden;
+  }
+  .hours-row{display:flex;align-items:center;justify-content:space-between;padding:15px 0;border-bottom:1px solid rgba(116,190,232,0.18);font-size:1rem}
+  .hours-row:last-child{border-bottom:none}
+  .hours-row .day{font-weight:600;color:var(--ink)}
+  .hours-row .time{font-weight:700;color:var(--ice-600);font-variant-numeric:tabular-nums}
+  .hours-row.today{position:relative}
+  .hours-row.today .day::after{content:"Today";margin-left:10px;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--ice-500),var(--ice-600));padding:3px 9px;border-radius:20px;vertical-align:middle}
+  .open-now{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.92rem;color:#0f7a52;background:rgba(201,255,240,0.5);border:1px solid rgba(120,210,180,0.4);padding:9px 16px;border-radius:30px;margin-bottom:24px}
+  .open-now .dot{width:9px;height:9px;border-radius:50%;background:#16c47f;box-shadow:0 0 0 0 rgba(22,196,127,.5);animation:pulse 2.2s ease-out infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(22,196,127,.45)}70%{box-shadow:0 0 0 9px rgba(22,196,127,0)}100%{box-shadow:0 0 0 0 rgba(22,196,127,0)}}
+  @media (prefers-reduced-motion:reduce){.open-now .dot{animation:none}}
+
+  .loc h3{font-size:1.5rem;letter-spacing:-.02em}
+  .loc .addr{color:var(--ink-soft);font-size:1.02rem;margin-top:14px;display:flex;gap:12px}
+  .loc .addr svg{width:22px;height:22px;color:var(--ice-500);flex:none;margin-top:2px}
+  .loc .vibe{margin-top:22px;color:var(--ink-soft);font-size:.98rem}
+  .loc .vibe strong{color:var(--ink);font-weight:700}
+  .map{margin-top:26px;border-radius:18px;overflow:hidden;border:1px solid var(--glass-line);box-shadow:inset 0 1px 0 rgba(255,255,255,0.8);position:relative;aspect-ratio:16/9;background:linear-gradient(160deg,#f3fbff,#e3f4ff)}
+  .map svg{width:100%;height:100%}
+  .map .pin{animation:drop 2.6s ease-in-out infinite}
+  @keyframes drop{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  @media (prefers-reduced-motion:reduce){.map .pin{animation:none}}
+
+  .trust{position:relative;text-align:center}
+  .rating-hero{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:14px}
+  .rating-num{font-family:var(--display);font-weight:700;font-size:clamp(4rem,12vw,7rem);line-height:.9;letter-spacing:-.04em;
+    background:linear-gradient(160deg,var(--ice-500),var(--ice-600) 40%,#9d8bff 90%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;}
+  .rating-stars{display:inline-flex;gap:6px}
+  .rating-stars svg{width:30px;height:30px}
+  .rating-sub{color:var(--ink-soft);font-size:1.05rem;margin-top:6px}
+  .rating-sub b{color:var(--ink);font-weight:800}
+
+  .review-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:48px;text-align:left}
+  .review{
+    background:rgba(255,255,255,0.72);border:1px solid rgba(255,255,255,0.85);
+    box-shadow:var(--shadow-soft);border-radius:var(--radius);padding:28px 26px;position:relative;
+    transition:transform .4s var(--ease),box-shadow .4s var(--ease);
+  }
+  .review:hover{transform:translateY(-5px);box-shadow:var(--shadow-ice)}
+  .review .q{position:absolute;top:14px;right:20px;font-family:var(--display);font-size:3.4rem;line-height:1;color:var(--ice-200);font-weight:700}
+  .review .stars{margin-bottom:14px}
+  .review p{color:var(--ink);font-size:1rem;line-height:1.6}
+  .review .by{margin-top:16px;font-size:.84rem;color:var(--ink-faint);font-weight:600;display:flex;align-items:center;gap:8px}
+  .review .by::before{content:"";width:18px;height:1px;background:var(--ice-300)}
+  .disclaim{margin-top:26px;font-size:.8rem;color:var(--ink-faint)}
+
+  .stat-band{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:48px}
+  .stat{background:rgba(255,255,255,0.6);border:1px solid var(--glass-line);border-radius:16px;padding:22px 18px;text-align:center}
+  .stat .v{font-family:var(--display);font-weight:700;font-size:1.9rem;letter-spacing:-.02em;color:var(--ice-600)}
+  .stat .l{font-size:.82rem;color:var(--ink-soft);margin-top:5px;font-weight:600}
+
+  .contact-card{
+    position:relative;border-radius:var(--radius-lg);overflow:hidden;
+    background:linear-gradient(155deg,#0e2a40 0%,#15406b 55%,#1c6aa0 100%);
+    color:#eaf6ff;padding:clamp(40px,6vw,72px);
+    box-shadow:0 30px 70px -30px rgba(14,42,64,0.8);
+  }
+  .contact-card::before{
+    content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+    background:
+      radial-gradient(600px 400px at 90% 0%, rgba(191,233,255,0.4), transparent 60%),
+      radial-gradient(500px 500px at 0% 100%, rgba(157,139,255,0.35), transparent 60%),
+      conic-gradient(from 120deg at 80% 20%, transparent, rgba(201,255,240,0.18), transparent 35%);
+  }
+  .contact-card::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:linear-gradient(115deg,transparent 40%,rgba(255,255,255,0.10) 50%,transparent 60%);
+    background-size:250% 100%;animation:slidesheen 8s linear infinite;
+  }
+  @keyframes slidesheen{0%{background-position:0% 0}100%{background-position:250% 0}}
+  @media (prefers-reduced-motion:reduce){.contact-card::after{animation:none}}
+  .contact-inner{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,56px);align-items:center}
+  .contact-card .eyebrow{color:var(--ice-200)}
+  .contact-card .eyebrow::before{background:linear-gradient(90deg,var(--ice-200),transparent)}
+  .contact-card h2{font-size:clamp(2rem,4.4vw,3rem);color:#fff;letter-spacing:-.03em}
+  .contact-card .lead{color:#bcdcf2;font-size:1.08rem;margin-top:18px;max-width:42ch}
+
+  .phone-big{display:inline-flex;align-items:center;gap:14px;margin-top:28px;font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3vw,2.1rem);color:#fff;letter-spacing:-.02em;transition:color .25s var(--ease)}
+  .phone-big:hover{color:var(--ice-200)}
+  .phone-big .ring{width:50px;height:50px;border-radius:14px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);display:flex;align-items:center;justify-content:center;flex:none}
+  .phone-big .ring svg{width:24px;height:24px}
+
+  .ch-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:8px}
+  .ch{
+    display:flex;align-items:center;gap:13px;
+    background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);
+    border-radius:15px;padding:16px 18px;font-weight:700;font-size:.96rem;color:#fff;
+    transition:transform .25s var(--ease),background .25s var(--ease),border-color .25s var(--ease);
+    backdrop-filter:blur(6px);
+  }
+  .ch:hover{transform:translateY(-3px);background:rgba(255,255,255,0.16);border-color:rgba(255,255,255,0.4)}
+  @media (prefers-reduced-motion:reduce){.ch:hover,.phone-big:hover{transform:none}}
+  .ch .ci{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex:none;color:#fff}
+  .ch .ci svg{width:22px;height:22px}
+  .ch small{display:block;font-weight:500;font-size:.74rem;color:#a9cde6}
+  .ch-wa .ci{background:linear-gradient(135deg,#25d366,#128c4f)}
+  .ch-line .ci{background:linear-gradient(135deg,#06c755,#04a045)}
+  .ch-fb .ci{background:linear-gradient(135deg,#1877f2,#0e5fc4)}
+  .ch-ig .ci{background:linear-gradient(135deg,#f9ce34,#ee2a7b 45%,#6228d7)}
+  .ch-mail .ci{background:linear-gradient(135deg,var(--ice-400),var(--ice-600))}
+
+  .book-online{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;width:100%;
+    margin-top:13px;
+    background:linear-gradient(135deg,rgba(255,255,255,0.95),rgba(227,244,255,0.92));
+    color:var(--ink);border:1px solid rgba(255,255,255,0.6);
+    border-radius:16px;padding:18px 22px;font-family:var(--display);font-weight:700;font-size:1.05rem;
+    cursor:not-allowed;position:relative;overflow:hidden;
+    box-shadow:0 16px 30px -16px rgba(0,0,0,0.5);
+  }
+  .book-online .soon{font-family:var(--sans);font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:linear-gradient(135deg,var(--ice-500),var(--ice-600));padding:5px 11px;border-radius:20px;flex:none}
+  .book-online .bi{display:flex;align-items:center;gap:12px}
+  .book-online .bi svg{width:24px;height:24px;color:var(--ice-600)}
+  .book-online::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,0.7) 50%,transparent 60%);background-size:250% 100%;animation:slidesheen 6s linear infinite}
+  @media (prefers-reduced-motion:reduce){.book-online::after{animation:none;display:none}}
+
+  footer{padding:clamp(54px,8vh,84px) 0 40px;position:relative}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;align-items:start;padding-bottom:40px;border-bottom:1px solid var(--glass-line)}
+  .foot-brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:700;font-size:1.2rem}
+  .foot-brand .gem{width:38px;height:38px}
+  .foot-col h4{font-family:var(--sans);font-weight:800;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ice-600);margin:0 0 16px}
+  .foot-col a,.foot-col p{display:block;color:var(--ink-soft);font-size:.94rem;margin-bottom:11px;transition:color .2s var(--ease)}
+  .foot-col a:hover{color:var(--ice-600)}
+  .foot-desc{color:var(--ink-soft);font-size:.96rem;margin-top:18px;max-width:38ch}
+  .foot-bottom{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;padding-top:26px}
+  .foot-bottom p{font-size:.86rem;color:var(--ink-faint)}
+  .credit{font-size:.86rem;color:var(--ink-faint)}
+  .credit a{color:var(--ice-600);font-weight:700;border-bottom:1px solid transparent;transition:border-color .2s var(--ease)}
+  .credit a:hover{border-color:var(--ice-400)}
+
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal[data-d="1"]{transition-delay:.08s}
+  .reveal[data-d="2"]{transition-delay:.16s}
+  .reveal[data-d="3"]{transition-delay:.24s}
+  .reveal[data-d="4"]{transition-delay:.32s}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+
+  @media (max-width:980px){
+    .hero-grid{grid-template-columns:1fr;gap:40px}
+    .hero-stage{min-height:380px;order:-1}
+    .crystal-wrap{width:min(82%,400px)}
+    .welcome-inner{grid-template-columns:1fr;gap:36px}
+    .pane-stack{height:260px;order:-1}
+    .visit-grid{grid-template-columns:1fr}
+    .contact-inner{grid-template-columns:1fr;gap:34px}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:30px}
+    .foot-brand-col{grid-column:1/-1}
+  }
+  @media (max-width:760px){
+    .nav-links{
+      position:absolute;top:calc(100% + 12px);right:0;left:0;
+      flex-direction:column;align-items:stretch;gap:6px;
+      background:rgba(255,255,255,0.94);backdrop-filter:blur(20px);
+      border:1px solid var(--glass-line);border-radius:18px;padding:14px;
+      box-shadow:var(--shadow-ice);
+      opacity:0;visibility:hidden;transform:translateY(-10px);transition:.3s var(--ease);
+    }
+    .nav-links.open{opacity:1;visibility:visible;transform:none}
+    .nav-links a{padding:13px 16px;font-size:.98rem}
+    .nav-cta{justify-content:center;margin-top:4px}
+    .burger{display:flex}
+    .ch-grid{grid-template-columns:1fr}
+    .stat-band{grid-template-columns:1fr 1fr}
+    .hero-cta .btn{flex:1 1 100%;justify-content:center}
+  }
+  @media (max-width:440px){
+    .foot-grid{grid-template-columns:1fr}
+    .floatcard{display:none}
+    .stat-band{grid-template-columns:1fr}
+  }
+</style>
+
+
+<style id="shm-bk-style">
+.shm-bk *{box-sizing:border-box}
+.shm-bk-overlay{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:max(16px,env(safe-area-inset-top)) 16px;background:rgba(10,10,12,.55);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);font-family:var(--bk-sans)}
+.shm-bk-overlay.open{display:flex}
+.shm-bk-card{width:100%;max-width:480px;max-height:92vh;overflow:auto;background:var(--bk-panel);
+  color:var(--bk-ink);border-radius:var(--bk-r);box-shadow:0 30px 80px -20px rgba(0,0,0,.55),0 0 0 1px var(--bk-line);
+  padding:26px 26px 22px;transform:translateY(10px);opacity:0;transition:transform .42s cubic-bezier(.16,1,.3,1),opacity .42s}
+.shm-bk-overlay.open .shm-bk-card{transform:none;opacity:1}
+.shm-bk-eyebrow{font-size:.64rem;letter-spacing:.26em;text-transform:uppercase;color:var(--bk-accent);
+  font-weight:600;display:flex;align-items:center;gap:.6em;margin:0 0 .5rem}
+.shm-bk-eyebrow::before{content:"";width:.42em;height:.42em;border-radius:50%;background:var(--bk-accent)}
+.shm-bk h2.shm-bk-title{font-family:var(--bk-serif);font-weight:500;line-height:1.05;font-size:1.7rem;margin:0 0 .35rem}
+.shm-bk-sub{color:var(--bk-muted);font-size:.92rem;line-height:1.5;margin:0 0 1.15rem}
+.shm-bk-close{position:absolute;top:14px;right:16px;background:none;border:0;color:var(--bk-muted);
+  font-size:1.5rem;line-height:1;cursor:pointer;padding:6px;border-radius:8px}
+.shm-bk-close:hover{color:var(--bk-ink);background:var(--bk-line)}
+.shm-bk-card{position:relative}
+.shm-bk-label{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bk-muted);
+  font-weight:600;margin:1.1rem 0 .55rem}
+.shm-bk-row{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.shm-bk-chip{flex:0 0 auto;min-width:62px;text-align:center;padding:.6rem .7rem;border:1px solid var(--bk-line);
+  background:transparent;color:var(--bk-ink);border-radius:calc(var(--bk-r)*.6);cursor:pointer;
+  font:inherit;font-size:.8rem;transition:.18s;line-height:1.25}
+.shm-bk-chip small{display:block;font-size:.62rem;color:var(--bk-muted);letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.shm-bk-chip:hover{border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"]{background:var(--bk-accent);color:var(--bk-accent-ink);border-color:var(--bk-accent)}
+.shm-bk-chip[aria-pressed="true"] small{color:var(--bk-accent-ink);opacity:.8}
+.shm-bk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(78px,1fr));gap:8px}
+.shm-bk-field{margin-top:.7rem}
+.shm-bk-field input,.shm-bk-field select,.shm-bk-field textarea{width:100%;padding:.7rem .8rem;border:1px solid var(--bk-line);
+  background:var(--bk-panel);color:var(--bk-ink);border-radius:calc(var(--bk-r)*.55);font:inherit;font-size:.9rem}
+.shm-bk-field input:focus,.shm-bk-field select:focus,.shm-bk-field textarea:focus{outline:2px solid var(--bk-accent);outline-offset:1px;border-color:var(--bk-accent)}
+.shm-bk-field input::placeholder,.shm-bk-field textarea::placeholder{color:var(--bk-muted)}
+.shm-bk-cta{width:100%;margin-top:1.25rem;padding:.95rem 1rem;border:0;border-radius:calc(var(--bk-r)*.55);
+  background:var(--bk-ink);color:var(--bk-panel);font:inherit;font-weight:600;letter-spacing:.04em;cursor:pointer;
+  font-size:.92rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:.5em}
+.shm-bk-cta:hover{filter:brightness(1.12)}
+.shm-bk-cta:disabled{opacity:.4;cursor:not-allowed}
+.shm-bk-ghost{display:block;text-align:center;margin-top:.7rem;padding:.85rem;border:1px solid var(--bk-line);
+  border-radius:calc(var(--bk-r)*.55);color:var(--bk-ink);text-decoration:none;font-size:.88rem;font-weight:600;transition:.18s}
+.shm-bk-ghost:hover{border-color:var(--bk-accent);color:var(--bk-accent)}
+.shm-bk-fine{font-size:.72rem;color:var(--bk-muted);text-align:center;margin:.95rem 0 0;line-height:1.45}
+.shm-bk-hide{display:none}
+.shm-bk-tick{width:54px;height:54px;border-radius:50%;background:var(--bk-accent);color:var(--bk-accent-ink);
+  display:flex;align-items:center;justify-content:center;font-size:1.7rem;margin:0 auto 1rem}
+.shm-bk-conf{text-align:center}
+.shm-bk-conf .shm-bk-title{font-size:1.5rem}
+.shm-bk-fab{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;z-index:9998;
+  display:inline-flex;align-items:center;gap:.5em;padding:.85rem 1.4rem;border:0;border-radius:999px;
+  background:var(--bk-accent);color:var(--bk-accent-ink);font-family:var(--bk-sans);font-weight:600;
+  font-size:.92rem;letter-spacing:.02em;cursor:pointer;box-shadow:0 10px 30px -6px rgba(0,0,0,.42)}
+.shm-bk-fab:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 16px 40px -8px rgba(0,0,0,.52)}
+@media (max-width:520px){.shm-bk-fab{bottom:14px;font-size:.88rem;padding:.8rem 1.15rem}}
+@media (prefers-reduced-motion:reduce){.shm-bk-card{transition:none}}
+.shm-bk{--bk-accent:#3f9fd6;--bk-accent-ink:#ffffff;--bk-ink:#0e2233;--bk-panel:#fbfeff;--bk-muted:rgba(14,34,51,0.6);--bk-line:rgba(14,34,51,0.14);--bk-serif:Georgia, "Times New Roman", serif;--bk-sans:"Manrope", system-ui, sans-serif;--bk-r:18px;}
+</style>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <nav class="nav" id="nav" aria-label="Primary">
+    <a class="brand" href="#top" aria-label="DC Dental Clinic home">
+      <svg class="gem" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="brandg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#bfe9ff"/><stop offset="1" stop-color="#ffffff"/>
+          </linearGradient>
+        </defs>
+        <path d="M20 3 L34 13 L29 34 L11 34 L6 13 Z" fill="url(#brandg)" stroke="#3f9fd6" stroke-width="1.6"/>
+        <path d="M20 3 L20 34 M6 13 L34 13 M13 13 L20 34 L27 13" fill="none" stroke="#3f9fd6" stroke-width="0.9" opacity="0.75"/>
+      </svg>
+      <span>DC Dental<small>Nimman &middot; Chiang Mai</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks">
+      <span></span>
+    </button>
+    <div class="nav-links" id="navlinks">
+      <a href="#welcome">Welcome</a>
+      <a href="#services">Services</a>
+      <a href="#visit">Visit</a>
+      <a href="#reviews">Reviews</a>
+      <a class="nav-cta" href="#contact">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+        Call now
+      </a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<section class="hero" aria-labelledby="hero-h">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal">English-friendly dentistry &middot; Nimman</span>
+      <h1 id="hero-h" class="reveal" data-d="1">
+        Crystal-clear<br><span class="shine">dental care</span>,<br>finally in English.
+      </h1>
+      <p class="hero-sub reveal" data-d="2">
+        Right in the heart of Nimman, DC Dental Clinic is the practice that
+        English-speaking nomads and visitors can <b>finally navigate with ease</b> &mdash;
+        clear answers, gentle treatment, and a team that welcomes you in English.
+      </p>
+      <div class="hero-cta reveal" data-d="3">
+        <a class="btn" href="tel:+6653222697">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Call +66 53 222 697
+        </a>
+        <a class="btn ghost" href="#services">
+          Explore treatments
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="hero-trust reveal" data-d="4">
+        <span class="stars" role="img" aria-label="Rated 4.9 out of 5 stars">
+          <svg viewBox="0 0 24 24" fill="#f7b733" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#f7b733" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#f7b733" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#f7b733" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="#f7b733" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </span>
+        <span class="meta"><b>4.9</b> from <b>678</b> Google reviews</span>
+        <span class="pip" aria-hidden="true"></span>
+        <span class="meta">Open every day &middot; until 7pm</span>
+      </div>
+    </div>
+
+    <div class="hero-stage" aria-hidden="true">
+      <div class="crystal-wrap">
+        <div class="orbit"></div>
+        <div class="orbit b"></div>
+        <span class="spark"></span>
+        <span class="spark s2"></span>
+        <span class="spark s3"></span>
+        <svg class="crystal-svg" viewBox="0 0 320 320" role="img" focusable="false">
+          <title>A faceted clear crystal aligner form refracting light</title>
+          <defs>
+            <linearGradient id="f1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/><stop offset="1" stop-color="#cdeafd" stop-opacity="0.7"/>
+            </linearGradient>
+            <linearGradient id="f2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#e3f4ff"/><stop offset="1" stop-color="#a9d9f5" stop-opacity="0.55"/>
+            </linearGradient>
+            <linearGradient id="f3" x1="1" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#d9c9ff" stop-opacity="0.8"/><stop offset="1" stop-color="#ffffff" stop-opacity="0.4"/>
+            </linearGradient>
+            <linearGradient id="f4" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#c9fff0" stop-opacity="0.85"/><stop offset="1" stop-color="#ffffff" stop-opacity="0.3"/>
+            </linearGradient>
+            <linearGradient id="f5" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#ffe7f6" stop-opacity="0.7"/><stop offset="1" stop-color="#bfe9ff" stop-opacity="0.4"/>
+            </linearGradient>
+            <radialGradient id="halo" cx="50%" cy="42%" r="60%">
+              <stop offset="0" stop-color="#ffffff" stop-opacity="0.9"/>
+              <stop offset="45%" stop-color="#cdeafd" stop-opacity="0.25"/>
+              <stop offset="100%" stop-color="#cdeafd" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="160" cy="150" r="140" fill="url(#halo)"/>
+          <g class="crystal-spin">
+            <polygon class="facet" points="160,28 232,96 232,96 160,150" fill="url(#f2)" stroke="#74bee8" stroke-width="1.1" stroke-opacity="0.6"/>
+            <polygon class="facet" points="160,28 88,96 160,150" fill="url(#f1)" stroke="#74bee8" stroke-width="1.1" stroke-opacity="0.6"/>
+            <polygon class="facet" points="88,96 160,150 110,210" fill="url(#f3)" stroke="#9d8bff" stroke-width="1.1" stroke-opacity="0.45"/>
+            <polygon class="facet" points="232,96 160,150 210,210" fill="url(#f5)" stroke="#74bee8" stroke-width="1.1" stroke-opacity="0.5"/>
+            <polygon class="facet" points="110,210 160,150 210,210 160,272" fill="url(#f4)" stroke="#56cbb0" stroke-width="1.1" stroke-opacity="0.5"/>
+            <polygon class="facet" points="88,96 110,210 160,272 50,150" fill="url(#f1)" stroke="#74bee8" stroke-width="1" stroke-opacity="0.4" opacity="0.85"/>
+            <polygon class="facet" points="232,96 210,210 160,272 270,150" fill="url(#f2)" stroke="#74bee8" stroke-width="1" stroke-opacity="0.4" opacity="0.85"/>
+            <path d="M160 28 L160 272 M88 96 L232 96 M50 150 L270 150 M110 210 L210 210" stroke="#ffffff" stroke-width="1.4" stroke-opacity="0.7" fill="none"/>
+            <path d="M88 96 L160 150 L232 96 M110 210 L160 150 L210 210" stroke="#bfe9ff" stroke-width="1" stroke-opacity="0.8" fill="none"/>
+            <polygon class="glint" points="160,28 232,96 160,150" fill="#ffffff" fill-opacity="0.85"/>
+            <polygon class="glint" points="110,210 160,150 160,272" fill="#ffffff" fill-opacity="0.7" style="animation-delay:1.6s"/>
+          </g>
+        </svg>
+
+        <div class="floatcard fc-1">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span>
+          <span>Clear aligners<small>discreet &amp; precise</small></span>
+        </div>
+        <div class="floatcard fc-2">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span>
+          <span>English-speaking<small>every appointment</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="marquee">
+    <span>Orthodontics</span><span>Dental Implants</span><span>Porcelain Veneers</span><span>Teeth Whitening</span><span>General Dentistry</span><span>Clear Aligners</span>
+    <span>Orthodontics</span><span>Dental Implants</span><span>Porcelain Veneers</span><span>Teeth Whitening</span><span>General Dentistry</span><span>Clear Aligners</span>
+  </div>
+</div>
+
+<section class="sec welcome" id="welcome" aria-labelledby="welcome-h">
+  <div class="wrap">
+    <div class="welcome-card reveal">
+      <div class="welcome-inner">
+        <div>
+          <span class="eyebrow">A clinic you can navigate</span>
+          <h2 id="welcome-h">Care that speaks your language.</h2>
+          <p>
+            Finding a dentist abroad shouldn't feel like a guessing game. At DC Dental Clinic,
+            you'll be <strong>greeted, examined, and guided entirely in English</strong> &mdash;
+            from your first question to your treatment plan and aftercare.
+          </p>
+          <p>
+            We explain every option clearly, share transparent timelines, and make sure you
+            understand exactly what's happening and why. <strong>No translation apps, no confusion</strong> &mdash;
+            just calm, modern dentistry that fits right into life in Nimman.
+          </p>
+          <span class="lang-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          We welcome you in English
+          </span>
+        </div>
+        <div class="pane-stack" aria-hidden="true">
+          <span class="pane p1"></span>
+          <span class="pane p3"></span>
+          <span class="pane p2"></span>
+          <span class="pane-glow" style="top:30%;left:38%"></span>
+          <span class="pane-glow" style="bottom:24%;right:30%;animation-delay:1.5s"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="services" aria-labelledby="services-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">What we do</span>
+      <h2 id="services-h">Treatments, made transparent.</h2>
+      <p>From a routine clean to a full smile transformation &mdash; modern, gentle care with clear pricing explained up front, every step in plain English.</p>
+    </div>
+    <div class="svc-grid">
+
+      <article class="svc reveal" data-d="1" style="--g1:rgba(191,233,255,.5)">
+        <span class="tag">01</span>
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5.5c-2-2.5-5-2.5-6.5-1C3 6.5 3.5 10 5 13s2 6 3 6 1.5-3 4-3 3 3 4 3 1.5-3 3-6 2-6.5-.5-8.5c-1.5-1.5-4.5-1.5-6.5 1z"/></svg></div>
+        <h3>Orthodontics</h3>
+        <p>Braces and clear aligners that gently straighten your smile, with progress you can actually see and timelines you'll understand.</p>
+      </article>
+
+      <article class="svc reveal" data-d="2" style="--g1:rgba(217,201,255,.45)">
+        <span class="tag">02</span>
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v6M9 5h6M12 8c-3 0-5 2-5 5 0 4 1.5 9 3 9s1-4 2-4 .5 4 2 4 3-5 3-9c0-3-2-5-5-5z"/></svg></div>
+        <h3>Dental Implants</h3>
+        <p>Replace missing teeth with secure, natural-looking implants &mdash; restoring your bite and confidence with precise, lasting results.</p>
+      </article>
+
+      <article class="svc reveal" data-d="3" style="--g1:rgba(201,255,240,.5)">
+        <span class="tag">03</span>
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10a2 2 0 0 1 2 2v3a4 4 0 0 1-4 4h-6a4 4 0 0 1-4-4V5a2 2 0 0 1 2-2z"/><path d="M9 13v5a3 3 0 0 0 6 0v-5"/><path d="M9 7h6"/></svg></div>
+        <h3>Porcelain Veneers</h3>
+        <p>Thin, custom-crafted shells that refine shape and colour for a bright, balanced smile &mdash; designed around your face, not a template.</p>
+      </article>
+
+      <article class="svc reveal" data-d="1" style="--g1:rgba(255,231,246,.5)">
+        <span class="tag">04</span>
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6z"/><path d="M5 16l.8 2.2L8 19l-2.2.8L5 22l-.8-2.2L2 19l2.2-.8zM19 14l.6 1.6L21 16l-1.4.4L19 18l-.6-1.6L17 16l1.4-.4z"/></svg></div>
+        <h3>Teeth Whitening</h3>
+        <p>Safe, professional whitening that lifts away stains for a noticeably brighter, fresher smile &mdash; comfortable and beautifully clean.</p>
+      </article>
+
+      <article class="svc reveal" data-d="2" style="--g1:rgba(191,233,255,.5)">
+        <span class="tag">05</span>
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2C9.5 2 8 4 8 6.5c0 1.5-1 2-1 4 0 3 1.5 11 3 11 1 0 1-3 2-3s1 3 2 3c1.5 0 3-8 3-11 0-2-1-2.5-1-4C16 4 14.5 2 12 2z"/></svg></div>
+        <h3>General Dentistry</h3>
+        <p>Check-ups, cleanings, fillings and friendly preventive care that keeps your teeth healthy &mdash; your reliable home base in Chiang Mai.</p>
+      </article>
+
+      <article class="svc reveal" data-d="3" style="--g1:rgba(217,201,255,.45)">
+        <span class="tag">06</span>
+        <div class="svc-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+        <h3>Clear Aligners</h3>
+        <p>Nearly invisible, removable aligners that straighten discreetly &mdash; perfect for video calls, travel and life on the move.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="visit" aria-labelledby="visit-h">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">Plan your visit</span>
+      <h2 id="visit-h">Find us in Nimman.</h2>
+      <p>We're open every single day of the week, tucked into Chiang Mai's most walkable caf&eacute;-and-nomad district &mdash; easy to reach between your morning coffee and afternoon work session.</p>
+    </div>
+    <div class="visit-grid">
+
+      <div class="glass-panel loc reveal" data-d="1">
+        <span class="open-now"><span class="dot" aria-hidden="true"></span>Open now &middot; closes 7:00pm</span>
+        <h3>DC Dental Clinic</h3>
+        <p class="addr">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Nimmanhaemin (Nimman), Mueang Chiang Mai District, Chiang Mai, Thailand</span>
+        </p>
+        <p class="vibe">
+          You'll find us among the <strong>caf&eacute;s, co-working spaces and boutiques of Nimman</strong> &mdash; the
+          neighbourhood the digital-nomad community already calls home. Pop in before or after your
+          flat white; we're built for the way you live here.
+        </p>
+        <div class="map" role="img" aria-label="Stylised map showing the clinic's location in the Nimman district">
+          <svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" focusable="false">
+            <rect width="320" height="180" fill="none"/>
+            <g stroke="#a9d9f5" stroke-width="1.4" opacity="0.6" fill="none">
+              <path d="M0 60 H320 M0 120 H320 M70 0 V180 M170 0 V180 M250 0 V180"/>
+            </g>
+            <g stroke="#74bee8" stroke-width="3.2" opacity="0.85" fill="none" stroke-linecap="round">
+              <path d="M0 60 H320"/><path d="M170 0 V180"/>
+            </g>
+            <rect x="92" y="74" width="56" height="32" rx="6" fill="#cdeafd" opacity="0.7"/>
+            <rect x="188" y="20" width="44" height="30" rx="6" fill="#d9c9ff" opacity="0.55"/>
+            <rect x="24" y="128" width="40" height="34" rx="6" fill="#c9fff0" opacity="0.6"/>
+            <g class="pin">
+              <circle cx="170" cy="60" r="18" fill="#ffffff" opacity="0.65"/>
+              <path d="M170 38c-7 0-12 5-12 12 0 8 12 20 12 20s12-12 12-20c0-7-5-12-12-12z" fill="#2a7fb5"/>
+              <circle cx="170" cy="50" r="5" fill="#ffffff"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <div class="glass-panel reveal" data-d="2">
+        <span class="eyebrow">Opening hours</span>
+        <h3 style="margin-top:14px;font-size:1.5rem;font-family:var(--display);font-weight:600;letter-spacing:-.02em">Open 7 days a week</h3>
+        <div style="margin-top:18px">
+          <div class="hours-row" id="row-mon"><span class="day">Monday</span><span class="time">9:00am &ndash; 7:00pm</span></div>
+          <div class="hours-row" id="row-tue"><span class="day">Tuesday</span><span class="time">9:00am &ndash; 7:00pm</span></div>
+          <div class="hours-row" id="row-wed"><span class="day">Wednesday</span><span class="time">9:00am &ndash; 7:00pm</span></div>
+          <div class="hours-row" id="row-thu"><span class="day">Thursday</span><span class="time">9:00am &ndash; 7:00pm</span></div>
+          <div class="hours-row" id="row-fri"><span class="day">Friday</span><span class="time">9:00am &ndash; 7:00pm</span></div>
+          <div class="hours-row" id="row-sat"><span class="day">Saturday</span><span class="time">9:00am &ndash; 7:00pm</span></div>
+          <div class="hours-row" id="row-sun"><span class="day">Sunday</span><span class="time">9:00am &ndash; 7:00pm</span></div>
+        </div>
+        <a class="btn" style="margin-top:26px;width:100%;justify-content:center" href="tel:+6653222697">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg>
+          Call to book a time
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="sec" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <div class="contact-inner">
+        <div>
+          <span class="eyebrow">Get in touch</span>
+          <h2 id="contact-h">Book your visit today.</h2>
+          <p class="lead">
+            Call us, message us, or reach out on your favourite app &mdash; we'll happily answer your
+            questions in English and find a time that fits your schedule.
+          </p>
+          <a class="phone-big" href="tel:+6653222697" aria-label="Call DC Dental Clinic at +66 53 222 697">
+            <span class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+            +66 53 222 697
+          </a>
+        </div>
+
+        <div>
+          <div class="ch-grid">
+            <!-- LINE: official account URL unknown -> placeholder. Replace href with https://line.me/R/ti/p/@<lineId> when known -->
+            <a class="ch ch-line" href="#" data-placeholder="LINE official account">
+              <span class="ci"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63h-1.755v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63h-1.755v1.125h1.755zm-3.855 3.016a.63.63 0 0 1-.631.629.61.61 0 0 1-.51-.252l-2.443-3.317v2.94a.628.628 0 0 1-.628.629.629.629 0 0 1-.63-.629V8.108a.63.63 0 0 1 .627-.63c.195 0 .375.105.495.255l2.462 3.337V8.108a.63.63 0 0 1 .631-.63c.345 0 .63.285.63.63v4.771zm-5.741 0a.629.629 0 0 1-.631.629.63.63 0 0 1-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.771zm-2.466.629H4.917a.633.633 0 0 1-.63-.629V8.108c0-.345.282-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63a.627.627 0 0 1-.629.628M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></span>
+              <span>LINE<small>Add &amp; message us</small></span>
+            </a>
+
+            <!-- Facebook: page URL unknown -> placeholder. Replace href with https://facebook.com/<page> when known -->
+            <a class="ch ch-fb" href="#" data-placeholder="Facebook page">
+              <span class="ci"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></span>
+              <span>Facebook<small>Follow us</small></span>
+            </a>
+
+          </div>
+
+          <!-- Online booking exists but the live booking widget is not yet wired in: intentionally non-functional -->
+          <button class="book-online" type="button" aria-disabled="true" title="Online booking is coming soon">
+            <span class="bi">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg>
+              Book Online
+            </span>
+            <span class="soon">Coming soon</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand-col">
+        <div class="foot-brand">
+          <svg class="gem" viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M20 3 L34 13 L29 34 L11 34 L6 13 Z" fill="url(#brandg)" stroke="#3f9fd6" stroke-width="1.6"/>
+            <path d="M20 3 L20 34 M6 13 L34 13 M13 13 L20 34 L27 13" fill="none" stroke="#3f9fd6" stroke-width="0.9" opacity="0.75"/>
+          </svg>
+          DC Dental Clinic
+        </div>
+        <p class="foot-desc">Clear, English-friendly dentistry in the heart of Nimman, Chiang Mai &mdash; orthodontics, implants, veneers, whitening and everyday care, all explained the way you understand.</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Visit</h4>
+        <p>Nimman (Nimmanhaemin)<br>Mueang Chiang Mai District<br>Chiang Mai, Thailand</p>
+        <p style="margin-top:14px;color:var(--ice-600);font-weight:700">Open daily &middot; 9am &ndash; 7pm</p>
+      </div>
+
+      <div class="foot-col">
+        <h4>Connect</h4>
+        <a href="tel:+6653222697">+66 53 222 697</a>
+        <!-- LINE official account URL unknown -> placeholder -->
+        <a href="#" data-placeholder="LINE official account">LINE official account</a>
+        <!-- Facebook page URL unknown -> placeholder -->
+        <a href="#" data-placeholder="Facebook page">Facebook</a>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <p>&copy; <span id="yr">2026</span> DC Dental Clinic &middot; Nimman, Chiang Mai. All rights reserved.</p>
+      <p class="credit">Designed by <a href="https://stellarhausmedia.com" target="_blank" rel="noopener noreferrer">Stellar Haus Media</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var yr = document.getElementById('yr');
+  if(yr){ yr.textContent = new Date().getFullYear(); }
+
+  var nav = document.getElementById('nav');
+  function onScroll(){
+    if(window.scrollY > 12){ nav.classList.add('scrolled'); }
+    else { nav.classList.remove('scrolled'); }
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, {passive:true});
+
+  var burger = document.getElementById('burger');
+  var links = document.getElementById('navlinks');
+  function closeMenu(){
+    links.classList.remove('open');
+    burger.setAttribute('aria-expanded','false');
+    burger.setAttribute('aria-label','Open menu');
+  }
+  burger.addEventListener('click', function(){
+    var open = links.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true':'false');
+    burger.setAttribute('aria-label', open ? 'Close menu':'Open menu');
+  });
+  links.addEventListener('click', function(e){
+    if(e.target.closest('a')){ closeMenu(); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ closeMenu(); }
+  });
+
+  var days = ['sun','mon','tue','wed','thu','fri','sat'];
+  var todayId = 'row-' + days[new Date().getDay()];
+  var todayRow = document.getElementById(todayId);
+  if(todayRow){ todayRow.classList.add('today'); }
+
+  var revealEls = document.querySelectorAll('.reveal');
+  if(reduce || !('IntersectionObserver' in window)){
+    revealEls.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    revealEls.forEach(function(el){ io.observe(el); });
+  }
+
+  document.querySelectorAll('a[href="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); });
+  });
+})();
+</script>
+
+
+<!-- ============================================================
+  SHM BOOKING WIDGET  (demo / front-end only)
+  Captures a booking request and hands off to the clinic's real
+  channel (phone / LINE). To go LIVE to patients, replace the body
+  of submitBooking() below with your GoHighLevel calendar embed or
+  a POST to your GHL/Calendly endpoint.  -- Stellar Haus Media
+============================================================ -->
+<div class="shm-bk">
+<div class="shm-bk-overlay" id="shmbk" role="dialog" aria-modal="true" aria-labelledby="shmbk-title" aria-hidden="true">
+  <div class="shm-bk-card" role="document">
+    <button class="shm-bk-close" type="button" aria-label="Close booking" data-bk-close>&times;</button>
+
+    <div id="shmbk-step">
+      <p class="shm-bk-eyebrow">English-speaking care</p>
+      <h2 class="shm-bk-title" id="shmbk-title">Book your visit</h2>
+      <p class="shm-bk-sub">Pick a day and time that suits you — our front desk replies in English.</p>
+
+      <p class="shm-bk-label">Choose a day</p>
+      <div class="shm-bk-row" id="shmbk-days"></div>
+
+      <div id="shmbk-times-wrap" class="shm-bk-hide">
+        <p class="shm-bk-label">Choose a time</p>
+        <div class="shm-bk-grid" id="shmbk-times"></div>
+      </div>
+
+      <div id="shmbk-form" class="shm-bk-hide">
+        <div class="shm-bk-field"><input id="shmbk-name" type="text" placeholder="Your name" autocomplete="name"></div>
+        <div class="shm-bk-field"><input id="shmbk-phone" type="tel" placeholder="Phone number" autocomplete="tel"></div>
+        <div class="shm-bk-field"><input id="shmbk-email" type="email" placeholder="Email (optional)" autocomplete="email"></div>
+        <div class="shm-bk-field">
+          <select id="shmbk-reason">
+            <option value="">What brings you in?</option>
+            <option>Check-up &amp; cleaning</option>
+            <option>Implant or veneer consultation</option>
+            <option>Teeth whitening</option>
+            <option>Tooth pain / emergency</option>
+            <option>Something else</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="shm-bk-cta" id="shmbk-submit" type="button" disabled>Confirm booking</button>
+      <p class="shm-bk-fine">No payment now. We’ll confirm your appointment by text.</p>
+    </div>
+
+    <div id="shmbk-done" class="shm-bk-conf shm-bk-hide">
+      <div class="shm-bk-tick" aria-hidden="true">✓</div>
+      <h2 class="shm-bk-title">You’re all set<span id="shmbk-name-out"></span>.</h2>
+      <p class="shm-bk-sub" id="shmbk-summary"></p>
+      <a class="shm-bk-cta" id="shmbk-call" href="#" style="text-decoration:none">Call now to confirm</a>
+      <a class="shm-bk-ghost shm-bk-hide" id="shmbk-chan" href="#" target="_blank" rel="noopener"></a>
+      <p class="shm-bk-fine">We’ll reach out shortly to lock in your time.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+/* SHM booking widget — demo. See submitBooking() TODO to wire GoHighLevel/Calendly. */
+(function(){
+  var ov=document.getElementById('shmbk'); if(!ov) return;
+  var TEL="tel:+6653222697", CHAN="https://lin.ee/S02p3CB", CHANLABEL="Message us on LINE";
+  var state={day:null,time:null};
+  var daysEl=document.getElementById('shmbk-days'),
+      timesWrap=document.getElementById('shmbk-times-wrap'),
+      timesEl=document.getElementById('shmbk-times'),
+      formEl=document.getElementById('shmbk-form'),
+      submit=document.getElementById('shmbk-submit'),
+      lastTrigger=null;
+  var TIMES=["09:30","10:30","11:30","14:00","15:00","16:00","17:30"];
+  var DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],
+      MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+  function buildDays(){
+    daysEl.innerHTML=""; var d=new Date(), made=0;
+    while(made<8){ d.setDate(d.getDate()+1);
+      if(d.getDay()===0) continue;            // skip Sundays
+      var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.setAttribute('aria-pressed','false');
+      b.innerHTML="<small>"+DOW[d.getDay()]+"</small>"+d.getDate()+" "+MON[d.getMonth()];
+      b.dataset.label=DOW[d.getDay()]+", "+d.getDate()+" "+MON[d.getMonth()];
+      b.addEventListener('click',function(){ select(daysEl,this); state.day=this.dataset.label;
+        timesWrap.classList.remove('shm-bk-hide'); refresh(); });
+      daysEl.appendChild(b); made++;
+    }
+  }
+  function buildTimes(){
+    timesEl.innerHTML="";
+    TIMES.forEach(function(t){ var b=document.createElement('button'); b.type="button"; b.className="shm-bk-chip";
+      b.textContent=t; b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){ select(timesEl,this); state.time=t;
+        formEl.classList.remove('shm-bk-hide'); refresh(); });
+      timesEl.appendChild(b); });
+  }
+  function select(group,el){ Array.prototype.forEach.call(group.children,function(c){c.setAttribute('aria-pressed','false');});
+    el.setAttribute('aria-pressed','true'); }
+  function refresh(){ var n=document.getElementById('shmbk-name').value.trim(),
+        p=document.getElementById('shmbk-phone').value.trim();
+    submit.disabled=!(state.day&&state.time&&n&&p); }
+
+  /* ---- TODO (go live): replace this with your GoHighLevel calendar write / Calendly,
+     or POST {name,phone,email,reason,day,time} to your GHL inbound webhook. ---- */
+  function submitBooking(data){
+    console.warn("[SHM booking] DEMO submit — not sent anywhere. Wire submitBooking() to GoHighLevel before launch.", data);
+  }
+
+  function done(){
+    var name=document.getElementById('shmbk-name').value.trim();
+    submitBooking({name:name, phone:document.getElementById('shmbk-phone').value.trim(),
+      email:document.getElementById('shmbk-email').value.trim(),
+      reason:document.getElementById('shmbk-reason').value, day:state.day, time:state.time});
+    document.getElementById('shmbk-step').classList.add('shm-bk-hide');
+    var d=document.getElementById('shmbk-done'); d.classList.remove('shm-bk-hide');
+    document.getElementById('shmbk-name-out').textContent=name?(", "+name.split(" ")[0]):"";
+    document.getElementById('shmbk-summary').textContent="Requested: "+state.day+" at "+state.time+". We’ll confirm shortly.";
+    var call=document.getElementById('shmbk-call'); call.href=TEL;
+    if(CHAN){ var l=document.getElementById('shmbk-chan'); l.href=CHAN; l.textContent=CHANLABEL; l.classList.remove('shm-bk-hide'); }
+  }
+
+  function open(t){ lastTrigger=t||null; ov.classList.add('open'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var f=ov.querySelector('.shm-bk-chip'); if(f) f.focus(); }
+  function close(){ ov.classList.remove('open'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow=''; if(lastTrigger&&lastTrigger.focus) lastTrigger.focus(); }
+
+  buildDays(); buildTimes();
+  ['shmbk-name','shmbk-phone'].forEach(function(id){document.getElementById(id).addEventListener('input',refresh);});
+  submit.addEventListener('click',done);
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  ov.querySelector('[data-bk-close]').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('open')) close(); });
+  // simple focus trap
+  ov.addEventListener('keydown',function(e){ if(e.key!=='Tab')return;
+    var f=ov.querySelectorAll('button,a[href],input,select,textarea'); if(!f.length)return;
+    var first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){last.focus();e.preventDefault();}
+    else if(!e.shiftKey&&document.activeElement===last){first.focus();e.preventDefault();}
+  });
+
+  // ---- bind triggers: explicit hooks + any element whose label starts with "Book" ----
+  function isBookLabel(el){
+    var t=(el.textContent||"").replace(/[^a-z0-9 ]/gi," ").replace(/\s+/g," ").trim().toLowerCase();
+    if(!t || t.length>40) return false;                 // skip long paragraphs that merely contain "book"
+    return /\bbook/.test(t) || /\breserve\b/.test(t);   // \bbook matches "book"/"booking"/"book online soon"; NOT "facebook"
+  }
+  var sel='.js-book,.book-demo,[data-shm-book],a[href="#book"],a[href="#booking"]';
+  var bound=new Set();
+  function bind(el){ if(bound.has(el)||el.closest('.shm-bk'))return; bound.add(el);
+    el.removeAttribute('aria-disabled'); el.removeAttribute('disabled'); el.style.pointerEvents='auto';
+    // the booking now works, so drop any "coming soon / launching" badge inside the button
+    el.querySelectorAll('span,small,sup,em,i,b').forEach(function(s){
+      var st=(s.textContent||"").trim();
+      if(st.length<22 && /coming|soon|launch/i.test(st)) s.remove();
+    });
+    el.addEventListener('click',function(e){ e.preventDefault(); open(el); }); }
+  document.querySelectorAll(sel).forEach(bind);
+  document.querySelectorAll('a,button').forEach(function(el){ if(isBookLabel(el)) bind(el); });
+
+  // if the page has no booking CTA of its own, add a small themed one so booking is always reachable
+  if(bound.size===0){
+    var fab=document.createElement('button');
+    fab.type='button'; fab.className='shm-bk-fab'; fab.setAttribute('aria-label','Book online');
+    fab.innerHTML='<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="vertical-align:-2px"><rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg> Book online';
+    fab.addEventListener('click',function(){ open(fab); });
+    (document.querySelector('.shm-bk')||document.body).appendChild(fab);
+  }
+})();
+</script>
+
+</body>
+</html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
